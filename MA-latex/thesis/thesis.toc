@@ -1,0 +1,19 @@
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\nonumberline List of Figures}{5}{chapter*.3}%
+\contentsline {chapter}{\nonumberline List of Tables}{6}{chapter*.4}%
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}%
+\contentsline {paragraph}{\nonumberline Motivation}{7}{paragraph*.6}%
+\contentsline {paragraph}{\nonumberline State of the art}{7}{paragraph*.8}%
+\contentsline {paragraph}{\nonumberline Goal of this thesis}{7}{paragraph*.10}%
+\contentsline {paragraph}{\nonumberline Steps required to reach this goal}{7}{paragraph*.12}%
+\contentsline {paragraph}{\nonumberline Your Method}{7}{paragraph*.14}%
+\contentsline {chapter}{\numberline {2}Related Work}{8}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Approach}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}(Prototype) Implementation}{10}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Evaluation}{11}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{12}{chapter.6}%
+\contentsline {paragraph}{\nonumberline Conclude}{12}{paragraph*.16}%
+\contentsline {paragraph}{\nonumberline Outlook}{12}{paragraph*.18}%
+\contentsline {chapter}{\nonumberline Bibliography}{13}{chapter*.19}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
