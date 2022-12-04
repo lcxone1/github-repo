@@ -29,7 +29,8 @@ void Txc1::initialize()
     if (strcmp("tic", getName()) == 0) {
         // create and send first message on gate "out". "tictocMsg" is an
         // arbitrary string which will be the name of the message object.
-        cMessage *msg = new cMessage("tictocMsg");
+        //cMessage *msg = new cMessage("tictocMsg");
+        cMessage *msg;
         send(msg, "out");
     }
 }
@@ -41,4 +42,5 @@ void Txc1::handleMessage(cMessage *msg)
     // gate `out'. Because both `tic' and `toc' does the same, the message
     // will bounce between the two.
     send(msg, "out"); // send out the message
+
 }
