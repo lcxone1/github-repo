@@ -1,0 +1,81 @@
+version 3
+run Test1-0-20221205-16:55:07-33976
+attr configname Test1
+attr datetime 20221205-16:55:07
+attr datetimef 20221205-165507
+attr experiment Test1
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Link5TogetherWithClasse
+attr processid 33976
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Link5TogetherWithClasse
+config record-eventlog true
+
+par Link5TogetherWithClasse.sensor1.gate$o[0].channel typename "\"Link5TogetherWithClasse.Channel\""
+par Link5TogetherWithClasse.sensor1.gate$o[0].channel disabled false
+attr mutable ""
+par Link5TogetherWithClasse.sensor1.gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Link5TogetherWithClasse.gw1.gate$o[0].channel typename "\"Link5TogetherWithClasse.Channel\""
+par Link5TogetherWithClasse.gw1.gate$o[0].channel disabled false
+attr mutable ""
+par Link5TogetherWithClasse.gw1.gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Link5TogetherWithClasse.gw1.gate$o[1].channel typename "\"Link5TogetherWithClasse.Channel\""
+par Link5TogetherWithClasse.gw1.gate$o[1].channel disabled false
+attr mutable ""
+par Link5TogetherWithClasse.gw1.gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Link5TogetherWithClasse.ip1.gate$o[0].channel typename "\"Link5TogetherWithClasse.Channel\""
+par Link5TogetherWithClasse.ip1.gate$o[0].channel disabled false
+attr mutable ""
+par Link5TogetherWithClasse.ip1.gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Link5TogetherWithClasse.ip1.gate$o[1].channel typename "\"Link5TogetherWithClasse.Channel\""
+par Link5TogetherWithClasse.ip1.gate$o[1].channel disabled false
+attr mutable ""
+par Link5TogetherWithClasse.ip1.gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Link5TogetherWithClasse.gw2.gate$o[0].channel typename "\"Link5TogetherWithClasse.Channel\""
+par Link5TogetherWithClasse.gw2.gate$o[0].channel disabled false
+attr mutable ""
+par Link5TogetherWithClasse.gw2.gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Link5TogetherWithClasse.gw2.gate$o[1].channel typename "\"Link5TogetherWithClasse.Channel\""
+par Link5TogetherWithClasse.gw2.gate$o[1].channel disabled false
+attr mutable ""
+par Link5TogetherWithClasse.gw2.gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Link5TogetherWithClasse.aktor1.gate$o[0].channel typename "\"Link5TogetherWithClasse.Channel\""
+par Link5TogetherWithClasse.aktor1.gate$o[0].channel disabled false
+attr mutable ""
+par Link5TogetherWithClasse.aktor1.gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Link5TogetherWithClasse.sensor1 typename "\"Sensor\""
+par Link5TogetherWithClasse.sensor1 sendMsgOnInit true
+par Link5TogetherWithClasse.aktor1 typename "\"Aktor\""
+par Link5TogetherWithClasse.aktor1 sendMsgOnInit false
+par Link5TogetherWithClasse.gw1 typename "\"Gateway\""
+par Link5TogetherWithClasse.gw1 sendMsgOnInit false
+par Link5TogetherWithClasse.gw2 typename "\"Gateway\""
+par Link5TogetherWithClasse.gw2 sendMsgOnInit false
+par Link5TogetherWithClasse.ip1 typename "\"IP\""
+par Link5TogetherWithClasse.ip1 sendMsgOnInit false
+par Link5TogetherWithClasse typename "\"Link5TogetherWithClasse\""
+

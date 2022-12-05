@@ -12,32 +12,29 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 //
-simple Txc1
+
+
+simple Txc6
 {
     parameters:
-        bool sendMsgOnInit=default(false);
-        int limit=default(2);
-	gates:
-	    input in;
-	    output out;
+        @display("i=block/routing");
+    gates:
+        input in;
+        output out;
 }
 
-// 2 instances tic and toc of Txc1 connected both ways. Tic and toc will pass mes to one another
-
-network Tictoc1
+network Tictoc6
 {
-	submodules:
-	    	tic: Txc1{
-	    		parameters:
-	    			sendMsgOnInit=false;
-	    	}
-	    	toc: Txc1{
-	    	    parameters:
-	    	     	sendMsgOnInit=true;
-	    	}
-	    		
-	    	
-	connections:
-	  		tic.out --> {delay=100ms;} --> toc.in;
-	    	tic.in <-- {delay=100ms;} <-- toc.out;
+    submodules:
+        tic: Txc6 {
+            parameters:
+                @display("i=,cyan");
+        }
+        toc: Txc6 {
+            parameters:
+                @display("i=,gold");
+        }
+    connections:
+        tic.out --> {  delay = 100ms; } --> toc.in;
+        tic.in <-- {  delay = 100ms; } <-- toc.out;
 }

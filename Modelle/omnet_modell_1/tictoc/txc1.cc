@@ -10,6 +10,9 @@ using namespace omnetpp;
  */
 class Txc1 : public cSimpleModule
 {
+
+  private:
+    int counter;
   protected:
     // The following redefined virtual function holds the algorithm.
     virtual void initialize() override;
@@ -26,11 +29,16 @@ void Txc1::initialize()
     // to send the first message. Let this be `tic'.
 
     // Am I Tic or Toc?
+
+    counter = par("limit");
+
     if (strcmp("tic", getName()) == 0) {
         // create and send first message on gate "out". "tictocMsg" is an
         // arbitrary string which will be the name of the message object.
-        //cMessage *msg = new cMessage("tictocMsg");
-        cMessage *msg;
+
+        EV<<"Sending init msg\n";
+        cMessage *msg = new cMessage("tictocMsg");
+
         send(msg, "out");
     }
 }
@@ -41,6 +49,16 @@ void Txc1::handleMessage(cMessage *msg)
     // at the module. Here, we just send it to the other module, through
     // gate `out'. Because both `tic' and `toc' does the same, the message
     // will bounce between the two.
-    send(msg, "out"); // send out the message
+
+    counter--;
+    if (counter==0){
+        EV<<getName()<<"'s counter reached 0.deleteing msg\n.";
+        delete msg;
+    }
+    else{
+        EV<<getName()<<"'s counter is "<< counter << ", sending back msg\n";
+        send(msg, "out"); // send out the message
+    }
+
 
 }
