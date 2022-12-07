@@ -31,7 +31,7 @@ simple IP extends Test1_Class
 // using two way connections to further simplify the network definition
 network Link5TogetherWithClasse
 {
-    @display("bgb=834,519");
+    //@display("bgb=834,519");
     types:
         channel Channel extends ned.DelayChannel
         {

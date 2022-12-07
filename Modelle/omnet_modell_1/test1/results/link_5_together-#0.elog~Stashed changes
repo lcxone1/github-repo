@@ -1,4 +1,4 @@
-SB ov 1536 ev 2 rid Tictoc12-0-20221205-16:24:28-9148
+SB ov 1536 ev 2 rid link_5_together-0-20221206-20:47:17-21864
 
 E # 0 t 0 m 1 ce -1 msg -1
 MC id 1 c omnetpp::cModule t Link5Together n Link5Together cm 1
@@ -77,4 +77,14 @@ SH sm 4 sg 1572865 pd 0.1
 ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tic-0 sm 4 sg 1572865 st 0.2 am 5 ag 1048576 at 0.3 pe 3
 CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tic-0 m 4 pe -1 cid 0
 
-SE e 0 c 10 m "The user has finished the simulation -- at t=0.2s, event #3"
+E # 4 t 0.3 m 5 ce 3 msg 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tic-0 m 5 pe 4
+SH sm 5 sg 1572865 pd 0.1
+ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tic-0 sm 5 sg 1572865 st 0.3 am 6 ag 1048576 at 0.4 pe 4
+CL id 1 tid 0 eid 1 etid 0 c omnetpp::cMessage n tic-0 m 5 pe -1 cid 0
+
+E # 5 t 0.4 m 6 ce 4 msg 0
+- INFO: Message (omnetpp::cMessage)tic-0  arrived.
+DM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tic-0 m 6 pe 5
+
+SE e 0 c 13 m "No more events, simulation completed -- at t=0.4s, event #5"

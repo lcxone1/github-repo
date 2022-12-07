@@ -5,13 +5,7 @@
 
 using namespace omnetpp;
 
-/**
- * Let's make it more interesting by using several (n) `tic' modules,
- * and connecting every module to every other. For now, let's keep it
- * simple what they do: module 0 generates a message, and the others
- * keep tossing it around in random directions until it arrives at
- * module 3.
- */
+
 class Test1_Class : public cSimpleModule
 {
   protected:
@@ -22,8 +16,10 @@ class Test1_Class : public cSimpleModule
 
 Define_Module(Test1_Class);
 
+
 void Test1_Class::initialize()
 {
+
     if (strcmp("sensor1", getName()) == 0) {
 
         EV << "Sending initial message from sensor\n";
@@ -34,21 +30,23 @@ void Test1_Class::initialize()
 
 void Test1_Class::handleMessage(cMessage *msg)
 {
+
     if (strcmp("aktor1", getName()) == 0) {
-            // Message arrived.
-            EV << "Message " << msg << " arrived at aktor, delete message.\n";
-            delete msg;
+        // Message arrived.
+        EV << "Message " << msg << " arrived at aktor, delete message.\n";
+        delete msg;
     }
     else if (strcmp("sensor1", getName()) == 0){
+        EV << "Wait period is over, sending back message\n";
         send(msg, "gate$o", 0);
     }
     else{
         forwardMessage(msg);
     }
+
 }
 
 void Test1_Class::forwardMessage(cMessage *msg)
 {
-
     send(msg, "gate$o", 1);
 }

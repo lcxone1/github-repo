@@ -1,7 +1,0 @@
-SB ov 1536 ev 2 rid General-0-20221205-14:53:42-33664
-
-E # 0 t 0 m 1 ce -1 msg -1
-MC id 1 c omnetpp::cModule t Network_Test1 n Network_Test1 cm 1
-MDC id 1 d ""
-
-SE e 0 c -1 m ""
