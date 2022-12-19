@@ -1,0 +1,7235 @@
+version 2
+run smallNetwork-0-20221216-22:08:34-7284
+attr configname smallNetwork
+attr datetime 20221216-22:08:34
+attr experiment smallNetwork
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network smallNetwork
+attr processid 7284
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.gateway.transformDelay 40us
+param **.addressTableFile "\"addressTable.txt\""
+param **.ct_marker 0x03040506
+param **.ct_mask 0xffffffff
+param **.scheduler.tick 80ns
+param **.scheduler.numPeriods 1
+param **.scheduler.period[0].cycle_ticks sec_to_tick(2ms)
+param **.scheduler.period[0].offset_ticks sec_to_tick(0ms)
+param **.scheduler.oscillator.max_drift 200ppm
+param **.scheduler.oscillator.drift_change uniform(-50ppm,50ppm)
+param **.precission 500ns
+param **.gateway.buffering[*].typename "\"AccumulationGatewayBuffering\""
+param **.gateway.transform[*].typename "\"GatewayTransformation\""
+param **.canNode1.sourceApp[0].idDataFrames "\"1,2,3,4\""
+param **.canNode1.sourceApp[0].initialDataFrameOffset "\"0,0,0,0\""
+param **.canNode1.sourceApp[0].periodicityDataFrames "\"0.010,0.015,0.020,0.333\""
+param **.canNode1.sourceApp[0].dataLengthDataFrames "\"8,8,8,8\""
+param **.canNode2.bufferIn[0].idIncomingFrames "\"1,2,3\""
+param **.gateway1.can[0].bufferIn[0].idIncomingFrames "\"1,2,3,4\""
+param **.gateway1.tte[0].phy[*].mac.address "\"0A-00-00-00-00-03\""
+param **.gateway1.tte[*].bgIn.destination_gates "\"gatewayApp.in\""
+param **.gateway1.tte[*].gatewayApp.buffers "\"bgOut,TTvlinks[0]\""
+param **.gateway1.tte[0].numberOfTT_Vlinks 1
+param **.gateway1.tte[0].phy[0].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.gateway1.tte[0].TTvlinks[0].period "\"period[0]\""
+param **.gateway1.tte[0].TTvlinks_ctc[0].period "\"period[0]\""
+param **.gateway1.tte[0].TTvlinks[0].destination_gates "\"phy[0].TTin\""
+param **.gateway1.tte[0].TTvlinks_ctc[0].receive_window_start -1tick
+param **.gateway1.tte[0].TTvlinks_ctc[0].receive_window_end -1tick
+param **.gateway1.tte[0].TTvlinks_ctc[0].permanence_pit -1tick
+param **.gateway1.tte[0].TTvlinks[0].ct_id 1
+param **.gateway1.tte[0].TTvlinks[0].sendWindowStart sec_to_tick(1ms)
+param **.gateway1.tte[0].phy[0].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.gateway2.tte[0].phy[*].mac.address "\"0A-00-00-00-00-04\""
+param **.gateway2.tte[*].bgIn.destination_gates "\"gatewayApp.in\""
+param **.gateway2.tte[*].gatewayApp.buffers "\"bgOut\""
+param **.gateway2.tte[0].numberOfTT_Vlinks 1
+param **.gateway2.tte[0].phy[0].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.gateway2.tte[0].gatewayApp.buffers "\"TTvlinks[0]\""
+param **.gateway2.tte[0].TTvlinks[0].period "\"period[0]\""
+param **.gateway2.tte[0].TTvlinks_ctc[0].period "\"period[0]\""
+param **.gateway2.tte[0].TTvlinks[0].destination_gates "\"gatewayApp.TTin\""
+param **.gateway2.tte[0].TTvlinks_ctc[0].receive_window_start -1tick
+param **.gateway2.tte[0].TTvlinks_ctc[0].receive_window_end -1tick
+param **.gateway2.tte[0].TTvlinks_ctc[0].permanence_pit -1tick
+param **.gateway2.tte[0].TTvlinks[0].ct_id 1
+param **.gateway2.tte[0].TTvlinks[0].sendWindowStart sec_to_tick(1ms)
+param **.gateway2.tte[0].phy[0].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.switch.phy[0].mac.address "\"0A-00-00-00-00-01\""
+param **.switch.phy[1].mac.address "\"0A-00-00-00-00-02\""
+param **.switch.phy[0].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.switch.phy[1].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.switch.phy[0].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.switch.phy[1].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.switch.TTvlinks[0].period "\"period[0]\""
+param **.switch.TTvlinks_ctc[0].period "\"period[0]\""
+param **.switch.TTvlinks[0].destination_gates "\"phy[1].TTin\""
+param **.switch.TTvlinks_ctc[0].receive_window_start -1tick
+param **.switch.TTvlinks_ctc[0].receive_window_end -1tick
+param **.switch.TTvlinks_ctc[0].permanence_pit -1tick
+param **.switch.TTvlinks[0].ct_id 1
+param **.switch.TTvlinks[0].sendWindowStart sec_to_tick(1.5ms)
+param **.gateway1.can[0].bufferIn[0].idIncomingFrames "\"1,2,3,4\""
+param **.gateway1.tte[0].phy[*].mac.address "\"0A-00-00-00-00-03\""
+param **.gateway1.tte[*].bgIn.destination_gates "\"gatewayApp.in\""
+param **.gateway1.tte[*].gatewayApp.buffers "\"bgOut,TTvlinks[0]\""
+param **.gateway1.tte[0].numberOfTT_Vlinks 1
+param **.gateway1.tte[0].phy[0].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.gateway1.tte[0].TTvlinks[0].period "\"period[0]\""
+param **.gateway1.tte[0].TTvlinks_ctc[0].period "\"period[0]\""
+param **.gateway1.tte[0].TTvlinks[0].destination_gates "\"phy[0].TTin\""
+param **.gateway1.tte[0].TTvlinks_ctc[0].receive_window_start -1tick
+param **.gateway1.tte[0].TTvlinks_ctc[0].receive_window_end -1tick
+param **.gateway1.tte[0].TTvlinks_ctc[0].permanence_pit -1tick
+param **.gateway1.tte[0].TTvlinks[0].ct_id 1
+param **.gateway1.tte[0].TTvlinks[0].sendWindowStart sec_to_tick(1ms)
+param **.gateway1.tte[0].phy[0].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.gateway2.tte[0].phy[*].mac.address "\"0A-00-00-00-00-04\""
+param **.gateway2.tte[*].bgIn.destination_gates "\"gatewayApp.in\""
+param **.gateway2.tte[*].gatewayApp.buffers "\"bgOut\""
+param **.gateway2.tte[0].numberOfTT_Vlinks 1
+param **.gateway2.tte[0].phy[0].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.gateway2.tte[0].gatewayApp.buffers "\"TTvlinks[0]\""
+param **.gateway2.tte[0].TTvlinks[0].period "\"period[0]\""
+param **.gateway2.tte[0].TTvlinks_ctc[0].period "\"period[0]\""
+param **.gateway2.tte[0].TTvlinks[0].destination_gates "\"gatewayApp.TTin\""
+param **.gateway2.tte[0].TTvlinks_ctc[0].receive_window_start -1tick
+param **.gateway2.tte[0].TTvlinks_ctc[0].receive_window_end -1tick
+param **.gateway2.tte[0].TTvlinks_ctc[0].permanence_pit -1tick
+param **.gateway2.tte[0].TTvlinks[0].ct_id 1
+param **.gateway2.tte[0].TTvlinks[0].sendWindowStart sec_to_tick(1ms)
+param **.gateway2.tte[0].phy[0].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.switch.phy[0].mac.address "\"0A-00-00-00-00-01\""
+param **.switch.phy[1].mac.address "\"0A-00-00-00-00-02\""
+param **.switch.phy[0].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.switch.phy[1].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.switch.phy[0].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.switch.phy[1].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.switch.TTvlinks[0].period "\"period[0]\""
+param **.switch.TTvlinks_ctc[0].period "\"period[0]\""
+param **.switch.TTvlinks[0].destination_gates "\"phy[1].TTin\""
+param **.switch.TTvlinks_ctc[0].receive_window_start -1tick
+param **.switch.TTvlinks_ctc[0].receive_window_end -1tick
+param **.switch.TTvlinks_ctc[0].permanence_pit -1tick
+param **.switch.TTvlinks[0].ct_id 1
+param **.switch.TTvlinks[0].sendWindowStart sec_to_tick(1.5ms)
+
+scalar smallNetwork.gateway1.ethg$o[0].channel packetsDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway1.ethg$o[0].channel utilization:last 0.0022954277560643
+attr source timeavg(channelBusy)
+scalar smallNetwork.gateway1.ethg$o[0].channel packets:count 2
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway1.ethg$o[0].channel packetBytes:sum 148
+attr interpolationmode none
+attr source packetBytes(messageSent)
+attr unit B
+scalar smallNetwork.gateway1.ethg$o[0].channel throughput:last 229813.66459627
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar smallNetwork.gateway2.ethg$o[0].channel packetsDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway2.ethg$o[0].channel utilization:last nan
+attr source timeavg(channelBusy)
+scalar smallNetwork.gateway2.ethg$o[0].channel packets:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway2.ethg$o[0].channel packetBytes:sum 0
+attr interpolationmode none
+attr source packetBytes(messageSent)
+attr unit B
+scalar smallNetwork.gateway2.ethg$o[0].channel throughput:last nan
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar smallNetwork.switch.ethg$o[0].channel packetsDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.switch.ethg$o[0].channel utilization:last nan
+attr source timeavg(channelBusy)
+scalar smallNetwork.switch.ethg$o[0].channel packets:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.switch.ethg$o[0].channel packetBytes:sum 0
+attr interpolationmode none
+attr source packetBytes(messageSent)
+attr unit B
+scalar smallNetwork.switch.ethg$o[0].channel throughput:last nan
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar smallNetwork.switch.ethg$o[1].channel packetsDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.switch.ethg$o[1].channel utilization:last 0.0022891347302726
+attr source timeavg(channelBusy)
+scalar smallNetwork.switch.ethg$o[1].channel packets:count 2
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.switch.ethg$o[1].channel packetBytes:sum 148
+attr interpolationmode none
+attr source packetBytes(messageSent)
+attr unit B
+scalar smallNetwork.switch.ethg$o[1].channel throughput:last 229182.87787108
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+statistic smallNetwork.canbus1.canBusLogic arbitrationLength:stats
+field count 8
+field mean 2
+field stddev 1.309307341416
+field min 0
+field max 4
+field sum 16
+field sqrsum 44
+attr interpolationmode sample-hold
+attr source arbitrationLength
+attr title "Arbitration Length, stats"
+attr unit packets
+scalar smallNetwork.canbus1.canBusLogic utilization:last 100
+attr source lowHighRatio(state)*100
+attr title "Utilization, last"
+attr unit %
+scalar smallNetwork.canbus1.canBusLogic rxEF:count 0
+attr interpolationmode none
+attr source rxEF
+attr title "error frames received, count"
+statistic smallNetwork.canbus1.canBusLogic rxCANIdEF:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source ID(rxEF)
+attr title "received CAN IDs via EF, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.canbus1.canBusLogic rxRF:count 0
+attr interpolationmode none
+attr source rxRF
+attr title "remote frames received, count"
+statistic smallNetwork.canbus1.canBusLogic rxCANIdRF:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source ID(rxRF)
+attr title "received CAN IDs via RF, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.canbus1.canBusLogic rxDF:count 4
+attr interpolationmode none
+attr source rxDF
+attr title "data frames received, count"
+statistic smallNetwork.canbus1.canBusLogic rxCANIdDF:histogram
+field count 4
+field mean 2.5
+field stddev 1.2909944487358
+field min 1
+field max 4
+field sum 10
+field sqrsum 30
+attr interpolationmode none
+attr source ID(rxDF)
+attr title "received CAN IDs via DF, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	1
+bin	2	1
+bin	3	1
+bin	4	1
+bin	5	0
+scalar smallNetwork.canbus1.canBusLogic framesPerSec:last 11976.047904192
+attr source sumPerDuration(constant1(rxPk))
+attr title "Frames/sec, last"
+attr unit fps
+scalar smallNetwork.canbus1.canBusLogic bitsPerSec:last 1329341.3173653
+attr source sumPerDuration(packetBits(rxPk))
+attr title "Bits/sec, last"
+attr unit bps
+statistic smallNetwork.canNode1.canNodePort.canPortInput rxRFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, stats"
+attr unit s
+statistic smallNetwork.canNode1.canNodePort.canPortInput rxRFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.canNode1.canNodePort.canPortInput rxDFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, stats"
+attr unit s
+statistic smallNetwork.canNode1.canNodePort.canPortInput rxDFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.canNode1.canNodePort.canPortInput rxRF:count 0
+attr source rxRF
+attr title "complete remote frames received, count"
+statistic smallNetwork.canNode1.canNodePort.canPortInput rxRFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, stats"
+attr unit s
+statistic smallNetwork.canNode1.canNodePort.canPortInput rxRFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.canNode1.canNodePort.canPortInput rxDF:count 0
+attr source rxDF
+attr title "complete data frames received, count"
+statistic smallNetwork.canNode1.canNodePort.canPortInput rxDFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, stats"
+attr unit s
+statistic smallNetwork.canNode1.canNodePort.canPortInput rxDFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.canNode1.canNodePort.canPortOutput txEF:count 0
+attr source txEF
+attr title "sent errors, count"
+scalar smallNetwork.canNode1.canNodePort.canPortOutput txRF:count 0
+attr source txRF
+attr title "sent remote frames, count"
+scalar smallNetwork.canNode1.canNodePort.canPortOutput txDF:count 4
+attr source txDF
+attr title "sent data frames, count"
+scalar smallNetwork.canNode1.canNodePort.canPortOutput rxEF:count 0
+attr source rxEF
+attr title "receive errors, count"
+scalar smallNetwork.canNode1.bufferIn[0] rxPk:count 0
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, count"
+scalar smallNetwork.canNode1.bufferIn[0] rxPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, sum(packetBytes)"
+statistic smallNetwork.canNode1.bufferIn[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.canNode1.bufferIn[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.canNode1.bufferIn[0] txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, count"
+scalar smallNetwork.canNode1.bufferIn[0] txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, sum(packetBytes)"
+scalar smallNetwork.canNode1.bufferOut rxPk:count 8
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, count"
+scalar smallNetwork.canNode1.bufferOut rxPk:sum(packetBytes) 112
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, sum(packetBytes)"
+statistic smallNetwork.canNode1.bufferOut size:stats
+field count 8
+field mean 28
+field stddev 18.330302779823
+field min 0
+field max 56
+field sum 224
+field sqrsum 8624
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.canNode1.bufferOut length:stats
+field count 8
+field mean 2
+field stddev 1.309307341416
+field min 0
+field max 4
+field sum 16
+field sqrsum 44
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.canNode1.bufferOut txPk:count 4
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, count"
+scalar smallNetwork.canNode1.bufferOut txPk:sum(packetBytes) 56
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, sum(packetBytes)"
+scalar smallNetwork.canNode1.sourceApp[0] txRF:count 0
+attr source txRF
+attr title "source app remote frame, count"
+scalar smallNetwork.canNode1.sourceApp[0] txDF:count 4
+attr source txDF
+attr title "source app data frame, count"
+statistic smallNetwork.canNode1.sinkApp[0] rxRFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, stats"
+attr unit s
+statistic smallNetwork.canNode1.sinkApp[0] rxRFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.canNode1.sinkApp[0] rxDFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, stats"
+attr unit s
+statistic smallNetwork.canNode1.sinkApp[0] rxDFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.canNode1.sinkApp[0] rxRF:count 0
+attr source rxRF
+attr title "sink app remote frame, count"
+statistic smallNetwork.canNode1.sinkApp[0] rxRFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, stats"
+attr unit s
+statistic smallNetwork.canNode1.sinkApp[0] rxRFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.canNode1.sinkApp[0] rxDF:count 0
+attr source rxDF
+attr title "sink app data frame, count"
+statistic smallNetwork.canNode1.sinkApp[0] rxDFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, stats"
+attr unit s
+statistic smallNetwork.canNode1.sinkApp[0] rxDFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.canNode1.canClock clockDrift:stats
+field count 5
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, stats"
+attr unit s
+statistic smallNetwork.canNode1.canClock clockDrift:histogram
+field count 5
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	5
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic smallNetwork.canbus2.canBusLogic arbitrationLength:stats
+field count 2
+field mean 0.5
+field stddev 0.70710678118655
+field min 0
+field max 1
+field sum 1
+field sqrsum 1
+attr interpolationmode sample-hold
+attr source arbitrationLength
+attr title "Arbitration Length, stats"
+attr unit packets
+scalar smallNetwork.canbus2.canBusLogic utilization:last 100
+attr source lowHighRatio(state)*100
+attr title "Utilization, last"
+attr unit %
+scalar smallNetwork.canbus2.canBusLogic rxEF:count 0
+attr interpolationmode none
+attr source rxEF
+attr title "error frames received, count"
+statistic smallNetwork.canbus2.canBusLogic rxCANIdEF:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source ID(rxEF)
+attr title "received CAN IDs via EF, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.canbus2.canBusLogic rxRF:count 0
+attr interpolationmode none
+attr source rxRF
+attr title "remote frames received, count"
+statistic smallNetwork.canbus2.canBusLogic rxCANIdRF:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source ID(rxRF)
+attr title "received CAN IDs via RF, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.canbus2.canBusLogic rxDF:count 1
+attr interpolationmode none
+attr source rxDF
+attr title "data frames received, count"
+statistic smallNetwork.canbus2.canBusLogic rxCANIdDF:histogram
+field count 1
+field mean 3
+field stddev nan
+field min 3
+field max 3
+field sum 3
+field sqrsum 9
+attr interpolationmode none
+attr source ID(rxDF)
+attr title "received CAN IDs via DF, histogram"
+bin	-inf	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar smallNetwork.canbus2.canBusLogic framesPerSec:last 2300.5958543263
+attr source sumPerDuration(constant1(rxPk))
+attr title "Frames/sec, last"
+attr unit fps
+scalar smallNetwork.canbus2.canBusLogic bitsPerSec:last 255366.13983022
+attr source sumPerDuration(packetBits(rxPk))
+attr title "Bits/sec, last"
+attr unit bps
+statistic smallNetwork.canNode2.canNodePort.canPortInput rxRFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, stats"
+attr unit s
+statistic smallNetwork.canNode2.canNodePort.canPortInput rxRFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.canNode2.canNodePort.canPortInput rxDFPayloadLatency:stats
+field count 1
+field mean 0.00054567
+field stddev nan
+field min 0.00054567
+field max 0.00054567
+field sum 0.00054567
+field sqrsum 2.977557489e-007
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, stats"
+attr unit s
+statistic smallNetwork.canNode2.canNodePort.canPortInput rxDFPayloadLatency:histogram
+field count 1
+field mean 0.00054567
+field stddev nan
+field min 0.00054567
+field max 0.00054567
+field sum 0.00054567
+field sqrsum 2.977557489e-007
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	1
+bin	0.01	0
+bin	0.02	0
+bin	0.03	0
+bin	0.04	0
+bin	0.05	0
+bin	0.06	0
+bin	0.07	0
+bin	0.08	0
+bin	0.09	0
+bin	0.1	0
+bin	0.11	0
+bin	0.12	0
+bin	0.13	0
+bin	0.14	0
+bin	0.15	0
+bin	0.16	0
+bin	0.17	0
+bin	0.18	0
+bin	0.19	0
+bin	0.2	0
+bin	0.21	0
+bin	0.22	0
+bin	0.23	0
+bin	0.24	0
+bin	0.25	0
+bin	0.26	0
+bin	0.27	0
+bin	0.28	0
+bin	0.29	0
+bin	0.3	0
+bin	0.31	0
+bin	0.32	0
+bin	0.33	0
+bin	0.34	0
+bin	0.35	0
+bin	0.36	0
+bin	0.37	0
+bin	0.38	0
+bin	0.39	0
+bin	0.4	0
+bin	0.41	0
+bin	0.42	0
+bin	0.43	0
+bin	0.44	0
+bin	0.45	0
+bin	0.46	0
+bin	0.47	0
+bin	0.48	0
+bin	0.49	0
+bin	0.5	0
+bin	0.51	0
+scalar smallNetwork.canNode2.canNodePort.canPortInput rxRF:count 0
+attr source rxRF
+attr title "complete remote frames received, count"
+statistic smallNetwork.canNode2.canNodePort.canPortInput rxRFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, stats"
+attr unit s
+statistic smallNetwork.canNode2.canNodePort.canPortInput rxRFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.canNode2.canNodePort.canPortInput rxDF:count 1
+attr source rxDF
+attr title "complete data frames received, count"
+statistic smallNetwork.canNode2.canNodePort.canPortInput rxDFLatency:stats
+field count 1
+field mean 0.000112
+field stddev nan
+field min 0.000112
+field max 0.000112
+field sum 0.000112
+field sqrsum 1.2544e-008
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, stats"
+attr unit s
+statistic smallNetwork.canNode2.canNodePort.canPortInput rxDFLatency:histogram
+field count 1
+field mean 0.000112
+field stddev nan
+field min 0.000112
+field max 0.000112
+field sum 0.000112
+field sqrsum 1.2544e-008
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	1
+bin	0.01	0
+bin	0.02	0
+bin	0.03	0
+bin	0.04	0
+bin	0.05	0
+bin	0.06	0
+bin	0.07	0
+bin	0.08	0
+bin	0.09	0
+bin	0.1	0
+bin	0.11	0
+bin	0.12	0
+bin	0.13	0
+bin	0.14	0
+bin	0.15	0
+bin	0.16	0
+bin	0.17	0
+bin	0.18	0
+bin	0.19	0
+bin	0.2	0
+bin	0.21	0
+bin	0.22	0
+bin	0.23	0
+bin	0.24	0
+bin	0.25	0
+bin	0.26	0
+bin	0.27	0
+bin	0.28	0
+bin	0.29	0
+bin	0.3	0
+bin	0.31	0
+bin	0.32	0
+bin	0.33	0
+bin	0.34	0
+bin	0.35	0
+bin	0.36	0
+bin	0.37	0
+bin	0.38	0
+bin	0.39	0
+bin	0.4	0
+bin	0.41	0
+bin	0.42	0
+bin	0.43	0
+bin	0.44	0
+bin	0.45	0
+bin	0.46	0
+bin	0.47	0
+bin	0.48	0
+bin	0.49	0
+bin	0.5	0
+bin	0.51	0
+scalar smallNetwork.canNode2.canNodePort.canPortOutput txEF:count 0
+attr source txEF
+attr title "sent errors, count"
+scalar smallNetwork.canNode2.canNodePort.canPortOutput txRF:count 0
+attr source txRF
+attr title "sent remote frames, count"
+scalar smallNetwork.canNode2.canNodePort.canPortOutput txDF:count 0
+attr source txDF
+attr title "sent data frames, count"
+scalar smallNetwork.canNode2.canNodePort.canPortOutput rxEF:count 0
+attr source rxEF
+attr title "receive errors, count"
+scalar smallNetwork.canNode2.bufferIn[0] rxPk:count 1
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, count"
+scalar smallNetwork.canNode2.bufferIn[0] rxPk:sum(packetBytes) 14
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, sum(packetBytes)"
+statistic smallNetwork.canNode2.bufferIn[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.canNode2.bufferIn[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.canNode2.bufferIn[0] txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, count"
+scalar smallNetwork.canNode2.bufferIn[0] txPk:sum(packetBytes) 14
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, sum(packetBytes)"
+scalar smallNetwork.canNode2.bufferOut rxPk:count 0
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, count"
+scalar smallNetwork.canNode2.bufferOut rxPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, sum(packetBytes)"
+statistic smallNetwork.canNode2.bufferOut size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.canNode2.bufferOut length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.canNode2.bufferOut txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, count"
+scalar smallNetwork.canNode2.bufferOut txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, sum(packetBytes)"
+scalar smallNetwork.canNode2.sourceApp[0] txRF:count 0
+attr source txRF
+attr title "source app remote frame, count"
+scalar smallNetwork.canNode2.sourceApp[0] txDF:count 0
+attr source txDF
+attr title "source app data frame, count"
+statistic smallNetwork.canNode2.sinkApp[0] rxRFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, stats"
+attr unit s
+statistic smallNetwork.canNode2.sinkApp[0] rxRFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.canNode2.sinkApp[0] rxDFPayloadLatency:stats
+field count 1
+field mean 0.00054567
+field stddev nan
+field min 0.00054567
+field max 0.00054567
+field sum 0.00054567
+field sqrsum 2.977557489e-007
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, stats"
+attr unit s
+statistic smallNetwork.canNode2.sinkApp[0] rxDFPayloadLatency:histogram
+field count 1
+field mean 0.00054567
+field stddev nan
+field min 0.00054567
+field max 0.00054567
+field sum 0.00054567
+field sqrsum 2.977557489e-007
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	1
+bin	0.01	0
+bin	0.02	0
+bin	0.03	0
+bin	0.04	0
+bin	0.05	0
+bin	0.06	0
+bin	0.07	0
+bin	0.08	0
+bin	0.09	0
+bin	0.1	0
+bin	0.11	0
+bin	0.12	0
+bin	0.13	0
+bin	0.14	0
+bin	0.15	0
+bin	0.16	0
+bin	0.17	0
+bin	0.18	0
+bin	0.19	0
+bin	0.2	0
+bin	0.21	0
+bin	0.22	0
+bin	0.23	0
+bin	0.24	0
+bin	0.25	0
+bin	0.26	0
+bin	0.27	0
+bin	0.28	0
+bin	0.29	0
+bin	0.3	0
+bin	0.31	0
+bin	0.32	0
+bin	0.33	0
+bin	0.34	0
+bin	0.35	0
+bin	0.36	0
+bin	0.37	0
+bin	0.38	0
+bin	0.39	0
+bin	0.4	0
+bin	0.41	0
+bin	0.42	0
+bin	0.43	0
+bin	0.44	0
+bin	0.45	0
+bin	0.46	0
+bin	0.47	0
+bin	0.48	0
+bin	0.49	0
+bin	0.5	0
+bin	0.51	0
+scalar smallNetwork.canNode2.sinkApp[0] rxRF:count 0
+attr source rxRF
+attr title "sink app remote frame, count"
+statistic smallNetwork.canNode2.sinkApp[0] rxRFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, stats"
+attr unit s
+statistic smallNetwork.canNode2.sinkApp[0] rxRFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.canNode2.sinkApp[0] rxDF:count 1
+attr source rxDF
+attr title "sink app data frame, count"
+statistic smallNetwork.canNode2.sinkApp[0] rxDFLatency:stats
+field count 1
+field mean 0.000112
+field stddev nan
+field min 0.000112
+field max 0.000112
+field sum 0.000112
+field sqrsum 1.2544e-008
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, stats"
+attr unit s
+statistic smallNetwork.canNode2.sinkApp[0] rxDFLatency:histogram
+field count 1
+field mean 0.000112
+field stddev nan
+field min 0.000112
+field max 0.000112
+field sum 0.000112
+field sqrsum 1.2544e-008
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	1
+bin	0.01	0
+bin	0.02	0
+bin	0.03	0
+bin	0.04	0
+bin	0.05	0
+bin	0.06	0
+bin	0.07	0
+bin	0.08	0
+bin	0.09	0
+bin	0.1	0
+bin	0.11	0
+bin	0.12	0
+bin	0.13	0
+bin	0.14	0
+bin	0.15	0
+bin	0.16	0
+bin	0.17	0
+bin	0.18	0
+bin	0.19	0
+bin	0.2	0
+bin	0.21	0
+bin	0.22	0
+bin	0.23	0
+bin	0.24	0
+bin	0.25	0
+bin	0.26	0
+bin	0.27	0
+bin	0.28	0
+bin	0.29	0
+bin	0.3	0
+bin	0.31	0
+bin	0.32	0
+bin	0.33	0
+bin	0.34	0
+bin	0.35	0
+bin	0.36	0
+bin	0.37	0
+bin	0.38	0
+bin	0.39	0
+bin	0.4	0
+bin	0.41	0
+bin	0.42	0
+bin	0.43	0
+bin	0.44	0
+bin	0.45	0
+bin	0.46	0
+bin	0.47	0
+bin	0.48	0
+bin	0.49	0
+bin	0.5	0
+bin	0.51	0
+statistic smallNetwork.canNode2.canClock clockDrift:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, stats"
+attr unit s
+statistic smallNetwork.canNode2.canClock clockDrift:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic smallNetwork.gateway1.can[0].canNodePort.canPortInput rxRFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, stats"
+attr unit s
+statistic smallNetwork.gateway1.can[0].canNodePort.canPortInput rxRFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.can[0].canNodePort.canPortInput rxDFPayloadLatency:stats
+field count 4
+field mean 0.0002785
+field stddev 0.00014330038380967
+field min 0.000112
+field max 0.000445
+field sum 0.001114
+field sqrsum 3.71854e-007
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, stats"
+attr unit s
+statistic smallNetwork.gateway1.can[0].canNodePort.canPortInput rxDFPayloadLatency:histogram
+field count 4
+field mean 0.0002785
+field stddev 0.00014330038380967
+field min 0.000112
+field max 0.000445
+field sum 0.001114
+field sqrsum 3.71854e-007
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	2e-005	0
+bin	3e-005	0
+bin	4e-005	0
+bin	5e-005	0
+bin	6e-005	0
+bin	7e-005	0
+bin	8e-005	0
+bin	9e-005	0
+bin	0.0001	0
+bin	0.00011	1
+bin	0.00012	0
+bin	0.00013	0
+bin	0.00014	0
+bin	0.00015	0
+bin	0.00016	0
+bin	0.00017	0
+bin	0.00018	0
+bin	0.00019	0
+bin	0.0002	0
+bin	0.00021	0
+bin	0.00022	1
+bin	0.00023	0
+bin	0.00024	0
+bin	0.00025	0
+bin	0.00026	0
+bin	0.00027	0
+bin	0.00028	0
+bin	0.00029	0
+bin	0.0003	0
+bin	0.00031	0
+bin	0.00032	0
+bin	0.00033	1
+bin	0.00034	0
+bin	0.00035	0
+bin	0.00036	0
+bin	0.00037	0
+bin	0.00038	0
+bin	0.00039	0
+bin	0.0004	0
+bin	0.00041	0
+bin	0.00042	0
+bin	0.00043	0
+bin	0.00044	1
+bin	0.00045	0
+bin	0.00046	0
+bin	0.00047	0
+bin	0.00048	0
+bin	0.00049	0
+bin	0.0005	0
+bin	0.00051	0
+bin	0.00052	0
+bin	0.00053	0
+scalar smallNetwork.gateway1.can[0].canNodePort.canPortInput rxRF:count 0
+attr source rxRF
+attr title "complete remote frames received, count"
+statistic smallNetwork.gateway1.can[0].canNodePort.canPortInput rxRFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, stats"
+attr unit s
+statistic smallNetwork.gateway1.can[0].canNodePort.canPortInput rxRFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway1.can[0].canNodePort.canPortInput rxDF:count 4
+attr source rxDF
+attr title "complete data frames received, count"
+statistic smallNetwork.gateway1.can[0].canNodePort.canPortInput rxDFLatency:stats
+field count 4
+field mean 0.0002785
+field stddev 0.00014330038380967
+field min 0.000112
+field max 0.000445
+field sum 0.001114
+field sqrsum 3.71854e-007
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, stats"
+attr unit s
+statistic smallNetwork.gateway1.can[0].canNodePort.canPortInput rxDFLatency:histogram
+field count 4
+field mean 0.0002785
+field stddev 0.00014330038380967
+field min 0.000112
+field max 0.000445
+field sum 0.001114
+field sqrsum 3.71854e-007
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, histogram"
+attr unit s
+bin	-inf	0
+bin	2e-005	0
+bin	3e-005	0
+bin	4e-005	0
+bin	5e-005	0
+bin	6e-005	0
+bin	7e-005	0
+bin	8e-005	0
+bin	9e-005	0
+bin	0.0001	0
+bin	0.00011	1
+bin	0.00012	0
+bin	0.00013	0
+bin	0.00014	0
+bin	0.00015	0
+bin	0.00016	0
+bin	0.00017	0
+bin	0.00018	0
+bin	0.00019	0
+bin	0.0002	0
+bin	0.00021	0
+bin	0.00022	1
+bin	0.00023	0
+bin	0.00024	0
+bin	0.00025	0
+bin	0.00026	0
+bin	0.00027	0
+bin	0.00028	0
+bin	0.00029	0
+bin	0.0003	0
+bin	0.00031	0
+bin	0.00032	0
+bin	0.00033	1
+bin	0.00034	0
+bin	0.00035	0
+bin	0.00036	0
+bin	0.00037	0
+bin	0.00038	0
+bin	0.00039	0
+bin	0.0004	0
+bin	0.00041	0
+bin	0.00042	0
+bin	0.00043	0
+bin	0.00044	1
+bin	0.00045	0
+bin	0.00046	0
+bin	0.00047	0
+bin	0.00048	0
+bin	0.00049	0
+bin	0.0005	0
+bin	0.00051	0
+bin	0.00052	0
+bin	0.00053	0
+scalar smallNetwork.gateway1.can[0].canNodePort.canPortOutput txEF:count 0
+attr source txEF
+attr title "sent errors, count"
+scalar smallNetwork.gateway1.can[0].canNodePort.canPortOutput txRF:count 0
+attr source txRF
+attr title "sent remote frames, count"
+scalar smallNetwork.gateway1.can[0].canNodePort.canPortOutput txDF:count 0
+attr source txDF
+attr title "sent data frames, count"
+scalar smallNetwork.gateway1.can[0].canNodePort.canPortOutput rxEF:count 0
+attr source rxEF
+attr title "receive errors, count"
+scalar smallNetwork.gateway1.can[0].bufferIn[0] rxPk:count 4
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, count"
+scalar smallNetwork.gateway1.can[0].bufferIn[0] rxPk:sum(packetBytes) 56
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, sum(packetBytes)"
+statistic smallNetwork.gateway1.can[0].bufferIn[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway1.can[0].bufferIn[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.gateway1.can[0].bufferIn[0] txPk:count 4
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, count"
+scalar smallNetwork.gateway1.can[0].bufferIn[0] txPk:sum(packetBytes) 56
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, sum(packetBytes)"
+scalar smallNetwork.gateway1.can[0].bufferOut rxPk:count 0
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, count"
+scalar smallNetwork.gateway1.can[0].bufferOut rxPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, sum(packetBytes)"
+statistic smallNetwork.gateway1.can[0].bufferOut size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway1.can[0].bufferOut length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.gateway1.can[0].bufferOut txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, count"
+scalar smallNetwork.gateway1.can[0].bufferOut txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, sum(packetBytes)"
+scalar smallNetwork.gateway1.can[0].sourceApp[0] txRF:count 0
+attr source txRF
+attr title "source app remote frame, count"
+scalar smallNetwork.gateway1.can[0].sourceApp[0] txDF:count 0
+attr source txDF
+attr title "source app data frame, count"
+statistic smallNetwork.gateway1.can[0].sinkApp[0] rxRFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, stats"
+attr unit s
+statistic smallNetwork.gateway1.can[0].sinkApp[0] rxRFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.can[0].sinkApp[0] rxDFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, stats"
+attr unit s
+statistic smallNetwork.gateway1.can[0].sinkApp[0] rxDFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway1.can[0].sinkApp[0] rxRF:count 0
+attr source rxRF
+attr title "sink app remote frame, count"
+statistic smallNetwork.gateway1.can[0].sinkApp[0] rxRFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, stats"
+attr unit s
+statistic smallNetwork.gateway1.can[0].sinkApp[0] rxRFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway1.can[0].sinkApp[0] rxDF:count 0
+attr source rxDF
+attr title "sink app data frame, count"
+statistic smallNetwork.gateway1.can[0].sinkApp[0] rxDFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, stats"
+attr unit s
+statistic smallNetwork.gateway1.can[0].sinkApp[0] rxDFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.can[0].canClock clockDrift:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, stats"
+attr unit s
+statistic smallNetwork.gateway1.can[0].canClock clockDrift:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc9QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc9QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc9QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc9QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc8QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc8QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc8QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc8QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc7QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc7QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc7QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc7QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc6QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc6QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc6QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc6QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc5QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc5QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc5QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc5QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc4QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc4QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc4QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc4QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc3QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc3QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc3QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc3QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc2QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc2QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc2QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc2QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc1QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc1QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc1QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc1QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc0QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc0QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper rc0QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc0QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q7QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q7QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q6QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q6QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q5QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q5QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q4QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q4QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q3QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q3QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q2QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q2QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q1QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q1QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q0QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper q0QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper avbAQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBA-Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper avbAQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBA-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper avbBQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBB-Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper avbBQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBB-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper beQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper beQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper ttQueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "TT-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper pcfQueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "PCF-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].shaper pcfQueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, stats"
+attr unit B
+scalar smallNetwork.gateway1.tte[0].phy[0].inControl dropped:count 0
+attr interpolationmode none
+attr source droppedPk
+attr title "Unconfigured CT dropped, count"
+attr unit packets
+statistic smallNetwork.gateway1.tte[0].phy[0].inControl rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].phy[0].inControl rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway1.tte[0].phy[0].mac "simulated time" 0.005166221115
+scalar smallNetwork.gateway1.tte[0].phy[0].mac full-duplex 1
+scalar smallNetwork.gateway1.tte[0].phy[0].mac "frames/sec sent" 387.13015867498
+scalar smallNetwork.gateway1.tte[0].phy[0].mac "frames/sec rcvd" 0
+scalar smallNetwork.gateway1.tte[0].phy[0].mac "bits/sec sent" 204404.72378039
+scalar smallNetwork.gateway1.tte[0].phy[0].mac "bits/sec rcvd" 0
+scalar smallNetwork.gateway1.tte[0].phy[0].mac "rx channel idle (%)" 100
+scalar smallNetwork.gateway1.tte[0].phy[0].mac "rx channel utilization (%)" 0
+scalar smallNetwork.gateway1.tte[0].phy[0].mac rxPkFromHL:count 2
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac rxPkFromHL:sum(packetBytes) 132
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac txPk:count 2
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac txPk:sum(packetBytes) 132
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar smallNetwork.gateway1.tte[0].phy[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar smallNetwork.gateway1.tte[0].avbCTC dropped:count 0
+attr source droppedPk
+attr title "Packets Dropped, count"
+scalar smallNetwork.gateway1.tte[0].avbCTC rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+scalar smallNetwork.gateway1.tte[0].avbCTC rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].avbCTC latency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].avbCTC latency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway1.tte[0].avbABuffer[0] dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].avbABuffer[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].avbABuffer[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].avbABuffer[0] rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.tte[0].avbABuffer[0] rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].avbABuffer[0] rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.tte[0].avbABuffer[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].avbABuffer[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].avbABuffer[0] txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].avbABuffer[0] txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].avbABuffer[0] txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.tte[0].avbABuffer[0] txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].avbABuffer[0] txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway1.tte[0].avbBBuffer[0] dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].avbBBuffer[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].avbBBuffer[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].avbBBuffer[0] rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.tte[0].avbBBuffer[0] rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].avbBBuffer[0] rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.tte[0].avbBBuffer[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].avbBBuffer[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].avbBBuffer[0] txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].avbBBuffer[0] txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].avbBBuffer[0] txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.tte[0].avbBBuffer[0] txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].avbBBuffer[0] txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway1.tte[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar smallNetwork.gateway1.tte[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar smallNetwork.gateway1.tte[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar smallNetwork.gateway1.tte[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar smallNetwork.gateway1.tte[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar smallNetwork.gateway1.tte[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar smallNetwork.gateway1.tte[0].scheduler.period[0] numberOfCycles:count 2
+attr interpolationmode none
+attr source newCycle
+attr title "Number of cycle, count"
+scalar smallNetwork.gateway1.tte[0].bgIn dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].bgIn rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].bgIn rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].bgIn rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.tte[0].bgIn rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].bgIn rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway1.tte[0].bgIn txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].bgIn txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].bgIn txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.tte[0].bgIn txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].bgIn txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway1.tte[0].bgOut dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].bgOut rxPk:count 2
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].bgOut rxBytes:sum(packetBytes) 132
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].bgOut rxBytes:histogram(packetBytes)
+field count 2
+field mean 66
+field stddev 2.8284271247462
+field min 64
+field max 68
+field sum 132
+field sqrsum 8720
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	63	0
+bin	64	1
+bin	65	0
+bin	66	0
+bin	67	0
+bin	68	1
+bin	69	0
+statistic smallNetwork.gateway1.tte[0].bgOut rxLatency:stats
+field count 2
+field mean 4e-005
+field stddev 0
+field min 4e-005
+field max 4e-005
+field sum 8e-005
+field sqrsum 3.2e-009
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].bgOut rxLatency:histogram
+field count 2
+field mean 4e-005
+field stddev 0
+field min 4e-005
+field max 4e-005
+field sum 8e-005
+field sqrsum 3.2e-009
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	2
+bin	0.01	0
+bin	0.02	0
+bin	0.03	0
+bin	0.04	0
+bin	0.05	0
+bin	0.06	0
+bin	0.07	0
+bin	0.08	0
+bin	0.09	0
+bin	0.1	0
+bin	0.11	0
+bin	0.12	0
+bin	0.13	0
+bin	0.14	0
+bin	0.15	0
+bin	0.16	0
+bin	0.17	0
+bin	0.18	0
+bin	0.19	0
+bin	0.2	0
+bin	0.21	0
+bin	0.22	0
+bin	0.23	0
+bin	0.24	0
+bin	0.25	0
+bin	0.26	0
+bin	0.27	0
+bin	0.28	0
+bin	0.29	0
+bin	0.3	0
+bin	0.31	0
+bin	0.32	0
+bin	0.33	0
+bin	0.34	0
+bin	0.35	0
+bin	0.36	0
+bin	0.37	0
+bin	0.38	0
+bin	0.39	0
+bin	0.4	0
+bin	0.41	0
+bin	0.42	0
+bin	0.43	0
+bin	0.44	0
+bin	0.45	0
+bin	0.46	0
+bin	0.47	0
+bin	0.48	0
+bin	0.49	0
+bin	0.5	0
+bin	0.51	0
+scalar smallNetwork.gateway1.tte[0].bgOut txPk:count 2
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].bgOut txBytes:sum(packetBytes) 132
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].bgOut txBytes:histogram(packetBytes)
+field count 2
+field mean 66
+field stddev 2.8284271247462
+field min 64
+field max 68
+field sum 132
+field sqrsum 8720
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	63	0
+bin	64	1
+bin	65	0
+bin	66	0
+bin	67	0
+bin	68	1
+bin	69	0
+statistic smallNetwork.gateway1.tte[0].bgOut txLatency:stats
+field count 2
+field mean 4e-005
+field stddev 0
+field min 4e-005
+field max 4e-005
+field sum 8e-005
+field sqrsum 3.2e-009
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].bgOut txLatency:histogram
+field count 2
+field mean 4e-005
+field stddev 0
+field min 4e-005
+field max 4e-005
+field sum 8e-005
+field sqrsum 3.2e-009
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	2
+bin	0.01	0
+bin	0.02	0
+bin	0.03	0
+bin	0.04	0
+bin	0.05	0
+bin	0.06	0
+bin	0.07	0
+bin	0.08	0
+bin	0.09	0
+bin	0.1	0
+bin	0.11	0
+bin	0.12	0
+bin	0.13	0
+bin	0.14	0
+bin	0.15	0
+bin	0.16	0
+bin	0.17	0
+bin	0.18	0
+bin	0.19	0
+bin	0.2	0
+bin	0.21	0
+bin	0.22	0
+bin	0.23	0
+bin	0.24	0
+bin	0.25	0
+bin	0.26	0
+bin	0.27	0
+bin	0.28	0
+bin	0.29	0
+bin	0.3	0
+bin	0.31	0
+bin	0.32	0
+bin	0.33	0
+bin	0.34	0
+bin	0.35	0
+bin	0.36	0
+bin	0.37	0
+bin	0.38	0
+bin	0.39	0
+bin	0.4	0
+bin	0.41	0
+bin	0.42	0
+bin	0.43	0
+bin	0.44	0
+bin	0.45	0
+bin	0.46	0
+bin	0.47	0
+bin	0.48	0
+bin	0.49	0
+bin	0.5	0
+bin	0.51	0
+scalar smallNetwork.gateway1.tte[0].TTvlinks[0] dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].TTvlinks[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].TTvlinks[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].TTvlinks[0] rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.tte[0].TTvlinks[0] rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].TTvlinks[0] rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.tte[0].TTvlinks[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].TTvlinks[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].TTvlinks[0] txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.gateway1.tte[0].TTvlinks[0] txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].TTvlinks[0] txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway1.tte[0].TTvlinks[0] txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].TTvlinks[0] txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway1.tte[0].TTvlinks_ctc[0] dropped:count 0
+attr source droppedPk
+attr title "Packets Dropped, count"
+scalar smallNetwork.gateway1.tte[0].TTvlinks_ctc[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+scalar smallNetwork.gateway1.tte[0].TTvlinks_ctc[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway1.tte[0].TTvlinks_ctc[0] latency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, stats"
+attr unit s
+statistic smallNetwork.gateway1.tte[0].TTvlinks_ctc[0] latency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway1.gateway.router.out[0].channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway1.gateway.router.out[0].channel messages:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway1.gateway.router.out[1].channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway1.gateway.router.out[1].channel messages:count 3
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway1.gateway.transform[0].out.channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway1.gateway.transform[0].out.channel messages:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway1.gateway.transform[1].out.channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway1.gateway.transform[1].out.channel messages:count 2
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway1.gateway.buffering[0].out.channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway1.gateway.buffering[0].out.channel messages:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway1.gateway.buffering[1].out.channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway1.gateway.buffering[1].out.channel messages:count 2
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway1.gateway.router dropped:count 1
+attr interpolationmode none
+attr source droppedFramesSignal
+attr title "dropped frames, count"
+scalar smallNetwork.gateway1.gateway.buffering[0] pool0MessageSize:count 0
+attr interpolationmode linear
+attr title "pool size (pool0MessageSize)"
+scalar smallNetwork.gateway1.gateway.buffering[0] pool0MessageSize:sum 0
+attr interpolationmode linear
+attr title "pool size (pool0MessageSize)"
+scalar smallNetwork.gateway1.gateway.buffering[0] pool0MessageSize:mean nan
+attr interpolationmode linear
+attr title "pool size (pool0MessageSize)"
+scalar smallNetwork.gateway1.gateway.buffering[0] pool0MessageSize:min nan
+attr interpolationmode linear
+attr title "pool size (pool0MessageSize)"
+scalar smallNetwork.gateway1.gateway.buffering[0] pool0MessageSize:max nan
+attr interpolationmode linear
+attr title "pool size (pool0MessageSize)"
+scalar smallNetwork.gateway1.gateway.buffering[0] pool0HoldUpTime:mean nan
+attr interpolationmode sample-hold
+attr title "Pool-Hold-Up-Time (pool0HoldUpTime)"
+scalar smallNetwork.gateway1.gateway.buffering[0] pool0HoldUpTime:max nan
+attr interpolationmode sample-hold
+attr title "Pool-Hold-Up-Time (pool0HoldUpTime)"
+scalar smallNetwork.gateway1.gateway.buffering[0] pool0HoldUpTime:min nan
+attr interpolationmode sample-hold
+attr title "Pool-Hold-Up-Time (pool0HoldUpTime)"
+scalar smallNetwork.gateway1.gateway.buffering[1] pool0MessageSize:count 1
+attr interpolationmode linear
+attr title "pool size (pool0MessageSize)"
+scalar smallNetwork.gateway1.gateway.buffering[1] pool0MessageSize:sum 2
+attr interpolationmode linear
+attr title "pool size (pool0MessageSize)"
+scalar smallNetwork.gateway1.gateway.buffering[1] pool0MessageSize:mean 2
+attr interpolationmode linear
+attr title "pool size (pool0MessageSize)"
+scalar smallNetwork.gateway1.gateway.buffering[1] pool0MessageSize:min 2
+attr interpolationmode linear
+attr title "pool size (pool0MessageSize)"
+scalar smallNetwork.gateway1.gateway.buffering[1] pool0MessageSize:max 2
+attr interpolationmode linear
+attr title "pool size (pool0MessageSize)"
+scalar smallNetwork.gateway1.gateway.buffering[1] pool0HoldUpTime:mean 0.0049445
+attr interpolationmode sample-hold
+attr title "Pool-Hold-Up-Time (pool0HoldUpTime)"
+scalar smallNetwork.gateway1.gateway.buffering[1] pool0HoldUpTime:max 0.005
+attr interpolationmode sample-hold
+attr title "Pool-Hold-Up-Time (pool0HoldUpTime)"
+scalar smallNetwork.gateway1.gateway.buffering[1] pool0HoldUpTime:min 0.004889
+attr interpolationmode sample-hold
+attr title "Pool-Hold-Up-Time (pool0HoldUpTime)"
+statistic smallNetwork.gateway2.can[0].canNodePort.canPortInput rxRFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, stats"
+attr unit s
+statistic smallNetwork.gateway2.can[0].canNodePort.canPortInput rxRFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.can[0].canNodePort.canPortInput rxDFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, stats"
+attr unit s
+statistic smallNetwork.gateway2.can[0].canNodePort.canPortInput rxDFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.can[0].canNodePort.canPortInput rxRF:count 0
+attr source rxRF
+attr title "complete remote frames received, count"
+statistic smallNetwork.gateway2.can[0].canNodePort.canPortInput rxRFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, stats"
+attr unit s
+statistic smallNetwork.gateway2.can[0].canNodePort.canPortInput rxRFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.can[0].canNodePort.canPortInput rxDF:count 0
+attr source rxDF
+attr title "complete data frames received, count"
+statistic smallNetwork.gateway2.can[0].canNodePort.canPortInput rxDFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, stats"
+attr unit s
+statistic smallNetwork.gateway2.can[0].canNodePort.canPortInput rxDFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.can[0].canNodePort.canPortOutput txEF:count 0
+attr source txEF
+attr title "sent errors, count"
+scalar smallNetwork.gateway2.can[0].canNodePort.canPortOutput txRF:count 0
+attr source txRF
+attr title "sent remote frames, count"
+scalar smallNetwork.gateway2.can[0].canNodePort.canPortOutput txDF:count 1
+attr source txDF
+attr title "sent data frames, count"
+scalar smallNetwork.gateway2.can[0].canNodePort.canPortOutput rxEF:count 0
+attr source rxEF
+attr title "receive errors, count"
+scalar smallNetwork.gateway2.can[0].bufferIn[0] rxPk:count 0
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, count"
+scalar smallNetwork.gateway2.can[0].bufferIn[0] rxPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, sum(packetBytes)"
+statistic smallNetwork.gateway2.can[0].bufferIn[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway2.can[0].bufferIn[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.gateway2.can[0].bufferIn[0] txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, count"
+scalar smallNetwork.gateway2.can[0].bufferIn[0] txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, sum(packetBytes)"
+scalar smallNetwork.gateway2.can[0].bufferOut rxPk:count 2
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, count"
+scalar smallNetwork.gateway2.can[0].bufferOut rxPk:sum(packetBytes) 28
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, sum(packetBytes)"
+statistic smallNetwork.gateway2.can[0].bufferOut size:stats
+field count 2
+field mean 7
+field stddev 9.8994949366117
+field min 0
+field max 14
+field sum 14
+field sqrsum 196
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway2.can[0].bufferOut length:stats
+field count 2
+field mean 0.5
+field stddev 0.70710678118655
+field min 0
+field max 1
+field sum 1
+field sqrsum 1
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.gateway2.can[0].bufferOut txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, count"
+scalar smallNetwork.gateway2.can[0].bufferOut txPk:sum(packetBytes) 14
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, sum(packetBytes)"
+scalar smallNetwork.gateway2.can[0].sourceApp[0] txRF:count 0
+attr source txRF
+attr title "source app remote frame, count"
+scalar smallNetwork.gateway2.can[0].sourceApp[0] txDF:count 0
+attr source txDF
+attr title "source app data frame, count"
+statistic smallNetwork.gateway2.can[0].sinkApp[0] rxRFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, stats"
+attr unit s
+statistic smallNetwork.gateway2.can[0].sinkApp[0] rxRFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRFPayload)
+attr title "End-to-end latency of remote frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.can[0].sinkApp[0] rxDFPayloadLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, stats"
+attr unit s
+statistic smallNetwork.gateway2.can[0].sinkApp[0] rxDFPayloadLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.can[0].sinkApp[0] rxRF:count 0
+attr source rxRF
+attr title "sink app remote frame, count"
+statistic smallNetwork.gateway2.can[0].sinkApp[0] rxRFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, stats"
+attr unit s
+statistic smallNetwork.gateway2.can[0].sinkApp[0] rxRFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxRF)
+attr title "End-to-end latency of remote frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.can[0].sinkApp[0] rxDF:count 0
+attr source rxDF
+attr title "sink app data frame, count"
+statistic smallNetwork.gateway2.can[0].sinkApp[0] rxDFLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, stats"
+attr unit s
+statistic smallNetwork.gateway2.can[0].sinkApp[0] rxDFLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.can[0].canClock clockDrift:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, stats"
+attr unit s
+statistic smallNetwork.gateway2.can[0].canClock clockDrift:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc9QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc9QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc9QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc9QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc8QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc8QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc8QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc8QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc7QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc7QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc7QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc7QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc6QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc6QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc6QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc6QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc5QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc5QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc5QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc5QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc4QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc4QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc4QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc4QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc3QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc3QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc3QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc3QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc2QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc2QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc2QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc2QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc1QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc1QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc1QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc1QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc0QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc0QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper rc0QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc0QueueLength)"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q7QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q7QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q6QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q6QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q5QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q5QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q4QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q4QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q3QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q3QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q2QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q2QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q1QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q1QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q0QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper q0QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper avbAQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBA-Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper avbAQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBA-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper avbBQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBB-Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper avbBQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBB-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper beQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper beQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper ttQueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "TT-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper pcfQueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "PCF-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].shaper pcfQueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, stats"
+attr unit B
+scalar smallNetwork.gateway2.tte[0].phy[0].inControl dropped:count 0
+attr interpolationmode none
+attr source droppedPk
+attr title "Unconfigured CT dropped, count"
+attr unit packets
+statistic smallNetwork.gateway2.tte[0].phy[0].inControl rxLatency:stats
+field count 1
+field mean 5.967e-005
+field stddev nan
+field min 5.967e-005
+field max 5.967e-005
+field sum 5.967e-005
+field sqrsum 3.5605089e-009
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].phy[0].inControl rxLatency:histogram
+field count 1
+field mean 5.967e-005
+field stddev nan
+field min 5.967e-005
+field max 5.967e-005
+field sum 5.967e-005
+field sqrsum 3.5605089e-009
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	1
+bin	0.01	0
+bin	0.02	0
+bin	0.03	0
+bin	0.04	0
+bin	0.05	0
+bin	0.06	0
+bin	0.07	0
+bin	0.08	0
+bin	0.09	0
+bin	0.1	0
+bin	0.11	0
+bin	0.12	0
+bin	0.13	0
+bin	0.14	0
+bin	0.15	0
+bin	0.16	0
+bin	0.17	0
+bin	0.18	0
+bin	0.19	0
+bin	0.2	0
+bin	0.21	0
+bin	0.22	0
+bin	0.23	0
+bin	0.24	0
+bin	0.25	0
+bin	0.26	0
+bin	0.27	0
+bin	0.28	0
+bin	0.29	0
+bin	0.3	0
+bin	0.31	0
+bin	0.32	0
+bin	0.33	0
+bin	0.34	0
+bin	0.35	0
+bin	0.36	0
+bin	0.37	0
+bin	0.38	0
+bin	0.39	0
+bin	0.4	0
+bin	0.41	0
+bin	0.42	0
+bin	0.43	0
+bin	0.44	0
+bin	0.45	0
+bin	0.46	0
+bin	0.47	0
+bin	0.48	0
+bin	0.49	0
+bin	0.5	0
+bin	0.51	0
+scalar smallNetwork.gateway2.tte[0].phy[0].mac "simulated time" 0.005166221115
+scalar smallNetwork.gateway2.tte[0].phy[0].mac full-duplex 1
+scalar smallNetwork.gateway2.tte[0].phy[0].mac "frames/sec sent" 0
+scalar smallNetwork.gateway2.tte[0].phy[0].mac "frames/sec rcvd" 193.56507933749
+scalar smallNetwork.gateway2.tte[0].phy[0].mac "bits/sec sent" 0
+scalar smallNetwork.gateway2.tte[0].phy[0].mac "bits/sec rcvd" 99105.320620796
+scalar smallNetwork.gateway2.tte[0].phy[0].mac "rx channel idle (%)" 99.888506514302
+scalar smallNetwork.gateway2.tte[0].phy[0].mac "rx channel utilization (%)" 0.1114934856984
+scalar smallNetwork.gateway2.tte[0].phy[0].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac rxPkOk:count 1
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac rxPkOk:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac passedUpPk:count 1
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar smallNetwork.gateway2.tte[0].phy[0].mac passedUpPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar smallNetwork.gateway2.tte[0].avbCTC dropped:count 0
+attr source droppedPk
+attr title "Packets Dropped, count"
+scalar smallNetwork.gateway2.tte[0].avbCTC rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+scalar smallNetwork.gateway2.tte[0].avbCTC rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].avbCTC latency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].avbCTC latency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.tte[0].avbABuffer[0] dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].avbABuffer[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].avbABuffer[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].avbABuffer[0] rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.tte[0].avbABuffer[0] rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].avbABuffer[0] rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.tte[0].avbABuffer[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].avbABuffer[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].avbABuffer[0] txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].avbABuffer[0] txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].avbABuffer[0] txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.tte[0].avbABuffer[0] txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].avbABuffer[0] txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.tte[0].avbBBuffer[0] dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].avbBBuffer[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].avbBBuffer[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].avbBBuffer[0] rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.tte[0].avbBBuffer[0] rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].avbBBuffer[0] rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.tte[0].avbBBuffer[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].avbBBuffer[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].avbBBuffer[0] txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].avbBBuffer[0] txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].avbBBuffer[0] txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.tte[0].avbBBuffer[0] txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].avbBBuffer[0] txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.tte[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar smallNetwork.gateway2.tte[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar smallNetwork.gateway2.tte[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar smallNetwork.gateway2.tte[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar smallNetwork.gateway2.tte[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar smallNetwork.gateway2.tte[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar smallNetwork.gateway2.tte[0].scheduler.period[0] numberOfCycles:count 2
+attr interpolationmode none
+attr source newCycle
+attr title "Number of cycle, count"
+scalar smallNetwork.gateway2.tte[0].bgIn dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].bgIn rxPk:count 1
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].bgIn rxBytes:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].bgIn rxBytes:histogram(packetBytes)
+field count 1
+field mean 64
+field stddev nan
+field min 64
+field max 64
+field sum 64
+field sqrsum 4096
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	63	0
+bin	64	1
+bin	65	0
+statistic smallNetwork.gateway2.tte[0].bgIn rxLatency:stats
+field count 1
+field mean 5.967e-005
+field stddev nan
+field min 5.967e-005
+field max 5.967e-005
+field sum 5.967e-005
+field sqrsum 3.5605089e-009
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].bgIn rxLatency:histogram
+field count 1
+field mean 5.967e-005
+field stddev nan
+field min 5.967e-005
+field max 5.967e-005
+field sum 5.967e-005
+field sqrsum 3.5605089e-009
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	1
+bin	0.01	0
+bin	0.02	0
+bin	0.03	0
+bin	0.04	0
+bin	0.05	0
+bin	0.06	0
+bin	0.07	0
+bin	0.08	0
+bin	0.09	0
+bin	0.1	0
+bin	0.11	0
+bin	0.12	0
+bin	0.13	0
+bin	0.14	0
+bin	0.15	0
+bin	0.16	0
+bin	0.17	0
+bin	0.18	0
+bin	0.19	0
+bin	0.2	0
+bin	0.21	0
+bin	0.22	0
+bin	0.23	0
+bin	0.24	0
+bin	0.25	0
+bin	0.26	0
+bin	0.27	0
+bin	0.28	0
+bin	0.29	0
+bin	0.3	0
+bin	0.31	0
+bin	0.32	0
+bin	0.33	0
+bin	0.34	0
+bin	0.35	0
+bin	0.36	0
+bin	0.37	0
+bin	0.38	0
+bin	0.39	0
+bin	0.4	0
+bin	0.41	0
+bin	0.42	0
+bin	0.43	0
+bin	0.44	0
+bin	0.45	0
+bin	0.46	0
+bin	0.47	0
+bin	0.48	0
+bin	0.49	0
+bin	0.5	0
+bin	0.51	0
+scalar smallNetwork.gateway2.tte[0].bgIn txPk:count 1
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].bgIn txBytes:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].bgIn txBytes:histogram(packetBytes)
+field count 1
+field mean 64
+field stddev nan
+field min 64
+field max 64
+field sum 64
+field sqrsum 4096
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	63	0
+bin	64	1
+bin	65	0
+statistic smallNetwork.gateway2.tte[0].bgIn txLatency:stats
+field count 1
+field mean 5.967e-005
+field stddev nan
+field min 5.967e-005
+field max 5.967e-005
+field sum 5.967e-005
+field sqrsum 3.5605089e-009
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].bgIn txLatency:histogram
+field count 1
+field mean 5.967e-005
+field stddev nan
+field min 5.967e-005
+field max 5.967e-005
+field sum 5.967e-005
+field sqrsum 3.5605089e-009
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	1
+bin	0.01	0
+bin	0.02	0
+bin	0.03	0
+bin	0.04	0
+bin	0.05	0
+bin	0.06	0
+bin	0.07	0
+bin	0.08	0
+bin	0.09	0
+bin	0.1	0
+bin	0.11	0
+bin	0.12	0
+bin	0.13	0
+bin	0.14	0
+bin	0.15	0
+bin	0.16	0
+bin	0.17	0
+bin	0.18	0
+bin	0.19	0
+bin	0.2	0
+bin	0.21	0
+bin	0.22	0
+bin	0.23	0
+bin	0.24	0
+bin	0.25	0
+bin	0.26	0
+bin	0.27	0
+bin	0.28	0
+bin	0.29	0
+bin	0.3	0
+bin	0.31	0
+bin	0.32	0
+bin	0.33	0
+bin	0.34	0
+bin	0.35	0
+bin	0.36	0
+bin	0.37	0
+bin	0.38	0
+bin	0.39	0
+bin	0.4	0
+bin	0.41	0
+bin	0.42	0
+bin	0.43	0
+bin	0.44	0
+bin	0.45	0
+bin	0.46	0
+bin	0.47	0
+bin	0.48	0
+bin	0.49	0
+bin	0.5	0
+bin	0.51	0
+scalar smallNetwork.gateway2.tte[0].bgOut dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].bgOut rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].bgOut rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].bgOut rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.tte[0].bgOut rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].bgOut rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.tte[0].bgOut txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].bgOut txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].bgOut txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.tte[0].bgOut txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].bgOut txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.tte[0].TTvlinks[0] dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].TTvlinks[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].TTvlinks[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].TTvlinks[0] rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.tte[0].TTvlinks[0] rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].TTvlinks[0] rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.tte[0].TTvlinks[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].TTvlinks[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].TTvlinks[0] txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.gateway2.tte[0].TTvlinks[0] txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].TTvlinks[0] txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.gateway2.tte[0].TTvlinks[0] txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].TTvlinks[0] txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.tte[0].TTvlinks_ctc[0] dropped:count 0
+attr source droppedPk
+attr title "Packets Dropped, count"
+scalar smallNetwork.gateway2.tte[0].TTvlinks_ctc[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+scalar smallNetwork.gateway2.tte[0].TTvlinks_ctc[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.gateway2.tte[0].TTvlinks_ctc[0] latency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, stats"
+attr unit s
+statistic smallNetwork.gateway2.tte[0].TTvlinks_ctc[0] latency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.gateway2.gateway.router.out[0].channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway2.gateway.router.out[0].channel messages:count 1
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway2.gateway.router.out[1].channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway2.gateway.router.out[1].channel messages:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway2.gateway.transform[0].out.channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway2.gateway.transform[0].out.channel messages:count 1
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway2.gateway.transform[1].out.channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway2.gateway.transform[1].out.channel messages:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway2.gateway.buffering[0].out.channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway2.gateway.buffering[0].out.channel messages:count 1
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway2.gateway.buffering[1].out.channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.gateway2.gateway.buffering[1].out.channel messages:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.gateway2.gateway.router dropped:count 0
+attr interpolationmode none
+attr source droppedFramesSignal
+attr title "dropped frames, count"
+scalar smallNetwork.switch.beswitch.ifOut[0].channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.switch.beswitch.ifOut[0].channel messages:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.switch.beswitch.ifOut[1].channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.switch.beswitch.ifOut[1].channel messages:count 2
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.switch.phy[0].upperLayerOut.channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.switch.phy[0].upperLayerOut.channel messages:count 2
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.switch.phy[1].upperLayerOut.channel messagesDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar smallNetwork.switch.phy[1].upperLayerOut.channel messages:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar smallNetwork.switch.beswitch "number of received BPDUs from STP module" 0
+scalar smallNetwork.switch.beswitch "number of received frames from network (including BPDUs)" 2
+scalar smallNetwork.switch.beswitch "number of dropped frames (including BPDUs)" 0
+scalar smallNetwork.switch.beswitch "number of delivered BPDUs to the STP module" 0
+scalar smallNetwork.switch.beswitch "number of dispatched BPDU frames to the network" 0
+scalar smallNetwork.switch.beswitch "number of dispatched non-BDPU frames to the network" 2
+statistic smallNetwork.switch.phy[0].shaper rc9QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc9QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper rc9QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc9QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper rc8QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc8QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper rc8QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc8QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper rc7QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc7QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper rc7QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc7QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper rc6QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc6QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper rc6QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc6QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper rc5QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc5QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper rc5QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc5QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper rc4QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc4QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper rc4QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc4QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper rc3QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc3QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper rc3QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc3QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper rc2QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc2QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper rc2QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc2QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper rc1QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc1QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper rc1QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc1QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper rc0QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc0QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper rc0QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc0QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper q7QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper q7QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+statistic smallNetwork.switch.phy[0].shaper q6QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper q6QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+statistic smallNetwork.switch.phy[0].shaper q5QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper q5QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+statistic smallNetwork.switch.phy[0].shaper q4QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper q4QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+statistic smallNetwork.switch.phy[0].shaper q3QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper q3QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+statistic smallNetwork.switch.phy[0].shaper q2QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper q2QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+statistic smallNetwork.switch.phy[0].shaper q1QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper q1QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+statistic smallNetwork.switch.phy[0].shaper q0QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper q0QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+statistic smallNetwork.switch.phy[0].shaper avbAQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBA-Queue Size, stats"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper avbAQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBA-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper avbBQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBB-Queue Size, stats"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper avbBQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBB-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper beQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper beQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, stats"
+attr unit B
+statistic smallNetwork.switch.phy[0].shaper ttQueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "TT-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper pcfQueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "PCF-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.switch.phy[0].shaper pcfQueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, stats"
+attr unit B
+scalar smallNetwork.switch.phy[0].inControl dropped:count 0
+attr interpolationmode none
+attr source droppedPk
+attr title "Unconfigured CT dropped, count"
+attr unit packets
+statistic smallNetwork.switch.phy[0].inControl rxLatency:stats
+field count 2
+field mean 4.602e-005
+field stddev 2.2627416998103e-007
+field min 4.586e-005
+field max 4.618e-005
+field sum 9.204e-005
+field sqrsum 4.235732e-009
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.switch.phy[0].inControl rxLatency:histogram
+field count 2
+field mean 4.602e-005
+field stddev 2.2627416998103e-007
+field min 4.586e-005
+field max 4.618e-005
+field sum 9.204e-005
+field sqrsum 4.235732e-009
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	4.577e-005	0
+bin	4.578e-005	0
+bin	4.579e-005	0
+bin	4.58e-005	0
+bin	4.581e-005	0
+bin	4.582e-005	0
+bin	4.583e-005	0
+bin	4.584e-005	0
+bin	4.585e-005	1
+bin	4.586e-005	0
+bin	4.587e-005	0
+bin	4.588e-005	0
+bin	4.589e-005	0
+bin	4.59e-005	0
+bin	4.591e-005	0
+bin	4.592e-005	0
+bin	4.593e-005	0
+bin	4.594e-005	0
+bin	4.595e-005	0
+bin	4.596e-005	0
+bin	4.597e-005	0
+bin	4.598e-005	0
+bin	4.599e-005	0
+bin	4.6e-005	0
+bin	4.601e-005	0
+bin	4.602e-005	0
+bin	4.603e-005	0
+bin	4.604e-005	0
+bin	4.605e-005	0
+bin	4.606e-005	0
+bin	4.607e-005	0
+bin	4.608e-005	0
+bin	4.609e-005	0
+bin	4.61e-005	0
+bin	4.611e-005	0
+bin	4.612e-005	0
+bin	4.613e-005	0
+bin	4.614e-005	0
+bin	4.615e-005	0
+bin	4.616e-005	0
+bin	4.617e-005	1
+bin	4.618e-005	0
+bin	4.619e-005	0
+bin	4.62e-005	0
+bin	4.621e-005	0
+bin	4.622e-005	0
+bin	4.623e-005	0
+bin	4.624e-005	0
+bin	4.625e-005	0
+bin	4.626e-005	0
+scalar smallNetwork.switch.phy[0].mac "simulated time" 0.005166221115
+scalar smallNetwork.switch.phy[0].mac full-duplex 1
+scalar smallNetwork.switch.phy[0].mac "frames/sec sent" 0
+scalar smallNetwork.switch.phy[0].mac "frames/sec rcvd" 387.13015867498
+scalar smallNetwork.switch.phy[0].mac "bits/sec sent" 0
+scalar smallNetwork.switch.phy[0].mac "bits/sec rcvd" 204404.72378039
+scalar smallNetwork.switch.phy[0].mac "rx channel idle (%)" 99.770818946064
+scalar smallNetwork.switch.phy[0].mac "rx channel utilization (%)" 0.22918105393559
+scalar smallNetwork.switch.phy[0].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar smallNetwork.switch.phy[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar smallNetwork.switch.phy[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar smallNetwork.switch.phy[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar smallNetwork.switch.phy[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar smallNetwork.switch.phy[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar smallNetwork.switch.phy[0].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar smallNetwork.switch.phy[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar smallNetwork.switch.phy[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar smallNetwork.switch.phy[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar smallNetwork.switch.phy[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar smallNetwork.switch.phy[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar smallNetwork.switch.phy[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar smallNetwork.switch.phy[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar smallNetwork.switch.phy[0].mac rxPkOk:count 2
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar smallNetwork.switch.phy[0].mac rxPkOk:sum(packetBytes) 132
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar smallNetwork.switch.phy[0].mac passedUpPk:count 2
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar smallNetwork.switch.phy[0].mac passedUpPk:sum(packetBytes) 132
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic smallNetwork.switch.phy[1].shaper rc9QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc9QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper rc9QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc9QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper rc8QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc8QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper rc8QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc8QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper rc7QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc7QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper rc7QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc7QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper rc6QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc6QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper rc6QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc6QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper rc5QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc5QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper rc5QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc5QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper rc4QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc4QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper rc4QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc4QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper rc3QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc3QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper rc3QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc3QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper rc2QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc2QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper rc2QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc2QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper rc1QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc1QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper rc1QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc1QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper rc0QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc0QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper rc0QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc0QueueLength)"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper q7QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper q7QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+statistic smallNetwork.switch.phy[1].shaper q6QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper q6QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+statistic smallNetwork.switch.phy[1].shaper q5QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper q5QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+statistic smallNetwork.switch.phy[1].shaper q4QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper q4QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+statistic smallNetwork.switch.phy[1].shaper q3QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper q3QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+statistic smallNetwork.switch.phy[1].shaper q2QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper q2QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+statistic smallNetwork.switch.phy[1].shaper q1QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper q1QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+statistic smallNetwork.switch.phy[1].shaper q0QueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper q0QueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+statistic smallNetwork.switch.phy[1].shaper avbAQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBA-Queue Size, stats"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper avbAQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBA-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper avbBQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBB-Queue Size, stats"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper avbBQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "AVBB-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper beQueueLength:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper beQueueSize:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, stats"
+attr unit B
+statistic smallNetwork.switch.phy[1].shaper ttQueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "TT-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper pcfQueueLength:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "PCF-Queue Length, stats"
+attr unit packets
+statistic smallNetwork.switch.phy[1].shaper pcfQueueSize:stats
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, stats"
+attr unit B
+scalar smallNetwork.switch.phy[1].inControl dropped:count 0
+attr interpolationmode none
+attr source droppedPk
+attr title "Unconfigured CT dropped, count"
+attr unit packets
+statistic smallNetwork.switch.phy[1].inControl rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.switch.phy[1].inControl rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.switch.phy[1].mac "simulated time" 0.005166221115
+scalar smallNetwork.switch.phy[1].mac full-duplex 1
+scalar smallNetwork.switch.phy[1].mac "frames/sec sent" 193.56507933749
+scalar smallNetwork.switch.phy[1].mac "frames/sec rcvd" 0
+scalar smallNetwork.switch.phy[1].mac "bits/sec sent" 99105.320620796
+scalar smallNetwork.switch.phy[1].mac "bits/sec rcvd" 0
+scalar smallNetwork.switch.phy[1].mac "rx channel idle (%)" 100
+scalar smallNetwork.switch.phy[1].mac "rx channel utilization (%)" 0
+scalar smallNetwork.switch.phy[1].mac rxPkFromHL:count 2
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar smallNetwork.switch.phy[1].mac rxPkFromHL:sum(packetBytes) 132
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar smallNetwork.switch.phy[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar smallNetwork.switch.phy[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar smallNetwork.switch.phy[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar smallNetwork.switch.phy[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar smallNetwork.switch.phy[1].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar smallNetwork.switch.phy[1].mac txPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar smallNetwork.switch.phy[1].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar smallNetwork.switch.phy[1].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar smallNetwork.switch.phy[1].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar smallNetwork.switch.phy[1].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar smallNetwork.switch.phy[1].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar smallNetwork.switch.phy[1].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar smallNetwork.switch.phy[1].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar smallNetwork.switch.phy[1].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar smallNetwork.switch.phy[1].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar smallNetwork.switch.phy[1].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar smallNetwork.switch.avbCTC dropped:count 0
+attr source droppedPk
+attr title "Packets Dropped, count"
+scalar smallNetwork.switch.avbCTC rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+scalar smallNetwork.switch.avbCTC rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.avbCTC latency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, stats"
+attr unit s
+statistic smallNetwork.switch.avbCTC latency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.switch.avbABuffer[0] dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.switch.avbABuffer[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.switch.avbABuffer[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.avbABuffer[0] rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbABuffer[0] rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.switch.avbABuffer[0] rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbABuffer[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.switch.avbABuffer[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.switch.avbABuffer[0] txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.switch.avbABuffer[0] txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.avbABuffer[0] txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbABuffer[0] txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.switch.avbABuffer[0] txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.switch.avbABuffer[1] dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.switch.avbABuffer[1] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.switch.avbABuffer[1] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.avbABuffer[1] rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbABuffer[1] rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.switch.avbABuffer[1] rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbABuffer[1] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.switch.avbABuffer[1] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.switch.avbABuffer[1] txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.switch.avbABuffer[1] txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.avbABuffer[1] txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbABuffer[1] txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.switch.avbABuffer[1] txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.switch.avbBBuffer[0] dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.switch.avbBBuffer[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.switch.avbBBuffer[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.avbBBuffer[0] rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbBBuffer[0] rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.switch.avbBBuffer[0] rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbBBuffer[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.switch.avbBBuffer[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.switch.avbBBuffer[0] txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.switch.avbBBuffer[0] txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.avbBBuffer[0] txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbBBuffer[0] txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.switch.avbBBuffer[0] txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.switch.avbBBuffer[1] dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.switch.avbBBuffer[1] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.switch.avbBBuffer[1] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.avbBBuffer[1] rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbBBuffer[1] rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.switch.avbBBuffer[1] rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbBBuffer[1] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.switch.avbBBuffer[1] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.switch.avbBBuffer[1] txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.switch.avbBBuffer[1] txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.avbBBuffer[1] txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.avbBBuffer[1] txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.switch.avbBBuffer[1] txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.switch.scheduler.period[0] numberOfCycles:count 2
+attr interpolationmode none
+attr source newCycle
+attr title "Number of cycle, count"
+scalar smallNetwork.switch.TTvlinks[0] dropped:count 0
+attr source dropped
+attr title "Dropped frames, count"
+attr unit packets
+scalar smallNetwork.switch.TTvlinks[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+attr unit packets
+scalar smallNetwork.switch.TTvlinks[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.TTvlinks[0] rxBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.TTvlinks[0] rxLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), stats"
+attr unit s
+statistic smallNetwork.switch.TTvlinks[0] rxLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.TTvlinks[0] size:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, stats"
+attr unit B
+statistic smallNetwork.switch.TTvlinks[0] length:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, stats"
+attr unit packets
+scalar smallNetwork.switch.TTvlinks[0] txPk:count 0
+attr source txPk
+attr title "Transmitted Packets, count"
+attr unit packets
+scalar smallNetwork.switch.TTvlinks[0] txBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.TTvlinks[0] txBytes:histogram(packetBytes)
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, histogram(packetBytes)"
+attr unit B
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic smallNetwork.switch.TTvlinks[0] txLatency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), stats"
+attr unit s
+statistic smallNetwork.switch.TTvlinks[0] txLatency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar smallNetwork.switch.TTvlinks_ctc[0] dropped:count 0
+attr source droppedPk
+attr title "Packets Dropped, count"
+scalar smallNetwork.switch.TTvlinks_ctc[0] rxPk:count 0
+attr source rxPk
+attr title "Received Packets, count"
+scalar smallNetwork.switch.TTvlinks_ctc[0] rxBytes:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, sum(packetBytes)"
+attr unit B
+statistic smallNetwork.switch.TTvlinks_ctc[0] latency:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, stats"
+attr unit s
+statistic smallNetwork.switch.TTvlinks_ctc[0] latency:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+
