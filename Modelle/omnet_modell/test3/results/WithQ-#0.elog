@@ -1,0 +1,4870 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1285 rid WithQ-0-20221222-14:37:12-19100 b 1000
+KF p -1 c "" s ""
+MC id 1 c omnetpp::cModule t signalsandgateways.examples.test3.test3 n test3 cm 1
+MS id 1 d bgb=755.44,231.04001,white
+MC id 2 c omnetpp::cModule t fico4omnet.bus.can.CanBus pid 1 n canbus1 cm 1
+MS id 2 d p=137,62;i=block/network
+MC id 3 c omnetpp::cModule t fico4omnet.nodes.can.CanNode pid 1 n sensor[0] cm 1
+GC m 3 g 0 n gate$i o 0
+GC m 3 g 1 n gate$o o 1
+MS id 3 d p=51,62;i=device/modem;bgb=586.32,221.76
+MC id 4 c omnetpp::cModule t fico4omnet.nodes.can.CanNode pid 1 n sensor[1] cm 1
+GC m 4 g 0 n gate$i o 0
+GC m 4 g 1 n gate$o o 1
+MS id 4 d p=51,62;i=device/modem;bgb=586.32,221.76
+MC id 5 c omnetpp::cModule t fico4omnet.nodes.can.CanNode pid 1 n sensor[2] cm 1
+GC m 5 g 0 n gate$i o 0
+GC m 5 g 1 n gate$o o 1
+MS id 5 d p=51,62;i=device/modem;bgb=586.32,221.76
+MC id 6 c omnetpp::cModule t fico4omnet.nodes.can.CanNode pid 1 n sensor[3] cm 1
+GC m 6 g 0 n gate$i o 0
+GC m 6 g 1 n gate$o o 1
+MS id 6 d p=51,62;i=device/modem;bgb=586.32,221.76
+MC id 7 c omnetpp::cModule t fico4omnet.bus.can.CanBus pid 1 n canbus2 cm 1
+MS id 7 d p=634.6,61.56;i=block/network
+MC id 8 c omnetpp::cModule t fico4omnet.nodes.can.CanNode pid 1 n aktor[0] cm 1
+GC m 8 g 0 n gate$i o 0
+GC m 8 g 1 n gate$o o 1
+MS id 8 d p=720.48,61.56;i=device/modem;bgb=586.32,221.76
+MC id 9 c omnetpp::cModule t fico4omnet.nodes.can.CanNode pid 1 n aktor[1] cm 1
+GC m 9 g 0 n gate$i o 0
+GC m 9 g 1 n gate$o o 1
+MS id 9 d p=720.48,61.56;i=device/modem;bgb=586.32,221.76
+MC id 10 c omnetpp::cModule t fico4omnet.nodes.can.CanNode pid 1 n aktor[2] cm 1
+GC m 10 g 0 n gate$i o 0
+GC m 10 g 1 n gate$o o 1
+MS id 10 d p=720.48,61.56;i=device/modem;bgb=586.32,221.76
+MC id 11 c omnetpp::cModule t signalsandgateways.examples.test3.Gateway1 pid 1 n gateway1 cm 1
+MS id 11 d p=214,62;i=block/layer
+GC m 11 g 1048576 n ethg$i i 0 o 0
+GC m 11 g 1572864 n ethg$o i 0 o 1
+GC m 11 g 2097152 n cang$i i 0 o 0
+GC m 11 g 2621440 n cang$o i 0 o 1
+MC id 12 c omnetpp::cModule t signalsandgateways.examples.test3.Gateway2 pid 1 n gateway2 cm 1
+MS id 12 d p=548.72003,61.56;i=block/layer
+GC m 12 g 1048576 n ethg$i i 0 o 0
+GC m 12 g 1572864 n ethg$o i 0 o 1
+GC m 12 g 2097152 n cang$i i 0 o 0
+GC m 12 g 2621440 n cang$o i 0 o 1
+MC id 13 c omnetpp::cModule t inet.node.ethernet.EtherHost pid 1 n etherHost cm 1
+GC m 13 g 0 n ethg$i o 0
+GC m 13 g 1 n ethg$o o 1
+MS id 13 d p=379,142;i=device/pc2
+MC id 14 c omnetpp::cModule t signalsandgateways.examples.test3.Switch pid 1 n switch1 cm 1
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+GC m 14 g 1048576 n ethg$i i 0 o 0
+GC m 14 g 1572864 n ethg$o i 0 o 1
+GC m 14 g 1048577 n ethg$i i 1 o 0
+GC m 14 g 1572865 n ethg$o i 1 o 1
+GC m 14 g 1048578 n ethg$i i 2 o 0
+GC m 14 g 1572866 n ethg$o i 2 o 1
+GC m 2 g 1048576 n gate$i i 0 o 0
+GC m 2 g 1572864 n gate$o i 0 o 1
+CC sm 11 sg 2621440 dm 2 dg 1048576
+CC sm 2 sg 1572864 dm 11 dg 2097152
+GC m 7 g 1048576 n gate$i i 0 o 0
+GC m 7 g 1572864 n gate$o i 0 o 1
+CC sm 12 sg 2621440 dm 7 dg 1048576
+CC sm 7 sg 1572864 dm 12 dg 2097152
+GC m 2 g 1048577 n gate$i i 1 o 0
+GC m 2 g 1572865 n gate$o i 1 o 1
+CC sm 2 sg 1572865 dm 3 dg 0
+CC sm 3 sg 1 dm 2 dg 1048577
+GC m 2 g 1048578 n gate$i i 2 o 0
+GC m 2 g 1572866 n gate$o i 2 o 1
+CC sm 2 sg 1572866 dm 4 dg 0
+CC sm 4 sg 1 dm 2 dg 1048578
+GC m 2 g 1048579 n gate$i i 3 o 0
+GC m 2 g 1572867 n gate$o i 3 o 1
+CC sm 2 sg 1572867 dm 5 dg 0
+CC sm 5 sg 1 dm 2 dg 1048579
+GC m 2 g 1048580 n gate$i i 4 o 0
+GC m 2 g 1572868 n gate$o i 4 o 1
+CC sm 2 sg 1572868 dm 6 dg 0
+CC sm 6 sg 1 dm 2 dg 1048580
+GC m 7 g 1048577 n gate$i i 1 o 0
+GC m 7 g 1572865 n gate$o i 1 o 1
+CC sm 7 sg 1572865 dm 8 dg 0
+CC sm 8 sg 1 dm 7 dg 1048577
+GC m 7 g 1048578 n gate$i i 2 o 0
+GC m 7 g 1572866 n gate$o i 2 o 1
+CC sm 7 sg 1572866 dm 9 dg 0
+CC sm 9 sg 1 dm 7 dg 1048578
+GC m 7 g 1048579 n gate$i i 3 o 0
+GC m 7 g 1572867 n gate$o i 3 o 1
+CC sm 7 sg 1572867 dm 10 dg 0
+CC sm 10 sg 1 dm 7 dg 1048579
+CC sm 11 sg 1572864 dm 14 dg 1048576
+CS sm 11 sg 1572864 d ""
+CC sm 14 sg 1572864 dm 11 dg 1048576
+CS sm 14 sg 1572864 d ""
+CC sm 14 sg 1572865 dm 12 dg 1048576
+CS sm 14 sg 1572865 d ""
+CC sm 12 sg 1572864 dm 14 dg 1048577
+CS sm 12 sg 1572864 d ""
+CC sm 14 sg 1572866 dm 13 dg 0
+CS sm 14 sg 1572866 d ""
+CC sm 13 sg 1 dm 14 dg 1048578
+CS sm 13 sg 1 d ""
+MC id 21 c FiCo4OMNeT::BusPort t fico4omnet.bus.BusPort pid 2 n busPort
+GC m 21 g 2 n innerGate$i o 0
+GC m 21 g 3 n innerGate$o o 1
+MS id 21 d p=163,74;bgb=300,158
+GC m 21 g 1048576 n phygate$i i 0 o 0
+GC m 21 g 1572864 n phygate$o i 0 o 1
+GC m 21 g 1048577 n phygate$i i 1 o 0
+GC m 21 g 1572865 n phygate$o i 1 o 1
+GC m 21 g 1048578 n phygate$i i 2 o 0
+GC m 21 g 1572866 n phygate$o i 2 o 1
+GC m 21 g 1048579 n phygate$i i 3 o 0
+GC m 21 g 1572867 n phygate$o i 3 o 1
+GC m 21 g 1048580 n phygate$i i 4 o 0
+GC m 21 g 1572868 n phygate$o i 4 o 1
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n "" pe -1
+MC id 22 c FiCo4OMNeT::CanBusLogic t fico4omnet.bus.can.CanBusLogic pid 2 n canBusLogic
+GC m 22 g 0 n gate$i o 0
+GC m 22 g 1 n gate$o o 1
+MS id 22 d p=52,74;i=block/app
+CC sm 21 sg 3 dm 22 dg 0
+CC sm 22 sg 1 dm 21 dg 2
+CC sm 21 sg 1572864 dm 2 dg 1572864
+CC sm 2 sg 1048576 dm 21 dg 1048576
+CC sm 21 sg 1572865 dm 2 dg 1572865
+CC sm 2 sg 1048577 dm 21 dg 1048577
+CC sm 21 sg 1572866 dm 2 dg 1572866
+CC sm 2 sg 1048578 dm 21 dg 1048578
+CC sm 21 sg 1572867 dm 2 dg 1572867
+CC sm 2 sg 1048579 dm 21 dg 1048579
+CC sm 21 sg 1572868 dm 2 dg 1572868
+CC sm 2 sg 1048580 dm 21 dg 1048580
+MC id 23 c omnetpp::cModule t fico4omnet.linklayer.can.CanNodePort pid 3 n canNodePort cm 1
+GC m 23 g 0 n phygate$i o 0
+GC m 23 g 1 n phygate$o o 1
+GC m 23 g 2 n upperLayerIn o 0
+GC m 23 g 5 n upperLayerOut o 1
+MS id 23 d p=149,168;bgb=199,193
+MC id 24 c FiCo4OMNeT::CanInputBuffer t fico4omnet.buffer.can.CanInputBuffer pid 3 n bufferIn[0]
+GC m 24 g 2 n directIn o 0
+GC m 24 g 5 n out o 1
+MS id 24 d p=452.76,134.4;i=block/buffer
+GC m 24 g 1048576 n in i 0 o 0
+MC id 25 c FiCo4OMNeT::CanOutputBuffer t fico4omnet.buffer.can.CanOutputBuffer pid 3 n bufferOut
+GC m 25 g 2 n directIn o 0
+GC m 25 g 5 n out o 1
+MS id 25 d p=98,102;i=block/buffer
+GC m 25 g 1048576 n in i 0 o 0
+MC id 26 c FiCo4OMNeT::CanTrafficSourceAppBase t fico4omnet.applications.can.source.CanTrafficSourceAppBase pid 3 n sourceApp[0]
+GC m 26 g 1 n out o 1
+GC m 26 g 2 n remoteIn o 0
+MS id 26 d p=98,32,row,70;i=block/source
+MC id 27 c FiCo4OMNeT::CanTrafficSinkAppBase t fico4omnet.applications.can.sink.CanTrafficSinkAppBase pid 3 n sinkApp[0]
+GC m 27 g 0 n controllerIn o 0
+GC m 27 g 2 n dataIn o 0
+MS id 27 d p=477.96,44.52;i=block/sink
+MC id 28 c FiCo4OMNeT::CanClock t fico4omnet.scheduler.can.CanClock pid 3 n canClock
+MS id 28 d p=294,101.64;i=block/cogwheel
+CC sm 23 sg 1 dm 3 dg 1
+CC sm 3 sg 0 dm 23 dg 0
+CC sm 25 sg 5 dm 23 dg 2
+CC sm 26 sg 1 dm 25 dg 1048576
+MC id 29 c FiCo4OMNeT::CanPortInput t fico4omnet.linklayer.can.CanPortInput pid 23 n canPortInput
+GC m 29 g 1 n out o 1
+GC m 29 g 2 n in o 0
+MS id 29 d p=132,51
+MC id 30 c FiCo4OMNeT::CanPortOutput t fico4omnet.linklayer.can.CanPortOutput pid 23 n canPortOutput
+GC m 30 g 1 n out o 1
+GC m 30 g 2 n in o 0
+GC m 30 g 4 n directIn o 0
+MS id 30 d p=54,51
+MC id 31 c FiCo4OMNeT::NodePort t fico4omnet.linklayer.NodePort pid 23 n nodePort
+GC m 31 g 0 n phygate$i o 0
+GC m 31 g 1 n phygate$o o 1
+GC m 31 g 2 n upperLayerIn o 0
+GC m 31 g 5 n upperLayerOut o 1
+MS id 31 d p=93,119;bgb=300,158
+CC sm 31 sg 1 dm 23 dg 1
+CC sm 23 sg 0 dm 31 dg 0
+CC sm 31 sg 5 dm 29 dg 2
+CC sm 30 sg 1 dm 31 dg 2
+CC sm 23 sg 2 dm 30 dg 2
+CC sm 29 sg 1 dm 23 dg 5
+MC id 32 c omnetpp::cModule t fico4omnet.linklayer.can.CanNodePort pid 4 n canNodePort cm 1
+GC m 32 g 0 n phygate$i o 0
+GC m 32 g 1 n phygate$o o 1
+GC m 32 g 2 n upperLayerIn o 0
+GC m 32 g 5 n upperLayerOut o 1
+MS id 32 d p=149,168;bgb=199,193
+MC id 33 c FiCo4OMNeT::CanInputBuffer t fico4omnet.buffer.can.CanInputBuffer pid 4 n bufferIn[0]
+GC m 33 g 2 n directIn o 0
+GC m 33 g 5 n out o 1
+MS id 33 d p=452.76,134.4;i=block/buffer
+GC m 33 g 1048576 n in i 0 o 0
+MC id 34 c FiCo4OMNeT::CanOutputBuffer t fico4omnet.buffer.can.CanOutputBuffer pid 4 n bufferOut
+GC m 34 g 2 n directIn o 0
+GC m 34 g 5 n out o 1
+MS id 34 d p=98,102;i=block/buffer
+GC m 34 g 1048576 n in i 0 o 0
+MC id 35 c FiCo4OMNeT::CanTrafficSourceAppBase t fico4omnet.applications.can.source.CanTrafficSourceAppBase pid 4 n sourceApp[0]
+GC m 35 g 1 n out o 1
+GC m 35 g 2 n remoteIn o 0
+MS id 35 d p=98,32,row,70;i=block/source
+MC id 36 c FiCo4OMNeT::CanTrafficSinkAppBase t fico4omnet.applications.can.sink.CanTrafficSinkAppBase pid 4 n sinkApp[0]
+GC m 36 g 0 n controllerIn o 0
+GC m 36 g 2 n dataIn o 0
+MS id 36 d p=477.96,44.52;i=block/sink
+MC id 37 c FiCo4OMNeT::CanClock t fico4omnet.scheduler.can.CanClock pid 4 n canClock
+MS id 37 d p=294,101.64;i=block/cogwheel
+CC sm 32 sg 1 dm 4 dg 1
+CC sm 4 sg 0 dm 32 dg 0
+CC sm 34 sg 5 dm 32 dg 2
+CC sm 35 sg 1 dm 34 dg 1048576
+MC id 38 c FiCo4OMNeT::CanPortInput t fico4omnet.linklayer.can.CanPortInput pid 32 n canPortInput
+GC m 38 g 1 n out o 1
+GC m 38 g 2 n in o 0
+MS id 38 d p=132,51
+MC id 39 c FiCo4OMNeT::CanPortOutput t fico4omnet.linklayer.can.CanPortOutput pid 32 n canPortOutput
+GC m 39 g 1 n out o 1
+GC m 39 g 2 n in o 0
+GC m 39 g 4 n directIn o 0
+MS id 39 d p=54,51
+MC id 40 c FiCo4OMNeT::NodePort t fico4omnet.linklayer.NodePort pid 32 n nodePort
+GC m 40 g 0 n phygate$i o 0
+GC m 40 g 1 n phygate$o o 1
+GC m 40 g 2 n upperLayerIn o 0
+GC m 40 g 5 n upperLayerOut o 1
+MS id 40 d p=93,119;bgb=300,158
+CC sm 40 sg 1 dm 32 dg 1
+CC sm 32 sg 0 dm 40 dg 0
+CC sm 40 sg 5 dm 38 dg 2
+CC sm 39 sg 1 dm 40 dg 2
+CC sm 32 sg 2 dm 39 dg 2
+CC sm 38 sg 1 dm 32 dg 5
+MC id 41 c omnetpp::cModule t fico4omnet.linklayer.can.CanNodePort pid 5 n canNodePort cm 1
+GC m 41 g 0 n phygate$i o 0
+GC m 41 g 1 n phygate$o o 1
+GC m 41 g 2 n upperLayerIn o 0
+GC m 41 g 5 n upperLayerOut o 1
+MS id 41 d p=149,168;bgb=199,193
+MC id 42 c FiCo4OMNeT::CanInputBuffer t fico4omnet.buffer.can.CanInputBuffer pid 5 n bufferIn[0]
+GC m 42 g 2 n directIn o 0
+GC m 42 g 5 n out o 1
+MS id 42 d p=452.76,134.4;i=block/buffer
+GC m 42 g 1048576 n in i 0 o 0
+MC id 43 c FiCo4OMNeT::CanOutputBuffer t fico4omnet.buffer.can.CanOutputBuffer pid 5 n bufferOut
+GC m 43 g 2 n directIn o 0
+GC m 43 g 5 n out o 1
+MS id 43 d p=98,102;i=block/buffer
+GC m 43 g 1048576 n in i 0 o 0
+MC id 44 c FiCo4OMNeT::CanTrafficSourceAppBase t fico4omnet.applications.can.source.CanTrafficSourceAppBase pid 5 n sourceApp[0]
+GC m 44 g 1 n out o 1
+GC m 44 g 2 n remoteIn o 0
+MS id 44 d p=98,32,row,70;i=block/source
+MC id 45 c FiCo4OMNeT::CanTrafficSinkAppBase t fico4omnet.applications.can.sink.CanTrafficSinkAppBase pid 5 n sinkApp[0]
+GC m 45 g 0 n controllerIn o 0
+GC m 45 g 2 n dataIn o 0
+MS id 45 d p=477.96,44.52;i=block/sink
+MC id 46 c FiCo4OMNeT::CanClock t fico4omnet.scheduler.can.CanClock pid 5 n canClock
+MS id 46 d p=294,101.64;i=block/cogwheel
+CC sm 41 sg 1 dm 5 dg 1
+CC sm 5 sg 0 dm 41 dg 0
+CC sm 43 sg 5 dm 41 dg 2
+CC sm 44 sg 1 dm 43 dg 1048576
+MC id 47 c FiCo4OMNeT::CanPortInput t fico4omnet.linklayer.can.CanPortInput pid 41 n canPortInput
+GC m 47 g 1 n out o 1
+GC m 47 g 2 n in o 0
+MS id 47 d p=132,51
+MC id 48 c FiCo4OMNeT::CanPortOutput t fico4omnet.linklayer.can.CanPortOutput pid 41 n canPortOutput
+GC m 48 g 1 n out o 1
+GC m 48 g 2 n in o 0
+GC m 48 g 4 n directIn o 0
+MS id 48 d p=54,51
+MC id 49 c FiCo4OMNeT::NodePort t fico4omnet.linklayer.NodePort pid 41 n nodePort
+GC m 49 g 0 n phygate$i o 0
+GC m 49 g 1 n phygate$o o 1
+GC m 49 g 2 n upperLayerIn o 0
+GC m 49 g 5 n upperLayerOut o 1
+MS id 49 d p=93,119;bgb=300,158
+CC sm 49 sg 1 dm 41 dg 1
+CC sm 41 sg 0 dm 49 dg 0
+CC sm 49 sg 5 dm 47 dg 2
+CC sm 48 sg 1 dm 49 dg 2
+CC sm 41 sg 2 dm 48 dg 2
+CC sm 47 sg 1 dm 41 dg 5
+MC id 50 c omnetpp::cModule t fico4omnet.linklayer.can.CanNodePort pid 6 n canNodePort cm 1
+GC m 50 g 0 n phygate$i o 0
+GC m 50 g 1 n phygate$o o 1
+GC m 50 g 2 n upperLayerIn o 0
+GC m 50 g 5 n upperLayerOut o 1
+MS id 50 d p=149,168;bgb=199,193
+MC id 51 c FiCo4OMNeT::CanInputBuffer t fico4omnet.buffer.can.CanInputBuffer pid 6 n bufferIn[0]
+GC m 51 g 2 n directIn o 0
+GC m 51 g 5 n out o 1
+MS id 51 d p=452.76,134.4;i=block/buffer
+GC m 51 g 1048576 n in i 0 o 0
+MC id 52 c FiCo4OMNeT::CanOutputBuffer t fico4omnet.buffer.can.CanOutputBuffer pid 6 n bufferOut
+GC m 52 g 2 n directIn o 0
+GC m 52 g 5 n out o 1
+MS id 52 d p=98,102;i=block/buffer
+GC m 52 g 1048576 n in i 0 o 0
+MC id 53 c FiCo4OMNeT::CanTrafficSourceAppBase t fico4omnet.applications.can.source.CanTrafficSourceAppBase pid 6 n sourceApp[0]
+GC m 53 g 1 n out o 1
+GC m 53 g 2 n remoteIn o 0
+MS id 53 d p=98,32,row,70;i=block/source
+MC id 54 c FiCo4OMNeT::CanTrafficSinkAppBase t fico4omnet.applications.can.sink.CanTrafficSinkAppBase pid 6 n sinkApp[0]
+GC m 54 g 0 n controllerIn o 0
+GC m 54 g 2 n dataIn o 0
+MS id 54 d p=477.96,44.52;i=block/sink
+MC id 55 c FiCo4OMNeT::CanClock t fico4omnet.scheduler.can.CanClock pid 6 n canClock
+MS id 55 d p=294,101.64;i=block/cogwheel
+CC sm 50 sg 1 dm 6 dg 1
+CC sm 6 sg 0 dm 50 dg 0
+CC sm 52 sg 5 dm 50 dg 2
+CC sm 53 sg 1 dm 52 dg 1048576
+MC id 56 c FiCo4OMNeT::CanPortInput t fico4omnet.linklayer.can.CanPortInput pid 50 n canPortInput
+GC m 56 g 1 n out o 1
+GC m 56 g 2 n in o 0
+MS id 56 d p=132,51
+MC id 57 c FiCo4OMNeT::CanPortOutput t fico4omnet.linklayer.can.CanPortOutput pid 50 n canPortOutput
+GC m 57 g 1 n out o 1
+GC m 57 g 2 n in o 0
+GC m 57 g 4 n directIn o 0
+MS id 57 d p=54,51
+MC id 58 c FiCo4OMNeT::NodePort t fico4omnet.linklayer.NodePort pid 50 n nodePort
+GC m 58 g 0 n phygate$i o 0
+GC m 58 g 1 n phygate$o o 1
+GC m 58 g 2 n upperLayerIn o 0
+GC m 58 g 5 n upperLayerOut o 1
+MS id 58 d p=93,119;bgb=300,158
+CC sm 58 sg 1 dm 50 dg 1
+CC sm 50 sg 0 dm 58 dg 0
+CC sm 58 sg 5 dm 56 dg 2
+CC sm 57 sg 1 dm 58 dg 2
+CC sm 50 sg 2 dm 57 dg 2
+CC sm 56 sg 1 dm 50 dg 5
+MC id 59 c FiCo4OMNeT::BusPort t fico4omnet.bus.BusPort pid 7 n busPort
+GC m 59 g 2 n innerGate$i o 0
+GC m 59 g 3 n innerGate$o o 1
+MS id 59 d p=163,74;bgb=300,158
+GC m 59 g 1048576 n phygate$i i 0 o 0
+GC m 59 g 1572864 n phygate$o i 0 o 1
+GC m 59 g 1048577 n phygate$i i 1 o 0
+GC m 59 g 1572865 n phygate$o i 1 o 1
+GC m 59 g 1048578 n phygate$i i 2 o 0
+GC m 59 g 1572866 n phygate$o i 2 o 1
+GC m 59 g 1048579 n phygate$i i 3 o 0
+GC m 59 g 1572867 n phygate$o i 3 o 1
+CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n "" pe -1
+MC id 60 c FiCo4OMNeT::CanBusLogic t fico4omnet.bus.can.CanBusLogic pid 7 n canBusLogic
+GC m 60 g 0 n gate$i o 0
+GC m 60 g 1 n gate$o o 1
+MS id 60 d p=52,74;i=block/app
+CC sm 59 sg 3 dm 60 dg 0
+CC sm 60 sg 1 dm 59 dg 2
+CC sm 59 sg 1572864 dm 7 dg 1572864
+CC sm 7 sg 1048576 dm 59 dg 1048576
+CC sm 59 sg 1572865 dm 7 dg 1572865
+CC sm 7 sg 1048577 dm 59 dg 1048577
+CC sm 59 sg 1572866 dm 7 dg 1572866
+CC sm 7 sg 1048578 dm 59 dg 1048578
+CC sm 59 sg 1572867 dm 7 dg 1572867
+CC sm 7 sg 1048579 dm 59 dg 1048579
+MC id 61 c omnetpp::cModule t fico4omnet.linklayer.can.CanNodePort pid 8 n canNodePort cm 1
+GC m 61 g 0 n phygate$i o 0
+GC m 61 g 1 n phygate$o o 1
+GC m 61 g 2 n upperLayerIn o 0
+GC m 61 g 5 n upperLayerOut o 1
+MS id 61 d p=149,168;bgb=199,193
+MC id 62 c FiCo4OMNeT::CanInputBuffer t fico4omnet.buffer.can.CanInputBuffer pid 8 n bufferIn[0]
+GC m 62 g 2 n directIn o 0
+GC m 62 g 5 n out o 1
+MS id 62 d p=452.76,134.4;i=block/buffer
+GC m 62 g 1048576 n in i 0 o 0
+MC id 63 c FiCo4OMNeT::CanOutputBuffer t fico4omnet.buffer.can.CanOutputBuffer pid 8 n bufferOut
+GC m 63 g 2 n directIn o 0
+GC m 63 g 5 n out o 1
+MS id 63 d p=98,102;i=block/buffer
+GC m 63 g 1048576 n in i 0 o 0
+MC id 64 c FiCo4OMNeT::CanTrafficSourceAppBase t fico4omnet.applications.can.source.CanTrafficSourceAppBase pid 8 n sourceApp[0]
+GC m 64 g 1 n out o 1
+GC m 64 g 2 n remoteIn o 0
+MS id 64 d p=98,32,row,70;i=block/source
+MC id 65 c FiCo4OMNeT::CanTrafficSinkAppBase t fico4omnet.applications.can.sink.CanTrafficSinkAppBase pid 8 n sinkApp[0]
+GC m 65 g 0 n controllerIn o 0
+GC m 65 g 2 n dataIn o 0
+MS id 65 d p=477.96,44.52;i=block/sink
+MC id 66 c FiCo4OMNeT::CanClock t fico4omnet.scheduler.can.CanClock pid 8 n canClock
+MS id 66 d p=294,101.64;i=block/cogwheel
+CC sm 61 sg 1 dm 8 dg 1
+CC sm 8 sg 0 dm 61 dg 0
+CC sm 63 sg 5 dm 61 dg 2
+CC sm 64 sg 1 dm 63 dg 1048576
+MC id 67 c FiCo4OMNeT::CanPortInput t fico4omnet.linklayer.can.CanPortInput pid 61 n canPortInput
+GC m 67 g 1 n out o 1
+GC m 67 g 2 n in o 0
+MS id 67 d p=132,51
+MC id 68 c FiCo4OMNeT::CanPortOutput t fico4omnet.linklayer.can.CanPortOutput pid 61 n canPortOutput
+GC m 68 g 1 n out o 1
+GC m 68 g 2 n in o 0
+GC m 68 g 4 n directIn o 0
+MS id 68 d p=54,51
+MC id 69 c FiCo4OMNeT::NodePort t fico4omnet.linklayer.NodePort pid 61 n nodePort
+GC m 69 g 0 n phygate$i o 0
+GC m 69 g 1 n phygate$o o 1
+GC m 69 g 2 n upperLayerIn o 0
+GC m 69 g 5 n upperLayerOut o 1
+MS id 69 d p=93,119;bgb=300,158
+CC sm 69 sg 1 dm 61 dg 1
+CC sm 61 sg 0 dm 69 dg 0
+CC sm 69 sg 5 dm 67 dg 2
+CC sm 68 sg 1 dm 69 dg 2
+CC sm 61 sg 2 dm 68 dg 2
+CC sm 67 sg 1 dm 61 dg 5
+MC id 70 c omnetpp::cModule t fico4omnet.linklayer.can.CanNodePort pid 9 n canNodePort cm 1
+GC m 70 g 0 n phygate$i o 0
+GC m 70 g 1 n phygate$o o 1
+GC m 70 g 2 n upperLayerIn o 0
+GC m 70 g 5 n upperLayerOut o 1
+MS id 70 d p=149,168;bgb=199,193
+MC id 71 c FiCo4OMNeT::CanInputBuffer t fico4omnet.buffer.can.CanInputBuffer pid 9 n bufferIn[0]
+GC m 71 g 2 n directIn o 0
+GC m 71 g 5 n out o 1
+MS id 71 d p=452.76,134.4;i=block/buffer
+GC m 71 g 1048576 n in i 0 o 0
+MC id 72 c FiCo4OMNeT::CanOutputBuffer t fico4omnet.buffer.can.CanOutputBuffer pid 9 n bufferOut
+GC m 72 g 2 n directIn o 0
+GC m 72 g 5 n out o 1
+MS id 72 d p=98,102;i=block/buffer
+GC m 72 g 1048576 n in i 0 o 0
+MC id 73 c FiCo4OMNeT::CanTrafficSourceAppBase t fico4omnet.applications.can.source.CanTrafficSourceAppBase pid 9 n sourceApp[0]
+GC m 73 g 1 n out o 1
+GC m 73 g 2 n remoteIn o 0
+MS id 73 d p=98,32,row,70;i=block/source
+MC id 74 c FiCo4OMNeT::CanTrafficSinkAppBase t fico4omnet.applications.can.sink.CanTrafficSinkAppBase pid 9 n sinkApp[0]
+GC m 74 g 0 n controllerIn o 0
+GC m 74 g 2 n dataIn o 0
+MS id 74 d p=477.96,44.52;i=block/sink
+MC id 75 c FiCo4OMNeT::CanClock t fico4omnet.scheduler.can.CanClock pid 9 n canClock
+MS id 75 d p=294,101.64;i=block/cogwheel
+CC sm 70 sg 1 dm 9 dg 1
+CC sm 9 sg 0 dm 70 dg 0
+CC sm 72 sg 5 dm 70 dg 2
+CC sm 73 sg 1 dm 72 dg 1048576
+MC id 76 c FiCo4OMNeT::CanPortInput t fico4omnet.linklayer.can.CanPortInput pid 70 n canPortInput
+GC m 76 g 1 n out o 1
+GC m 76 g 2 n in o 0
+MS id 76 d p=132,51
+MC id 77 c FiCo4OMNeT::CanPortOutput t fico4omnet.linklayer.can.CanPortOutput pid 70 n canPortOutput
+GC m 77 g 1 n out o 1
+GC m 77 g 2 n in o 0
+GC m 77 g 4 n directIn o 0
+MS id 77 d p=54,51
+MC id 78 c FiCo4OMNeT::NodePort t fico4omnet.linklayer.NodePort pid 70 n nodePort
+GC m 78 g 0 n phygate$i o 0
+GC m 78 g 1 n phygate$o o 1
+GC m 78 g 2 n upperLayerIn o 0
+GC m 78 g 5 n upperLayerOut o 1
+MS id 78 d p=93,119;bgb=300,158
+CC sm 78 sg 1 dm 70 dg 1
+CC sm 70 sg 0 dm 78 dg 0
+CC sm 78 sg 5 dm 76 dg 2
+CC sm 77 sg 1 dm 78 dg 2
+CC sm 70 sg 2 dm 77 dg 2
+CC sm 76 sg 1 dm 70 dg 5
+MC id 79 c omnetpp::cModule t fico4omnet.linklayer.can.CanNodePort pid 10 n canNodePort cm 1
+GC m 79 g 0 n phygate$i o 0
+GC m 79 g 1 n phygate$o o 1
+GC m 79 g 2 n upperLayerIn o 0
+GC m 79 g 5 n upperLayerOut o 1
+MS id 79 d p=149,168;bgb=199,193
+MC id 80 c FiCo4OMNeT::CanInputBuffer t fico4omnet.buffer.can.CanInputBuffer pid 10 n bufferIn[0]
+GC m 80 g 2 n directIn o 0
+GC m 80 g 5 n out o 1
+MS id 80 d p=452.76,134.4;i=block/buffer
+GC m 80 g 1048576 n in i 0 o 0
+MC id 81 c FiCo4OMNeT::CanOutputBuffer t fico4omnet.buffer.can.CanOutputBuffer pid 10 n bufferOut
+GC m 81 g 2 n directIn o 0
+GC m 81 g 5 n out o 1
+MS id 81 d p=98,102;i=block/buffer
+GC m 81 g 1048576 n in i 0 o 0
+MC id 82 c FiCo4OMNeT::CanTrafficSourceAppBase t fico4omnet.applications.can.source.CanTrafficSourceAppBase pid 10 n sourceApp[0]
+GC m 82 g 1 n out o 1
+GC m 82 g 2 n remoteIn o 0
+MS id 82 d p=98,32,row,70;i=block/source
+MC id 83 c FiCo4OMNeT::CanTrafficSinkAppBase t fico4omnet.applications.can.sink.CanTrafficSinkAppBase pid 10 n sinkApp[0]
+GC m 83 g 0 n controllerIn o 0
+GC m 83 g 2 n dataIn o 0
+MS id 83 d p=477.96,44.52;i=block/sink
+MC id 84 c FiCo4OMNeT::CanClock t fico4omnet.scheduler.can.CanClock pid 10 n canClock
+MS id 84 d p=294,101.64;i=block/cogwheel
+CC sm 79 sg 1 dm 10 dg 1
+CC sm 10 sg 0 dm 79 dg 0
+CC sm 81 sg 5 dm 79 dg 2
+CC sm 82 sg 1 dm 81 dg 1048576
+MC id 85 c FiCo4OMNeT::CanPortInput t fico4omnet.linklayer.can.CanPortInput pid 79 n canPortInput
+GC m 85 g 1 n out o 1
+GC m 85 g 2 n in o 0
+MS id 85 d p=132,51
+MC id 86 c FiCo4OMNeT::CanPortOutput t fico4omnet.linklayer.can.CanPortOutput pid 79 n canPortOutput
+GC m 86 g 1 n out o 1
+GC m 86 g 2 n in o 0
+GC m 86 g 4 n directIn o 0
+MS id 86 d p=54,51
+MC id 87 c FiCo4OMNeT::NodePort t fico4omnet.linklayer.NodePort pid 79 n nodePort
+GC m 87 g 0 n phygate$i o 0
+GC m 87 g 1 n phygate$o o 1
+GC m 87 g 2 n upperLayerIn o 0
+GC m 87 g 5 n upperLayerOut o 1
+MS id 87 d p=93,119;bgb=300,158
+CC sm 87 sg 1 dm 79 dg 1
+CC sm 79 sg 0 dm 87 dg 0
+CC sm 87 sg 5 dm 85 dg 2
+CC sm 86 sg 1 dm 87 dg 2
+CC sm 79 sg 2 dm 86 dg 2
+CC sm 85 sg 1 dm 79 dg 5
+MC id 88 c omnetpp::cModule t signalsandgateways.applications.can.CanGatewayNode pid 11 n can[0] cm 1
+GC m 88 g 0 n gate$i o 0
+GC m 88 g 1 n gate$o o 1
+GC m 88 g 3 n upperLayerOut o 1
+GC m 88 g 4 n upperLayerIn o 0
+MS id 88 d p=369,100,c,130;i=block/app2;bgb=248,222
+MC id 89 c omnetpp::cModule t signalsandgateways.applications.ethernet.EthernetGatewayHost pid 11 n tte[0] cm 1
+GC m 89 g 0 n ethg$i o 0
+GC m 89 g 1 n ethg$o o 1
+GC m 89 g 3 n upperLayerOut o 1
+GC m 89 g 4 n upperLayerIn o 0
+MS id 89 d p=74,100,c,130;bgb=894,314;i=device/device
+MC id 90 c omnetpp::cModule t signalsandgateways.gateway.GatewayBase pid 11 n gateway cm 1
+MS id 90 d p=224,100;i=device/hub
+GC m 90 g 1048576 n lowerLayerIn i 0 o 0
+GC m 90 g 1048577 n lowerLayerIn i 1 o 0
+GC m 90 g 2621440 n lowerLayerOut i 0 o 1
+GC m 90 g 2621441 n lowerLayerOut i 1 o 1
+CC sm 88 sg 3 dm 90 dg 1048576
+CC sm 90 sg 2621440 dm 88 dg 4
+CC sm 88 sg 1 dm 11 dg 2621440
+CC sm 11 sg 2097152 dm 88 dg 0
+CC sm 89 sg 3 dm 90 dg 1048577
+CC sm 90 sg 2621441 dm 89 dg 4
+CC sm 89 sg 1 dm 11 dg 1572864
+CC sm 11 sg 1048576 dm 89 dg 0
+MC id 91 c omnetpp::cModule t fico4omnet.linklayer.can.CanNodePort pid 88 n canNodePort cm 1
+GC m 91 g 0 n phygate$i o 0
+GC m 91 g 1 n phygate$o o 1
+GC m 91 g 2 n upperLayerIn o 0
+GC m 91 g 5 n upperLayerOut o 1
+MS id 91 d p=149,168;bgb=199,193
+MC id 92 c FiCo4OMNeT::CanInputBuffer t fico4omnet.buffer.can.CanInputBuffer pid 88 n bufferIn[0]
+GC m 92 g 2 n directIn o 0
+GC m 92 g 5 n out o 1
+MS id 92 d p=203,102;i=block/buffer
+GC m 92 g 1048576 n in i 0 o 0
+MC id 93 c FiCo4OMNeT::CanOutputBuffer t fico4omnet.buffer.can.CanOutputBuffer pid 88 n bufferOut
+GC m 93 g 2 n directIn o 0
+GC m 93 g 5 n out o 1
+MS id 93 d p=98,102;i=block/buffer
+GC m 93 g 1048576 n in i 0 o 0
+MC id 94 c SignalsAndGateways::CanSourceGatewayApp t signalsandgateways.applications.can.CanSourceGatewayApp pid 88 n sourceApp[0]
+GC m 94 g 1 n out o 1
+GC m 94 g 2 n remoteIn o 0
+GC m 94 g 4 n in o 0
+MS id 94 d p=98,32,row,70;i=block/source
+MC id 95 c SignalsAndGateways::CanSinkGatewayApp t signalsandgateways.applications.can.CanSinkGatewayApp pid 88 n sinkApp[0]
+GC m 95 g 0 n controllerIn o 0
+GC m 95 g 2 n dataIn o 0
+GC m 95 g 5 n out o 1
+MS id 95 d p=203,32;i=block/sink
+MC id 96 c FiCo4OMNeT::CanClock t fico4omnet.scheduler.can.CanClock pid 88 n canClock
+MS id 96 d p=149,102;i=block/cogwheel
+CC sm 91 sg 1 dm 88 dg 1
+CC sm 88 sg 0 dm 91 dg 0
+CC sm 93 sg 5 dm 91 dg 2
+CC sm 94 sg 1 dm 93 dg 1048576
+CC sm 95 sg 5 dm 88 dg 3
+CC sm 88 sg 4 dm 94 dg 4
+MC id 97 c FiCo4OMNeT::CanPortInput t fico4omnet.linklayer.can.CanPortInput pid 91 n canPortInput
+GC m 97 g 1 n out o 1
+GC m 97 g 2 n in o 0
+MS id 97 d p=132,51
+MC id 98 c FiCo4OMNeT::CanPortOutput t fico4omnet.linklayer.can.CanPortOutput pid 91 n canPortOutput
+GC m 98 g 1 n out o 1
+GC m 98 g 2 n in o 0
+GC m 98 g 4 n directIn o 0
+MS id 98 d p=54,51
+MC id 99 c FiCo4OMNeT::NodePort t fico4omnet.linklayer.NodePort pid 91 n nodePort
+GC m 99 g 0 n phygate$i o 0
+GC m 99 g 1 n phygate$o o 1
+GC m 99 g 2 n upperLayerIn o 0
+GC m 99 g 5 n upperLayerOut o 1
+MS id 99 d p=93,119;bgb=300,158
+CC sm 99 sg 1 dm 91 dg 1
+CC sm 91 sg 0 dm 99 dg 0
+CC sm 99 sg 5 dm 97 dg 2
+CC sm 98 sg 1 dm 99 dg 2
+CC sm 91 sg 2 dm 98 dg 2
+CC sm 97 sg 1 dm 91 dg 5
+MC id 100 c omnetpp::cModule t core4inet.linklayer.port.TTEAVBPHYPort pid 89 n phy[0] cm 1
+GC m 100 g 0 n upperLayerIn o 0
+GC m 100 g 3 n upperLayerOut o 1
+GC m 100 g 4 n phys$i o 0
+GC m 100 g 5 n phys$o o 1
+GC m 100 g 6 n TTin o 0
+GC m 100 g 8 n RCin o 0
+GC m 100 g 10 n PCFin o 0
+GC m 100 g 12 n AVBAin o 0
+GC m 100 g 14 n AVBBin o 0
+MS id 100 d p=380,255,c,50;bgb=188,180;i=device/port
+MC id 101 c CoRE4INET::AVBIncoming t core4inet.incoming.avb.AVBIncoming pid 89 n avbCTC
+GC m 101 g 0 n in o 0
+GC m 101 g 3 n out o 1
+MS id 101 d p=380,118;i=block/arrival,blue
+GC m 101 g 3670016 n AVBAout i 0 o 1
+GC m 101 g 4718592 n AVBBout i 0 o 1
+MC id 102 c CoRE4INET::AVBQueueBuffer t core4inet.buffer.avb.AVBQueueBuffer pid 89 n avbABuffer[0]
+GC m 102 g 0 n in o 0
+GC m 102 g 3 n out o 1
+GC m 102 g 4 n schedulerIn o 0
+MS id 102 d p=341,193;q=frames;i=block/buffer,blue
+MC id 103 c CoRE4INET::AVBQueueBuffer t core4inet.buffer.avb.AVBQueueBuffer pid 89 n avbBBuffer[0]
+GC m 103 g 0 n in o 0
+GC m 103 g 3 n out o 1
+GC m 103 g 4 n schedulerIn o 0
+MS id 103 d p=419,193;q=frames;i=block/buffer,blue
+MC id 104 c CoRE4INET::SRPEtherEncap t core4inet.linklayer.ethernet.avb.SRPEtherEncap pid 89 n encap
+GC m 104 g 0 n upperLayerIn o 0
+GC m 104 g 3 n upperLayerOut o 1
+GC m 104 g 4 n lowerLayerIn o 0
+GC m 104 g 7 n lowerLayerOut o 1
+GC m 104 g 8 n bgIn o 0
+GC m 104 g 11 n bgOut o 1
+GC m 104 g 12 n srpIn o 0
+GC m 104 g 15 n srpOut o 1
+MS id 104 d p=141,255;i=block/fork
+MC id 105 c CoRE4INET::DummySync t core4inet.synchronisation.base.DummySync pid 89 n sync
+GC m 105 g 0 n TTin o 0
+GC m 105 g 2 n RCin o 0
+GC m 105 g 4 n schedulerIn o 0
+MS id 105 d p=208,169;i=block/timer
+MC id 106 c omnetpp::cModule t core4inet.scheduler.Scheduler pid 89 n scheduler cm 1
+MS id 106 d p=274,169;i=block/cogwheel;bgb=293,141
+MC id 107 c CoRE4INET::BGQueueBuffer t core4inet.buffer.base.BGQueueBuffer pid 89 n bgIn
+GC m 107 g 0 n in o 0
+GC m 107 g 3 n out o 1
+MS id 107 d p=60,37;q=frames;i=block/buffer,green
+MC id 108 c CoRE4INET::BGQueueBuffer t core4inet.buffer.base.BGQueueBuffer pid 89 n bgOut
+GC m 108 g 0 n in o 0
+GC m 108 g 3 n out o 1
+MS id 108 d p=109,37;q=frames;i=block/buffer,green
+MC id 109 c CoRE4INET::SRPTable t core4inet.services.avb.SRP.SRPTable pid 89 n srpTable
+MS id 109 d p=141,99;i=block/table2,blue
+MC id 110 c CoRE4INET::SRProtocol t core4inet.services.avb.SRP.SRProtocol pid 89 n srpProtocol
+GC m 110 g 0 n in o 0
+GC m 110 g 3 n out o 1
+MS id 110 d p=141,169;i=block/network2,blue
+MC id 111 c inet::InterfaceTable t inet.networklayer.common.InterfaceTable pid 89 n interfaceTable
+MS id 111 d p=208,99;i=block/table
+CC sm 100 sg 5 dm 89 dg 1
+CC sm 89 sg 0 dm 100 dg 4
+CC sm 104 sg 7 dm 100 dg 0
+CC sm 100 sg 3 dm 104 dg 4
+CC sm 104 sg 11 dm 107 dg 0
+CC sm 108 sg 3 dm 104 dg 8
+CC sm 101 sg 3670016 dm 102 dg 0
+CC sm 101 sg 4718592 dm 103 dg 0
+CC sm 102 sg 3 dm 100 dg 12
+CC sm 103 sg 3 dm 100 dg 14
+CC sm 110 sg 3 dm 104 dg 12
+CC sm 104 sg 15 dm 110 dg 0
+MC id 112 c SignalsAndGateways::EthernetGatewayApplication t signalsandgateways.applications.ethernet.EthernetGatewayApplication pid 89 n gatewayApp
+GC m 112 g 0 n schedulerIn o 0
+GC m 112 g 2 n TTin o 0
+GC m 112 g 4 n RCin o 0
+GC m 112 g 7 n upperLayerOut o 1
+GC m 112 g 8 n upperLayerIn o 0
+GC m 112 g 10 n in o 0
+MS id 112 d p=282,37;i=block/app
+MC id 113 c CoRE4INET::TTQueueBuffer t core4inet.buffer.AS6802.TTQueueBuffer pid 89 n TTvlinks[0]
+GC m 113 g 0 n in o 0
+GC m 113 g 3 n out o 1
+GC m 113 g 4 n schedulerIn o 0
+MS id 113 d p=561,37,r,70;q=frames;i=block/buffer,red
+MC id 114 c CoRE4INET::TTIncoming t core4inet.incoming.AS6802.TTIncoming pid 89 n TTvlinks_ctc[0]
+GC m 114 g 0 n in o 0
+GC m 114 g 3 n out o 1
+GC m 114 g 4 n schedulerIn o 0
+MS id 114 d p=561,154,r,70;i=block/arrival,red
+CC sm 112 sg 7 dm 89 dg 3
+CC sm 89 sg 4 dm 112 dg 8
+CC sm 114 sg 3 dm 113 dg 0
+MC id 115 c CoRE4INET::TT_AVBClassA_AVBClassB_PCF_RC_8021Q_Shaper t core4inet.linklayer.shaper.TT_AVBClassA_AVBClassB_PCF_RC_8021Q_Shaper pid 100 n shaper
+GC m 115 g 0 n in o 0
+GC m 115 g 3 n out o 1
+GC m 115 g 4 n RCin o 0
+GC m 115 g 6 n PCFin o 0
+GC m 115 g 8 n TTin o 0
+GC m 115 g 10 n AVBAin o 0
+GC m 115 g 12 n AVBBin o 0
+MS id 115 d p=48,45;i=block/classifier
+MC id 116 c CoRE4INET::CT_AVB_8021Q_InControl t core4inet.linklayer.inControl.CT_AVB_8021Q_InControl pid 100 n inControl
+GC m 116 g 0 n in o 0
+GC m 116 g 3 n out o 1
+MS id 116 d p=142,45;i=block/classifier
+MC id 117 c inet::EtherMACFullDuplex t inet.linklayer.ethernet.EtherMACFullDuplex pid 100 n mac
+GC m 117 g 0 n upperLayerIn o 0
+GC m 117 g 3 n upperLayerOut o 1
+GC m 117 g 4 n phys$i o 0
+GC m 117 g 5 n phys$o o 1
+MS id 117 d p=87,139;i=block/rxtx
+CC sm 100 sg 0 dm 115 dg 0
+CC sm 116 sg 3 dm 100 dg 3
+CC sm 115 sg 3 dm 117 dg 0
+CC sm 117 sg 3 dm 116 dg 0
+CC sm 100 sg 4 dm 117 dg 4
+CC sm 117 sg 5 dm 100 dg 5
+CC sm 100 sg 6 dm 115 dg 8
+CC sm 100 sg 8 dm 115 dg 4
+CC sm 100 sg 10 dm 115 dg 6
+CC sm 100 sg 12 dm 115 dg 10
+CC sm 100 sg 14 dm 115 dg 12
+CM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n "Scheduler Message" pe -1
+MC id 118 c CoRE4INET::Timer t core4inet.scheduler.timer.Timer pid 106 n timer
+GC m 118 g 2 n oscillator_in o 0
+MS id 118 d p=160,40;i=block/timer
+GC m 118 g 1048576 n period_in i 0 o 0
+GC m 118 g 1048577 n period_in i 1 o 0
+MC id 119 c CoRE4INET::SimpleOscillator t core4inet.scheduler.oscillator.SimpleOscillator pid 106 n oscillator
+GC m 119 g 1 n out o 1
+GC m 119 g 2 n schedulerIn o 0
+MS id 119 d p=70,40;i=block/mac
+MC id 120 c CoRE4INET::Period t core4inet.scheduler.period.Period pid 106 n period[0]
+GC m 120 g 1 n out o 1
+GC m 120 g 2 n schedulerIn o 0
+MS id 120 d p=70,100,row,60;i=block/table
+MC id 121 c CoRE4INET::Period t core4inet.scheduler.period.Period pid 106 n period[1]
+GC m 121 g 1 n out o 1
+GC m 121 g 2 n schedulerIn o 0
+MS id 121 d p=70,100,row,60;i=block/table
+CC sm 120 sg 1 dm 118 dg 1048576
+CC sm 121 sg 1 dm 118 dg 1048577
+CC sm 119 sg 1 dm 118 dg 2
+MC id 122 c SignalsAndGateways::BaseGatewayRouter t signalsandgateways.gateway.routing.BaseGatewayRouter pid 90 n router
+MS id 122 d p=63,100;i=block/routing
+GC m 122 g 1048576 n in i 0 o 0
+GC m 122 g 1048577 n in i 1 o 0
+GC m 122 g 2621440 n out i 0 o 1
+GC m 122 g 2621441 n out i 1 o 1
+MC id 123 c SignalsAndGateways::GatewayTransformation t signalsandgateways.gateway.transformation.GatewayTransformation pid 90 n transform[0]
+GC m 123 g 0 n in o 0
+GC m 123 g 3 n out o 1
+MS id 123 d p=338,100,c,130;i=block/segm
+MC id 124 c SignalsAndGateways::GatewayTransformation t signalsandgateways.gateway.transformation.GatewayTransformation pid 90 n transform[1]
+GC m 124 g 0 n in o 0
+GC m 124 g 3 n out o 1
+MS id 124 d p=338,100,c,130;i=block/segm
+MC id 125 c SignalsAndGateways::AccumulationGatewayBuffering t signalsandgateways.gateway.buffering.AccumulationGatewayBuffering pid 90 n buffering[0]
+GC m 125 g 0 n in o 0
+GC m 125 g 3 n out o 1
+MS id 125 d p=200,100,c,130;i=block/subqueue
+MC id 126 c SignalsAndGateways::AccumulationGatewayBuffering t signalsandgateways.gateway.buffering.AccumulationGatewayBuffering pid 90 n buffering[1]
+GC m 126 g 0 n in o 0
+GC m 126 g 3 n out o 1
+MS id 126 d p=200,100,c,130;i=block/subqueue
+CC sm 90 sg 1048576 dm 122 dg 1048576
+CC sm 122 sg 2621440 dm 125 dg 0
+CS sm 122 sg 2621440 d ""
+CC sm 125 sg 3 dm 123 dg 0
+CS sm 125 sg 3 d ""
+CC sm 123 sg 3 dm 90 dg 2621440
+CS sm 123 sg 3 d ""
+CC sm 90 sg 1048577 dm 122 dg 1048577
+CC sm 122 sg 2621441 dm 126 dg 0
+CS sm 122 sg 2621441 d ""
+CC sm 126 sg 3 dm 124 dg 0
+CS sm 126 sg 3 d ""
+CC sm 124 sg 3 dm 90 dg 2621441
+CS sm 124 sg 3 d ""
+MC id 133 c omnetpp::cModule t signalsandgateways.applications.can.CanGatewayNode pid 12 n can[0] cm 1
+GC m 133 g 0 n gate$i o 0
+GC m 133 g 1 n gate$o o 1
+GC m 133 g 3 n upperLayerOut o 1
+GC m 133 g 4 n upperLayerIn o 0
+MS id 133 d p=369,100,c,130;i=block/app2;bgb=248,222
+MC id 134 c omnetpp::cModule t signalsandgateways.applications.ethernet.EthernetGatewayHost pid 12 n tte[0] cm 1
+GC m 134 g 0 n ethg$i o 0
+GC m 134 g 1 n ethg$o o 1
+GC m 134 g 3 n upperLayerOut o 1
+GC m 134 g 4 n upperLayerIn o 0
+MS id 134 d p=74,100,c,130;bgb=894,314;i=device/device
+MC id 135 c omnetpp::cModule t signalsandgateways.gateway.GatewayBase pid 12 n gateway cm 1
+MS id 135 d p=224,100;i=device/hub
+GC m 135 g 1048576 n lowerLayerIn i 0 o 0
+GC m 135 g 1048577 n lowerLayerIn i 1 o 0
+GC m 135 g 2621440 n lowerLayerOut i 0 o 1
+GC m 135 g 2621441 n lowerLayerOut i 1 o 1
+CC sm 133 sg 3 dm 135 dg 1048576
+CC sm 135 sg 2621440 dm 133 dg 4
+CC sm 133 sg 1 dm 12 dg 2621440
+CC sm 12 sg 2097152 dm 133 dg 0
+CC sm 134 sg 3 dm 135 dg 1048577
+CC sm 135 sg 2621441 dm 134 dg 4
+CC sm 134 sg 1 dm 12 dg 1572864
+CC sm 12 sg 1048576 dm 134 dg 0
+MC id 136 c omnetpp::cModule t fico4omnet.linklayer.can.CanNodePort pid 133 n canNodePort cm 1
+GC m 136 g 0 n phygate$i o 0
+GC m 136 g 1 n phygate$o o 1
+GC m 136 g 2 n upperLayerIn o 0
+GC m 136 g 5 n upperLayerOut o 1
+MS id 136 d p=149,168;bgb=199,193
+MC id 137 c FiCo4OMNeT::CanInputBuffer t fico4omnet.buffer.can.CanInputBuffer pid 133 n bufferIn[0]
+GC m 137 g 2 n directIn o 0
+GC m 137 g 5 n out o 1
+MS id 137 d p=203,102;i=block/buffer
+GC m 137 g 1048576 n in i 0 o 0
+MC id 138 c FiCo4OMNeT::CanOutputBuffer t fico4omnet.buffer.can.CanOutputBuffer pid 133 n bufferOut
+GC m 138 g 2 n directIn o 0
+GC m 138 g 5 n out o 1
+MS id 138 d p=98,102;i=block/buffer
+GC m 138 g 1048576 n in i 0 o 0
+MC id 139 c SignalsAndGateways::CanSourceGatewayApp t signalsandgateways.applications.can.CanSourceGatewayApp pid 133 n sourceApp[0]
+GC m 139 g 1 n out o 1
+GC m 139 g 2 n remoteIn o 0
+GC m 139 g 4 n in o 0
+MS id 139 d p=98,32,row,70;i=block/source
+MC id 140 c SignalsAndGateways::CanSinkGatewayApp t signalsandgateways.applications.can.CanSinkGatewayApp pid 133 n sinkApp[0]
+GC m 140 g 0 n controllerIn o 0
+GC m 140 g 2 n dataIn o 0
+GC m 140 g 5 n out o 1
+MS id 140 d p=203,32;i=block/sink
+MC id 141 c FiCo4OMNeT::CanClock t fico4omnet.scheduler.can.CanClock pid 133 n canClock
+MS id 141 d p=149,102;i=block/cogwheel
+CC sm 136 sg 1 dm 133 dg 1
+CC sm 133 sg 0 dm 136 dg 0
+CC sm 138 sg 5 dm 136 dg 2
+CC sm 139 sg 1 dm 138 dg 1048576
+CC sm 140 sg 5 dm 133 dg 3
+CC sm 133 sg 4 dm 139 dg 4
+MC id 142 c FiCo4OMNeT::CanPortInput t fico4omnet.linklayer.can.CanPortInput pid 136 n canPortInput
+GC m 142 g 1 n out o 1
+GC m 142 g 2 n in o 0
+MS id 142 d p=132,51
+MC id 143 c FiCo4OMNeT::CanPortOutput t fico4omnet.linklayer.can.CanPortOutput pid 136 n canPortOutput
+GC m 143 g 1 n out o 1
+GC m 143 g 2 n in o 0
+GC m 143 g 4 n directIn o 0
+MS id 143 d p=54,51
+MC id 144 c FiCo4OMNeT::NodePort t fico4omnet.linklayer.NodePort pid 136 n nodePort
+GC m 144 g 0 n phygate$i o 0
+GC m 144 g 1 n phygate$o o 1
+GC m 144 g 2 n upperLayerIn o 0
+GC m 144 g 5 n upperLayerOut o 1
+MS id 144 d p=93,119;bgb=300,158
+CC sm 144 sg 1 dm 136 dg 1
+CC sm 136 sg 0 dm 144 dg 0
+CC sm 144 sg 5 dm 142 dg 2
+CC sm 143 sg 1 dm 144 dg 2
+CC sm 136 sg 2 dm 143 dg 2
+CC sm 142 sg 1 dm 136 dg 5
+MC id 145 c omnetpp::cModule t core4inet.linklayer.port.TTEAVBPHYPort pid 134 n phy[0] cm 1
+GC m 145 g 0 n upperLayerIn o 0
+GC m 145 g 3 n upperLayerOut o 1
+GC m 145 g 4 n phys$i o 0
+GC m 145 g 5 n phys$o o 1
+GC m 145 g 6 n TTin o 0
+GC m 145 g 8 n RCin o 0
+GC m 145 g 10 n PCFin o 0
+GC m 145 g 12 n AVBAin o 0
+GC m 145 g 14 n AVBBin o 0
+MS id 145 d p=380,255,c,50;bgb=188,180;i=device/port
+MC id 146 c CoRE4INET::AVBIncoming t core4inet.incoming.avb.AVBIncoming pid 134 n avbCTC
+GC m 146 g 0 n in o 0
+GC m 146 g 3 n out o 1
+MS id 146 d p=380,118;i=block/arrival,blue
+GC m 146 g 3670016 n AVBAout i 0 o 1
+GC m 146 g 4718592 n AVBBout i 0 o 1
+MC id 147 c CoRE4INET::AVBQueueBuffer t core4inet.buffer.avb.AVBQueueBuffer pid 134 n avbABuffer[0]
+GC m 147 g 0 n in o 0
+GC m 147 g 3 n out o 1
+GC m 147 g 4 n schedulerIn o 0
+MS id 147 d p=341,193;q=frames;i=block/buffer,blue
+MC id 148 c CoRE4INET::AVBQueueBuffer t core4inet.buffer.avb.AVBQueueBuffer pid 134 n avbBBuffer[0]
+GC m 148 g 0 n in o 0
+GC m 148 g 3 n out o 1
+GC m 148 g 4 n schedulerIn o 0
+MS id 148 d p=419,193;q=frames;i=block/buffer,blue
+MC id 149 c CoRE4INET::SRPEtherEncap t core4inet.linklayer.ethernet.avb.SRPEtherEncap pid 134 n encap
+GC m 149 g 0 n upperLayerIn o 0
+GC m 149 g 3 n upperLayerOut o 1
+GC m 149 g 4 n lowerLayerIn o 0
+GC m 149 g 7 n lowerLayerOut o 1
+GC m 149 g 8 n bgIn o 0
+GC m 149 g 11 n bgOut o 1
+GC m 149 g 12 n srpIn o 0
+GC m 149 g 15 n srpOut o 1
+MS id 149 d p=141,255;i=block/fork
+MC id 150 c CoRE4INET::DummySync t core4inet.synchronisation.base.DummySync pid 134 n sync
+GC m 150 g 0 n TTin o 0
+GC m 150 g 2 n RCin o 0
+GC m 150 g 4 n schedulerIn o 0
+MS id 150 d p=208,169;i=block/timer
+MC id 151 c omnetpp::cModule t core4inet.scheduler.Scheduler pid 134 n scheduler cm 1
+MS id 151 d p=274,169;i=block/cogwheel;bgb=293,141
+MC id 152 c CoRE4INET::BGQueueBuffer t core4inet.buffer.base.BGQueueBuffer pid 134 n bgIn
+GC m 152 g 0 n in o 0
+GC m 152 g 3 n out o 1
+MS id 152 d p=60,37;q=frames;i=block/buffer,green
+MC id 153 c CoRE4INET::BGQueueBuffer t core4inet.buffer.base.BGQueueBuffer pid 134 n bgOut
+GC m 153 g 0 n in o 0
+GC m 153 g 3 n out o 1
+MS id 153 d p=109,37;q=frames;i=block/buffer,green
+MC id 154 c CoRE4INET::SRPTable t core4inet.services.avb.SRP.SRPTable pid 134 n srpTable
+MS id 154 d p=141,99;i=block/table2,blue
+MC id 155 c CoRE4INET::SRProtocol t core4inet.services.avb.SRP.SRProtocol pid 134 n srpProtocol
+GC m 155 g 0 n in o 0
+GC m 155 g 3 n out o 1
+MS id 155 d p=141,169;i=block/network2,blue
+MC id 156 c inet::InterfaceTable t inet.networklayer.common.InterfaceTable pid 134 n interfaceTable
+MS id 156 d p=208,99;i=block/table
+CC sm 145 sg 5 dm 134 dg 1
+CC sm 134 sg 0 dm 145 dg 4
+CC sm 149 sg 7 dm 145 dg 0
+CC sm 145 sg 3 dm 149 dg 4
+CC sm 149 sg 11 dm 152 dg 0
+CC sm 153 sg 3 dm 149 dg 8
+CC sm 146 sg 3670016 dm 147 dg 0
+CC sm 146 sg 4718592 dm 148 dg 0
+CC sm 147 sg 3 dm 145 dg 12
+CC sm 148 sg 3 dm 145 dg 14
+CC sm 155 sg 3 dm 149 dg 12
+CC sm 149 sg 15 dm 155 dg 0
+MC id 157 c SignalsAndGateways::EthernetGatewayApplication t signalsandgateways.applications.ethernet.EthernetGatewayApplication pid 134 n gatewayApp
+GC m 157 g 0 n schedulerIn o 0
+GC m 157 g 2 n TTin o 0
+GC m 157 g 4 n RCin o 0
+GC m 157 g 7 n upperLayerOut o 1
+GC m 157 g 8 n upperLayerIn o 0
+GC m 157 g 10 n in o 0
+MS id 157 d p=282,37;i=block/app
+MC id 158 c CoRE4INET::TTQueueBuffer t core4inet.buffer.AS6802.TTQueueBuffer pid 134 n TTvlinks[0]
+GC m 158 g 0 n in o 0
+GC m 158 g 3 n out o 1
+GC m 158 g 4 n schedulerIn o 0
+MS id 158 d p=561,37,r,70;q=frames;i=block/buffer,red
+MC id 159 c CoRE4INET::TTIncoming t core4inet.incoming.AS6802.TTIncoming pid 134 n TTvlinks_ctc[0]
+GC m 159 g 0 n in o 0
+GC m 159 g 3 n out o 1
+GC m 159 g 4 n schedulerIn o 0
+MS id 159 d p=561,154,r,70;i=block/arrival,red
+CC sm 157 sg 7 dm 134 dg 3
+CC sm 134 sg 4 dm 157 dg 8
+CC sm 159 sg 3 dm 158 dg 0
+MC id 160 c CoRE4INET::TT_AVBClassA_AVBClassB_PCF_RC_8021Q_Shaper t core4inet.linklayer.shaper.TT_AVBClassA_AVBClassB_PCF_RC_8021Q_Shaper pid 145 n shaper
+GC m 160 g 0 n in o 0
+GC m 160 g 3 n out o 1
+GC m 160 g 4 n RCin o 0
+GC m 160 g 6 n PCFin o 0
+GC m 160 g 8 n TTin o 0
+GC m 160 g 10 n AVBAin o 0
+GC m 160 g 12 n AVBBin o 0
+MS id 160 d p=48,45;i=block/classifier
+MC id 161 c CoRE4INET::CT_AVB_8021Q_InControl t core4inet.linklayer.inControl.CT_AVB_8021Q_InControl pid 145 n inControl
+GC m 161 g 0 n in o 0
+GC m 161 g 3 n out o 1
+MS id 161 d p=142,45;i=block/classifier
+MC id 162 c inet::EtherMACFullDuplex t inet.linklayer.ethernet.EtherMACFullDuplex pid 145 n mac
+GC m 162 g 0 n upperLayerIn o 0
+GC m 162 g 3 n upperLayerOut o 1
+GC m 162 g 4 n phys$i o 0
+GC m 162 g 5 n phys$o o 1
+MS id 162 d p=87,139;i=block/rxtx
+CC sm 145 sg 0 dm 160 dg 0
+CC sm 161 sg 3 dm 145 dg 3
+CC sm 160 sg 3 dm 162 dg 0
+CC sm 162 sg 3 dm 161 dg 0
+CC sm 145 sg 4 dm 162 dg 4
+CC sm 162 sg 5 dm 145 dg 5
+CC sm 145 sg 6 dm 160 dg 8
+CC sm 145 sg 8 dm 160 dg 4
+CC sm 145 sg 10 dm 160 dg 6
+CC sm 145 sg 12 dm 160 dg 10
+CC sm 145 sg 14 dm 160 dg 12
+CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n "Scheduler Message" pe -1
+MC id 163 c CoRE4INET::Timer t core4inet.scheduler.timer.Timer pid 151 n timer
+GC m 163 g 2 n oscillator_in o 0
+MS id 163 d p=160,40;i=block/timer
+GC m 163 g 1048576 n period_in i 0 o 0
+GC m 163 g 1048577 n period_in i 1 o 0
+MC id 164 c CoRE4INET::SimpleOscillator t core4inet.scheduler.oscillator.SimpleOscillator pid 151 n oscillator
+GC m 164 g 1 n out o 1
+GC m 164 g 2 n schedulerIn o 0
+MS id 164 d p=70,40;i=block/mac
+MC id 165 c CoRE4INET::Period t core4inet.scheduler.period.Period pid 151 n period[0]
+GC m 165 g 1 n out o 1
+GC m 165 g 2 n schedulerIn o 0
+MS id 165 d p=70,100,row,60;i=block/table
+MC id 166 c CoRE4INET::Period t core4inet.scheduler.period.Period pid 151 n period[1]
+GC m 166 g 1 n out o 1
+GC m 166 g 2 n schedulerIn o 0
+MS id 166 d p=70,100,row,60;i=block/table
+CC sm 165 sg 1 dm 163 dg 1048576
+CC sm 166 sg 1 dm 163 dg 1048577
+CC sm 164 sg 1 dm 163 dg 2
+MC id 167 c SignalsAndGateways::BaseGatewayRouter t signalsandgateways.gateway.routing.BaseGatewayRouter pid 135 n router
+MS id 167 d p=63,100;i=block/routing
+GC m 167 g 1048576 n in i 0 o 0
+GC m 167 g 1048577 n in i 1 o 0
+GC m 167 g 2621440 n out i 0 o 1
+GC m 167 g 2621441 n out i 1 o 1
+MC id 168 c SignalsAndGateways::GatewayTransformation t signalsandgateways.gateway.transformation.GatewayTransformation pid 135 n transform[0]
+GC m 168 g 0 n in o 0
+GC m 168 g 3 n out o 1
+MS id 168 d p=338,100,c,130;i=block/segm
+MC id 169 c SignalsAndGateways::GatewayTransformation t signalsandgateways.gateway.transformation.GatewayTransformation pid 135 n transform[1]
+GC m 169 g 0 n in o 0
+GC m 169 g 3 n out o 1
+MS id 169 d p=338,100,c,130;i=block/segm
+MC id 170 c SignalsAndGateways::AccumulationGatewayBuffering t signalsandgateways.gateway.buffering.AccumulationGatewayBuffering pid 135 n buffering[0]
+GC m 170 g 0 n in o 0
+GC m 170 g 3 n out o 1
+MS id 170 d p=200,100,c,130;i=block/subqueue
+MC id 171 c SignalsAndGateways::AccumulationGatewayBuffering t signalsandgateways.gateway.buffering.AccumulationGatewayBuffering pid 135 n buffering[1]
+GC m 171 g 0 n in o 0
+GC m 171 g 3 n out o 1
+MS id 171 d p=200,100,c,130;i=block/subqueue
+CC sm 135 sg 1048576 dm 167 dg 1048576
+CC sm 167 sg 2621440 dm 170 dg 0
+CS sm 167 sg 2621440 d ""
+CC sm 170 sg 3 dm 168 dg 0
+CS sm 170 sg 3 d ""
+CC sm 168 sg 3 dm 135 dg 2621440
+CS sm 168 sg 3 d ""
+CC sm 135 sg 1048577 dm 167 dg 1048577
+CC sm 167 sg 2621441 dm 171 dg 0
+CS sm 167 sg 2621441 d ""
+CC sm 171 sg 3 dm 169 dg 0
+CS sm 171 sg 3 d ""
+CC sm 169 sg 3 dm 135 dg 2621441
+CS sm 169 sg 3 d ""
+MC id 178 c inet::EtherAppCli t inet.applications.ethernet.EtherAppCli pid 13 n cli
+GC m 178 g 0 n in o 0
+GC m 178 g 3 n out o 1
+MS id 178 d p=120,58,col;i=block/app
+MC id 179 c inet::EtherAppSrv t inet.applications.ethernet.EtherAppSrv pid 13 n srv
+GC m 179 g 0 n in o 0
+GC m 179 g 3 n out o 1
+MS id 179 d p=310,58,col;i=block/app
+MC id 180 c inet::EtherLLC t inet.linklayer.ethernet.EtherLLC pid 13 n llc
+GC m 180 g 4 n lowerLayerIn o 0
+GC m 180 g 7 n lowerLayerOut o 1
+MS id 180 d p=215,118;i=block/fork
+GC m 180 g 1048576 n upperLayerIn i 0 o 0
+GC m 180 g 1048577 n upperLayerIn i 1 o 0
+GC m 180 g 2621440 n upperLayerOut i 0 o 1
+GC m 180 g 2621441 n upperLayerOut i 1 o 1
+MC id 181 c inet::EtherMAC t inet.linklayer.ethernet.EtherMAC pid 13 n mac
+GC m 181 g 0 n upperLayerIn o 0
+GC m 181 g 3 n upperLayerOut o 1
+GC m 181 g 4 n phys$i o 0
+GC m 181 g 5 n phys$o o 1
+MS id 181 d q=txQueue;p=215,270;i=block/rxtx
+CC sm 178 sg 3 dm 180 dg 1048576
+CC sm 180 sg 2621440 dm 178 dg 0
+CC sm 179 sg 3 dm 180 dg 1048577
+CC sm 180 sg 2621441 dm 179 dg 0
+CC sm 180 sg 7 dm 181 dg 0
+CC sm 181 sg 3 dm 180 dg 4
+CC sm 181 sg 5 dm 13 dg 1
+CC sm 13 sg 0 dm 181 dg 4
+MC id 182 c inet::NodeStatus t inet.common.lifecycle.NodeStatus pid 14 n status
+MS id 182 d p=47,50;i=block/cogwheel;is=n
+MC id 183 c inet::MACRelayUnit t inet.linklayer.ethernet.switch.MACRelayUnit pid 14 n beswitch
+GC m 183 g 4 n stpIn o 0
+GC m 183 g 7 n stpOut o 1
+MS id 183 d p=100,50;i=block/switch
+GC m 183 g 1048576 n ifIn i 0 o 0
+GC m 183 g 1048577 n ifIn i 1 o 0
+GC m 183 g 1048578 n ifIn i 2 o 0
+GC m 183 g 2621440 n ifOut i 0 o 1
+GC m 183 g 2621441 n ifOut i 1 o 1
+GC m 183 g 2621442 n ifOut i 2 o 1
+MC id 184 c inet::MACAddressTable t inet.linklayer.ethernet.switch.MACAddressTable pid 14 n macTable
+MS id 184 d p=170,50;i=block/table2
+MC id 185 c inet::InterfaceTable t inet.networklayer.common.InterfaceTable pid 14 n interfaceTable
+MS id 185 d p=447,313;i=block/table
+MC id 186 c omnetpp::cModule t core4inet.linklayer.port.TTEPHYPort pid 14 n phy[0] cm 1
+GC m 186 g 0 n upperLayerIn o 0
+GC m 186 g 3 n upperLayerOut o 1
+GC m 186 g 4 n phys$i o 0
+GC m 186 g 5 n phys$o o 1
+GC m 186 g 6 n TTin o 0
+GC m 186 g 8 n RCin o 0
+GC m 186 g 10 n PCFin o 0
+MS id 186 d p=50,100,column,50;bgb=188,180;i=device/port
+MC id 187 c omnetpp::cModule t core4inet.linklayer.port.TTEPHYPort pid 14 n phy[1] cm 1
+GC m 187 g 0 n upperLayerIn o 0
+GC m 187 g 3 n upperLayerOut o 1
+GC m 187 g 4 n phys$i o 0
+GC m 187 g 5 n phys$o o 1
+GC m 187 g 6 n TTin o 0
+GC m 187 g 8 n RCin o 0
+GC m 187 g 10 n PCFin o 0
+MS id 187 d p=50,100,column,50;bgb=188,180;i=device/port
+MC id 188 c omnetpp::cModule t core4inet.linklayer.port.TTEPHYPort pid 14 n phy[2] cm 1
+GC m 188 g 0 n upperLayerIn o 0
+GC m 188 g 3 n upperLayerOut o 1
+GC m 188 g 4 n phys$i o 0
+GC m 188 g 5 n phys$o o 1
+GC m 188 g 6 n TTin o 0
+GC m 188 g 8 n RCin o 0
+GC m 188 g 10 n PCFin o 0
+MS id 188 d p=50,100,column,50;bgb=188,180;i=device/port
+MC id 189 c CoRE4INET::DummySync t core4inet.synchronisation.base.DummySync pid 14 n sync
+GC m 189 g 0 n TTin o 0
+GC m 189 g 2 n RCin o 0
+GC m 189 g 4 n schedulerIn o 0
+MS id 189 d p=240,50;i=block/timer
+MC id 190 c omnetpp::cModule t core4inet.scheduler.Scheduler pid 14 n scheduler cm 1
+MS id 190 d p=310,50;i=block/cogwheel;bgb=293,141
+CC sm 186 sg 5 dm 14 dg 1572864
+CC sm 14 sg 1048576 dm 186 dg 4
+CC sm 183 sg 2621440 dm 186 dg 0
+CS sm 183 sg 2621440 d ""
+CC sm 186 sg 3 dm 183 dg 1048576
+CS sm 186 sg 3 d ""
+CC sm 187 sg 5 dm 14 dg 1572865
+CC sm 14 sg 1048577 dm 187 dg 4
+CC sm 183 sg 2621441 dm 187 dg 0
+CS sm 183 sg 2621441 d ""
+CC sm 187 sg 3 dm 183 dg 1048577
+CS sm 187 sg 3 d ""
+CC sm 188 sg 5 dm 14 dg 1572866
+CC sm 14 sg 1048578 dm 188 dg 4
+CC sm 183 sg 2621442 dm 188 dg 0
+CS sm 183 sg 2621442 d ""
+CC sm 188 sg 3 dm 183 dg 1048578
+CS sm 188 sg 3 d ""
+MC id 197 c CoRE4INET::TT_PCF_RC_BE_Shaper t core4inet.linklayer.shaper.TT_PCF_RC_BE_Shaper pid 186 n shaper
+GC m 197 g 0 n in o 0
+GC m 197 g 3 n out o 1
+GC m 197 g 4 n RCin o 0
+GC m 197 g 6 n PCFin o 0
+GC m 197 g 8 n TTin o 0
+MS id 197 d p=48,45;i=block/classifier
+MC id 198 c CoRE4INET::CT_BE_InControl t core4inet.linklayer.inControl.CT_BE_InControl pid 186 n inControl
+GC m 198 g 0 n in o 0
+GC m 198 g 3 n out o 1
+MS id 198 d p=142,45;i=block/classifier
+MC id 199 c inet::EtherMACFullDuplex t inet.linklayer.ethernet.EtherMACFullDuplex pid 186 n mac
+GC m 199 g 0 n upperLayerIn o 0
+GC m 199 g 3 n upperLayerOut o 1
+GC m 199 g 4 n phys$i o 0
+GC m 199 g 5 n phys$o o 1
+MS id 199 d p=87,139;i=block/rxtx
+CC sm 186 sg 0 dm 197 dg 0
+CC sm 198 sg 3 dm 186 dg 3
+CC sm 197 sg 3 dm 199 dg 0
+CC sm 199 sg 3 dm 198 dg 0
+CC sm 186 sg 4 dm 199 dg 4
+CC sm 199 sg 5 dm 186 dg 5
+CC sm 186 sg 6 dm 197 dg 8
+CC sm 186 sg 8 dm 197 dg 4
+CC sm 186 sg 10 dm 197 dg 6
+MC id 200 c CoRE4INET::TT_PCF_RC_BE_Shaper t core4inet.linklayer.shaper.TT_PCF_RC_BE_Shaper pid 187 n shaper
+GC m 200 g 0 n in o 0
+GC m 200 g 3 n out o 1
+GC m 200 g 4 n RCin o 0
+GC m 200 g 6 n PCFin o 0
+GC m 200 g 8 n TTin o 0
+MS id 200 d p=48,45;i=block/classifier
+MC id 201 c CoRE4INET::CT_BE_InControl t core4inet.linklayer.inControl.CT_BE_InControl pid 187 n inControl
+GC m 201 g 0 n in o 0
+GC m 201 g 3 n out o 1
+MS id 201 d p=142,45;i=block/classifier
+MC id 202 c inet::EtherMACFullDuplex t inet.linklayer.ethernet.EtherMACFullDuplex pid 187 n mac
+GC m 202 g 0 n upperLayerIn o 0
+GC m 202 g 3 n upperLayerOut o 1
+GC m 202 g 4 n phys$i o 0
+GC m 202 g 5 n phys$o o 1
+MS id 202 d p=87,139;i=block/rxtx
+CC sm 187 sg 0 dm 200 dg 0
+CC sm 201 sg 3 dm 187 dg 3
+CC sm 200 sg 3 dm 202 dg 0
+CC sm 202 sg 3 dm 201 dg 0
+CC sm 187 sg 4 dm 202 dg 4
+CC sm 202 sg 5 dm 187 dg 5
+CC sm 187 sg 6 dm 200 dg 8
+CC sm 187 sg 8 dm 200 dg 4
+CC sm 187 sg 10 dm 200 dg 6
+MC id 203 c CoRE4INET::TT_PCF_RC_BE_Shaper t core4inet.linklayer.shaper.TT_PCF_RC_BE_Shaper pid 188 n shaper
+GC m 203 g 0 n in o 0
+GC m 203 g 3 n out o 1
+GC m 203 g 4 n RCin o 0
+GC m 203 g 6 n PCFin o 0
+GC m 203 g 8 n TTin o 0
+MS id 203 d p=48,45;i=block/classifier
+MC id 204 c CoRE4INET::CT_BE_InControl t core4inet.linklayer.inControl.CT_BE_InControl pid 188 n inControl
+GC m 204 g 0 n in o 0
+GC m 204 g 3 n out o 1
+MS id 204 d p=142,45;i=block/classifier
+MC id 205 c inet::EtherMACFullDuplex t inet.linklayer.ethernet.EtherMACFullDuplex pid 188 n mac
+GC m 205 g 0 n upperLayerIn o 0
+GC m 205 g 3 n upperLayerOut o 1
+GC m 205 g 4 n phys$i o 0
+GC m 205 g 5 n phys$o o 1
+MS id 205 d p=87,139;i=block/rxtx
+CC sm 188 sg 0 dm 203 dg 0
+CC sm 204 sg 3 dm 188 dg 3
+CC sm 203 sg 3 dm 205 dg 0
+CC sm 205 sg 3 dm 204 dg 0
+CC sm 188 sg 4 dm 205 dg 4
+CC sm 205 sg 5 dm 188 dg 5
+CC sm 188 sg 6 dm 203 dg 8
+CC sm 188 sg 8 dm 203 dg 4
+CC sm 188 sg 10 dm 203 dg 6
+CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n "Scheduler Message" pe -1
+MC id 206 c CoRE4INET::Timer t core4inet.scheduler.timer.Timer pid 190 n timer
+GC m 206 g 2 n oscillator_in o 0
+MS id 206 d p=160,40;i=block/timer
+GC m 206 g 1048576 n period_in i 0 o 0
+GC m 206 g 1048577 n period_in i 1 o 0
+MC id 207 c CoRE4INET::SimpleOscillator t core4inet.scheduler.oscillator.SimpleOscillator pid 190 n oscillator
+GC m 207 g 1 n out o 1
+GC m 207 g 2 n schedulerIn o 0
+MS id 207 d p=70,40;i=block/mac
+MC id 208 c CoRE4INET::Period t core4inet.scheduler.period.Period pid 190 n period[0]
+GC m 208 g 1 n out o 1
+GC m 208 g 2 n schedulerIn o 0
+MS id 208 d p=70,100,row,60;i=block/table
+MC id 209 c CoRE4INET::Period t core4inet.scheduler.period.Period pid 190 n period[1]
+GC m 209 g 1 n out o 1
+GC m 209 g 2 n schedulerIn o 0
+MS id 209 d p=70,100,row,60;i=block/table
+CC sm 208 sg 1 dm 206 dg 1048576
+CC sm 209 sg 1 dm 206 dg 1048577
+CC sm 207 sg 1 dm 206 dg 2
+MB sm 1 tm 2 m initialize(0)
+ME
+MB sm 1 tm 21 m initialize(0)
+ME
+MB sm 1 tm 22 m initialize(0)
+BU id 22 txt "state: idle"
+MS id 22 d "tt=state: idle;p=52,74;i=block/app"
+ME
+MB sm 1 tm 3 m initialize(0)
+ME
+MB sm 1 tm 23 m initialize(0)
+ME
+MB sm 1 tm 29 m initialize(0)
+ME
+MB sm 1 tm 30 m initialize(0)
+CM id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 31 m initialize(0)
+ME
+MB sm 1 tm 24 m initialize(0)
+ME
+MB sm 1 tm 25 m initialize(0)
+ME
+MB sm 1 tm 26 m initialize(0)
+ME
+MB sm 1 tm 27 m initialize(0)
+ME
+MB sm 1 tm 28 m initialize(0)
+ME
+MB sm 1 tm 4 m initialize(0)
+ME
+MB sm 1 tm 32 m initialize(0)
+ME
+MB sm 1 tm 38 m initialize(0)
+ME
+MB sm 1 tm 39 m initialize(0)
+CM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 40 m initialize(0)
+ME
+MB sm 1 tm 33 m initialize(0)
+ME
+MB sm 1 tm 34 m initialize(0)
+ME
+MB sm 1 tm 35 m initialize(0)
+ME
+MB sm 1 tm 36 m initialize(0)
+ME
+MB sm 1 tm 37 m initialize(0)
+ME
+MB sm 1 tm 5 m initialize(0)
+ME
+MB sm 1 tm 41 m initialize(0)
+ME
+MB sm 1 tm 47 m initialize(0)
+ME
+MB sm 1 tm 48 m initialize(0)
+CM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 49 m initialize(0)
+ME
+MB sm 1 tm 42 m initialize(0)
+ME
+MB sm 1 tm 43 m initialize(0)
+ME
+MB sm 1 tm 44 m initialize(0)
+ME
+MB sm 1 tm 45 m initialize(0)
+ME
+MB sm 1 tm 46 m initialize(0)
+ME
+MB sm 1 tm 6 m initialize(0)
+ME
+MB sm 1 tm 50 m initialize(0)
+ME
+MB sm 1 tm 56 m initialize(0)
+ME
+MB sm 1 tm 57 m initialize(0)
+CM id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 58 m initialize(0)
+ME
+MB sm 1 tm 51 m initialize(0)
+ME
+MB sm 1 tm 52 m initialize(0)
+ME
+MB sm 1 tm 53 m initialize(0)
+ME
+MB sm 1 tm 54 m initialize(0)
+ME
+MB sm 1 tm 55 m initialize(0)
+ME
+MB sm 1 tm 7 m initialize(0)
+ME
+MB sm 1 tm 59 m initialize(0)
+ME
+MB sm 1 tm 60 m initialize(0)
+BU id 60 txt "state: idle"
+MS id 60 d "tt=state: idle;p=52,74;i=block/app"
+ME
+MB sm 1 tm 8 m initialize(0)
+ME
+MB sm 1 tm 61 m initialize(0)
+ME
+MB sm 1 tm 67 m initialize(0)
+ME
+MB sm 1 tm 68 m initialize(0)
+CM id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 69 m initialize(0)
+ME
+MB sm 1 tm 62 m initialize(0)
+ME
+MB sm 1 tm 63 m initialize(0)
+ME
+MB sm 1 tm 64 m initialize(0)
+ME
+MB sm 1 tm 65 m initialize(0)
+ME
+MB sm 1 tm 66 m initialize(0)
+ME
+MB sm 1 tm 9 m initialize(0)
+ME
+MB sm 1 tm 70 m initialize(0)
+ME
+MB sm 1 tm 76 m initialize(0)
+ME
+MB sm 1 tm 77 m initialize(0)
+CM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 78 m initialize(0)
+ME
+MB sm 1 tm 71 m initialize(0)
+ME
+MB sm 1 tm 72 m initialize(0)
+ME
+MB sm 1 tm 73 m initialize(0)
+ME
+MB sm 1 tm 74 m initialize(0)
+ME
+MB sm 1 tm 75 m initialize(0)
+ME
+MB sm 1 tm 10 m initialize(0)
+ME
+MB sm 1 tm 79 m initialize(0)
+ME
+MB sm 1 tm 85 m initialize(0)
+ME
+MB sm 1 tm 86 m initialize(0)
+CM id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 87 m initialize(0)
+ME
+MB sm 1 tm 80 m initialize(0)
+ME
+MB sm 1 tm 81 m initialize(0)
+ME
+MB sm 1 tm 82 m initialize(0)
+ME
+MB sm 1 tm 83 m initialize(0)
+ME
+MB sm 1 tm 84 m initialize(0)
+ME
+MB sm 1 tm 11 m initialize(0)
+ME
+MB sm 1 tm 88 m initialize(0)
+ME
+MB sm 1 tm 91 m initialize(0)
+ME
+MB sm 1 tm 97 m initialize(0)
+ME
+MB sm 1 tm 98 m initialize(0)
+CM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 99 m initialize(0)
+ME
+MB sm 1 tm 92 m initialize(0)
+ME
+MB sm 1 tm 93 m initialize(0)
+ME
+MB sm 1 tm 94 m initialize(0)
+ME
+MB sm 1 tm 95 m initialize(0)
+ME
+MB sm 1 tm 96 m initialize(0)
+ME
+MB sm 1 tm 89 m initialize(0)
+ME
+MB sm 1 tm 100 m initialize(0)
+ME
+MB sm 1 tm 115 m initialize(0)
+ME
+MB sm 1 tm 116 m initialize(0)
+ME
+MB sm 1 tm 117 m initialize(0)
+CM id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n EndTransmission k 103 pe -1
+CM id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n EndIFG k 100 pe -1
+CM id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n EndPause k 105 pe -1
+ME
+MB sm 1 tm 101 m initialize(0)
+ME
+MB sm 1 tm 102 m initialize(0)
+- DETAIL (AVBQueueBuffer)test3.gateway1.tte[0].avbABuffer[0]: Initialize Buffer
+MS id 102 d p=341,193;q=frames;i=buffer/empty,blue
+ME
+MB sm 1 tm 103 m initialize(0)
+- DETAIL (AVBQueueBuffer)test3.gateway1.tte[0].avbBBuffer[0]: Initialize Buffer
+MS id 103 d p=419,193;q=frames;i=buffer/empty,blue
+ME
+MB sm 1 tm 104 m initialize(0)
+ME
+MB sm 1 tm 105 m initialize(0)
+ME
+MB sm 1 tm 106 m initialize(0)
+ME
+MB sm 1 tm 118 m initialize(0)
+ME
+MB sm 1 tm 119 m initialize(0)
+ME
+MB sm 1 tm 120 m initialize(0)
+CM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n "Period New Cycle Event" k 1 pe -1
+MB sm 120 tm 118 m ""
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n "Scheduler Message" pe 0
+ES t 0.002
+ME
+ME
+MB sm 1 tm 121 m initialize(0)
+CM id 17 tid 17 eid 17 etid 17 c omnetpp::cMessage n "Period New Cycle Event" k 1 pe -1
+MB sm 121 tm 118 m ""
+ME
+ME
+MB sm 1 tm 107 m initialize(0)
+- DETAIL (BGQueueBuffer)test3.gateway1.tte[0].bgIn: Initialize Buffer
+MS id 107 d p=60,37;q=frames;i=buffer/empty,green
+ME
+MB sm 1 tm 108 m initialize(0)
+- DETAIL (BGQueueBuffer)test3.gateway1.tte[0].bgOut: Initialize Buffer
+MS id 108 d p=109,37;q=frames;i=buffer/empty,green
+ME
+MB sm 1 tm 109 m initialize(0)
+MS id 109 d "t=0 talkers\n0 listeners;p=141,99;i=block/table2,blue"
+ME
+MB sm 1 tm 110 m initialize(0)
+ME
+MB sm 1 tm 111 m initialize(0)
+ME
+MB sm 1 tm 112 m initialize(0)
+ME
+MB sm 1 tm 113 m initialize(0)
+- DETAIL (TTQueueBuffer)test3.gateway1.tte[0].TTvlinks[0]: Initialize Buffer
+MS id 113 d p=561,37,r,70;q=frames;i=buffer/empty,red
+ME
+MB sm 1 tm 114 m initialize(0)
+ME
+MB sm 1 tm 90 m initialize(0)
+ME
+MB sm 1 tm 122 m initialize(0)
+ME
+MB sm 1 tm 123 m initialize(0)
+ME
+MB sm 1 tm 124 m initialize(0)
+ME
+MB sm 1 tm 125 m initialize(0)
+CM id 18 tid 18 eid 18 etid 18 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 126 m initialize(0)
+CM id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 12 m initialize(0)
+ME
+MB sm 1 tm 133 m initialize(0)
+ME
+MB sm 1 tm 136 m initialize(0)
+ME
+MB sm 1 tm 142 m initialize(0)
+ME
+MB sm 1 tm 143 m initialize(0)
+CM id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 144 m initialize(0)
+ME
+MB sm 1 tm 137 m initialize(0)
+ME
+MB sm 1 tm 138 m initialize(0)
+ME
+MB sm 1 tm 139 m initialize(0)
+ME
+MB sm 1 tm 140 m initialize(0)
+ME
+MB sm 1 tm 141 m initialize(0)
+ME
+MB sm 1 tm 134 m initialize(0)
+ME
+MB sm 1 tm 145 m initialize(0)
+ME
+MB sm 1 tm 160 m initialize(0)
+ME
+MB sm 1 tm 161 m initialize(0)
+ME
+MB sm 1 tm 162 m initialize(0)
+CM id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n EndTransmission k 103 pe -1
+CM id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n EndIFG k 100 pe -1
+CM id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n EndPause k 105 pe -1
+ME
+MB sm 1 tm 146 m initialize(0)
+ME
+MB sm 1 tm 147 m initialize(0)
+- DETAIL (AVBQueueBuffer)test3.gateway2.tte[0].avbABuffer[0]: Initialize Buffer
+MS id 147 d p=341,193;q=frames;i=buffer/empty,blue
+ME
+MB sm 1 tm 148 m initialize(0)
+- DETAIL (AVBQueueBuffer)test3.gateway2.tte[0].avbBBuffer[0]: Initialize Buffer
+MS id 148 d p=419,193;q=frames;i=buffer/empty,blue
+ME
+MB sm 1 tm 149 m initialize(0)
+ME
+MB sm 1 tm 150 m initialize(0)
+ME
+MB sm 1 tm 151 m initialize(0)
+ME
+MB sm 1 tm 163 m initialize(0)
+ME
+MB sm 1 tm 164 m initialize(0)
+ME
+MB sm 1 tm 165 m initialize(0)
+CM id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n "Period New Cycle Event" k 1 pe -1
+MB sm 165 tm 163 m ""
+BS id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n "Scheduler Message" pe 0
+ES t 0.002
+ME
+ME
+MB sm 1 tm 166 m initialize(0)
+CM id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n "Period New Cycle Event" k 1 pe -1
+MB sm 166 tm 163 m ""
+ME
+ME
+MB sm 1 tm 152 m initialize(0)
+- DETAIL (BGQueueBuffer)test3.gateway2.tte[0].bgIn: Initialize Buffer
+MS id 152 d p=60,37;q=frames;i=buffer/empty,green
+ME
+MB sm 1 tm 153 m initialize(0)
+- DETAIL (BGQueueBuffer)test3.gateway2.tte[0].bgOut: Initialize Buffer
+MS id 153 d p=109,37;q=frames;i=buffer/empty,green
+ME
+MB sm 1 tm 154 m initialize(0)
+MS id 154 d "t=0 talkers\n0 listeners;p=141,99;i=block/table2,blue"
+ME
+MB sm 1 tm 155 m initialize(0)
+ME
+MB sm 1 tm 156 m initialize(0)
+ME
+MB sm 1 tm 157 m initialize(0)
+ME
+MB sm 1 tm 158 m initialize(0)
+- DETAIL (TTQueueBuffer)test3.gateway2.tte[0].TTvlinks[0]: Initialize Buffer
+MS id 158 d p=561,37,r,70;q=frames;i=buffer/empty,red
+ME
+MB sm 1 tm 159 m initialize(0)
+ME
+MB sm 1 tm 135 m initialize(0)
+ME
+MB sm 1 tm 167 m initialize(0)
+ME
+MB sm 1 tm 168 m initialize(0)
+ME
+MB sm 1 tm 169 m initialize(0)
+ME
+MB sm 1 tm 170 m initialize(0)
+ME
+MB sm 1 tm 171 m initialize(0)
+ME
+MB sm 1 tm 13 m initialize(0)
+ME
+MB sm 1 tm 178 m initialize(0)
+ME
+MB sm 1 tm 179 m initialize(0)
+ME
+MB sm 1 tm 180 m initialize(0)
+ME
+MB sm 1 tm 181 m initialize(0)
+CM id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n EndTransmission k 103 pe -1
+CM id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n EndIFG k 100 pe -1
+CM id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n EndPause k 105 pe -1
+CM id 29 tid 29 eid 29 etid 29 c omnetpp::cMessage n EndReception k 101 pe -1
+CM id 30 tid 30 eid 30 etid 30 c omnetpp::cMessage n EndBackoff k 102 pe -1
+CM id 31 tid 31 eid 31 etid 31 c omnetpp::cMessage n EndJamming k 104 pe -1
+ME
+MB sm 1 tm 14 m initialize(0)
+ME
+MB sm 1 tm 182 m initialize(0)
+ME
+MB sm 1 tm 183 m initialize(0)
+ME
+MB sm 1 tm 184 m initialize(0)
+ME
+MB sm 1 tm 185 m initialize(0)
+ME
+MB sm 1 tm 186 m initialize(0)
+ME
+MB sm 1 tm 197 m initialize(0)
+ME
+MB sm 1 tm 198 m initialize(0)
+ME
+MB sm 1 tm 199 m initialize(0)
+CM id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n EndTransmission k 103 pe -1
+CM id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n EndIFG k 100 pe -1
+CM id 34 tid 34 eid 34 etid 34 c omnetpp::cMessage n EndPause k 105 pe -1
+ME
+MB sm 1 tm 187 m initialize(0)
+ME
+MB sm 1 tm 200 m initialize(0)
+ME
+MB sm 1 tm 201 m initialize(0)
+ME
+MB sm 1 tm 202 m initialize(0)
+CM id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n EndTransmission k 103 pe -1
+CM id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n EndIFG k 100 pe -1
+CM id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n EndPause k 105 pe -1
+ME
+MB sm 1 tm 188 m initialize(0)
+ME
+MB sm 1 tm 203 m initialize(0)
+ME
+MB sm 1 tm 204 m initialize(0)
+ME
+MB sm 1 tm 205 m initialize(0)
+CM id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n EndTransmission k 103 pe -1
+CM id 39 tid 39 eid 39 etid 39 c omnetpp::cMessage n EndIFG k 100 pe -1
+CM id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n EndPause k 105 pe -1
+ME
+MB sm 1 tm 189 m initialize(0)
+ME
+MB sm 1 tm 190 m initialize(0)
+ME
+MB sm 1 tm 206 m initialize(0)
+ME
+MB sm 1 tm 207 m initialize(0)
+ME
+MB sm 1 tm 208 m initialize(0)
+CM id 41 tid 41 eid 41 etid 41 c omnetpp::cMessage n "Period New Cycle Event" k 1 pe -1
+MB sm 208 tm 206 m ""
+BS id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n "Scheduler Message" pe 0
+ES t 0
+ME
+ME
+MB sm 1 tm 209 m initialize(0)
+CM id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n "Period New Cycle Event" k 1 pe -1
+MB sm 209 tm 206 m ""
+ME
+ME
+MB sm 1 tm 26 m initialize(1)
+ME
+MB sm 1 tm 35 m initialize(1)
+ME
+MB sm 1 tm 44 m initialize(1)
+ME
+MB sm 1 tm 53 m initialize(1)
+ME
+MB sm 1 tm 64 m initialize(1)
+ME
+MB sm 1 tm 73 m initialize(1)
+ME
+MB sm 1 tm 82 m initialize(1)
+ME
+MB sm 1 tm 94 m initialize(1)
+ME
+MB sm 1 tm 115 m initialize(1)
+ME
+MB sm 1 tm 117 m initialize(1)
+ME
+MB sm 1 tm 104 m initialize(1)
+ME
+MB sm 1 tm 105 m initialize(1)
+CM id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n "Sync Task Event" k 1 pe -1
+MB sm 105 tm 118 m ""
+ME
+ME
+MB sm 1 tm 119 m initialize(1)
+CM id 44 tid 44 eid 44 etid 44 c omnetpp::cMessage n "SimpleOscillator Scheduler Event" k 1 pe -1
+MB sm 119 tm 118 m ""
+ME
+ME
+MB sm 1 tm 111 m initialize(1)
+ME
+MB sm 1 tm 113 m initialize(1)
+- DETAIL (TTQueueBuffer)test3.gateway1.tte[0].TTvlinks[0]: Initialize TTBuffer
+CM id 45 tid 45 eid 45 etid 45 c omnetpp::cMessage n "TTBuffer Scheduler Event" k 1 pe -1
+MB sm 113 tm 118 m ""
+ME
+ME
+MB sm 1 tm 139 m initialize(1)
+ME
+MB sm 1 tm 160 m initialize(1)
+ME
+MB sm 1 tm 162 m initialize(1)
+ME
+MB sm 1 tm 149 m initialize(1)
+ME
+MB sm 1 tm 150 m initialize(1)
+CM id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n "Sync Task Event" k 1 pe -1
+MB sm 150 tm 163 m ""
+ME
+ME
+MB sm 1 tm 164 m initialize(1)
+CM id 47 tid 47 eid 47 etid 47 c omnetpp::cMessage n "SimpleOscillator Scheduler Event" k 1 pe -1
+MB sm 164 tm 163 m ""
+ME
+ME
+MB sm 1 tm 156 m initialize(1)
+ME
+MB sm 1 tm 158 m initialize(1)
+- DETAIL (TTQueueBuffer)test3.gateway2.tte[0].TTvlinks[0]: Initialize TTBuffer
+CM id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n "TTBuffer Scheduler Event" k 1 pe -1
+MB sm 158 tm 163 m ""
+ME
+ME
+MB sm 1 tm 178 m initialize(1)
+ME
+MB sm 1 tm 179 m initialize(1)
+ME
+MB sm 1 tm 180 m initialize(1)
+ME
+MB sm 1 tm 181 m initialize(1)
+ME
+MB sm 1 tm 182 m initialize(1)
+ME
+MB sm 1 tm 183 m initialize(1)
+ME
+MB sm 1 tm 185 m initialize(1)
+ME
+MB sm 1 tm 197 m initialize(1)
+ME
+MB sm 1 tm 199 m initialize(1)
+ME
+MB sm 1 tm 200 m initialize(1)
+ME
+MB sm 1 tm 202 m initialize(1)
+ME
+MB sm 1 tm 203 m initialize(1)
+ME
+MB sm 1 tm 205 m initialize(1)
+ME
+MB sm 1 tm 189 m initialize(1)
+CM id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n "Sync Task Event" k 1 pe -1
+MB sm 189 tm 206 m ""
+ME
+ME
+MB sm 1 tm 207 m initialize(1)
+CM id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n "SimpleOscillator Scheduler Event" k 1 pe -1
+MB sm 207 tm 206 m ""
+ME
+ME
+MB sm 1 tm 26 m initialize(2)
+CM id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n message pe -1
+CM id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n "" pe -1
+BS id 51 tid 51 eid 52 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 0
+ES t 0
+ME
+MB sm 1 tm 35 m initialize(2)
+CM id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n message pe -1
+CM id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n "" pe -1
+BS id 53 tid 53 eid 54 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 0
+ES t 0.0002
+ME
+MB sm 1 tm 44 m initialize(2)
+CM id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n message pe -1
+CM id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n "" pe -1
+BS id 55 tid 55 eid 56 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 0
+ES t 0.0004
+ME
+MB sm 1 tm 53 m initialize(2)
+CM id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n message pe -1
+CM id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n "" pe -1
+BS id 57 tid 57 eid 58 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 0
+ES t 0.0006
+ME
+MB sm 1 tm 64 m initialize(2)
+CM id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n message pe -1
+CM id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 73 m initialize(2)
+CM id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n message pe -1
+CM id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 82 m initialize(2)
+CM id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n message pe -1
+CM id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n "" pe -1
+ME
+MB sm 1 tm 94 m initialize(2)
+ME
+MB sm 1 tm 115 m initialize(2)
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(2)
+ME
+MB sm 1 tm 104 m initialize(2)
+ME
+MB sm 1 tm 105 m initialize(2)
+MS id 105 d p=208,169;i=block/timer,green
+ME
+MB sm 1 tm 111 m initialize(2)
+ME
+MB sm 1 tm 139 m initialize(2)
+ME
+MB sm 1 tm 160 m initialize(2)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(2)
+ME
+MB sm 1 tm 149 m initialize(2)
+ME
+MB sm 1 tm 150 m initialize(2)
+MS id 150 d p=208,169;i=block/timer,green
+ME
+MB sm 1 tm 156 m initialize(2)
+ME
+MB sm 1 tm 178 m initialize(2)
+ME
+MB sm 1 tm 179 m initialize(2)
+ME
+MB sm 1 tm 180 m initialize(2)
+ME
+MB sm 1 tm 181 m initialize(2)
+ME
+MB sm 1 tm 182 m initialize(2)
+ME
+MB sm 1 tm 183 m initialize(2)
+ME
+MB sm 1 tm 185 m initialize(2)
+ME
+MB sm 1 tm 197 m initialize(2)
+ME
+MB sm 1 tm 199 m initialize(2)
+ME
+MB sm 1 tm 200 m initialize(2)
+ME
+MB sm 1 tm 202 m initialize(2)
+ME
+MB sm 1 tm 203 m initialize(2)
+ME
+MB sm 1 tm 205 m initialize(2)
+ME
+MB sm 1 tm 189 m initialize(2)
+MS id 189 d p=240,50;i=block/timer,green
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(3)
+ME
+MB sm 1 tm 104 m initialize(3)
+ME
+MB sm 1 tm 111 m initialize(3)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(3)
+ME
+MB sm 1 tm 149 m initialize(3)
+ME
+MB sm 1 tm 156 m initialize(3)
+ME
+MB sm 1 tm 178 m initialize(3)
+ME
+MB sm 1 tm 179 m initialize(3)
+ME
+MB sm 1 tm 180 m initialize(3)
+ME
+MB sm 1 tm 181 m initialize(3)
+ME
+MB sm 1 tm 182 m initialize(3)
+ME
+MB sm 1 tm 183 m initialize(3)
+ME
+MB sm 1 tm 185 m initialize(3)
+ME
+MB sm 1 tm 199 m initialize(3)
+ME
+MB sm 1 tm 202 m initialize(3)
+ME
+MB sm 1 tm 205 m initialize(3)
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(4)
+MB sm 117 tm 111 m ""
+ME
+MB sm 117 tm 111 m ""
+ME
+MB sm 117 tm 111 m ""
+ME
+- DETAIL (EtherMACFullDuplex)test3.gateway1.tte[0].phy[0].mac: Requesting first frame from queue module
+MB sm 117 tm 115 m requestPacket()
+ME
+MB sm 117 tm 111 m ""
+ME
+ME
+MB sm 1 tm 104 m initialize(4)
+ME
+MB sm 1 tm 111 m initialize(4)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(4)
+MB sm 162 tm 156 m ""
+ME
+MB sm 162 tm 156 m ""
+ME
+MB sm 162 tm 156 m ""
+ME
+- DETAIL (EtherMACFullDuplex)test3.gateway2.tte[0].phy[0].mac: Requesting first frame from queue module
+MB sm 162 tm 160 m requestPacket()
+ME
+MB sm 162 tm 156 m ""
+ME
+ME
+MB sm 1 tm 149 m initialize(4)
+ME
+MB sm 1 tm 156 m initialize(4)
+ME
+MB sm 1 tm 178 m initialize(4)
+ME
+MB sm 1 tm 179 m initialize(4)
+ME
+MB sm 1 tm 180 m initialize(4)
+ME
+MB sm 1 tm 181 m initialize(4)
+ME
+MB sm 1 tm 182 m initialize(4)
+ME
+MB sm 1 tm 183 m initialize(4)
+ME
+MB sm 1 tm 185 m initialize(4)
+ME
+MB sm 1 tm 199 m initialize(4)
+MB sm 199 tm 185 m ""
+ME
+MB sm 199 tm 185 m ""
+ME
+MB sm 199 tm 185 m ""
+ME
+MB sm 199 tm 185 m ""
+ME
+- DETAIL (EtherMACFullDuplex)test3.switch1.phy[0].mac: Requesting first frame from queue module
+MB sm 199 tm 197 m requestPacket()
+ME
+MB sm 199 tm 185 m ""
+ME
+ME
+MB sm 1 tm 202 m initialize(4)
+MB sm 202 tm 185 m ""
+ME
+MB sm 202 tm 185 m ""
+ME
+MB sm 202 tm 185 m ""
+ME
+MB sm 202 tm 185 m ""
+ME
+- DETAIL (EtherMACFullDuplex)test3.switch1.phy[1].mac: Requesting first frame from queue module
+MB sm 202 tm 200 m requestPacket()
+ME
+MB sm 202 tm 185 m ""
+ME
+ME
+MB sm 1 tm 205 m initialize(4)
+MB sm 205 tm 185 m ""
+ME
+MB sm 205 tm 185 m ""
+ME
+MB sm 205 tm 185 m ""
+ME
+MB sm 205 tm 185 m ""
+ME
+- DETAIL (EtherMACFullDuplex)test3.switch1.phy[2].mac: Requesting first frame from queue module
+MB sm 205 tm 203 m requestPacket()
+ME
+MB sm 205 tm 185 m ""
+ME
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(5)
+ME
+MB sm 1 tm 104 m initialize(5)
+MB sm 104 tm 111 m ""
+ME
+ME
+MB sm 1 tm 111 m initialize(5)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(5)
+ME
+MB sm 1 tm 149 m initialize(5)
+MB sm 149 tm 156 m ""
+ME
+ME
+MB sm 1 tm 156 m initialize(5)
+ME
+MB sm 1 tm 178 m initialize(5)
+ME
+MB sm 1 tm 179 m initialize(5)
+ME
+MB sm 1 tm 180 m initialize(5)
+ME
+MB sm 1 tm 181 m initialize(5)
+ME
+MB sm 1 tm 182 m initialize(5)
+ME
+MB sm 1 tm 183 m initialize(5)
+ME
+MB sm 1 tm 185 m initialize(5)
+ME
+MB sm 1 tm 199 m initialize(5)
+ME
+MB sm 1 tm 202 m initialize(5)
+ME
+MB sm 1 tm 205 m initialize(5)
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(6)
+ME
+MB sm 1 tm 104 m initialize(6)
+ME
+MB sm 1 tm 111 m initialize(6)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(6)
+ME
+MB sm 1 tm 149 m initialize(6)
+ME
+MB sm 1 tm 156 m initialize(6)
+ME
+MB sm 1 tm 178 m initialize(6)
+ME
+MB sm 1 tm 179 m initialize(6)
+ME
+MB sm 1 tm 180 m initialize(6)
+ME
+MB sm 1 tm 181 m initialize(6)
+ME
+MB sm 1 tm 182 m initialize(6)
+ME
+MB sm 1 tm 183 m initialize(6)
+ME
+MB sm 1 tm 185 m initialize(6)
+ME
+MB sm 1 tm 199 m initialize(6)
+ME
+MB sm 1 tm 202 m initialize(6)
+ME
+MB sm 1 tm 205 m initialize(6)
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(7)
+ME
+MB sm 1 tm 104 m initialize(7)
+ME
+MB sm 1 tm 111 m initialize(7)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(7)
+ME
+MB sm 1 tm 149 m initialize(7)
+ME
+MB sm 1 tm 156 m initialize(7)
+ME
+MB sm 1 tm 178 m initialize(7)
+ME
+MB sm 1 tm 179 m initialize(7)
+ME
+MB sm 1 tm 180 m initialize(7)
+ME
+MB sm 1 tm 181 m initialize(7)
+ME
+MB sm 1 tm 182 m initialize(7)
+ME
+MB sm 1 tm 183 m initialize(7)
+ME
+MB sm 1 tm 185 m initialize(7)
+ME
+MB sm 1 tm 199 m initialize(7)
+ME
+MB sm 1 tm 202 m initialize(7)
+ME
+MB sm 1 tm 205 m initialize(7)
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(8)
+ME
+MB sm 1 tm 104 m initialize(8)
+ME
+MB sm 1 tm 111 m initialize(8)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(8)
+ME
+MB sm 1 tm 149 m initialize(8)
+ME
+MB sm 1 tm 156 m initialize(8)
+ME
+MB sm 1 tm 178 m initialize(8)
+ME
+MB sm 1 tm 179 m initialize(8)
+ME
+MB sm 1 tm 180 m initialize(8)
+ME
+MB sm 1 tm 181 m initialize(8)
+ME
+MB sm 1 tm 182 m initialize(8)
+ME
+MB sm 1 tm 183 m initialize(8)
+ME
+MB sm 1 tm 185 m initialize(8)
+ME
+MB sm 1 tm 199 m initialize(8)
+ME
+MB sm 1 tm 202 m initialize(8)
+ME
+MB sm 1 tm 205 m initialize(8)
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(9)
+ME
+MB sm 1 tm 104 m initialize(9)
+ME
+MB sm 1 tm 111 m initialize(9)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(9)
+ME
+MB sm 1 tm 149 m initialize(9)
+ME
+MB sm 1 tm 156 m initialize(9)
+ME
+MB sm 1 tm 178 m initialize(9)
+ME
+MB sm 1 tm 179 m initialize(9)
+ME
+MB sm 1 tm 180 m initialize(9)
+ME
+MB sm 1 tm 181 m initialize(9)
+ME
+MB sm 1 tm 182 m initialize(9)
+ME
+MB sm 1 tm 183 m initialize(9)
+ME
+MB sm 1 tm 185 m initialize(9)
+ME
+MB sm 1 tm 199 m initialize(9)
+ME
+MB sm 1 tm 202 m initialize(9)
+ME
+MB sm 1 tm 205 m initialize(9)
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(10)
+ME
+MB sm 1 tm 104 m initialize(10)
+ME
+MB sm 1 tm 111 m initialize(10)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(10)
+ME
+MB sm 1 tm 149 m initialize(10)
+ME
+MB sm 1 tm 156 m initialize(10)
+ME
+MB sm 1 tm 178 m initialize(10)
+ME
+MB sm 1 tm 179 m initialize(10)
+ME
+MB sm 1 tm 180 m initialize(10)
+ME
+MB sm 1 tm 181 m initialize(10)
+ME
+MB sm 1 tm 182 m initialize(10)
+ME
+MB sm 1 tm 183 m initialize(10)
+ME
+MB sm 1 tm 185 m initialize(10)
+ME
+MB sm 1 tm 199 m initialize(10)
+ME
+MB sm 1 tm 202 m initialize(10)
+ME
+MB sm 1 tm 205 m initialize(10)
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(11)
+ME
+MB sm 1 tm 104 m initialize(11)
+ME
+MB sm 1 tm 111 m initialize(11)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(11)
+ME
+MB sm 1 tm 149 m initialize(11)
+ME
+MB sm 1 tm 156 m initialize(11)
+ME
+MB sm 1 tm 178 m initialize(11)
+ME
+MB sm 1 tm 179 m initialize(11)
+ME
+MB sm 1 tm 180 m initialize(11)
+ME
+MB sm 1 tm 181 m initialize(11)
+ME
+MB sm 1 tm 182 m initialize(11)
+ME
+MB sm 1 tm 183 m initialize(11)
+ME
+MB sm 1 tm 185 m initialize(11)
+ME
+MB sm 1 tm 199 m initialize(11)
+ME
+MB sm 1 tm 202 m initialize(11)
+ME
+MB sm 1 tm 205 m initialize(11)
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(12)
+ME
+MB sm 1 tm 104 m initialize(12)
+ME
+MB sm 1 tm 111 m initialize(12)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(12)
+ME
+MB sm 1 tm 149 m initialize(12)
+ME
+MB sm 1 tm 156 m initialize(12)
+ME
+MB sm 1 tm 178 m initialize(12)
+ME
+MB sm 1 tm 179 m initialize(12)
+- INFO (EtherAppSrv)test3.etherHost.srv: Starting application
+CM id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n register_DSAP k 2004 pe -1
+BS id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n register_DSAP k 2004 pe 0
+SH sm 179 sg 3
+ES t 0
+CL id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n register_DSAP k 2004 pe 0 cid 66
+ME
+MB sm 1 tm 180 m initialize(12)
+ME
+MB sm 1 tm 181 m initialize(12)
+ME
+MB sm 1 tm 182 m initialize(12)
+ME
+MB sm 1 tm 183 m initialize(12)
+ME
+MB sm 1 tm 185 m initialize(12)
+ME
+MB sm 1 tm 199 m initialize(12)
+ME
+MB sm 1 tm 202 m initialize(12)
+ME
+MB sm 1 tm 205 m initialize(12)
+ME
+MB sm 1 tm 115 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 117 m initialize(13)
+ME
+MB sm 1 tm 104 m initialize(13)
+ME
+MB sm 1 tm 111 m initialize(13)
+ME
+MB sm 1 tm 160 m registerTTBuffer(TTvlinks)
+ME
+MB sm 1 tm 162 m initialize(13)
+ME
+MB sm 1 tm 149 m initialize(13)
+ME
+MB sm 1 tm 156 m initialize(13)
+ME
+MB sm 1 tm 178 m initialize(13)
+ME
+MB sm 1 tm 179 m initialize(13)
+ME
+MB sm 1 tm 180 m initialize(13)
+ME
+MB sm 1 tm 181 m initialize(13)
+ME
+MB sm 1 tm 182 m initialize(13)
+ME
+MB sm 1 tm 183 m initialize(13)
+ME
+MB sm 1 tm 185 m initialize(13)
+ME
+MB sm 1 tm 199 m initialize(13)
+ME
+MB sm 1 tm 202 m initialize(13)
+ME
+MB sm 1 tm 205 m initialize(13)
+ME
+MS id 104 d "t=passed up: 0\nsent: 0;p=141,255;i=block/fork"
+MS id 111 d "t=1 interfaces;p=208,99;i=block/table"
+MS id 149 d "t=passed up: 0\nsent: 0;p=141,255;i=block/fork"
+MS id 156 d "t=1 interfaces;p=208,99;i=block/table"
+MS id 180 d "t=passed up: 0\nsent: 0;p=215,118;i=block/fork"
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 185 d "t=3 interfaces;p=447,313;i=block/table"
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 1 t 0 m 206 ce 0 msg 4
+BS id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n "Scheduler Message" pe 1
+ES t 0.002
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 2 t 0 m 26 ce 0 msg 51
+CL id 51 tid 51 eid 52 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 2 cid 67
+BS id 51 tid 51 eid 52 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 2
+ES t 0.01
+CL id 52 tid 52 eid 52 etid 52 c omnetpp::cPacket n "" l 64 pe 0 cid 68
+BS id 67 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 2
+SH sm 26 sg 1
+ES t 0
+CL id 67 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 2 cid 69
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 3 t 0 m 180 ce 0 msg 65
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+- INFO (EtherLLC)test3.etherHost.llc: Registering higher layer with DSAP=241 on port=1
+DM id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n register_DSAP k 2004 pe 3
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 4 t 0 m 25 ce 2 msg 67
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MB sm 25 tm 22 m ""
+CM id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n idle_signin pe -1
+BS id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n idle_signin pe 4
+ES t 0.000001
+BU id 22 txt "state: busy"
+MS id 22 d "tt=state: busy;p=52,74;i=block/app"
+ME
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 5 t 0.000001 m 22 ce 4 msg 70
+MB sm 22 tm 25 m ""
+CL id 67 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 4 cid 71
+CL id 71 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 5 cid 72
+BS id 72 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 5
+SH sm 25 sg 5
+SH sm 23 sg 2
+ES t 0.000001
+CL id 72 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 5 cid 73
+DM id 71 tid 51 eid 71 etid 51 c omnetpp::cMessage n message pe 5
+ME
+DM id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n idle_signin pe 5
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 6 t 0.000001 m 30 ce 5 msg 72
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 3 d p=51,62;i=device/modem,yellow;bgb=586.32,221.76
+CS sm 3 sg 0 d ""
+CS sm 3 sg 0 d ls=yellow
+CS sm 3 sg 0 d ls=yellow,3
+CS sm 2 sg 1572865 d ""
+CS sm 2 sg 1572865 d ls=yellow
+CS sm 2 sg 1572865 d ls=yellow,3
+BS id 72 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 6
+SH sm 30 sg 1
+ES t 0.000001
+CL id 72 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 6 cid 74
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 7 t 0.000001 m 31 ce 6 msg 72
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 72 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 7
+SH sm 31 sg 1
+SH sm 23 sg 1
+SH sm 3 sg 1
+SH sm 2 sg 1048577
+ES t 0.000001
+CL id 72 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 7 cid 75
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 8 t 0.000001 m 21 ce 7 msg 72
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 72 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 8
+SH sm 21 sg 3
+ES t 0.000001
+CL id 72 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 8 cid 76
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 9 t 0.000001 m 22 ce 8 msg 72
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CS sm 2 sg 1572864 d ""
+CS sm 2 sg 1572864 d ls=yellow
+CS sm 2 sg 1572864 d ls=yellow,3
+CS sm 11 sg 2621440 d ""
+CS sm 11 sg 2621440 d ls=yellow
+CS sm 11 sg 2621440 d ls=yellow,3
+CS sm 3 sg 1 d ""
+CS sm 3 sg 1 d ls=yellow
+CS sm 3 sg 1 d ls=yellow,3
+CS sm 2 sg 1572866 d ""
+CS sm 2 sg 1572866 d ls=yellow
+CS sm 2 sg 1572866 d ls=yellow,3
+CS sm 4 sg 1 d ""
+CS sm 4 sg 1 d ls=yellow
+CS sm 4 sg 1 d ls=yellow,3
+CS sm 2 sg 1572867 d ""
+CS sm 2 sg 1572867 d ls=yellow
+CS sm 2 sg 1572867 d ls=yellow,3
+CS sm 5 sg 1 d ""
+CS sm 5 sg 1 d ls=yellow
+CS sm 5 sg 1 d ls=yellow,3
+CS sm 2 sg 1572868 d ""
+CS sm 2 sg 1572868 d ls=yellow
+CS sm 2 sg 1572868 d ls=yellow,3
+CS sm 6 sg 1 d ""
+CS sm 6 sg 1 d ls=yellow
+CS sm 6 sg 1 d ls=yellow,3
+DM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n "" pe 0
+CL id 72 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 9 cid 77
+BS id 77 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 9
+ES t 0.000112
+CL id 72 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 9 cid 78
+BS id 78 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 9
+SH sm 22 sg 1
+ES t 0.000001
+CL id 78 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 9 cid 79
+DM id 72 tid 51 eid 72 etid 51 c omnetpp::cMessage n message pe 9
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 10 t 0.000001 m 21 ce 9 msg 78
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 78 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10 cid 80
+BS id 80 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10
+SH sm 21 sg 1572864
+SH sm 2 sg 1572864
+SH sm 11 sg 2097152
+SH sm 88 sg 0
+SH sm 91 sg 0
+ES t 0.000001
+CL id 80 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10 cid 81
+CL id 78 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10 cid 82
+BS id 82 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10
+SH sm 21 sg 1572865
+SH sm 2 sg 1572865
+SH sm 3 sg 0
+SH sm 23 sg 0
+ES t 0.000001
+CL id 82 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10 cid 83
+CL id 78 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10 cid 84
+BS id 84 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10
+SH sm 21 sg 1572866
+SH sm 2 sg 1572866
+SH sm 4 sg 0
+SH sm 32 sg 0
+ES t 0.000001
+CL id 84 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10 cid 85
+CL id 78 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10 cid 86
+BS id 86 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10
+SH sm 21 sg 1572867
+SH sm 2 sg 1572867
+SH sm 5 sg 0
+SH sm 41 sg 0
+ES t 0.000001
+CL id 86 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10 cid 87
+CL id 78 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10 cid 88
+BS id 88 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10
+SH sm 21 sg 1572868
+SH sm 2 sg 1572868
+SH sm 6 sg 0
+SH sm 50 sg 0
+ES t 0.000001
+CL id 88 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 10 cid 89
+DM id 78 tid 51 eid 78 etid 51 c omnetpp::cMessage n message pe 10
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 11 t 0.000001 m 99 ce 10 msg 80
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 80 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 11
+SH sm 99 sg 5
+ES t 0.000001
+CL id 80 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 11 cid 90
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 12 t 0.000001 m 31 ce 10 msg 82
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 82 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 12
+SH sm 31 sg 5
+ES t 0.000001
+CL id 82 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 12 cid 91
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 13 t 0.000001 m 40 ce 10 msg 84
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 84 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 13
+SH sm 40 sg 5
+ES t 0.000001
+CL id 84 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 13 cid 92
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 14 t 0.000001 m 49 ce 10 msg 86
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 86 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 14
+SH sm 49 sg 5
+ES t 0.000001
+CL id 86 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 14 cid 93
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 15 t 0.000001 m 58 ce 10 msg 88
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 88 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 15
+SH sm 58 sg 5
+ES t 0.000001
+CL id 88 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 15 cid 94
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 16 t 0.000001 m 97 ce 11 msg 80
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 80 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 16 cid 95
+BS id 95 tid 51 eid 68 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 16
+ES t 0.000112
+DM id 80 tid 51 eid 80 etid 51 c omnetpp::cMessage n message pe 16
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 17 t 0.000001 m 29 ce 12 msg 82
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 82 tid 51 eid 82 etid 51 c omnetpp::cMessage n message pe 17
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 18 t 0.000001 m 38 ce 13 msg 84
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 84 tid 51 eid 84 etid 51 c omnetpp::cMessage n message pe 18
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 19 t 0.000001 m 47 ce 14 msg 86
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 86 tid 51 eid 86 etid 51 c omnetpp::cMessage n message pe 19
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 20 t 0.000001 m 56 ce 15 msg 88
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 88 tid 51 eid 88 etid 51 c omnetpp::cMessage n message pe 20
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 21 t 0.000112 m 22 ce 9 msg 77
+CS sm 2 sg 1572864 d ls=black,3
+CS sm 2 sg 1572864 d ls=black,1
+CS sm 11 sg 2621440 d ls=black,3
+CS sm 11 sg 2621440 d ls=black,1
+CS sm 2 sg 1572865 d ls=black,3
+CS sm 2 sg 1572865 d ls=black,1
+CS sm 3 sg 1 d ls=black,3
+CS sm 3 sg 1 d ls=black,1
+CS sm 2 sg 1572866 d ls=black,3
+CS sm 2 sg 1572866 d ls=black,1
+CS sm 4 sg 1 d ls=black,3
+CS sm 4 sg 1 d ls=black,1
+CS sm 2 sg 1572867 d ls=black,3
+CS sm 2 sg 1572867 d ls=black,1
+CS sm 5 sg 1 d ls=black,3
+CS sm 5 sg 1 d ls=black,1
+CS sm 2 sg 1572868 d ls=black,3
+CS sm 2 sg 1572868 d ls=black,1
+CS sm 6 sg 1 d ls=black,3
+CS sm 6 sg 1 d ls=black,1
+MB sm 22 tm 25 m ""
+DM id 67 tid 51 eid 67 etid 51 c omnetpp::cMessage n message pe 5
+MS id 3 d p=51,62;i=device/modem;bgb=586.32,221.76
+CS sm 3 sg 0 d ls=black,3
+CS sm 3 sg 0 d ls=black,1
+ME
+MS id 22 d "tt=state: idle;p=52,74;i=block/app"
+BU id 22 txt "state: idle"
+DM id 77 tid 51 eid 77 etid 51 c omnetpp::cMessage n message pe 21
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 22 t 0.000112 m 97 ce 16 msg 95
+CL id 68 tid 52 eid 68 etid 52 c omnetpp::cPacket n "" l 64 pe 2 cid 96
+BS id 95 tid 51 eid 96 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 22
+SD sm 97 dm 92 dg 2
+ES t 0.000112
+CL id 95 tid 51 eid 96 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 22 cid 97
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 23 t 0.000112 m 92 ce 22 msg 95
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 95 tid 51 eid 96 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 23 cid 98
+BS id 98 tid 51 eid 96 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 23
+SD sm 92 dm 95 dg 2
+ES t 0.000112
+CL id 98 tid 51 eid 96 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 23 cid 99
+DM id 95 tid 51 eid 95 etid 51 c omnetpp::cMessage n message pe 23
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 24 t 0.000112 m 95 ce 23 msg 98
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 98 tid 51 eid 96 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 24
+SH sm 95 sg 5
+SH sm 88 sg 3
+SH sm 90 sg 1048576
+ES t 0.000112
+CL id 98 tid 51 eid 96 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 24 cid 100
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 25 t 0.000112 m 122 ce 24 msg 98
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 98 tid 51 eid 96 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 25 cid 101
+BS id 101 tid 51 eid 96 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 25
+SH sm 122 sg 2621441
+ES t 0.000112
+CL id 101 tid 51 eid 96 etid 52 c FiCo4OMNeT::CanDataFrame n message l 111 pe 25 cid 102
+DM id 98 tid 51 eid 98 etid 51 c omnetpp::cMessage n message pe 25
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 26 t 0.000112 m 126 ce 25 msg 101
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n "" pe 0
+ES t 0.005112
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 27 t 0.0002 m 35 ce 0 msg 53
+CL id 53 tid 53 eid 54 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 27 cid 103
+BS id 53 tid 53 eid 54 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 27
+ES t 0.0152
+CL id 54 tid 54 eid 54 etid 54 c omnetpp::cPacket n "" l 64 pe 0 cid 104
+BS id 103 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 27
+SH sm 35 sg 1
+ES t 0.0002
+CL id 103 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 27 cid 105
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 28 t 0.0002 m 34 ce 27 msg 103
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MB sm 34 tm 22 m ""
+CM id 106 tid 106 eid 106 etid 106 c omnetpp::cMessage n idle_signin pe -1
+BS id 106 tid 106 eid 106 etid 106 c omnetpp::cMessage n idle_signin pe 28
+ES t 0.000201
+BU id 22 txt "state: busy"
+MS id 22 d "tt=state: busy;p=52,74;i=block/app"
+ME
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 29 t 0.000201 m 22 ce 28 msg 106
+MB sm 22 tm 34 m ""
+CL id 103 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 28 cid 107
+CL id 107 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 29 cid 108
+BS id 108 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 29
+SH sm 34 sg 5
+SH sm 32 sg 2
+ES t 0.000201
+CL id 108 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 29 cid 109
+DM id 107 tid 53 eid 107 etid 53 c omnetpp::cMessage n message pe 29
+ME
+DM id 106 tid 106 eid 106 etid 106 c omnetpp::cMessage n idle_signin pe 29
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 30 t 0.000201 m 39 ce 29 msg 108
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 4 d p=51,62;i=device/modem,yellow;bgb=586.32,221.76
+CS sm 4 sg 0 d ""
+CS sm 4 sg 0 d ls=yellow
+CS sm 4 sg 0 d ls=yellow,3
+CS sm 2 sg 1572866 d ls=yellow,1
+CS sm 2 sg 1572866 d ls=yellow,3
+BS id 108 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 30
+SH sm 39 sg 1
+ES t 0.000201
+CL id 108 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 30 cid 110
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 31 t 0.000201 m 40 ce 30 msg 108
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 108 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 31
+SH sm 40 sg 1
+SH sm 32 sg 1
+SH sm 4 sg 1
+SH sm 2 sg 1048578
+ES t 0.000201
+CL id 108 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 31 cid 111
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 32 t 0.000201 m 21 ce 31 msg 108
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 108 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 32
+SH sm 21 sg 3
+ES t 0.000201
+CL id 108 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 32 cid 112
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 33 t 0.000201 m 22 ce 32 msg 108
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CS sm 2 sg 1572864 d ls=yellow,1
+CS sm 2 sg 1572864 d ls=yellow,3
+CS sm 11 sg 2621440 d ls=yellow,1
+CS sm 11 sg 2621440 d ls=yellow,3
+CS sm 2 sg 1572865 d ls=yellow,1
+CS sm 2 sg 1572865 d ls=yellow,3
+CS sm 3 sg 1 d ls=yellow,1
+CS sm 3 sg 1 d ls=yellow,3
+CS sm 4 sg 1 d ls=yellow,1
+CS sm 4 sg 1 d ls=yellow,3
+CS sm 2 sg 1572867 d ls=yellow,1
+CS sm 2 sg 1572867 d ls=yellow,3
+CS sm 5 sg 1 d ls=yellow,1
+CS sm 5 sg 1 d ls=yellow,3
+CS sm 2 sg 1572868 d ls=yellow,1
+CS sm 2 sg 1572868 d ls=yellow,3
+CS sm 6 sg 1 d ls=yellow,1
+CS sm 6 sg 1 d ls=yellow,3
+CL id 108 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 33 cid 113
+BS id 113 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 33
+ES t 0.000312
+CL id 108 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 33 cid 114
+BS id 114 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 33
+SH sm 22 sg 1
+ES t 0.000201
+CL id 114 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 33 cid 115
+DM id 108 tid 53 eid 108 etid 53 c omnetpp::cMessage n message pe 33
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 34 t 0.000201 m 21 ce 33 msg 114
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 114 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34 cid 116
+BS id 116 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34
+SH sm 21 sg 1572864
+SH sm 2 sg 1572864
+SH sm 11 sg 2097152
+SH sm 88 sg 0
+SH sm 91 sg 0
+ES t 0.000201
+CL id 116 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34 cid 117
+CL id 114 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34 cid 118
+BS id 118 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34
+SH sm 21 sg 1572865
+SH sm 2 sg 1572865
+SH sm 3 sg 0
+SH sm 23 sg 0
+ES t 0.000201
+CL id 118 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34 cid 119
+CL id 114 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34 cid 120
+BS id 120 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34
+SH sm 21 sg 1572866
+SH sm 2 sg 1572866
+SH sm 4 sg 0
+SH sm 32 sg 0
+ES t 0.000201
+CL id 120 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34 cid 121
+CL id 114 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34 cid 122
+BS id 122 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34
+SH sm 21 sg 1572867
+SH sm 2 sg 1572867
+SH sm 5 sg 0
+SH sm 41 sg 0
+ES t 0.000201
+CL id 122 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34 cid 123
+CL id 114 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34 cid 124
+BS id 124 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34
+SH sm 21 sg 1572868
+SH sm 2 sg 1572868
+SH sm 6 sg 0
+SH sm 50 sg 0
+ES t 0.000201
+CL id 124 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 34 cid 125
+DM id 114 tid 53 eid 114 etid 53 c omnetpp::cMessage n message pe 34
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 35 t 0.000201 m 99 ce 34 msg 116
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 116 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 35
+SH sm 99 sg 5
+ES t 0.000201
+CL id 116 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 35 cid 126
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 36 t 0.000201 m 31 ce 34 msg 118
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 118 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 36
+SH sm 31 sg 5
+ES t 0.000201
+CL id 118 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 36 cid 127
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 37 t 0.000201 m 40 ce 34 msg 120
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 120 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 37
+SH sm 40 sg 5
+ES t 0.000201
+CL id 120 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 37 cid 128
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 38 t 0.000201 m 49 ce 34 msg 122
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 122 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 38
+SH sm 49 sg 5
+ES t 0.000201
+CL id 122 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 38 cid 129
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 39 t 0.000201 m 58 ce 34 msg 124
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 124 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 39
+SH sm 58 sg 5
+ES t 0.000201
+CL id 124 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 39 cid 130
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 40 t 0.000201 m 97 ce 35 msg 116
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 116 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 40 cid 131
+BS id 131 tid 53 eid 104 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 40
+ES t 0.000312
+DM id 116 tid 53 eid 116 etid 53 c omnetpp::cMessage n message pe 40
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 41 t 0.000201 m 29 ce 36 msg 118
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 118 tid 53 eid 118 etid 53 c omnetpp::cMessage n message pe 41
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 42 t 0.000201 m 38 ce 37 msg 120
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 120 tid 53 eid 120 etid 53 c omnetpp::cMessage n message pe 42
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 43 t 0.000201 m 47 ce 38 msg 122
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 122 tid 53 eid 122 etid 53 c omnetpp::cMessage n message pe 43
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 44 t 0.000201 m 56 ce 39 msg 124
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 124 tid 53 eid 124 etid 53 c omnetpp::cMessage n message pe 44
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 45 t 0.000312 m 22 ce 33 msg 113
+CS sm 2 sg 1572864 d ls=black,3
+CS sm 2 sg 1572864 d ls=black,1
+CS sm 11 sg 2621440 d ls=black,3
+CS sm 11 sg 2621440 d ls=black,1
+CS sm 2 sg 1572865 d ls=black,3
+CS sm 2 sg 1572865 d ls=black,1
+CS sm 3 sg 1 d ls=black,3
+CS sm 3 sg 1 d ls=black,1
+CS sm 2 sg 1572866 d ls=black,3
+CS sm 2 sg 1572866 d ls=black,1
+CS sm 4 sg 1 d ls=black,3
+CS sm 4 sg 1 d ls=black,1
+CS sm 2 sg 1572867 d ls=black,3
+CS sm 2 sg 1572867 d ls=black,1
+CS sm 5 sg 1 d ls=black,3
+CS sm 5 sg 1 d ls=black,1
+CS sm 2 sg 1572868 d ls=black,3
+CS sm 2 sg 1572868 d ls=black,1
+CS sm 6 sg 1 d ls=black,3
+CS sm 6 sg 1 d ls=black,1
+MB sm 22 tm 34 m ""
+DM id 103 tid 53 eid 103 etid 53 c omnetpp::cMessage n message pe 29
+MS id 4 d p=51,62;i=device/modem;bgb=586.32,221.76
+CS sm 4 sg 0 d ls=black,3
+CS sm 4 sg 0 d ls=black,1
+ME
+MS id 22 d "tt=state: idle;p=52,74;i=block/app"
+BU id 22 txt "state: idle"
+DM id 113 tid 53 eid 113 etid 53 c omnetpp::cMessage n message pe 45
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 46 t 0.000312 m 97 ce 40 msg 131
+CL id 104 tid 54 eid 104 etid 54 c omnetpp::cPacket n "" l 64 pe 27 cid 132
+BS id 131 tid 53 eid 132 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 46
+SD sm 97 dm 92 dg 2
+ES t 0.000312
+CL id 131 tid 53 eid 132 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 46 cid 133
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 47 t 0.000312 m 92 ce 46 msg 131
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 131 tid 53 eid 132 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 47 cid 134
+BS id 134 tid 53 eid 132 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 47
+SD sm 92 dm 95 dg 2
+ES t 0.000312
+CL id 134 tid 53 eid 132 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 47 cid 135
+DM id 131 tid 53 eid 131 etid 53 c omnetpp::cMessage n message pe 47
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 48 t 0.000312 m 95 ce 47 msg 134
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 134 tid 53 eid 132 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 48
+SH sm 95 sg 5
+SH sm 88 sg 3
+SH sm 90 sg 1048576
+ES t 0.000312
+CL id 134 tid 53 eid 132 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 48 cid 136
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 49 t 0.000312 m 122 ce 48 msg 134
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 134 tid 53 eid 132 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 49 cid 137
+BS id 137 tid 53 eid 132 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 49
+SH sm 122 sg 2621441
+ES t 0.000312
+CL id 137 tid 53 eid 132 etid 54 c FiCo4OMNeT::CanDataFrame n message l 111 pe 49 cid 138
+DM id 134 tid 53 eid 134 etid 53 c omnetpp::cMessage n message pe 49
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 50 t 0.000312 m 126 ce 49 msg 137
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 51 t 0.0004 m 44 ce 0 msg 55
+CL id 55 tid 55 eid 56 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 51 cid 139
+BS id 55 tid 55 eid 56 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 51
+ES t 0.0204
+CL id 56 tid 56 eid 56 etid 56 c omnetpp::cPacket n "" l 64 pe 0 cid 140
+BS id 139 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 51
+SH sm 44 sg 1
+ES t 0.0004
+CL id 139 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 51 cid 141
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 52 t 0.0004 m 43 ce 51 msg 139
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MB sm 43 tm 22 m ""
+CM id 142 tid 142 eid 142 etid 142 c omnetpp::cMessage n idle_signin pe -1
+BS id 142 tid 142 eid 142 etid 142 c omnetpp::cMessage n idle_signin pe 52
+ES t 0.000401
+BU id 22 txt "state: busy"
+MS id 22 d "tt=state: busy;p=52,74;i=block/app"
+ME
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 53 t 0.000401 m 22 ce 52 msg 142
+MB sm 22 tm 43 m ""
+CL id 139 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 52 cid 143
+CL id 143 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 53 cid 144
+BS id 144 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 53
+SH sm 43 sg 5
+SH sm 41 sg 2
+ES t 0.000401
+CL id 144 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 53 cid 145
+DM id 143 tid 55 eid 143 etid 55 c omnetpp::cMessage n message pe 53
+ME
+DM id 142 tid 142 eid 142 etid 142 c omnetpp::cMessage n idle_signin pe 53
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 54 t 0.000401 m 48 ce 53 msg 144
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 5 d p=51,62;i=device/modem,yellow;bgb=586.32,221.76
+CS sm 5 sg 0 d ""
+CS sm 5 sg 0 d ls=yellow
+CS sm 5 sg 0 d ls=yellow,3
+CS sm 2 sg 1572867 d ls=yellow,1
+CS sm 2 sg 1572867 d ls=yellow,3
+BS id 144 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 54
+SH sm 48 sg 1
+ES t 0.000401
+CL id 144 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 54 cid 146
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 55 t 0.000401 m 49 ce 54 msg 144
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 144 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 55
+SH sm 49 sg 1
+SH sm 41 sg 1
+SH sm 5 sg 1
+SH sm 2 sg 1048579
+ES t 0.000401
+CL id 144 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 55 cid 147
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 56 t 0.000401 m 21 ce 55 msg 144
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 144 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 56
+SH sm 21 sg 3
+ES t 0.000401
+CL id 144 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 56 cid 148
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 57 t 0.000401 m 22 ce 56 msg 144
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CS sm 2 sg 1572864 d ls=yellow,1
+CS sm 2 sg 1572864 d ls=yellow,3
+CS sm 11 sg 2621440 d ls=yellow,1
+CS sm 11 sg 2621440 d ls=yellow,3
+CS sm 2 sg 1572865 d ls=yellow,1
+CS sm 2 sg 1572865 d ls=yellow,3
+CS sm 3 sg 1 d ls=yellow,1
+CS sm 3 sg 1 d ls=yellow,3
+CS sm 2 sg 1572866 d ls=yellow,1
+CS sm 2 sg 1572866 d ls=yellow,3
+CS sm 4 sg 1 d ls=yellow,1
+CS sm 4 sg 1 d ls=yellow,3
+CS sm 5 sg 1 d ls=yellow,1
+CS sm 5 sg 1 d ls=yellow,3
+CS sm 2 sg 1572868 d ls=yellow,1
+CS sm 2 sg 1572868 d ls=yellow,3
+CS sm 6 sg 1 d ls=yellow,1
+CS sm 6 sg 1 d ls=yellow,3
+CL id 144 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 57 cid 149
+BS id 149 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 57
+ES t 0.000512
+CL id 144 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 57 cid 150
+BS id 150 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 57
+SH sm 22 sg 1
+ES t 0.000401
+CL id 150 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 57 cid 151
+DM id 144 tid 55 eid 144 etid 55 c omnetpp::cMessage n message pe 57
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 58 t 0.000401 m 21 ce 57 msg 150
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 150 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58 cid 152
+BS id 152 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58
+SH sm 21 sg 1572864
+SH sm 2 sg 1572864
+SH sm 11 sg 2097152
+SH sm 88 sg 0
+SH sm 91 sg 0
+ES t 0.000401
+CL id 152 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58 cid 153
+CL id 150 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58 cid 154
+BS id 154 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58
+SH sm 21 sg 1572865
+SH sm 2 sg 1572865
+SH sm 3 sg 0
+SH sm 23 sg 0
+ES t 0.000401
+CL id 154 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58 cid 155
+CL id 150 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58 cid 156
+BS id 156 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58
+SH sm 21 sg 1572866
+SH sm 2 sg 1572866
+SH sm 4 sg 0
+SH sm 32 sg 0
+ES t 0.000401
+CL id 156 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58 cid 157
+CL id 150 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58 cid 158
+BS id 158 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58
+SH sm 21 sg 1572867
+SH sm 2 sg 1572867
+SH sm 5 sg 0
+SH sm 41 sg 0
+ES t 0.000401
+CL id 158 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58 cid 159
+CL id 150 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58 cid 160
+BS id 160 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58
+SH sm 21 sg 1572868
+SH sm 2 sg 1572868
+SH sm 6 sg 0
+SH sm 50 sg 0
+ES t 0.000401
+CL id 160 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 58 cid 161
+DM id 150 tid 55 eid 150 etid 55 c omnetpp::cMessage n message pe 58
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 59 t 0.000401 m 99 ce 58 msg 152
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 152 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 59
+SH sm 99 sg 5
+ES t 0.000401
+CL id 152 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 59 cid 162
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 60 t 0.000401 m 31 ce 58 msg 154
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 154 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 60
+SH sm 31 sg 5
+ES t 0.000401
+CL id 154 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 60 cid 163
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 61 t 0.000401 m 40 ce 58 msg 156
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 156 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 61
+SH sm 40 sg 5
+ES t 0.000401
+CL id 156 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 61 cid 164
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 62 t 0.000401 m 49 ce 58 msg 158
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 158 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 62
+SH sm 49 sg 5
+ES t 0.000401
+CL id 158 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 62 cid 165
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 63 t 0.000401 m 58 ce 58 msg 160
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 160 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 63
+SH sm 58 sg 5
+ES t 0.000401
+CL id 160 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 63 cid 166
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 64 t 0.000401 m 97 ce 59 msg 152
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 152 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 64 cid 167
+BS id 167 tid 55 eid 140 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 64
+ES t 0.000512
+DM id 152 tid 55 eid 152 etid 55 c omnetpp::cMessage n message pe 64
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 65 t 0.000401 m 29 ce 60 msg 154
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 154 tid 55 eid 154 etid 55 c omnetpp::cMessage n message pe 65
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 66 t 0.000401 m 38 ce 61 msg 156
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 156 tid 55 eid 156 etid 55 c omnetpp::cMessage n message pe 66
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 67 t 0.000401 m 47 ce 62 msg 158
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 158 tid 55 eid 158 etid 55 c omnetpp::cMessage n message pe 67
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 68 t 0.000401 m 56 ce 63 msg 160
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 160 tid 55 eid 160 etid 55 c omnetpp::cMessage n message pe 68
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 69 t 0.000512 m 22 ce 57 msg 149
+CS sm 2 sg 1572864 d ls=black,3
+CS sm 2 sg 1572864 d ls=black,1
+CS sm 11 sg 2621440 d ls=black,3
+CS sm 11 sg 2621440 d ls=black,1
+CS sm 2 sg 1572865 d ls=black,3
+CS sm 2 sg 1572865 d ls=black,1
+CS sm 3 sg 1 d ls=black,3
+CS sm 3 sg 1 d ls=black,1
+CS sm 2 sg 1572866 d ls=black,3
+CS sm 2 sg 1572866 d ls=black,1
+CS sm 4 sg 1 d ls=black,3
+CS sm 4 sg 1 d ls=black,1
+CS sm 2 sg 1572867 d ls=black,3
+CS sm 2 sg 1572867 d ls=black,1
+CS sm 5 sg 1 d ls=black,3
+CS sm 5 sg 1 d ls=black,1
+CS sm 2 sg 1572868 d ls=black,3
+CS sm 2 sg 1572868 d ls=black,1
+CS sm 6 sg 1 d ls=black,3
+CS sm 6 sg 1 d ls=black,1
+MB sm 22 tm 43 m ""
+DM id 139 tid 55 eid 139 etid 55 c omnetpp::cMessage n message pe 53
+MS id 5 d p=51,62;i=device/modem;bgb=586.32,221.76
+CS sm 5 sg 0 d ls=black,3
+CS sm 5 sg 0 d ls=black,1
+ME
+MS id 22 d "tt=state: idle;p=52,74;i=block/app"
+BU id 22 txt "state: idle"
+DM id 149 tid 55 eid 149 etid 55 c omnetpp::cMessage n message pe 69
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 70 t 0.000512 m 97 ce 64 msg 167
+CL id 140 tid 56 eid 140 etid 56 c omnetpp::cPacket n "" l 64 pe 51 cid 168
+BS id 167 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 70
+SD sm 97 dm 92 dg 2
+ES t 0.000512
+CL id 167 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 70 cid 169
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 71 t 0.000512 m 92 ce 70 msg 167
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 167 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 71 cid 170
+BS id 170 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 71
+SD sm 92 dm 95 dg 2
+ES t 0.000512
+CL id 170 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 71 cid 171
+DM id 167 tid 55 eid 167 etid 55 c omnetpp::cMessage n message pe 71
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 72 t 0.000512 m 95 ce 71 msg 170
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 170 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 72
+SH sm 95 sg 5
+SH sm 88 sg 3
+SH sm 90 sg 1048576
+ES t 0.000512
+CL id 170 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 72 cid 172
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 73 t 0.000512 m 122 ce 72 msg 170
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 170 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 73 cid 173
+BS id 173 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 73
+SH sm 122 sg 2621441
+ES t 0.000512
+CL id 173 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 73 cid 174
+DM id 170 tid 55 eid 170 etid 55 c omnetpp::cMessage n message pe 73
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 74 t 0.000512 m 126 ce 73 msg 173
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 173 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 74
+SH sm 126 sg 3
+ES t 0.000512
+CL id 173 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 74 cid 175
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 75 t 0.000512 m 124 ce 74 msg 173
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 173 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 75 cid 176
+CM id 177 tid 177 eid 177 etid 177 c omnetpp::cMessage n "" pe -1
+CM id 178 tid 178 eid 178 etid 178 c omnetpp::cMessage n "" pe -1
+CM id 179 tid 179 eid 179 etid 179 c omnetpp::cMessage n "" pe -1
+BS id 179 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 75
+SH sm 124 sg 3 pd 0.00004
+SH sm 90 sg 2621441
+SH sm 89 sg 4
+ES t 0.000552
+CL id 179 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 75 cid 180
+DM id 173 tid 55 eid 173 etid 55 c omnetpp::cMessage n message pe 75
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 76 t 0.000552 m 112 ce 75 msg 179
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 179 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 76 cid 181
+BS id 181 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 76
+SD sm 112 dm 108 dg 0
+ES t 0.000552
+CL id 181 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 76 cid 182
+DM id 179 tid 179 eid 179 etid 179 c omnetpp::cMessage n "gateway1 - singleFrame" pe 76
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 77 t 0.000552 m 108 ce 76 msg 181
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 108 d p=109,37;q=frames;i=buffer/buffer1,green
+MS id 108 d p=109,37;q=frames;i=buffer/empty,green
+CL id 181 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 77 cid 183
+BS id 183 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 77
+SH sm 108 sg 3
+ES t 0.000552
+CL id 183 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 77 cid 184
+DM id 181 tid 179 eid 181 etid 179 c omnetpp::cMessage n "gateway1 - singleFrame" pe 77
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 78 t 0.000552 m 104 ce 77 msg 183
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 183 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 78
+SH sm 104 sg 7
+SH sm 100 sg 0
+ES t 0.000552
+CL id 183 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 78 cid 185
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 79 t 0.000552 m 115 ce 78 msg 183
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 183 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 79
+SH sm 115 sg 3
+ES t 0.000552
+CL id 183 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 79 cid 186
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 80 t 0.000552 m 117 ce 79 msg 183
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+- INFO (EtherMACFullDuplex)test3.gateway1.tte[0].phy[0].mac: Received (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame from upper layer.
+- DETAIL (EtherMACFullDuplex)test3.gateway1.tte[0].phy[0].mac: Transmitting a copy of frame (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame
+CL id 183 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 80 cid 187
+CM id 188 tid 188 eid 188 etid 188 c omnetpp::cMessage n "gateway1 - singleFrame" pe -1
+- INFO (EtherMACFullDuplex)test3.gateway1.tte[0].phy[0].mac: Transmission of (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame started.
+BS id 188 tid 188 eid 178 etid 178 c inet::EtherPhyFrame n "gateway1 - singleFrame" l 576 pe 80
+SH sm 117 sg 5
+SH sm 100 sg 5
+SH sm 89 sg 1
+SH sm 11 sg 1572864 pd 0.00000005 td 0.00000576
+SH sm 14 sg 1048576
+SH sm 186 sg 4
+ES t 0.00055781
+CL id 188 tid 188 eid 178 etid 178 c inet::EtherPhyFrame n "gateway1 - singleFrame" l 576 pe 80 cid 189
+CL id 187 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 80 cid 190
+BS id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n EndTransmission k 103 pe 0
+ES t 0.00055776
+MS id 117 d p=87,139;i=block/rxtx,yellow
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 81 t 0.00055776 m 117 ce 80 msg 13
+- INFO (EtherMACFullDuplex)test3.gateway1.tte[0].phy[0].mac: Transmission of (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame successfully completed.
+DM id 183 tid 179 eid 183 etid 179 c omnetpp::cMessage n "gateway1 - singleFrame" pe 80
+- DETAIL (EtherMACFullDuplex)test3.gateway1.tte[0].phy[0].mac: Start IFG period
+BS id 14 tid 14 eid 14 etid 14 c omnetpp::cMessage n EndIFG k 100 pe 0
+ES t 0.00055872
+MS id 117 d p=87,139;i=block/rxtx
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 82 t 0.00055781 m 199 ce 80 msg 188
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+- INFO (EtherMACFullDuplex)test3.switch1.phy[0].mac: (inet::EtherPhyFrame)gateway1 - singleFrame received.
+DM id 188 tid 188 eid 188 etid 188 c omnetpp::cMessage n "gateway1 - singleFrame" pe 82
+- INFO (EtherMACFullDuplex)test3.switch1.phy[0].mac: Reception of (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame successfully completed.
+- INFO (EtherMACFullDuplex)test3.switch1.phy[0].mac: Sending (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame to upper layer.
+BS id 190 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 80
+SH sm 199 sg 3
+ES t 0.00055781
+CL id 190 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 82 cid 191
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 83 t 0.00055781 m 198 ce 82 msg 190
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 190 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 83
+SH sm 198 sg 3
+SH sm 186 sg 3 pd 0.000004
+ES t 0.00056181
+CL id 190 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 83 cid 192
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 84 t 0.00055872 m 117 ce 81 msg 14
+- DETAIL (EtherMACFullDuplex)test3.gateway1.tte[0].phy[0].mac: IFG elapsed
+MB sm 117 tm 115 m requestPacket()
+ME
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 85 t 0.00056181 m 183 ce 83 msg 190
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MB sm 183 tm 184 m MACAddressTable::updateTableWithAddress()
+- INFO (MACAddressTable)test3.switch1.macTable: Updating entry in Address Table: 0A-00-00-00-00-03 --> port0
+ME
+MB sm 183 tm 184 m MACAddressTable::getPortForAddress()
+ME
+- INFO (MACRelayUnit)test3.switch1.beswitch: Sending frame (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame with dest address 0A-00-00-00-00-04 to port 1
+BS id 190 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 85
+SH sm 183 sg 2621441 pd 0.000004
+SH sm 187 sg 0
+ES t 0.00056581
+CL id 190 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 85 cid 193
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 86 t 0.00056581 m 200 ce 85 msg 190
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 190 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 86
+SH sm 200 sg 3
+ES t 0.00056581
+CL id 190 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 86 cid 194
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 87 t 0.00056581 m 202 ce 86 msg 190
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+- INFO (EtherMACFullDuplex)test3.switch1.phy[1].mac: Received (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame from upper layer.
+- DETAIL (EtherMACFullDuplex)test3.switch1.phy[1].mac: Transmitting a copy of frame (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame
+CL id 190 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 87 cid 195
+CM id 196 tid 196 eid 196 etid 196 c omnetpp::cMessage n "gateway1 - singleFrame" pe -1
+- INFO (EtherMACFullDuplex)test3.switch1.phy[1].mac: Transmission of (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame started.
+BS id 196 tid 196 eid 178 etid 178 c inet::EtherPhyFrame n "gateway1 - singleFrame" l 576 pe 87
+SH sm 202 sg 5
+SH sm 187 sg 5
+SH sm 14 sg 1572865 pd 0.00000005 td 0.00000576
+SH sm 12 sg 1048576
+SH sm 134 sg 0
+SH sm 145 sg 4
+ES t 0.00057162
+CL id 196 tid 196 eid 178 etid 178 c inet::EtherPhyFrame n "gateway1 - singleFrame" l 576 pe 87 cid 197
+CL id 195 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 87 cid 198
+BS id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n EndTransmission k 103 pe 0
+ES t 0.00057157
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 202 d p=87,139;i=block/rxtx,yellow
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 88 t 0.00057157 m 202 ce 87 msg 35
+- INFO (EtherMACFullDuplex)test3.switch1.phy[1].mac: Transmission of (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame successfully completed.
+DM id 190 tid 179 eid 190 etid 179 c omnetpp::cMessage n "gateway1 - singleFrame" pe 87
+- DETAIL (EtherMACFullDuplex)test3.switch1.phy[1].mac: Start IFG period
+BS id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n EndIFG k 100 pe 0
+ES t 0.00057253
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 202 d p=87,139;i=block/rxtx
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 89 t 0.00057162 m 162 ce 87 msg 196
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+- INFO (EtherMACFullDuplex)test3.gateway2.tte[0].phy[0].mac: (inet::EtherPhyFrame)gateway1 - singleFrame received.
+DM id 196 tid 196 eid 196 etid 196 c omnetpp::cMessage n "gateway1 - singleFrame" pe 89
+- INFO (EtherMACFullDuplex)test3.gateway2.tte[0].phy[0].mac: Reception of (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame successfully completed.
+- INFO (EtherMACFullDuplex)test3.gateway2.tte[0].phy[0].mac: Sending (CoRE4INET::EthernetIIFrameWithQTag)gateway1 - singleFrame to upper layer.
+BS id 198 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 87
+SH sm 162 sg 3
+ES t 0.00057162
+CL id 198 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 89 cid 199
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 90 t 0.00057162 m 161 ce 89 msg 198
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MB sm 161 tm 154 m SRPTable::containsStream()
+ME
+BS id 198 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 90
+SH sm 161 sg 3
+SH sm 145 sg 3
+ES t 0.00057162
+CL id 198 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 90 cid 200
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 91 t 0.00057162 m 149 ce 90 msg 198
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 198 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 91 cid 201
+BS id 201 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 91
+SH sm 149 sg 11
+ES t 0.00057162
+CL id 201 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 91 cid 202
+DM id 198 tid 179 eid 198 etid 179 c omnetpp::cMessage n "gateway1 - singleFrame" pe 91
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 92 t 0.00057162 m 152 ce 91 msg 201
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 152 d p=60,37;q=frames;i=buffer/buffer1,green
+MS id 152 d p=60,37;q=frames;i=buffer/empty,green
+CL id 201 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 92 cid 203
+BS id 203 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 92
+SD sm 152 dm 157 dg 10
+ES t 0.00057162
+CL id 203 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 92 cid 204
+DM id 201 tid 179 eid 201 etid 179 c omnetpp::cMessage n "gateway1 - singleFrame" pe 92
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 93 t 0.00057162 m 157 ce 92 msg 203
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 203 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 93
+SH sm 157 sg 7
+SH sm 134 sg 3
+SH sm 135 sg 1048577
+ES t 0.00057162
+CL id 203 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 93 cid 205
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 94 t 0.00057162 m 167 ce 93 msg 203
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 203 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 94 cid 206
+BS id 206 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 94
+SH sm 167 sg 2621440
+ES t 0.00057162
+CL id 206 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 94 cid 207
+DM id 203 tid 179 eid 203 etid 179 c omnetpp::cMessage n "gateway1 - singleFrame" pe 94
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 95 t 0.00057162 m 170 ce 94 msg 206
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 206 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 95
+SH sm 170 sg 3
+ES t 0.00057162
+CL id 206 tid 179 eid 178 etid 178 c CoRE4INET::EthernetIIFrameWithQTag n "gateway1 - singleFrame" l 512 pe 95 cid 208
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 96 t 0.00057162 m 168 ce 95 msg 206
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 178 tid 178 eid 178 etid 178 c SignalsAndGateways::GatewayAggregationMessage n "" l 216 pe 75 cid 209
+CL id 177 tid 177 eid 168 etid 56 c SignalsAndGateways::UnitMessage n "" l 183 pe 75 cid 210
+CL id 176 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 95 pe 75 cid 211
+DM id 210 tid 177 eid 210 etid 177 c omnetpp::cMessage n "" pe 96
+DM id 209 tid 178 eid 209 etid 178 c omnetpp::cMessage n "" pe 96
+BS id 211 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 96
+SH sm 168 sg 3 pd 0.00004
+SH sm 135 sg 2621440
+SH sm 133 sg 4
+ES t 0.00061162
+CL id 211 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 96 cid 212
+DM id 206 tid 179 eid 206 etid 179 c omnetpp::cMessage n "gateway1 - singleFrame" pe 96
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 97 t 0.00057253 m 202 ce 88 msg 36
+- DETAIL (EtherMACFullDuplex)test3.switch1.phy[1].mac: IFG elapsed
+MB sm 202 tm 200 m requestPacket()
+ME
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 98 t 0.0006 m 53 ce 0 msg 57
+CL id 57 tid 57 eid 58 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 98 cid 213
+BS id 57 tid 57 eid 58 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 98
+ES t 0.3336
+CL id 58 tid 58 eid 58 etid 58 c omnetpp::cPacket n "" l 64 pe 0 cid 214
+BS id 213 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 98
+SH sm 53 sg 1
+ES t 0.0006
+CL id 213 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 98 cid 215
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 99 t 0.0006 m 52 ce 98 msg 213
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MB sm 52 tm 22 m ""
+CM id 216 tid 216 eid 216 etid 216 c omnetpp::cMessage n idle_signin pe -1
+BS id 216 tid 216 eid 216 etid 216 c omnetpp::cMessage n idle_signin pe 99
+ES t 0.000601
+BU id 22 txt "state: busy"
+MS id 22 d "tt=state: busy;p=52,74;i=block/app"
+ME
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 100 t 0.000601 m 22 ce 99 msg 216
+MB sm 22 tm 52 m ""
+CL id 213 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 99 cid 217
+CL id 217 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 100 cid 218
+BS id 218 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 100
+SH sm 52 sg 5
+SH sm 50 sg 2
+ES t 0.000601
+CL id 218 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 100 cid 219
+DM id 217 tid 57 eid 217 etid 57 c omnetpp::cMessage n message pe 100
+ME
+DM id 216 tid 216 eid 216 etid 216 c omnetpp::cMessage n idle_signin pe 100
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 101 t 0.000601 m 57 ce 100 msg 218
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 6 d p=51,62;i=device/modem,yellow;bgb=586.32,221.76
+CS sm 6 sg 0 d ""
+CS sm 6 sg 0 d ls=yellow
+CS sm 6 sg 0 d ls=yellow,3
+CS sm 2 sg 1572868 d ls=yellow,1
+CS sm 2 sg 1572868 d ls=yellow,3
+BS id 218 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 101
+SH sm 57 sg 1
+ES t 0.000601
+CL id 218 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 101 cid 220
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 102 t 0.000601 m 58 ce 101 msg 218
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 218 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 102
+SH sm 58 sg 1
+SH sm 50 sg 1
+SH sm 6 sg 1
+SH sm 2 sg 1048580
+ES t 0.000601
+CL id 218 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 102 cid 221
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 103 t 0.000601 m 21 ce 102 msg 218
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 218 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 103
+SH sm 21 sg 3
+ES t 0.000601
+CL id 218 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 103 cid 222
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 104 t 0.000601 m 22 ce 103 msg 218
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CS sm 2 sg 1572864 d ls=yellow,1
+CS sm 2 sg 1572864 d ls=yellow,3
+CS sm 11 sg 2621440 d ls=yellow,1
+CS sm 11 sg 2621440 d ls=yellow,3
+CS sm 2 sg 1572865 d ls=yellow,1
+CS sm 2 sg 1572865 d ls=yellow,3
+CS sm 3 sg 1 d ls=yellow,1
+CS sm 3 sg 1 d ls=yellow,3
+CS sm 2 sg 1572866 d ls=yellow,1
+CS sm 2 sg 1572866 d ls=yellow,3
+CS sm 4 sg 1 d ls=yellow,1
+CS sm 4 sg 1 d ls=yellow,3
+CS sm 2 sg 1572867 d ls=yellow,1
+CS sm 2 sg 1572867 d ls=yellow,3
+CS sm 5 sg 1 d ls=yellow,1
+CS sm 5 sg 1 d ls=yellow,3
+CS sm 6 sg 1 d ls=yellow,1
+CS sm 6 sg 1 d ls=yellow,3
+CL id 218 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 104 cid 223
+BS id 223 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 104
+ES t 0.000712
+CL id 218 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 104 cid 224
+BS id 224 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 104
+SH sm 22 sg 1
+ES t 0.000601
+CL id 224 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 104 cid 225
+DM id 218 tid 57 eid 218 etid 57 c omnetpp::cMessage n message pe 104
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 105 t 0.000601 m 21 ce 104 msg 224
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 224 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105 cid 226
+BS id 226 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105
+SH sm 21 sg 1572864
+SH sm 2 sg 1572864
+SH sm 11 sg 2097152
+SH sm 88 sg 0
+SH sm 91 sg 0
+ES t 0.000601
+CL id 226 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105 cid 227
+CL id 224 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105 cid 228
+BS id 228 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105
+SH sm 21 sg 1572865
+SH sm 2 sg 1572865
+SH sm 3 sg 0
+SH sm 23 sg 0
+ES t 0.000601
+CL id 228 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105 cid 229
+CL id 224 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105 cid 230
+BS id 230 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105
+SH sm 21 sg 1572866
+SH sm 2 sg 1572866
+SH sm 4 sg 0
+SH sm 32 sg 0
+ES t 0.000601
+CL id 230 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105 cid 231
+CL id 224 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105 cid 232
+BS id 232 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105
+SH sm 21 sg 1572867
+SH sm 2 sg 1572867
+SH sm 5 sg 0
+SH sm 41 sg 0
+ES t 0.000601
+CL id 232 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105 cid 233
+CL id 224 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105 cid 234
+BS id 234 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105
+SH sm 21 sg 1572868
+SH sm 2 sg 1572868
+SH sm 6 sg 0
+SH sm 50 sg 0
+ES t 0.000601
+CL id 234 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 105 cid 235
+DM id 224 tid 57 eid 224 etid 57 c omnetpp::cMessage n message pe 105
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 106 t 0.000601 m 99 ce 105 msg 226
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 226 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 106
+SH sm 99 sg 5
+ES t 0.000601
+CL id 226 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 106 cid 236
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 107 t 0.000601 m 31 ce 105 msg 228
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 228 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 107
+SH sm 31 sg 5
+ES t 0.000601
+CL id 228 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 107 cid 237
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 108 t 0.000601 m 40 ce 105 msg 230
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 230 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 108
+SH sm 40 sg 5
+ES t 0.000601
+CL id 230 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 108 cid 238
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 109 t 0.000601 m 49 ce 105 msg 232
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 232 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 109
+SH sm 49 sg 5
+ES t 0.000601
+CL id 232 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 109 cid 239
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 110 t 0.000601 m 58 ce 105 msg 234
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 234 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 110
+SH sm 58 sg 5
+ES t 0.000601
+CL id 234 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 110 cid 240
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 111 t 0.000601 m 97 ce 106 msg 226
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 226 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 111 cid 241
+BS id 241 tid 57 eid 214 etid 58 c FiCo4OMNeT::CanDataFrame n message l 111 pe 111
+ES t 0.000712
+DM id 226 tid 57 eid 226 etid 57 c omnetpp::cMessage n message pe 111
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 112 t 0.000601 m 29 ce 107 msg 228
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 228 tid 57 eid 228 etid 57 c omnetpp::cMessage n message pe 112
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 113 t 0.000601 m 38 ce 108 msg 230
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 230 tid 57 eid 230 etid 57 c omnetpp::cMessage n message pe 113
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 114 t 0.000601 m 47 ce 109 msg 232
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 232 tid 57 eid 232 etid 57 c omnetpp::cMessage n message pe 114
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 115 t 0.000601 m 56 ce 110 msg 234
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 234 tid 57 eid 234 etid 57 c omnetpp::cMessage n message pe 115
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 116 t 0.00061162 m 139 ce 96 msg 211
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 211 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 116
+SH sm 139 sg 1
+ES t 0.00061162
+CL id 211 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 116 cid 242
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 117 t 0.00061162 m 138 ce 116 msg 211
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MB sm 138 tm 60 m ""
+CM id 243 tid 243 eid 243 etid 243 c omnetpp::cMessage n idle_signin pe -1
+BS id 243 tid 243 eid 243 etid 243 c omnetpp::cMessage n idle_signin pe 117
+ES t 0.00061262
+BU id 60 txt "state: busy"
+MS id 60 d "tt=state: busy;p=52,74;i=block/app"
+ME
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 118 t 0.00061262 m 60 ce 117 msg 243
+MB sm 60 tm 138 m ""
+CL id 211 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 117 cid 244
+CL id 244 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 118 cid 245
+BS id 245 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 118
+SH sm 138 sg 5
+SH sm 136 sg 2
+ES t 0.00061262
+CL id 245 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 118 cid 246
+DM id 244 tid 55 eid 244 etid 55 c omnetpp::cMessage n message pe 118
+ME
+DM id 243 tid 243 eid 243 etid 243 c omnetpp::cMessage n idle_signin pe 118
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 119 t 0.00061262 m 143 ce 118 msg 245
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 133 d p=369,100,c,130;i=block/app2,yellow;bgb=248,222
+CS sm 133 sg 0 d ""
+CS sm 133 sg 0 d ls=yellow
+CS sm 133 sg 0 d ls=yellow,3
+CS sm 12 sg 2097152 d ""
+CS sm 12 sg 2097152 d ls=yellow
+CS sm 12 sg 2097152 d ls=yellow,3
+BS id 245 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 119
+SH sm 143 sg 1
+ES t 0.00061262
+CL id 245 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 119 cid 247
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 120 t 0.00061262 m 144 ce 119 msg 245
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 245 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 120
+SH sm 144 sg 1
+SH sm 136 sg 1
+SH sm 133 sg 1
+SH sm 12 sg 2621440
+SH sm 7 sg 1048576
+ES t 0.00061262
+CL id 245 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 120 cid 248
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 121 t 0.00061262 m 59 ce 120 msg 245
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 245 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 121
+SH sm 59 sg 3
+ES t 0.00061262
+CL id 245 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 121 cid 249
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 122 t 0.00061262 m 60 ce 121 msg 245
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CS sm 7 sg 1572864 d ""
+CS sm 7 sg 1572864 d ls=yellow
+CS sm 7 sg 1572864 d ls=yellow,3
+CS sm 12 sg 2621440 d ""
+CS sm 12 sg 2621440 d ls=yellow
+CS sm 12 sg 2621440 d ls=yellow,3
+CS sm 7 sg 1572865 d ""
+CS sm 7 sg 1572865 d ls=yellow
+CS sm 7 sg 1572865 d ls=yellow,3
+CS sm 8 sg 1 d ""
+CS sm 8 sg 1 d ls=yellow
+CS sm 8 sg 1 d ls=yellow,3
+CS sm 7 sg 1572866 d ""
+CS sm 7 sg 1572866 d ls=yellow
+CS sm 7 sg 1572866 d ls=yellow,3
+CS sm 9 sg 1 d ""
+CS sm 9 sg 1 d ls=yellow
+CS sm 9 sg 1 d ls=yellow,3
+CS sm 7 sg 1572867 d ""
+CS sm 7 sg 1572867 d ls=yellow
+CS sm 7 sg 1572867 d ls=yellow,3
+CS sm 10 sg 1 d ""
+CS sm 10 sg 1 d ls=yellow
+CS sm 10 sg 1 d ls=yellow,3
+DM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n "" pe 0
+CL id 245 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 122 cid 250
+BS id 250 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 122
+ES t 0.00072362
+CL id 245 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 122 cid 251
+BS id 251 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 122
+SH sm 60 sg 1
+ES t 0.00061262
+CL id 251 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 122 cid 252
+DM id 245 tid 55 eid 245 etid 55 c omnetpp::cMessage n message pe 122
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 123 t 0.00061262 m 59 ce 122 msg 251
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+CL id 251 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123 cid 253
+BS id 253 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123
+SH sm 59 sg 1572864
+SH sm 7 sg 1572864
+SH sm 12 sg 2097152
+SH sm 133 sg 0
+SH sm 136 sg 0
+ES t 0.00061262
+CL id 253 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123 cid 254
+CL id 251 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123 cid 255
+BS id 255 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123
+SH sm 59 sg 1572865
+SH sm 7 sg 1572865
+SH sm 8 sg 0
+SH sm 61 sg 0
+ES t 0.00061262
+CL id 255 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123 cid 256
+CL id 251 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123 cid 257
+BS id 257 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123
+SH sm 59 sg 1572866
+SH sm 7 sg 1572866
+SH sm 9 sg 0
+SH sm 70 sg 0
+ES t 0.00061262
+CL id 257 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123 cid 258
+CL id 251 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123 cid 259
+BS id 259 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123
+SH sm 59 sg 1572867
+SH sm 7 sg 1572867
+SH sm 10 sg 0
+SH sm 79 sg 0
+ES t 0.00061262
+CL id 259 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 123 cid 260
+DM id 251 tid 55 eid 251 etid 55 c omnetpp::cMessage n message pe 123
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 124 t 0.00061262 m 144 ce 123 msg 253
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 253 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 124
+SH sm 144 sg 5
+ES t 0.00061262
+CL id 253 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 124 cid 261
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 125 t 0.00061262 m 69 ce 123 msg 255
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 255 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 125
+SH sm 69 sg 5
+ES t 0.00061262
+CL id 255 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 125 cid 262
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 126 t 0.00061262 m 78 ce 123 msg 257
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 257 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 126
+SH sm 78 sg 5
+ES t 0.00061262
+CL id 257 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 126 cid 263
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 127 t 0.00061262 m 87 ce 123 msg 259
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+BS id 259 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 127
+SH sm 87 sg 5
+ES t 0.00061262
+CL id 259 tid 55 eid 168 etid 56 c FiCo4OMNeT::CanDataFrame n message l 111 pe 127 cid 264
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 128 t 0.00061262 m 142 ce 124 msg 253
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 253 tid 55 eid 253 etid 55 c omnetpp::cMessage n message pe 128
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 129 t 0.00061262 m 67 ce 125 msg 255
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 255 tid 55 eid 255 etid 55 c omnetpp::cMessage n message pe 129
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+
+E # 130 t 0.00061262 m 76 ce 126 msg 257
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+DM id 257 tid 55 eid 257 etid 55 c omnetpp::cMessage n message pe 130
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311
+MS id 14 d p=379,62;i=block/switch;bgb=457,311

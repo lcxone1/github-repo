@@ -1,0 +1,1297 @@
+version 2
+run WithQ-0-20221222-14:37:12-19100
+attr configname WithQ
+attr datetime 20221222-14:37:12
+attr experiment WithQ
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network test3
+attr processid 19100
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.gateway2.tte[0].phy[*].untaggedVID 0
+param **.gateway2.tte[0].phy[*].taggedVIDs "\"0,1\""
+param **.gateway.configXML "xmldoc(\"GatewayConfig_withQ.xml\")"
+param **.taggedVIDs "\"1\""
+param **.gateway.transformDelay 40us
+param **.addressTableFile "\"addressTable.txt\""
+param **.ct_marker 0x03040506
+param **.ct_mask 0xffffffff
+param **.scheduler.tick 80ns
+param **.scheduler.numPeriods 2
+param **.scheduler.period[0].cycle_ticks sec_to_tick(30ms)
+param **.scheduler.period[0].offset_ticks sec_to_tick(2ms)
+param **.scheduler.period[1].cycle_ticks sec_to_tick(20ms)
+param **.scheduler.period[1].offset_ticks sec_to_tick(3ms)
+param **.scheduler.oscillator.max_drift 200ppm
+param **.scheduler.oscillator.drift_change uniform(-50ppm,50ppm)
+param **.precission 500ns
+param **.gateway.buffering[*].typename "\"AccumulationGatewayBuffering\""
+param **.gateway.transform[*].typename "\"GatewayTransformation\""
+param **.gateway1.can[0].bufferIn[0].idIncomingFrames "\"1,2,3,4\""
+param **.gateway1.tte[0].phy[*].mac.address "\"0A-00-00-00-00-03\""
+param **.gateway1.tte[*].bgIn.destination_gates "\"gatewayApp.in\""
+param **.gateway1.tte[*].gatewayApp.buffers "\"bgOut,TTvlinks[0]\""
+param **.gateway1.tte[0].numberOfTT_Vlinks 1
+param **.gateway1.tte[0].phy[0].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.gateway1.tte[0].TTvlinks[0].period "\"period[0]\""
+param **.gateway1.tte[0].TTvlinks_ctc[0].period "\"period[0]\""
+param **.gateway1.tte[0].TTvlinks[0].destination_gates "\"phy[0].TTin\""
+param **.gateway1.tte[0].TTvlinks_ctc[0].receive_window_start -1tick
+param **.gateway1.tte[0].TTvlinks_ctc[0].receive_window_end -1tick
+param **.gateway1.tte[0].TTvlinks_ctc[0].permanence_pit -1tick
+param **.gateway1.tte[0].TTvlinks[0].ct_id 1
+param **.gateway1.tte[0].TTvlinks[0].sendWindowStart sec_to_tick(1ms)
+param **.gateway1.tte[0].phy[0].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.gateway2.tte[0].phy[*].mac.address "\"0A-00-00-00-00-04\""
+param **.gateway2.tte[*].bgIn.destination_gates "\"gatewayApp.in\""
+param **.gateway2.tte[*].gatewayApp.buffers "\"bgOut\""
+param **.gateway2.tte[0].numberOfTT_Vlinks 1
+param **.gateway2.tte[0].phy[0].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.gateway2.tte[0].gatewayApp.buffers "\"TTvlinks[0]\""
+param **.gateway2.tte[0].TTvlinks[0].period "\"period[0]\""
+param **.gateway2.tte[0].TTvlinks_ctc[0].period "\"period[0]\""
+param **.gateway2.tte[0].TTvlinks[0].destination_gates "\"gatewayApp.TTin\""
+param **.gateway2.tte[0].TTvlinks_ctc[0].receive_window_start -1tick
+param **.gateway2.tte[0].TTvlinks_ctc[0].receive_window_end -1tick
+param **.gateway2.tte[0].TTvlinks_ctc[0].permanence_pit -1tick
+param **.gateway2.tte[0].TTvlinks[0].ct_id 1
+param **.gateway2.tte[0].TTvlinks[0].sendWindowStart sec_to_tick(1ms)
+param **.gateway2.tte[0].phy[0].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.switch.numberOfTT_Vlinks 4
+param **.switch.phy[0].mac.address "\"0A-00-00-00-00-04\""
+param **.switch.phy[1].mac.address "\"0A-00-00-00-00-05\""
+param **.switch.phy[2].mac.address "\"0A-00-00-00-00-06\""
+param **.switch.phy[0].inControl.ct_incomings "\"TTvlinks_ctc[0], TTvlinks_ctc[1], TTvlinks_ctc[2], TTvlinks_ctc[3]\""
+param **.switch.phy[1].inControl.ct_incomings "\"TTvlinks_ctc[0], TTvlinks_ctc[1], TTvlinks_ctc[2], TTvlinks_ctc[3]\""
+param **.switch.phy[2].inControl.ct_incomings "\"TTvlinks_ctc[0], TTvlinks_ctc[1], TTvlinks_ctc[2], TTvlinks_ctc[3]\""
+param **.switch.phy[0].shaper.tt_buffers "\"TTvlinks[1], TTvlinks[2]\""
+param **.switch.phy[1].shaper.tt_buffers "\"TTvlinks[1], TTvlinks[3]\""
+param **.switch.phy[2].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.switch.TTvlinks[0].period "\"period[1]\""
+param **.switch.TTvlinks_ctc[0].period "\"period[1]\""
+param **.switch.TTvlinks[0].destination_gates "\"phy[2].TTin\""
+param **.switch.TTvlinks_ctc[0].receive_window_start -1tick
+param **.switch.TTvlinks_ctc[0].receive_window_end -1tick
+param **.switch.TTvlinks_ctc[0].permanence_pit -1tick
+param **.switch.TTvlinks[0].ct_id 20
+param **.switch.TTvlinks[0].sendWindowStart sec_to_tick(3ms)
+param **.switch.TTvlinks[1].period "\"period[2]\""
+param **.switch.TTvlinks_ctc[1].period "\"period[2]\""
+param **.switch.TTvlinks[1].destination_gates "\"phy[0].TTin, phy[1].TTin\""
+param **.switch.TTvlinks_ctc[1].receive_window_start -1tick
+param **.switch.TTvlinks_ctc[1].receive_window_end -1tick
+param **.switch.TTvlinks_ctc[1].permanence_pit -1tick
+param **.switch.TTvlinks[1].ct_id 300
+param **.switch.TTvlinks[1].sendWindowStart sec_to_tick(3ms)
+param **.switch.TTvlinks[2].period "\"period[2]\""
+param **.switch.TTvlinks_ctc[2].period "\"period[2]\""
+param **.switch.TTvlinks[2].destination_gates "\"phy[0].TTin\""
+param **.switch.TTvlinks_ctc[2].receive_window_start -1tick
+param **.switch.TTvlinks_ctc[2].receive_window_end -1tick
+param **.switch.TTvlinks_ctc[2].permanence_pit -1tick
+param **.switch.TTvlinks[2].ct_id 30
+param **.switch.TTvlinks[2].sendWindowStart sec_to_tick(4ms)
+param **.switch.TTvlinks[3].period "\"period[3]\""
+param **.switch.TTvlinks_ctc[3].period "\"period[3]\""
+param **.switch.TTvlinks[3].destination_gates "\"phy[1].TTin\""
+param **.switch.TTvlinks_ctc[3].receive_window_start -1tick
+param **.switch.TTvlinks_ctc[3].receive_window_end -1tick
+param **.switch.TTvlinks_ctc[3].permanence_pit -1tick
+param **.switch.TTvlinks[3].ct_id 33
+param **.switch.TTvlinks[3].sendWindowStart sec_to_tick(3ms)
+param **.sensor[0].sourceApp[0].idDataFrames "\"1\""
+param **.sensor[0].sourceApp[0].initialDataFrameOffset "\"0\""
+param **.sensor[0].sourceApp[0].periodicityDataFrames "\"0.010\""
+param **.sensor[0].sourceApp[0].dataLengthDataFrames "\"8\""
+param **.sensor[1].sourceApp[0].idDataFrames "\"2\""
+param **.sensor[1].sourceApp[0].initialDataFrameOffset "\"0.00020\""
+param **.sensor[1].sourceApp[0].periodicityDataFrames "\"0.015\""
+param **.sensor[1].sourceApp[0].dataLengthDataFrames "\"8\""
+param **.sensor[2].sourceApp[0].idDataFrames "\"3\""
+param **.sensor[2].sourceApp[0].initialDataFrameOffset "\"0.00040\""
+param **.sensor[2].sourceApp[0].periodicityDataFrames "\"0.020\""
+param **.sensor[2].sourceApp[0].dataLengthDataFrames "\"8\""
+param **.sensor[3].sourceApp[0].idDataFrames "\"4\""
+param **.sensor[3].sourceApp[0].initialDataFrameOffset "\"0.00060\""
+param **.sensor[3].sourceApp[0].periodicityDataFrames "\"0.333\""
+param **.sensor[3].sourceApp[0].dataLengthDataFrames "\"8\""
+param **.aktor[0].bufferIn[0].idIncomingFrames "\"1,2\""
+param **.aktor[0].sourceApp[0].idDataFrames "\"10\""
+param **.aktor[1].bufferIn[0].idIncomingFrames "\"2\""
+param **.aktor[1].sourceApp[0].idDataFrames "\"20\""
+param **.aktor[2].bufferIn[0].idIncomingFrames "\"2,3,4\""
+param **.aktor[2].sourceApp[0].idDataFrames "\"30\""
+
+vector 0 test3.gateway1.ethg$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 1 test3.gateway2.ethg$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 2 test3.etherHost.ethg$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 3 test3.switch1.ethg$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 4 test3.switch1.ethg$o[1].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 5 test3.switch1.ethg$o[2].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 6 test3.gateway1.tte[0].phy[0].shaper q0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+vector 7 test3.gateway1.tte[0].phy[0].shaper q0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+vector 8 test3.gateway1.tte[0].phy[0].shaper q1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+vector 9 test3.gateway1.tte[0].phy[0].shaper q1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+vector 10 test3.gateway1.tte[0].phy[0].shaper q2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+vector 11 test3.gateway1.tte[0].phy[0].shaper q2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+vector 12 test3.gateway1.tte[0].phy[0].shaper q3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+vector 13 test3.gateway1.tte[0].phy[0].shaper q3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+vector 14 test3.gateway1.tte[0].phy[0].shaper q4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+vector 15 test3.gateway1.tte[0].phy[0].shaper q4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+vector 16 test3.gateway1.tte[0].phy[0].shaper q5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+vector 17 test3.gateway1.tte[0].phy[0].shaper q5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+vector 18 test3.gateway1.tte[0].phy[0].shaper q6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+vector 19 test3.gateway1.tte[0].phy[0].shaper q6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+vector 20 test3.gateway1.tte[0].phy[0].shaper q7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+vector 21 test3.gateway1.tte[0].phy[0].shaper q7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+vector 22 test3.gateway1.tte[0].phy[0].shaper rc0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc0QueueLength)"
+attr unit packets
+vector 23 test3.gateway1.tte[0].phy[0].shaper rc0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc0QueueSize)"
+attr unit B
+vector 24 test3.gateway1.tte[0].phy[0].shaper rc1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc1QueueLength)"
+attr unit packets
+vector 25 test3.gateway1.tte[0].phy[0].shaper rc1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc1QueueSize)"
+attr unit B
+vector 26 test3.gateway1.tte[0].phy[0].shaper rc2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc2QueueLength)"
+attr unit packets
+vector 27 test3.gateway1.tte[0].phy[0].shaper rc2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc2QueueSize)"
+attr unit B
+vector 28 test3.gateway1.tte[0].phy[0].shaper rc3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc3QueueLength)"
+attr unit packets
+vector 29 test3.gateway1.tte[0].phy[0].shaper rc3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc3QueueSize)"
+attr unit B
+vector 30 test3.gateway1.tte[0].phy[0].shaper rc4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc4QueueLength)"
+attr unit packets
+vector 31 test3.gateway1.tte[0].phy[0].shaper rc4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc4QueueSize)"
+attr unit B
+vector 32 test3.gateway1.tte[0].phy[0].shaper rc5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc5QueueLength)"
+attr unit packets
+vector 33 test3.gateway1.tte[0].phy[0].shaper rc5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc5QueueSize)"
+attr unit B
+vector 34 test3.gateway1.tte[0].phy[0].shaper rc6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc6QueueLength)"
+attr unit packets
+vector 35 test3.gateway1.tte[0].phy[0].shaper rc6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc6QueueSize)"
+attr unit B
+vector 36 test3.gateway1.tte[0].phy[0].shaper rc7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc7QueueLength)"
+attr unit packets
+vector 37 test3.gateway1.tte[0].phy[0].shaper rc7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc7QueueSize)"
+attr unit B
+vector 38 test3.gateway1.tte[0].phy[0].shaper rc8QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc8QueueLength)"
+attr unit packets
+vector 39 test3.gateway1.tte[0].phy[0].shaper rc8QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc8QueueSize)"
+attr unit B
+vector 40 test3.gateway1.tte[0].phy[0].shaper rc9QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc9QueueLength)"
+attr unit packets
+vector 41 test3.gateway1.tte[0].phy[0].shaper rc9QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc9QueueSize)"
+attr unit B
+vector 42 test3.gateway1.tte[0].phy[0].shaper pcfQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "PCF-Queue Length, vector"
+attr unit packets
+vector 43 test3.gateway1.tte[0].phy[0].shaper pcfQueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, vector"
+attr unit B
+vector 44 test3.gateway1.tte[0].phy[0].shaper ttQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "TT-Queue Length, vector"
+attr unit packets
+vector 45 test3.gateway2.tte[0].phy[0].shaper q0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+vector 46 test3.gateway2.tte[0].phy[0].shaper q0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+vector 47 test3.gateway2.tte[0].phy[0].shaper q1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+vector 48 test3.gateway2.tte[0].phy[0].shaper q1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+vector 49 test3.gateway2.tte[0].phy[0].shaper q2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+vector 50 test3.gateway2.tte[0].phy[0].shaper q2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+vector 51 test3.gateway2.tte[0].phy[0].shaper q3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+vector 52 test3.gateway2.tte[0].phy[0].shaper q3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+vector 53 test3.gateway2.tte[0].phy[0].shaper q4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+vector 54 test3.gateway2.tte[0].phy[0].shaper q4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+vector 55 test3.gateway2.tte[0].phy[0].shaper q5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+vector 56 test3.gateway2.tte[0].phy[0].shaper q5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+vector 57 test3.gateway2.tte[0].phy[0].shaper q6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+vector 58 test3.gateway2.tte[0].phy[0].shaper q6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+vector 59 test3.gateway2.tte[0].phy[0].shaper q7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+vector 60 test3.gateway2.tte[0].phy[0].shaper q7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+vector 61 test3.gateway2.tte[0].phy[0].shaper rc0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc0QueueLength)"
+attr unit packets
+vector 62 test3.gateway2.tte[0].phy[0].shaper rc0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc0QueueSize)"
+attr unit B
+vector 63 test3.gateway2.tte[0].phy[0].shaper rc1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc1QueueLength)"
+attr unit packets
+vector 64 test3.gateway2.tte[0].phy[0].shaper rc1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc1QueueSize)"
+attr unit B
+vector 65 test3.gateway2.tte[0].phy[0].shaper rc2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc2QueueLength)"
+attr unit packets
+vector 66 test3.gateway2.tte[0].phy[0].shaper rc2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc2QueueSize)"
+attr unit B
+vector 67 test3.gateway2.tte[0].phy[0].shaper rc3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc3QueueLength)"
+attr unit packets
+vector 68 test3.gateway2.tte[0].phy[0].shaper rc3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc3QueueSize)"
+attr unit B
+vector 69 test3.gateway2.tte[0].phy[0].shaper rc4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc4QueueLength)"
+attr unit packets
+vector 70 test3.gateway2.tte[0].phy[0].shaper rc4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc4QueueSize)"
+attr unit B
+vector 71 test3.gateway2.tte[0].phy[0].shaper rc5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc5QueueLength)"
+attr unit packets
+vector 72 test3.gateway2.tte[0].phy[0].shaper rc5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc5QueueSize)"
+attr unit B
+vector 73 test3.gateway2.tte[0].phy[0].shaper rc6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc6QueueLength)"
+attr unit packets
+vector 74 test3.gateway2.tte[0].phy[0].shaper rc6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc6QueueSize)"
+attr unit B
+vector 75 test3.gateway2.tte[0].phy[0].shaper rc7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc7QueueLength)"
+attr unit packets
+vector 76 test3.gateway2.tte[0].phy[0].shaper rc7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc7QueueSize)"
+attr unit B
+vector 77 test3.gateway2.tte[0].phy[0].shaper rc8QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc8QueueLength)"
+attr unit packets
+vector 78 test3.gateway2.tte[0].phy[0].shaper rc8QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc8QueueSize)"
+attr unit B
+vector 79 test3.gateway2.tte[0].phy[0].shaper rc9QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc9QueueLength)"
+attr unit packets
+vector 80 test3.gateway2.tte[0].phy[0].shaper rc9QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc9QueueSize)"
+attr unit B
+vector 81 test3.gateway2.tte[0].phy[0].shaper pcfQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "PCF-Queue Length, vector"
+attr unit packets
+vector 82 test3.gateway2.tte[0].phy[0].shaper pcfQueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, vector"
+attr unit B
+vector 83 test3.gateway2.tte[0].phy[0].shaper ttQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "TT-Queue Length, vector"
+attr unit packets
+vector 84 test3.switch1.phy[0].shaper beQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "BE-Queue Length, vector"
+attr unit packets
+vector 85 test3.switch1.phy[0].shaper beQueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, vector"
+attr unit B
+vector 86 test3.switch1.phy[0].shaper rc0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc0QueueLength)"
+attr unit packets
+vector 87 test3.switch1.phy[0].shaper rc0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc0QueueSize)"
+attr unit B
+vector 88 test3.switch1.phy[0].shaper rc1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc1QueueLength)"
+attr unit packets
+vector 89 test3.switch1.phy[0].shaper rc1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc1QueueSize)"
+attr unit B
+vector 90 test3.switch1.phy[0].shaper rc2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc2QueueLength)"
+attr unit packets
+vector 91 test3.switch1.phy[0].shaper rc2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc2QueueSize)"
+attr unit B
+vector 92 test3.switch1.phy[0].shaper rc3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc3QueueLength)"
+attr unit packets
+vector 93 test3.switch1.phy[0].shaper rc3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc3QueueSize)"
+attr unit B
+vector 94 test3.switch1.phy[0].shaper rc4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc4QueueLength)"
+attr unit packets
+vector 95 test3.switch1.phy[0].shaper rc4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc4QueueSize)"
+attr unit B
+vector 96 test3.switch1.phy[0].shaper rc5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc5QueueLength)"
+attr unit packets
+vector 97 test3.switch1.phy[0].shaper rc5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc5QueueSize)"
+attr unit B
+vector 98 test3.switch1.phy[0].shaper rc6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc6QueueLength)"
+attr unit packets
+vector 99 test3.switch1.phy[0].shaper rc6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc6QueueSize)"
+attr unit B
+vector 100 test3.switch1.phy[0].shaper rc7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc7QueueLength)"
+attr unit packets
+vector 101 test3.switch1.phy[0].shaper rc7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc7QueueSize)"
+attr unit B
+vector 102 test3.switch1.phy[0].shaper rc8QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc8QueueLength)"
+attr unit packets
+vector 103 test3.switch1.phy[0].shaper rc8QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc8QueueSize)"
+attr unit B
+vector 104 test3.switch1.phy[0].shaper rc9QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc9QueueLength)"
+attr unit packets
+vector 105 test3.switch1.phy[0].shaper rc9QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc9QueueSize)"
+attr unit B
+vector 106 test3.switch1.phy[0].shaper pcfQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "PCF-Queue Length, vector"
+attr unit packets
+vector 107 test3.switch1.phy[0].shaper pcfQueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, vector"
+attr unit B
+vector 108 test3.switch1.phy[0].shaper ttQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "TT-Queue Length, vector"
+attr unit packets
+vector 109 test3.switch1.phy[1].shaper beQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "BE-Queue Length, vector"
+attr unit packets
+vector 110 test3.switch1.phy[1].shaper beQueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, vector"
+attr unit B
+vector 111 test3.switch1.phy[1].shaper rc0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc0QueueLength)"
+attr unit packets
+vector 112 test3.switch1.phy[1].shaper rc0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc0QueueSize)"
+attr unit B
+vector 113 test3.switch1.phy[1].shaper rc1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc1QueueLength)"
+attr unit packets
+vector 114 test3.switch1.phy[1].shaper rc1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc1QueueSize)"
+attr unit B
+vector 115 test3.switch1.phy[1].shaper rc2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc2QueueLength)"
+attr unit packets
+vector 116 test3.switch1.phy[1].shaper rc2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc2QueueSize)"
+attr unit B
+vector 117 test3.switch1.phy[1].shaper rc3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc3QueueLength)"
+attr unit packets
+vector 118 test3.switch1.phy[1].shaper rc3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc3QueueSize)"
+attr unit B
+vector 119 test3.switch1.phy[1].shaper rc4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc4QueueLength)"
+attr unit packets
+vector 120 test3.switch1.phy[1].shaper rc4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc4QueueSize)"
+attr unit B
+vector 121 test3.switch1.phy[1].shaper rc5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc5QueueLength)"
+attr unit packets
+vector 122 test3.switch1.phy[1].shaper rc5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc5QueueSize)"
+attr unit B
+vector 123 test3.switch1.phy[1].shaper rc6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc6QueueLength)"
+attr unit packets
+vector 124 test3.switch1.phy[1].shaper rc6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc6QueueSize)"
+attr unit B
+vector 125 test3.switch1.phy[1].shaper rc7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc7QueueLength)"
+attr unit packets
+vector 126 test3.switch1.phy[1].shaper rc7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc7QueueSize)"
+attr unit B
+vector 127 test3.switch1.phy[1].shaper rc8QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc8QueueLength)"
+attr unit packets
+vector 128 test3.switch1.phy[1].shaper rc8QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc8QueueSize)"
+attr unit B
+vector 129 test3.switch1.phy[1].shaper rc9QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc9QueueLength)"
+attr unit packets
+vector 130 test3.switch1.phy[1].shaper rc9QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc9QueueSize)"
+attr unit B
+vector 131 test3.switch1.phy[1].shaper pcfQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "PCF-Queue Length, vector"
+attr unit packets
+vector 132 test3.switch1.phy[1].shaper pcfQueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, vector"
+attr unit B
+vector 133 test3.switch1.phy[1].shaper ttQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "TT-Queue Length, vector"
+attr unit packets
+vector 134 test3.switch1.phy[2].shaper beQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "BE-Queue Length, vector"
+attr unit packets
+vector 135 test3.switch1.phy[2].shaper beQueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, vector"
+attr unit B
+vector 136 test3.switch1.phy[2].shaper rc0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc0QueueLength)"
+attr unit packets
+vector 137 test3.switch1.phy[2].shaper rc0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc0QueueSize)"
+attr unit B
+vector 138 test3.switch1.phy[2].shaper rc1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc1QueueLength)"
+attr unit packets
+vector 139 test3.switch1.phy[2].shaper rc1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc1QueueSize)"
+attr unit B
+vector 140 test3.switch1.phy[2].shaper rc2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc2QueueLength)"
+attr unit packets
+vector 141 test3.switch1.phy[2].shaper rc2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc2QueueSize)"
+attr unit B
+vector 142 test3.switch1.phy[2].shaper rc3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc3QueueLength)"
+attr unit packets
+vector 143 test3.switch1.phy[2].shaper rc3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc3QueueSize)"
+attr unit B
+vector 144 test3.switch1.phy[2].shaper rc4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc4QueueLength)"
+attr unit packets
+vector 145 test3.switch1.phy[2].shaper rc4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc4QueueSize)"
+attr unit B
+vector 146 test3.switch1.phy[2].shaper rc5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc5QueueLength)"
+attr unit packets
+vector 147 test3.switch1.phy[2].shaper rc5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc5QueueSize)"
+attr unit B
+vector 148 test3.switch1.phy[2].shaper rc6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc6QueueLength)"
+attr unit packets
+vector 149 test3.switch1.phy[2].shaper rc6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc6QueueSize)"
+attr unit B
+vector 150 test3.switch1.phy[2].shaper rc7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc7QueueLength)"
+attr unit packets
+vector 151 test3.switch1.phy[2].shaper rc7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc7QueueSize)"
+attr unit B
+vector 152 test3.switch1.phy[2].shaper rc8QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc8QueueLength)"
+attr unit packets
+vector 153 test3.switch1.phy[2].shaper rc8QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc8QueueSize)"
+attr unit B
+vector 154 test3.switch1.phy[2].shaper rc9QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc9QueueLength)"
+attr unit packets
+vector 155 test3.switch1.phy[2].shaper rc9QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc9QueueSize)"
+attr unit B
+vector 156 test3.switch1.phy[2].shaper pcfQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "PCF-Queue Length, vector"
+attr unit packets
+vector 157 test3.switch1.phy[2].shaper pcfQueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "BE-Queue Size, vector"
+attr unit B
+vector 158 test3.switch1.phy[2].shaper ttQueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "TT-Queue Length, vector"
+attr unit packets
+vector 159 test3.sensor[0].canClock clockDrift:vector ETV
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, vector"
+attr unit s
+vector 160 test3.sensor[1].canClock clockDrift:vector ETV
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, vector"
+attr unit s
+vector 161 test3.sensor[2].canClock clockDrift:vector ETV
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, vector"
+attr unit s
+vector 162 test3.sensor[3].canClock clockDrift:vector ETV
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, vector"
+attr unit s
+vector 163 test3.aktor[0].canClock clockDrift:vector ETV
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, vector"
+attr unit s
+vector 164 test3.aktor[1].canClock clockDrift:vector ETV
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, vector"
+attr unit s
+vector 165 test3.aktor[2].canClock clockDrift:vector ETV
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, vector"
+attr unit s
+vector 166 test3.gateway1.can[0].canClock clockDrift:vector ETV
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, vector"
+attr unit s
+vector 167 test3.gateway2.can[0].canClock clockDrift:vector ETV
+attr interpolationmode linear
+attr source clockDrift
+attr title "clockDrift, vector"
+attr unit s
+vector 168 test3.etherHost.llc dsap:vector ETV
+attr title "dsap registering, vector"
+vector 169 test3.sensor[0].bufferOut rxPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, vector(packetBytes)"
+vector 170 test3.sensor[0].bufferOut length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 171 test3.sensor[0].bufferOut size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 172 test3.canbus1.canBusLogic arbitrationLength:vector ETV
+attr interpolationmode sample-hold
+attr source arbitrationLength
+attr title "Arbitration Length, vector"
+attr unit packets
+vector 173 test3.sensor[0].bufferOut txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, vector(packetBytes)"
+vector 174 test3.canbus1.canBusLogic rxCANIdDF:vector ETV
+attr interpolationmode none
+attr source ID(rxDF)
+attr title "received CAN IDs via DF, vector"
+vector 175 test3.gateway1.can[0].canNodePort.canPortInput rxDFLatency:vector ETV
+attr interpolationmode linear
+attr source timestampAge(rxDF)
+attr title "End-to-end latency of data frames, vector"
+attr unit s
+vector 176 test3.gateway1.can[0].canNodePort.canPortInput rxDFPayloadLatency:vector ETV
+attr interpolationmode linear
+attr source timestampAge(rxDFPayload)
+attr title "End-to-end latency of data frame payload, vector"
+attr unit s
+vector 177 test3.gateway1.can[0].bufferIn[0] rxPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, vector(packetBytes)"
+vector 178 test3.gateway1.can[0].bufferIn[0] txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, vector(packetBytes)"
+vector 179 test3.sensor[1].bufferOut rxPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, vector(packetBytes)"
+vector 180 test3.sensor[1].bufferOut length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 181 test3.sensor[1].bufferOut size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 182 test3.sensor[1].bufferOut txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, vector(packetBytes)"
+vector 183 test3.sensor[2].bufferOut rxPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, vector(packetBytes)"
+vector 184 test3.sensor[2].bufferOut length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 185 test3.sensor[2].bufferOut size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 186 test3.sensor[2].bufferOut txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, vector(packetBytes)"
+vector 187 test3.gateway1.tte[0].bgOut rxBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, vector(packetBytes)"
+attr unit B
+vector 188 test3.gateway1.tte[0].bgOut rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 189 test3.gateway1.tte[0].bgOut length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 190 test3.gateway1.tte[0].bgOut size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 191 test3.gateway1.tte[0].bgOut txBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, vector(packetBytes)"
+attr unit B
+vector 192 test3.gateway1.tte[0].bgOut txLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), vector"
+attr unit s
+vector 193 test3.gateway1.tte[0].phy[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 194 test3.gateway1.tte[0].phy[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 195 test3.switch1.phy[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 196 test3.switch1.phy[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 197 test3.switch1.phy[0].inControl rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 198 test3.switch1.phy[0].inControl bandwidthFloating:floatingIntervalSumVector(packetBytes) ETV
+vector 199 test3.gateway1.tte[0].avbABuffer[0] credit:vector ETV
+attr "" ""
+attr interpolationmode linear
+attr source credit
+attr title "Credit, vector"
+attr unit b
+vector 200 test3.gateway1.tte[0].avbBBuffer[0] credit:vector ETV
+attr "" ""
+attr interpolationmode linear
+attr source credit
+attr title "Credit, vector"
+attr unit b
+vector 201 test3.switch1.phy[1].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 202 test3.switch1.phy[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 203 test3.gateway2.tte[0].phy[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 204 test3.gateway2.tte[0].phy[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 205 test3.gateway2.tte[0].phy[0].inControl rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 206 test3.gateway2.tte[0].phy[0].inControl bandwidthFloating:floatingIntervalSumVector(packetBytes) ETV
+vector 207 test3.gateway2.tte[0].bgIn rxBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, vector(packetBytes)"
+attr unit B
+vector 208 test3.gateway2.tte[0].bgIn rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 209 test3.gateway2.tte[0].bgIn length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 210 test3.gateway2.tte[0].bgIn size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 211 test3.gateway2.tte[0].bgIn txBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, vector(packetBytes)"
+attr unit B
+vector 212 test3.gateway2.tte[0].bgIn txLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), vector"
+attr unit s
+vector 213 test3.sensor[3].bufferOut rxPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, vector(packetBytes)"
+vector 214 test3.sensor[3].bufferOut length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 215 test3.sensor[3].bufferOut size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 216 test3.sensor[3].bufferOut txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, vector(packetBytes)"
+vector 217 test3.gateway2.can[0].bufferOut rxPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "RX Packets, vector(packetBytes)"
+vector 218 test3.gateway2.can[0].bufferOut length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 219 test3.gateway2.can[0].bufferOut size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 220 test3.canbus2.canBusLogic arbitrationLength:vector ETV
+attr interpolationmode sample-hold
+attr source arbitrationLength
+attr title "Arbitration Length, vector"
+attr unit packets
+vector 221 test3.gateway2.can[0].bufferOut txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "TX Packets, vector(packetBytes)"
+vector 222 test3.canbus2.canBusLogic rxCANIdDF:vector ETV
+attr interpolationmode none
+attr source ID(rxDF)
+attr title "received CAN IDs via DF, vector"
+0	0	0	0
+0	80	0.000552	1
+0	130	0.00055776	0
+1	0	0	0
+2	0	0	0
+3	0	0	0
+4	0	0	0
+4	87	0.00056581	1
+4	130	0.00057157	0
+5	0	0	0
+6	0	0	0
+7	0	0	0
+8	0	0	0
+9	0	0	0
+10	0	0	0
+11	0	0	0
+12	0	0	0
+13	0	0	0
+14	0	0	0
+15	0	0	0
+16	0	0	0
+17	0	0	0
+18	0	0	0
+19	0	0	0
+20	0	0	0
+21	0	0	0
+22	0	0	0
+23	0	0	0
+24	0	0	0
+25	0	0	0
+26	0	0	0
+27	0	0	0
+28	0	0	0
+29	0	0	0
+30	0	0	0
+31	0	0	0
+32	0	0	0
+33	0	0	0
+34	0	0	0
+35	0	0	0
+36	0	0	0
+37	0	0	0
+38	0	0	0
+39	0	0	0
+40	0	0	0
+41	0	0	0
+42	0	0	0
+43	0	0	0
+44	0	0	0
+45	0	0	0
+46	0	0	0
+47	0	0	0
+48	0	0	0
+49	0	0	0
+50	0	0	0
+51	0	0	0
+52	0	0	0
+53	0	0	0
+54	0	0	0
+55	0	0	0
+56	0	0	0
+57	0	0	0
+58	0	0	0
+59	0	0	0
+60	0	0	0
+61	0	0	0
+62	0	0	0
+63	0	0	0
+64	0	0	0
+65	0	0	0
+66	0	0	0
+67	0	0	0
+68	0	0	0
+69	0	0	0
+70	0	0	0
+71	0	0	0
+72	0	0	0
+73	0	0	0
+74	0	0	0
+75	0	0	0
+76	0	0	0
+77	0	0	0
+78	0	0	0
+79	0	0	0
+80	0	0	0
+81	0	0	0
+82	0	0	0
+83	0	0	0
+84	0	0	0
+85	0	0	0
+86	0	0	0
+87	0	0	0
+88	0	0	0
+89	0	0	0
+90	0	0	0
+91	0	0	0
+92	0	0	0
+93	0	0	0
+94	0	0	0
+95	0	0	0
+96	0	0	0
+97	0	0	0
+98	0	0	0
+99	0	0	0
+100	0	0	0
+101	0	0	0
+102	0	0	0
+103	0	0	0
+104	0	0	0
+105	0	0	0
+106	0	0	0
+107	0	0	0
+108	0	0	0
+109	0	0	0
+110	0	0	0
+111	0	0	0
+112	0	0	0
+113	0	0	0
+114	0	0	0
+115	0	0	0
+116	0	0	0
+117	0	0	0
+118	0	0	0
+119	0	0	0
+120	0	0	0
+121	0	0	0
+122	0	0	0
+123	0	0	0
+124	0	0	0
+125	0	0	0
+126	0	0	0
+127	0	0	0
+128	0	0	0
+129	0	0	0
+130	0	0	0
+131	0	0	0
+132	0	0	0
+133	0	0	0
+134	0	0	0
+135	0	0	0
+136	0	0	0
+137	0	0	0
+138	0	0	0
+139	0	0	0
+140	0	0	0
+141	0	0	0
+142	0	0	0
+143	0	0	0
+144	0	0	0
+145	0	0	0
+146	0	0	0
+147	0	0	0
+148	0	0	0
+149	0	0	0
+150	0	0	0
+151	0	0	0
+152	0	0	0
+153	0	0	0
+154	0	0	0
+155	0	0	0
+156	0	0	0
+157	0	0	0
+158	0	0	0
+159	0	0	0
+159	2	0	0
+160	0	0	0
+160	27	0.0002	0
+161	0	0	0
+161	51	0.0004	0
+162	0	0	0
+162	98	0.0006	0
+163	0	0	0
+164	0	0	0
+165	0	0	0
+166	0	0	0
+167	0	0	0
+168	3	0	1
+169	4	0	14
+169	4	0	14
+170	4	0	1
+170	21	0.000112	0
+171	4	0	14
+171	21	0.000112	0
+172	4	0	1
+172	21	0.000112	0
+172	28	0.0002	1
+172	45	0.000312	0
+172	52	0.0004	1
+172	69	0.000512	0
+172	99	0.0006	1
+173	5	0.000001	14
+174	9	0.000001	1
+174	33	0.000201	2
+174	57	0.000401	3
+174	104	0.000601	4
+175	22	0.000112	0.000112
+175	46	0.000312	0.000112
+175	70	0.000512	0.000112
+176	22	0.000112	0.000112
+176	46	0.000312	0.000112
+176	70	0.000512	0.000112
+177	23	0.000112	14
+177	47	0.000312	14
+177	71	0.000512	14
+178	23	0.000112	14
+178	47	0.000312	14
+178	71	0.000512	14
+179	28	0.0002	14
+179	28	0.0002	14
+180	28	0.0002	1
+180	45	0.000312	0
+181	28	0.0002	14
+181	45	0.000312	0
+182	29	0.000201	14
+183	52	0.0004	14
+183	52	0.0004	14
+184	52	0.0004	1
+184	69	0.000512	0
+185	52	0.0004	14
+185	69	0.000512	0
+186	53	0.000401	14
+187	77	0.000552	64
+188	77	0.000552	4e-005
+189	77	0.000552	1
+189	77	0.000552	0
+190	77	0.000552	64
+190	77	0.000552	0
+191	77	0.000552	64
+192	77	0.000552	4e-005
+193	80	0.000552	64
+194	81	0.00055776	64
+195	82	0.00055781	64
+196	82	0.00055781	64
+197	83	0.00055781	4.581e-005
+198	83	0.00055781	64
+199	84	0.00055872	0
+200	84	0.00055872	0
+201	87	0.00056581	64
+202	88	0.00057157	64
+203	89	0.00057162	64
+204	89	0.00057162	64
+205	90	0.00057162	5.962e-005
+206	90	0.00057162	64
+207	92	0.00057162	64
+208	92	0.00057162	5.962e-005
+209	92	0.00057162	1
+209	92	0.00057162	0
+210	92	0.00057162	64
+210	92	0.00057162	0
+211	92	0.00057162	64
+212	92	0.00057162	5.962e-005
+213	99	0.0006	14
+213	99	0.0006	14
+214	99	0.0006	1
+215	99	0.0006	14
+216	100	0.000601	14
+217	117	0.00061162	14
+217	117	0.00061162	14
+218	117	0.00061162	1
+219	117	0.00061162	14
+220	117	0.00061162	1
+221	118	0.00061262	14
+222	122	0.00061262	3
+
