@@ -1,0 +1,179 @@
+version 2
+run WithQ-0-20221225-19:09:38-18096
+attr configname WithQ
+attr datetime 20221225-19:09:38
+attr experiment WithQ
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network test3
+attr processid 18096
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.zonenmodul2.tte[0].phy[*].untaggedVID 0
+param **.zonenmodul2.tte[0].phy[*].taggedVIDs "\"0,1\""
+param **.gateway.configXML "xmldoc(\"GatewayConfig_withQ.xml\")"
+param **.taggedVIDs "\"1\""
+param **.gateway.transformDelay 40us
+param **.addressTableFile "\"addressTable.txt\""
+param **.ct_marker 0x03040506
+param **.ct_mask 0xffffffff
+param **.scheduler.tick 80ns
+param **.scheduler.numPeriods 2
+param **.scheduler.period[0].cycle_ticks sec_to_tick(30ms)
+param **.scheduler.period[0].offset_ticks sec_to_tick(2ms)
+param **.scheduler.period[1].cycle_ticks sec_to_tick(20ms)
+param **.scheduler.period[1].offset_ticks sec_to_tick(3ms)
+param **.scheduler.oscillator.max_drift 200ppm
+param **.scheduler.oscillator.drift_change uniform(-50ppm,50ppm)
+param **.precission 500ns
+param **.gateway.buffering[*].typename "\"AccumulationGatewayBuffering\""
+param **.gateway.transform[*].typename "\"GatewayTransformation\""
+param **.zonenmodul1.can[0].bufferIn[0].idIncomingFrames "\"1,2,3,4\""
+param **.zonenmodul1.tte[0].phy[*].mac.address "\"0A-00-00-00-00-01\""
+param **.zonenmodul1.tte[*].bgIn.destination_gates "\"gatewayApp.in\""
+param **.zonenmodul1.tte[*].gatewayApp.buffers "\"bgOut,TTvlinks[0]\""
+param **.zonenmodul1.tte[0].numberOfTT_Vlinks 1
+param **.zonenmodul1.tte[0].phy[0].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.zonenmodul1.tte[0].TTvlinks[0].period "\"period[0]\""
+param **.zonenmodul1.tte[0].TTvlinks_ctc[0].period "\"period[0]\""
+param **.zonenmodul1.tte[0].TTvlinks[0].destination_gates "\"phy[0].TTin\""
+param **.zonenmodul1.tte[0].TTvlinks_ctc[0].receive_window_start -1tick
+param **.zonenmodul1.tte[0].TTvlinks_ctc[0].receive_window_end -1tick
+param **.zonenmodul1.tte[0].TTvlinks_ctc[0].permanence_pit -1tick
+param **.zonenmodul1.tte[0].TTvlinks[0].ct_id 1
+param **.zonenmodul1.tte[0].TTvlinks[0].sendWindowStart sec_to_tick(1ms)
+param **.zonenmodul1.tte[0].phy[0].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.zonenmodul2.tte[0].phy[*].mac.address "\"0A-00-00-00-00-02\""
+param **.zonenmodul2.tte[*].bgIn.destination_gates "\"gatewayApp.in\""
+param **.zonenmodul2.tte[*].gatewayApp.buffers "\"bgOut\""
+param **.zonenmodul2.tte[0].numberOfTT_Vlinks 1
+param **.zonenmodul2.tte[0].phy[0].inControl.ct_incomings "\"TTvlinks_ctc[0]\""
+param **.zonenmodul2.tte[0].gatewayApp.buffers "\"TTvlinks[0]\""
+param **.zonenmodul2.tte[0].TTvlinks[0].period "\"period[0]\""
+param **.zonenmodul2.tte[0].TTvlinks_ctc[0].period "\"period[0]\""
+param **.zonenmodul2.tte[0].TTvlinks[0].destination_gates "\"gatewayApp.TTin\""
+param **.zonenmodul2.tte[0].TTvlinks_ctc[0].receive_window_start -1tick
+param **.zonenmodul2.tte[0].TTvlinks_ctc[0].receive_window_end -1tick
+param **.zonenmodul2.tte[0].TTvlinks_ctc[0].permanence_pit -1tick
+param **.zonenmodul2.tte[0].TTvlinks[0].ct_id 1
+param **.zonenmodul2.tte[0].TTvlinks[0].sendWindowStart sec_to_tick(1ms)
+param **.zonenmodul2.tte[0].phy[0].shaper.tt_buffers "\"TTvlinks[0]\""
+param **.switch1.phy[0].untaggedVID 0
+param **.switch1.phy[0].taggedVIDs "\"1\""
+param **.switch1.phy[1].untaggedVID 1
+param **.switch1.phy[1].taggedVIDs "\"0,1\""
+param **.switch1.phy[2].untaggedVID 1
+param **.switch1.phy[2].taggedVIDs "\"0,1\""
+param **.sensor.sourceApp[0].idDataFrames "\"1\""
+param **.sensor.sourceApp[0].initialDataFrameOffset "\"0\""
+param **.sensor.sourceApp[0].periodicityDataFrames "\"0.010\""
+param **.sensor.sourceApp[0].dataLengthDataFrames "\"8\""
+param **.aktor.bufferIn[0].idIncomingFrames "\"1,2\""
+param **.aktor.sourceApp[0].idDataFrames "\"10\""
+
+vector 0 test3.zonenmodul1.ethg$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 1 test3.zonenmodul2.ethg$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 2 test3.switch1.ethg$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 3 test3.switch1.ethg$o[1].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 4 test3.switch1.ethg$o[2].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 5 test3.IP_zentral.ethg$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 6 test3.zonenmodul1.tte[0].phy[0].shaper q0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+vector 7 test3.zonenmodul1.tte[0].phy[0].shaper q0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+vector 8 test3.zonenmodul1.tte[0].phy[0].shaper q1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+vector 9 test3.zonenmodul1.tte[0].phy[0].shaper q1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+vector 10 test3.zonenmodul1.tte[0].phy[0].shaper q2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+vector 11 test3.zonenmodul1.tte[0].phy[0].shaper q2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+vector 12 test3.zonenmodul1.tte[0].phy[0].shaper q3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+vector 13 test3.zonenmodul1.tte[0].phy[0].shaper q3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+vector 14 test3.zonenmodul1.tte[0].phy[0].shaper q4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+vector 15 test3.zonenmodul1.tte[0].phy[0].shaper q4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+vector 16 test3.zonenmodul1.tte[0].phy[0].shaper q5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+vector 17 test3.zonenmodul1.tte[0].phy[0].shaper q5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+vector 18 test3.zonenmodul1.tte[0].phy[0].shaper q6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+vector 19 test3.zonenmodul1.tte[0].phy[0].shaper q6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+vector 20 test3.zonenmodul1.tte[0].phy[0].shaper q7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+vector 21 test3.zonenmodul1.tte[0].phy[0].shaper q7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+vector 22 test3.zonenmodul1.tte[0].phy[0].shaper rc0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc0QueueLength)"
+attr unit packets
+vector 23 test3.zonenmodul1.tte[0].phy[0].shaper rc0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc0QueueSize)"
+attr unit B
+vector 24 test3.zonenmodul1.tte[0].phy[0].shaper rc1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc1QueueLength)"
+attr unit packets
+vector 25 test3.zonenmodul1.tte[0].phy[0].shaper rc1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc1QueueSize)"
+attr unit B
+vector 26 test3.zonenmodul1.tte[0].phy[0].shaper rc2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Length (rc2QueueLength)"
+attr unit packets
+vector 27 test3.zonenmodul1.tte[0].phy[0].shaper rc2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "RC-Queue Size (rc2QueueSize)"
+attr unit B
+vector 28 test3.zonenmodul1.tte[0].phy[0].shaper rc3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title

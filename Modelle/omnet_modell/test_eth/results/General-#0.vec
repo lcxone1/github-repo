@@ -1,0 +1,3204 @@
+version 2
+run General-0-20221225-22:48:42-23740
+attr configname General
+attr datetime 20221225-22:48:42
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network test_eth
+attr processid 23740
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.scheduler.tick 80ns
+param **.scheduler.oscillator.max_drift 200ppm
+param **.scheduler.oscillator.drift_change uniform(-50ppm,50ppm)
+param **.precission 500ns
+param **.IP_1.phy[*].mac.address "\"0A-00-00-00-00-01\""
+param **.IP_1.numApps 1
+param **.IP_1.app[0].typename "\"BGTrafficSourceApp\""
+param **.IP_1.app[0].destAddress "\"0A-00-00-00-00-10\""
+param **.IP_1.app[0].payload intWithUnit(1500Byte)
+param **.IP_1.app[0].sendInterval 50ms
+param **.IP_1.app[0].priority 1
+param **.IP_2.phy[*].mac.address "\"0A-00-00-00-00-02\""
+param **.IP_2.numApps 2
+param **.IP_2.app[0].typename "\"BGTrafficSinkApp\""
+param **.IP_2.app[0].srcAddress "\"0A-00-00-00-00-10\""
+param **.IP_2.app[1].typename "\"BGTrafficSourceApp\""
+param **.IP_2.app[1].destAddress "\"0A-00-00-00-00-10\""
+param **.IP_2.app[1].payload intWithUnit(1500Byte)
+param **.IP_2.app[1].sendInterval 400ms
+param **.IP_2.app[1].priority 2
+param **.IP_2.bgIn.destination_gates "\"app[0].in\""
+param **.IP_zentral.phy[*].mac.address "\"0A-00-00-00-00-10\""
+param **.IP_zentral.numApps 3
+param **.IP_zentral.app[0].typename "\"BGTrafficSinkApp\""
+param **.IP_zentral.app[0].srcAddress "\"0A-00-00-00-00-01\""
+param **.IP_zentral.app[1].typename "\"BGTrafficSinkApp\""
+param **.IP_zentral.app[1].srcAddress "\"0A-00-00-00-00-02\""
+param **.IP_zentral.bgIn.destination_gates "\"app[0].in, app[1].in\""
+param **.IP_zentral.app[2].typename "\"BGTrafficSourceApp\""
+param **.IP_zentral.app[2].destAddress "\"0A-00-00-00-00-02\""
+param **.IP_zentral.app[2].payload intWithUnit(1500Byte)
+param **.IP_zentral.app[2].sendInterval 200ms
+param **.IP_zentral.app[2].priority 1
+param **.switch1.phy[0].untaggedVID 0
+param **.switch1.phy[0].taggedVIDs "\"1\""
+param **.switch1.phy[1].untaggedVID 1
+param **.switch1.phy[1].taggedVIDs "\"0,1\""
+param **.switch1.phy[2].untaggedVID 1
+param **.switch1.phy[2].taggedVIDs "\"0,1\""
+
+vector 0 test_eth.switch1.ethg$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 1 test_eth.switch1.ethg$o[1].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 2 test_eth.switch1.ethg$o[2].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 3 test_eth.IP_zentral.ethg$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 4 test_eth.IP_1.ethg$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 5 test_eth.IP_2.ethg$o.channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 6 test_eth.switch1.phy[0].shaper q0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+attr unit packets
+vector 7 test_eth.switch1.phy[0].shaper q0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+vector 8 test_eth.switch1.phy[0].shaper q1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+attr unit packets
+vector 9 test_eth.switch1.phy[0].shaper q1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+vector 10 test_eth.switch1.phy[0].shaper q2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+attr unit packets
+vector 11 test_eth.switch1.phy[0].shaper q2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+vector 12 test_eth.switch1.phy[0].shaper q3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+attr unit packets
+vector 13 test_eth.switch1.phy[0].shaper q3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+vector 14 test_eth.switch1.phy[0].shaper q4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+attr unit packets
+vector 15 test_eth.switch1.phy[0].shaper q4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+vector 16 test_eth.switch1.phy[0].shaper q5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+attr unit packets
+vector 17 test_eth.switch1.phy[0].shaper q5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+vector 18 test_eth.switch1.phy[0].shaper q6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+attr unit packets
+vector 19 test_eth.switch1.phy[0].shaper q6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+vector 20 test_eth.switch1.phy[0].shaper q7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+attr unit packets
+vector 21 test_eth.switch1.phy[0].shaper q7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+vector 22 test_eth.switch1.phy[1].shaper q0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+attr unit packets
+vector 23 test_eth.switch1.phy[1].shaper q0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+vector 24 test_eth.switch1.phy[1].shaper q1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+attr unit packets
+vector 25 test_eth.switch1.phy[1].shaper q1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+vector 26 test_eth.switch1.phy[1].shaper q2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+attr unit packets
+vector 27 test_eth.switch1.phy[1].shaper q2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+vector 28 test_eth.switch1.phy[1].shaper q3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+attr unit packets
+vector 29 test_eth.switch1.phy[1].shaper q3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+vector 30 test_eth.switch1.phy[1].shaper q4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+attr unit packets
+vector 31 test_eth.switch1.phy[1].shaper q4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+vector 32 test_eth.switch1.phy[1].shaper q5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+attr unit packets
+vector 33 test_eth.switch1.phy[1].shaper q5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+vector 34 test_eth.switch1.phy[1].shaper q6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+attr unit packets
+vector 35 test_eth.switch1.phy[1].shaper q6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+vector 36 test_eth.switch1.phy[1].shaper q7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+attr unit packets
+vector 37 test_eth.switch1.phy[1].shaper q7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+vector 38 test_eth.switch1.phy[2].shaper q0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+attr unit packets
+vector 39 test_eth.switch1.phy[2].shaper q0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+vector 40 test_eth.switch1.phy[2].shaper q1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+attr unit packets
+vector 41 test_eth.switch1.phy[2].shaper q1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+vector 42 test_eth.switch1.phy[2].shaper q2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+attr unit packets
+vector 43 test_eth.switch1.phy[2].shaper q2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+vector 44 test_eth.switch1.phy[2].shaper q3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+attr unit packets
+vector 45 test_eth.switch1.phy[2].shaper q3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+vector 46 test_eth.switch1.phy[2].shaper q4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+attr unit packets
+vector 47 test_eth.switch1.phy[2].shaper q4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+vector 48 test_eth.switch1.phy[2].shaper q5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+attr unit packets
+vector 49 test_eth.switch1.phy[2].shaper q5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+vector 50 test_eth.switch1.phy[2].shaper q6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+attr unit packets
+vector 51 test_eth.switch1.phy[2].shaper q6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+vector 52 test_eth.switch1.phy[2].shaper q7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+attr unit packets
+vector 53 test_eth.switch1.phy[2].shaper q7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+vector 54 test_eth.IP_zentral.phy[0].shaper q0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+attr unit packets
+vector 55 test_eth.IP_zentral.phy[0].shaper q0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+vector 56 test_eth.IP_zentral.phy[0].shaper q1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+attr unit packets
+vector 57 test_eth.IP_zentral.phy[0].shaper q1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+vector 58 test_eth.IP_zentral.phy[0].shaper q2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+attr unit packets
+vector 59 test_eth.IP_zentral.phy[0].shaper q2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+vector 60 test_eth.IP_zentral.phy[0].shaper q3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+attr unit packets
+vector 61 test_eth.IP_zentral.phy[0].shaper q3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+vector 62 test_eth.IP_zentral.phy[0].shaper q4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+attr unit packets
+vector 63 test_eth.IP_zentral.phy[0].shaper q4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+vector 64 test_eth.IP_zentral.phy[0].shaper q5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+attr unit packets
+vector 65 test_eth.IP_zentral.phy[0].shaper q5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+vector 66 test_eth.IP_zentral.phy[0].shaper q6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+attr unit packets
+vector 67 test_eth.IP_zentral.phy[0].shaper q6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+vector 68 test_eth.IP_zentral.phy[0].shaper q7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+attr unit packets
+vector 69 test_eth.IP_zentral.phy[0].shaper q7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+vector 70 test_eth.IP_1.phy[0].shaper q0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+attr unit packets
+vector 71 test_eth.IP_1.phy[0].shaper q0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+vector 72 test_eth.IP_1.phy[0].shaper q1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+attr unit packets
+vector 73 test_eth.IP_1.phy[0].shaper q1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+vector 74 test_eth.IP_1.phy[0].shaper q2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+attr unit packets
+vector 75 test_eth.IP_1.phy[0].shaper q2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+vector 76 test_eth.IP_1.phy[0].shaper q3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+attr unit packets
+vector 77 test_eth.IP_1.phy[0].shaper q3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+vector 78 test_eth.IP_1.phy[0].shaper q4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+attr unit packets
+vector 79 test_eth.IP_1.phy[0].shaper q4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+vector 80 test_eth.IP_1.phy[0].shaper q5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+attr unit packets
+vector 81 test_eth.IP_1.phy[0].shaper q5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+vector 82 test_eth.IP_1.phy[0].shaper q6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+attr unit packets
+vector 83 test_eth.IP_1.phy[0].shaper q6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+vector 84 test_eth.IP_1.phy[0].shaper q7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+attr unit packets
+vector 85 test_eth.IP_1.phy[0].shaper q7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+vector 86 test_eth.IP_2.phy[0].shaper q0QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q0QueueLength)"
+attr unit packets
+vector 87 test_eth.IP_2.phy[0].shaper q0QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q0QueueSize)"
+attr unit B
+vector 88 test_eth.IP_2.phy[0].shaper q1QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q1QueueLength)"
+attr unit packets
+vector 89 test_eth.IP_2.phy[0].shaper q1QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q1QueueSize)"
+attr unit B
+vector 90 test_eth.IP_2.phy[0].shaper q2QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q2QueueLength)"
+attr unit packets
+vector 91 test_eth.IP_2.phy[0].shaper q2QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q2QueueSize)"
+attr unit B
+vector 92 test_eth.IP_2.phy[0].shaper q3QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q3QueueLength)"
+attr unit packets
+vector 93 test_eth.IP_2.phy[0].shaper q3QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q3QueueSize)"
+attr unit B
+vector 94 test_eth.IP_2.phy[0].shaper q4QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q4QueueLength)"
+attr unit packets
+vector 95 test_eth.IP_2.phy[0].shaper q4QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q4QueueSize)"
+attr unit B
+vector 96 test_eth.IP_2.phy[0].shaper q5QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q5QueueLength)"
+attr unit packets
+vector 97 test_eth.IP_2.phy[0].shaper q5QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q5QueueSize)"
+attr unit B
+vector 98 test_eth.IP_2.phy[0].shaper q6QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q6QueueLength)"
+attr unit packets
+vector 99 test_eth.IP_2.phy[0].shaper q6QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q6QueueSize)"
+attr unit B
+vector 100 test_eth.IP_2.phy[0].shaper q7QueueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Length (q7QueueLength)"
+attr unit packets
+vector 101 test_eth.IP_2.phy[0].shaper q7QueueSize:vector ETV
+attr interpolationmode sample-hold
+attr title "Q-Queue Size (q7QueueSize)"
+attr unit B
+vector 102 test_eth.IP_zentral.app[2] payloadOverTime:vector ETV
+attr interpolationmode linear
+attr source payloadSignal
+attr title "payload over time, vector"
+attr unit B
+vector 103 test_eth.IP_zentral.app[2] sendIntervalOverTime:vector ETV
+attr interpolationmode linear
+attr source intervalSignal
+attr title "send interval over time, vector"
+attr unit s
+vector 104 test_eth.IP_1.app[0] payloadOverTime:vector ETV
+attr interpolationmode linear
+attr source payloadSignal
+attr title "payload over time, vector"
+attr unit B
+vector 105 test_eth.IP_1.app[0] sendIntervalOverTime:vector ETV
+attr interpolationmode linear
+attr source intervalSignal
+attr title "send interval over time, vector"
+attr unit s
+vector 106 test_eth.IP_2.app[1] payloadOverTime:vector ETV
+attr interpolationmode linear
+attr source payloadSignal
+attr title "payload over time, vector"
+attr unit B
+vector 107 test_eth.IP_2.app[1] sendIntervalOverTime:vector ETV
+attr interpolationmode linear
+attr source intervalSignal
+attr title "send interval over time, vector"
+attr unit s
+vector 108 test_eth.IP_zentral.bgOut rxBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, vector(packetBytes)"
+attr unit B
+vector 109 test_eth.IP_zentral.bgOut rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 110 test_eth.IP_zentral.bgOut length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 111 test_eth.IP_zentral.bgOut size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 112 test_eth.IP_zentral.bgOut txBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, vector(packetBytes)"
+attr unit B
+vector 113 test_eth.IP_zentral.bgOut txLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), vector"
+attr unit s
+vector 114 test_eth.IP_1.bgOut rxBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, vector(packetBytes)"
+attr unit B
+vector 115 test_eth.IP_1.bgOut rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 116 test_eth.IP_1.bgOut length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 117 test_eth.IP_1.bgOut size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 118 test_eth.IP_1.bgOut txBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, vector(packetBytes)"
+attr unit B
+vector 119 test_eth.IP_1.bgOut txLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), vector"
+attr unit s
+vector 120 test_eth.IP_2.bgOut rxBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, vector(packetBytes)"
+attr unit B
+vector 121 test_eth.IP_2.bgOut rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 122 test_eth.IP_2.bgOut length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 123 test_eth.IP_2.bgOut size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 124 test_eth.IP_2.bgOut txBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, vector(packetBytes)"
+attr unit B
+vector 125 test_eth.IP_2.bgOut txLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), vector"
+attr unit s
+vector 126 test_eth.IP_zentral.phy[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 127 test_eth.IP_1.phy[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 128 test_eth.IP_2.phy[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 129 test_eth.IP_zentral.phy[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 130 test_eth.IP_1.phy[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 131 test_eth.IP_2.phy[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 132 test_eth.switch1.phy[2].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 133 test_eth.switch1.phy[2].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 134 test_eth.switch1.phy[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 135 test_eth.switch1.phy[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 136 test_eth.switch1.phy[1].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 137 test_eth.switch1.phy[1].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 138 test_eth.switch1.phy[2].inControl rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 139 test_eth.switch1.phy[2].inControl bandwidthFloating:floatingIntervalSumVector(packetBytes) ETV
+vector 140 test_eth.switch1.phy[0].inControl rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 141 test_eth.switch1.phy[0].inControl bandwidthFloating:floatingIntervalSumVector(packetBytes) ETV
+vector 142 test_eth.switch1.phy[1].inControl rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 143 test_eth.switch1.phy[1].inControl bandwidthFloating:floatingIntervalSumVector(packetBytes) ETV
+vector 144 test_eth.switch1.phy[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 145 test_eth.switch1.phy[1].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 146 test_eth.switch1.phy[2].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 147 test_eth.switch1.phy[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 148 test_eth.switch1.phy[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 149 test_eth.switch1.phy[2].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 150 test_eth.IP_1.phy[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 151 test_eth.IP_1.phy[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 152 test_eth.IP_2.phy[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 153 test_eth.IP_2.phy[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 154 test_eth.IP_zentral.phy[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 155 test_eth.IP_zentral.phy[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 156 test_eth.IP_1.phy[0].inControl rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 157 test_eth.IP_1.phy[0].inControl bandwidthFloating:floatingIntervalSumVector(packetBytes) ETV
+vector 158 test_eth.IP_2.phy[0].inControl rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 159 test_eth.IP_2.phy[0].inControl bandwidthFloating:floatingIntervalSumVector(packetBytes) ETV
+vector 160 test_eth.IP_zentral.phy[0].inControl rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 161 test_eth.IP_zentral.phy[0].inControl bandwidthFloating:floatingIntervalSumVector(packetBytes) ETV
+vector 162 test_eth.IP_2.bgIn rxBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, vector(packetBytes)"
+attr unit B
+vector 163 test_eth.IP_2.bgIn rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 164 test_eth.IP_2.bgIn length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 165 test_eth.IP_2.bgIn size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 166 test_eth.IP_2.bgIn txBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, vector(packetBytes)"
+attr unit B
+vector 167 test_eth.IP_2.bgIn txLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), vector"
+attr unit s
+vector 168 test_eth.IP_zentral.bgIn rxBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, vector(packetBytes)"
+attr unit B
+vector 169 test_eth.IP_zentral.bgIn rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 170 test_eth.IP_zentral.bgIn length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 171 test_eth.IP_zentral.bgIn size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 172 test_eth.IP_zentral.bgIn txBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "Transmitted Bytes, vector(packetBytes)"
+attr unit B
+vector 173 test_eth.IP_zentral.bgIn txLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(txPk)
+attr title "End-to-end latency (transmitted), vector"
+attr unit s
+vector 174 test_eth.IP_2.app[0] rxBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, vector(packetBytes)"
+attr unit B
+vector 175 test_eth.IP_2.app[0] rxBytes:floatingIntervalSumVector(packetBytes) ETV
+vector 176 test_eth.IP_2.app[0] rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, vector"
+attr unit s
+vector 177 test_eth.IP_2.app[0] rxLatencyInner:vector ETV
+attr interpolationmode none
+attr source messageAge(innerMessage(rxPk))
+attr title "End-to-end latency inner, vector"
+attr unit s
+vector 178 test_eth.IP_zentral.app[0] rxBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, vector(packetBytes)"
+attr unit B
+vector 179 test_eth.IP_zentral.app[0] rxBytes:floatingIntervalSumVector(packetBytes) ETV
+vector 180 test_eth.IP_zentral.app[0] rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, vector"
+attr unit s
+vector 181 test_eth.IP_zentral.app[0] rxLatencyInner:vector ETV
+attr interpolationmode none
+attr source messageAge(innerMessage(rxPk))
+attr title "End-to-end latency inner, vector"
+attr unit s
+0	0	0	0
+0	43	0.00013013	1
+1	0	0	0
+1	44	0.00013013	1
+2	0	0	0
+2	45	0.00013013	1
+3	0	0	0
+3	21	0	1
+4	0	0	0
+4	22	0	1
+5	0	0	0
+5	23	0	1
+6	0	0	0
+7	0	0	0
+8	0	0	0
+9	0	0	0
+10	0	0	0
+11	0	0	0
+12	0	0	0
+13	0	0	0
+14	0	0	0
+15	0	0	0
+16	0	0	0
+17	0	0	0
+18	0	0	0
+19	0	0	0
+20	0	0	0
+21	0	0	0
+22	0	0	0
+23	0	0	0
+24	0	0	0
+25	0	0	0
+26	0	0	0
+27	0	0	0
+28	0	0	0
+29	0	0	0
+30	0	0	0
+31	0	0	0
+32	0	0	0
+33	0	0	0
+34	0	0	0
+35	0	0	0
+36	0	0	0
+37	0	0	0
+38	0	0	0
+38	42	0.00013013	1
+39	0	0	0
+39	42	0.00013013	1518
+40	0	0	0
+41	0	0	0
+42	0	0	0
+43	0	0	0
+44	0	0	0
+45	0	0	0
+46	0	0	0
+47	0	0	0
+48	0	0	0
+49	0	0	0
+50	0	0	0
+51	0	0	0
+52	0	0	0
+53	0	0	0
+54	0	0	0
+55	0	0	0
+56	0	0	0
+57	0	0	0
+58	0	0	0
+59	0	0	0
+60	0	0	0
+61	0	0	0
+62	0	0	0
+63	0	0	0
+64	0	0	0
+65	0	0	0
+66	0	0	0
+67	0	0	0
+68	0	0	0
+69	0	0	0
+70	0	0	0
+71	0	0	0
+72	0	0	0
+73	0	0	0
+74	0	0	0
+75	0	0	0
+76	0	0	0
+77	0	0	0
+78	0	0	0
+79	0	0	0
+80	0	0	0
+81	0	0	0
+82	0	0	0
+83	0	0	0
+84	0	0	0
+85	0	0	0
+86	0	0	0
+87	0	0	0
+88	0	0	0
+89	0	0	0
+90	0	0	0
+91	0	0	0
+92	0	0	0
+93	0	0	0
+94	0	0	0
+95	0	0	0
+96	0	0	0
+97	0	0	0
+98	0	0	0
+99	0	0	0
+100	0	0	0
+101	0	0	0
+102	3	0	1500
+103	3	0	0.2
+104	5	0	1500
+105	5	0	0.05
+106	7	0	1500
+107	7	0	0.4
+108	12	0	1518
+108	63	0.00025226	1518
+109	12	0	0
+109	63	0.00025226	0
+110	12	0	1
+110	12	0	0
+110	63	0.00025226	1
+110	63	0.00025226	0
+111	12	0	1518
+111	12	0	0
+111	63	0.00025226	1518
+111	63	0.00025226	0
+112	12	0	1518
+112	63	0.00025226	1518
+113	12	0	0
+113	63	0.00025226	0
+114	13	0	1518
+115	13	0	0
+116	13	0	1
+116	13	0	0
+117	13	0	1518
+117	13	0	0
+118	13	0	1518
+119	13	0	0
+120	14	0	1518
+120	62	0.00025226	1518
+121	14	0	0
+121	62	0.00025226	0
+122	14	0	1
+122	14	0	0
+122	62	0.00025226	1
+122	62	0.00025226	0
+123	14	0	1518
+123	14	0	0
+123	62	0.00025226	1518
+123	62	0.00025226	0
+124	14	0	1518
+124	62	0.00025226	1518
+125	14	0	0
+125	62	0.00025226	0
+126	21	0	1518
+127	22	0	1518
+128	23	0	1518
+129	24	0.00012208	1518
+130	25	0.00012208	1518
+131	26	0.00012208	1518
+132	27	0.00012213	1518
+133	27	0.00012213	1518
+134	28	0.00012213	1518
+135	28	0.00012213	1518
+136	29	0.00012213	1518
+137	29	0.00012213	1518
+138	30	0.00012213	0.00012213
+139	30	0.00012213	1518
+140	31	0.00012213	0.00012213
+141	31	0.00012213	1518
+142	32	0.00012213	0.00012213
+143	32	0.00012213	1518
+144	43	0.00013013	1518
+145	44	0.00013013	1518
+146	45	0.00013013	1518
+147	46	0.00025221	1518
+148	47	0.00025221	1518
+149	48	0.00025221	1518
+150	49	0.00025226	1518
+151	49	0.00025226	1518
+152	50	0.00025226	1518
+153	50	0.00025226	1518
+154	51	0.00025226	1518
+155	51	0.00025226	1518
+156	52	0.00025226	0.00025226
+157	52	0.00025226	1518
+158	53	0.00025226	0.00025226
+159	53	0.00025226	1518
+160	54	0.00025226	0.00025226
+161	54	0.00025226	1518
+162	57	0.00025226	1518
+163	57	0.00025226	0.00025226
+164	57	0.00025226	1
+164	57	0.00025226	0
+165	57	0.00025226	1518
+165	57	0.00025226	0
+166	57	0.00025226	1518
+167	57	0.00025226	0.00025226
+168	58	0.00025226	1518
+169	58	0.00025226	0.00025226
+170	58	0.00025226	1
+170	58	0.00025226	0
+171	58	0.00025226	1518
+171	58	0.00025226	0
+172	58	0.00025226	1518
+173	58	0.00025226	0.00025226
+174	59	0.00025226	1518
+175	59	0.00025226	1518
+176	59	0.00025226	0.00025226
+177	59	0.00025226	0.00025226
+178	60	0.00025226	1518
+179	60	0.00025226	1518
+180	60	0.00025226	0.00025226
+181	60	0.00025226	0.00025226
+vector 182 test_eth.IP_zentral.app[1] rxBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, vector(packetBytes)"
+attr unit B
+vector 183 test_eth.IP_zentral.app[1] rxBytes:floatingIntervalSumVector(packetBytes) ETV
+vector 184 test_eth.IP_zentral.app[1] rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency, vector"
+attr unit s
+vector 185 test_eth.IP_zentral.app[1] rxLatencyInner:vector ETV
+attr interpolationmode none
+attr source messageAge(innerMessage(rxPk))
+attr title "End-to-end latency inner, vector"
+attr unit s
+vector 186 test_eth.IP_1.bgIn rxBytes:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPk
+attr title "Received Bytes, vector(packetBytes)"
+attr unit B
+vector 187 test_eth.IP_1.bgIn rxLatency:vector ETV
+attr interpolationmode none
+attr source messageAge(rxPk)
+attr title "End-to-end latency (received), vector"
+attr unit s
+vector 188 test_eth.IP_1.bgIn length:vector ETV
+attr interpolationmode sample-hold
+attr source length
+attr title "Queue Length, vector"
+attr unit packets
+vector 189 test_eth.IP_1.bgIn size:vector ETV
+attr interpolationmode sample-hold
+attr source size
+attr title "Queue Size, vector"
+attr unit B
+vector 190 test_eth.switch1.scheduler.period[0] newCycle:vector ETV
+attr interpolationmode none
+attr title "Start of cycle, vector"
+vector 191 test_eth.switch1.scheduler.oscillator currentDrift:vector ETV
+attr title "Current drift, vector"
+attr unit s
+vector 192 test_eth.switch1.scheduler.timer clockCorrection:vector ETV
+attr title "Clock correction, vector"
+attr unit tick
+vector 193 test_eth.IP_zentral.scheduler.period[0] newCycle:vector ETV
+attr interpolationmode none
+attr title "Start of cycle, vector"
+vector 194 test_eth.IP_zentral.scheduler.oscillator currentDrift:vector ETV
+attr title "Current drift, vector"
+attr unit s
+vector 195 test_eth.IP_zentral.scheduler.timer clockCorrection:vector ETV
+attr title "Clock correction, vector"
+attr unit tick
+vector 196 test_eth.IP_1.scheduler.period[0] newCycle:vector ETV
+attr interpolationmode none
+attr title "Start of cycle, vector"
+vector 197 test_eth.IP_1.scheduler.oscillator currentDrift:vector ETV
+attr title "Current drift, vector"
+attr unit s
+vector 198 test_eth.IP_1.scheduler.timer clockCorrection:vector ETV
+attr title "Clock correction, vector"
+attr unit tick
+vector 199 test_eth.IP_2.scheduler.period[0] newCycle:vector ETV
+attr interpolationmode none
+attr title "Start of cycle, vector"
+vector 200 test_eth.IP_2.scheduler.oscillator currentDrift:vector ETV
+attr title "Current drift, vector"
+attr unit s
+vector 201 test_eth.IP_2.scheduler.timer clockCorrection:vector ETV
+attr title "Clock correction, vector"
+attr unit tick
+0	99	0.00025221	0
+0	99	0.00038239	1
+1	120	0.00025221	0
+1	120	0.00050543	1
+2	73	0.00025221	0
+2	73	0.00025317	1
+2	98	0.00037525	0
+2	98	0.00038239	1
+3	69	0.00012208	0
+3	69	0.00025226	1
+3	92	0.00037434	0
+3	92	0.0003753	1
+5	68	0.00012208	0
+5	68	0.00025226	1
+38	72	0.00025317	0
+39	72	0.00025317	0
+108	89	0.0003753	1518
+109	89	0.0003753	0
+110	89	0.0003753	1
+110	89	0.0003753	0
+111	89	0.0003753	1518
+111	89	0.0003753	0
+112	89	0.0003753	1518
+113	89	0.0003753	0
+126	69	0.00025226	1518
+126	92	0.0003753	1518
+128	68	0.00025226	1518
+129	75	0.00037434	1518
+129	100	0.00049738	1518
+131	74	0.00037434	1518
+132	77	0.00037439	1518
+132	101	0.00049743	1518
+133	77	0.00037439	1518
+133	101	0.00049743	1518
+136	76	0.00037439	1518
+137	76	0.00037439	1518
+138	79	0.00037439	0.00012213
+138	102	0.00049743	0.00012213
+139	79	0.00037439	3036
+139	102	0.00049743	4554
+142	78	0.00037439	0.00012213
+143	78	0.00037439	3036
+144	99	0.00038239	1518
+145	120	0.00050543	1518
+146	73	0.00025317	1518
+146	98	0.00038239	1518
+147	106	0.00050447	1518
+148	121	0.00062751	1518
+149	80	0.00037525	1518
+149	105	0.00050447	1518
+150	108	0.00050452	1518
+151	108	0.00050452	1518
+152	122	0.00062756	1518
+153	122	0.00062756	1518
+154	81	0.0003753	1518
+154	107	0.00050452	1518
+155	81	0.0003753	1518
+155	107	0.00050452	1518
+156	110	0.00050452	0.00025226
+157	110	0.00050452	3036
+158	123	0.00062756	0.00025226
+159	123	0.00062756	3036
+160	84	0.0003753	0.0003753
+160	109	0.00050452	0.00025226
+161	84	0.0003753	3036
+161	109	0.00050452	4554
+162	125	0.00062756	1518
+163	125	0.00062756	0.00025226
+164	125	0.00062756	1
+164	125	0.00062756	0
+165	125	0.00062756	1518
+165	125	0.00062756	0
+166	125	0.00062756	1518
+167	125	0.00062756	0.00025226
+168	86	0.0003753	1518
+168	113	0.00050452	1518
+169	86	0.0003753	0.0003753
+169	113	0.00050452	0.00025226
+170	86	0.0003753	1
+170	86	0.0003753	0
+170	113	0.00050452	1
+170	113	0.00050452	0
+171	86	0.0003753	1518
+171	86	0.0003753	0
+171	113	0.00050452	1518
+171	113	0.00050452	0
+172	86	0.0003753	1518
+172	113	0.00050452	1518
+173	86	0.0003753	0.0003753
+173	113	0.00050452	0.00025226
+174	126	0.00062756	1518
+175	126	0.00062756	3036
+176	126	0.00062756	0.00025226
+177	126	0.00062756	0.00025226
+182	88	0.0003753	1518
+182	116	0.00050452	1518
+183	88	0.0003753	1518
+183	116	0.00050452	3036
+184	88	0.0003753	0.0003753
+184	116	0.00050452	0.00025226
+185	88	0.0003753	0.0003753
+185	116	0.00050452	0.00025226
+186	114	0.00050452	1518
+187	114	0.00050452	0.00025226
+188	114	0.00050452	1
+189	114	0.00050452	1518
+190	132	0.003	1
+190	157	0.00599992	1
+190	173	0.009000352512	1
+191	133	0.003	0
+191	158	0.00599992	3e-012
+191	174	0.009000352512	3e-012
+192	134	0.003	1
+192	159	0.00599992	-4
+192	175	0.009000352512	4
+193	135	0.003	1
+193	153	0.005999914996	1
+193	169	0.009000230002	1
+193	177	0.012000059986	1
+194	136	0.003	2e-012
+194	154	0.005999914996	2e-012
+194	170	0.009000230002	4e-012
+194	178	0.012000059986	5e-012
+195	137	0.003	2
+195	155	0.005999914996	-3
+195	171	0.009000230002	4
+196	138	0.003	1
+196	149	0.005999877498	1
+196	165	0.009000192504	1
+197	139	0.003	1e-012
+197	150	0.005999877498	2e-012
+197	166	0.009000192504	1e-012
+198	140	0.003	2
+198	151	0.005999877498	-3
+198	167	0.009000192504	2
+199	141	0.003	1
+199	145	0.00599984	1
+199	161	0.008999882499	1
+200	142	0.003	0
+200	146	0.00599984	-1e-012
+200	162	0.008999882499	3e-012
+201	143	0.003	2
+201	147	0.00599984	-1
+201	163	0.008999882499	-3
+190	185	0.012000145	1
+190	201	0.015000145	1
+190	221	0.018000300002	1
+190	229	0.021000129986	1
+190	245	0.024000157476	1
+191	186	0.012000145	0
+191	202	0.015000145	2e-012
+191	222	0.018000300002	4e-012
+191	230	0.021000129986	5e-012
+191	246	0.024000157476	4e-012
+192	187	0.012000145	0
+192	203	0.015000145	-1
+192	223	0.018000300002	4
+192	231	0.021000129986	2
+192	247	0.024000157476	1
+193	205	0.015000327491	1
+193	217	0.018000147443	1
+193	237	0.021000367435	1
+193	253	0.024000337363	1
+194	206	0.015000327491	8e-012
+194	218	0.018000147443	8e-012
+194	238	0.021000367435	1.2e-011
+194	254	0.024000337363	1.4e-011
+195	179	0.012000059986	-1
+195	207	0.015000327491	6
+195	219	0.018000147443	1
+195	239	0.021000367435	6
+195	255	0.024000337363	5
+196	181	0.012000070002	1
+196	197	0.015000059994	1
+196	213	0.018000082473	1
+196	233	0.021000179946	1
+196	249	0.024000244934	1
+197	182	0.012000070002	4e-012
+197	198	0.015000059994	7e-012
+197	214	0.018000082473	9e-012
+197	234	0.021000179946	6e-012
+197	250	0.024000244934	4e-012
+198	183	0.012000070002	2
+198	199	0.015000059994	3
+198	215	0.018000082473	3
+198	235	0.021000179946	2
+198	251	0.024000244934	1
+199	189	0.012000235008	1
+199	193	0.014999995008	1
+199	209	0.018000005	1
+199	225	0.021000005	1
+199	241	0.023999812503	1
+200	190	0.012000235008	0
+200	194	0.014999995008	-4e-012
+200	210	0.018000005	0
+200	226	0.021000005	-3e-012
+200	242	0.023999812503	-3e-012
+201	191	0.012000235008	3
+201	195	0.014999995008	-2
+201	211	0.018000005	0
+201	227	0.021000005	1
+201	243	0.023999812503	-5
+2	395	0.00050447	0
+2	395	0.05013013	1
+4	388	0.00012208	0
+4	388	0.05	1
+104	384	0.05	1500
+105	384	0.05	0.05
+114	385	0.05	1518
+115	385	0.05	0
+116	385	0.05	1
+116	385	0.05	0
+117	385	0.05	1518
+117	385	0.05	0
+118	385	0.05	1518
+119	385	0.05	0
+127	388	0.05	1518
+130	389	0.05012208	1518
+134	390	0.05012213	1518
+135	390	0.05012213	1518
+140	391	0.05012213	0.00012213
+141	391	0.05012213	3036
+146	395	0.05013013	1518
+149	396	0.05025221	1518
+154	397	0.05025226	1518
+155	397	0.05025226	1518
+160	398	0.05025226	0.00025226
+161	398	0.05025226	6072
+168	400	0.05025226	1518
+169	400	0.05025226	0.00025226
+170	400	0.05025226	1
+170	400	0.05025226	0
+171	400	0.05025226	1518
+171	400	0.05025226	0
+172	400	0.05025226	1518
+173	400	0.05025226	0.00025226
+178	401	0.05025226	1518
+179	401	0.05025226	3036
+180	401	0.05025226	0.00025226
+181	401	0.05025226	0.00025226
+190	261	0.027000227472	1
+190	281	0.030000414972	1
+190	289	0.0330001124	1
+190	313	0.036000252384	1
+190	329	0.039000317372	1
+190	349	0.042000579872	1
+190	361	0.044999929832	1
+190	377	0.048000159836	1
+190	417	0.051000347336	1
+190	429	0.054000022326	1
+190	445	0.057000087314	1
+190	465	0.06000054733	1
+190	481	0.063000174795	1
+190	497	0.066000277281	1
+190	513	0.068999947257	1
+190	525	0.072000054752	1
+191	262	0.027000227472	5e-012
+191	282	0.030000414972	9e-012
+191	290	0.0330001124	8e-012
+191	314	0.036000252384	6e-012
+191	330	0.039000317372	7e-012
+191	350	0.042000579872	4e-012
+191	362	0.044999929832	4e-012
+191	378	0.048000159836	5e-012
+191	418	0.051000347336	2e-012
+191	430	0.054000022326	6e-012
+191	446	0.057000087314	8e-012
+191	466	0.06000054733	5e-012
+191	482	0.063000174795	7e-012
+191	498	0.066000277281	4e-012
+191	514	0.068999947257	5e-012
+191	526	0.072000054752	3e-012
+192	263	0.027000227472	0
+192	283	0.030000414972	8
+192	291	0.0330001124	2
+192	315	0.036000252384	2
+192	331	0.039000317372	0
+192	351	0.042000579872	10
+192	363	0.044999929832	-1
+192	379	0.048000159836	0
+192	419	0.051000347336	5
+192	431	0.054000022326	2
+192	447	0.057000087314	-2
+192	467	0.06000054733	7
+192	483	0.063000174795	2
+192	499	0.066000277281	6
+192	515	0.068999947257	1
+192	527	0.072000054752	-1
+193	269	0.027000462293	1
+193	285	0.030000784748	1
+193	301	0.033000664604	1
+193	309	0.036000234472	1
+193	333	0.039000721972	1
+193	345	0.042000409342	1
+193	365	0.045000341776	1
+193	381	0.048000279231	1
+193	413	0.051000104201	1
+193	433	0.054000601719	1
+193	449	0.057000379156	1
+193	461	0.060000246636	1
+193	477	0.063000119127	1
+193	493	0.066000199127	1
+193	505	0.068999799127	1
+194	270	0.027000462293	1.5e-011
+194	286	0.030000784748	1.6e-011
+194	302	0.033000664604	1.2e-011
+194	310	0.036000234472	1.3e-011
+194	334	0.039000721972	1.3e-011
+194	346	0.042000409342	1.1e-011
+194	366	0.045000341776	9e-012
+194	382	0.048000279231	6e-012
+194	414	0.051000104201	9e-012
+194	434	0.054000601719	9e-012
+194	450	0.057000379156	5e-012
+194	462	0.060000246636	3e-012
+194	478	0.063000119127	0
+194	494	0.066000199127	0
+194	506	0.068999799127	3e-012
+195	271	0.027000462293	3
+195	287	0.030000784748	9
+195	303	0.033000664604	11
+195	311	0.036000234472	0
+195	335	0.039000721972	10
+195	347	0.042000409342	6
+195	367	0.045000341776	5
+195	383	0.048000279231	5
+195	415	0.051000104201	-2
+195	435	0.054000601719	7
+195	451	0.057000379156	4
+195	463	0.060000246636	3
+195	479	0.063000119127	-1
+195	495	0.066000199127	5
+195	507	0.068999799127	-4
+196	265	0.02700031493	1
+196	277	0.03000015493	1
+196	297	0.03300019243	1
+196	317	0.036000384933	1
+196	325	0.038999904933	1
+196	341	0.04200010743	1
+196	353	0.044999797438	1
+196	369	0.047999844932	1
+196	409	0.050999859914	1
+196	425	0.053999677407	1
+196	437	0.056999462387	1
+196	457	0.060000037327	1
+196	473	0.062999779818	1
+196	485	0.065999404818	1
+196	501	0.068999547264	1
+196	517	0.071999967192	1
+197	266	0.02700031493	0
+197	278	0.03000015493	1e-012
+197	298	0.03300019243	3e-012
+197	318	0.036000384933	0
+197	326	0.038999904933	-1e-012
+197	342	0.04200010743	-4e-012
+197	354	0.044999797438	-3e-012
+197	370	0.047999844932	-6e-012
+197	410	0.050999859914	-7e-012
+197	426	0.053999677407	-1e-011
+197	438	0.056999462387	-6e-012
+197	458	0.060000037327	-9e-012
+197	474	0.062999779818	-1e-011
+197	486	0.065999404818	-9e-012
+197	502	0.068999547264	-8e-012
+197	518	0.071999967192	-1.1e-011
+198	267	0.02700031493	2
+198	279	0.03000015493	0
+198	299	0.03300019243	-1
+198	319	0.036000384933	6
+198	327	0.038999904933	-3
+198	343	0.04200010743	2
+198	355	0.044999797438	-2
+198	371	0.047999844932	-3
+198	411	0.050999859914	-1
+198	427	0.053999677407	-2
+198	439	0.056999462387	-10
+198	459	0.060000037327	-1
+198	475	0.062999779818	0
+198	487	0.065999404818	-6
+198	503	0.068999547264	-9
+198	519	0.071999967192	0
+199	257	0.027000099988	1
+199	273	0.030000067485	1
+199	293	0.033000152481	1
+199	305	0.035999719993	1
+199	321	0.038999884987	1
+199	337	0.041999852484	1
+199	357	0.044999809983	1
+199	373	0.048000092479	1
+199	405	0.050999782487	1
+199	421	0.053999557487	1
+199	441	0.056999844972	1
+199	453	0.059999929968	1
+199	469	0.062999619976	1
+199	489	0.065999672461	1
+199	509	0.068999809926	1
+199	521	0.071999989878	1
+200	258	0.027000099988	-3e-012
+200	274	0.030000067485	-2e-012
+200	294	0.033000152481	-3e-012
+200	306	0.035999719993	-2e-012
+200	322	0.038999884987	-3e-012
+200	338	0.041999852484	1e-012
+200	358	0.044999809983	-1e-012
+200	374	0.048000092479	-4e-012
+200	406	0.050999782487	-6e-012
+200	422	0.053999557487	-3e-012
+200	442	0.056999844972	-2e-012
+200	454	0.059999929968	-4e-012
+200	470	0.062999619976	-5e-012
+200	490	0.065999672461	-7e-012
+200	510	0.068999809926	-8e-012
+200	522	0.071999989878	-6e-012
+201	259	0.027000099988	-1
+201	275	0.030000067485	-2
+201	295	0.033000152481	4
+201	307	0.035999719993	-3
+201	323	0.038999884987	-1
+201	339	0.041999852484	1
+201	359	0.044999809983	-4
+201	375	0.048000092479	2
+201	407	0.050999782487	0
+201	423	0.053999557487	-5
+201	443	0.056999844972	-2
+201	455	0.059999929968	2
+201	471	0.062999619976	-3
+201	491	0.065999672461	-5
+201	511	0.068999809926	-6
+201	523	0.071999989878	1
+190	545	0.075000247255	1
+190	557	0.078000129756	1
+190	573	0.081000167256	1
+190	589	0.083999922248	1
+191	546	0.075000247255	-1e-012
+191	558	0.078000129756	1e-012
+191	574	0.081000167256	2e-012
+191	590	0.083999922248	2e-012
+192	547	0.075000247255	1
+192	559	0.078000129756	0
+192	575	0.081000167256	4
+192	591	0.083999922248	-1
+193	529	0.072000231639	1
+193	541	0.075000151639	1
+193	561	0.078000264139	1
+193	577	0.081000286618	1
+193	593	0.084000266586	1
+194	530	0.072000231639	0
+194	542	0.075000151639	3e-012
+194	562	0.078000264139	7e-012
+194	578	0.081000286618	8e-012
+194	594	0.084000266586	1.1e-011
+195	531	0.072000231639	1
+195	543	0.075000151639	0
+195	563	0.078000264139	3
+195	579	0.081000286618	4
+195	595	0.084000266586	6
+196	533	0.074999554692	1
+196	549	0.077999659632	1
+196	569	0.080999722087	1
+196	585	0.083999822047	1
+197	534	0.074999554692	-1e-011
+197	550	0.077999659632	-9e-012
+197	570	0.080999722087	-8e-012
+197	586	0.083999822047	-4e-012
+198	535	0.074999554692	-6
+198	551	0.077999659632	-5
+198	571	0.080999722087	-5
+198	587	0.083999822047	-2
+199	537	0.074999684884	1
+199	553	0.077999789824	1
+199	565	0.0809994998	1
+199	581	0.08399937473	1
+199	597	0.086999254634	1
+200	538	0.074999684884	-1e-011
+200	554	0.077999789824	-1.2e-011
+200	566	0.0809994998	-1.4e-011
+200	582	0.08399937473	-1.6e-011
+200	598	0.086999254634	-1.4e-011
+201	539	0.074999684884	-6
+201	555	0.077999789824	-2
+201	567	0.0809994998	-5
+201	583	0.08399937473	-6
+201	599	0.086999254634	-12
+4	680	0.05012208	0
+4	680	0.1	1
+104	676	0.1	1500
+105	676	0.1	0.05
+114	677	0.1	1518
+115	677	0.1	0
+116	677	0.1	1
+116	677	0.1	0
+117	677	0.1	1518
+117	677	0.1	0
+118	677	0.1	1518
+119	677	0.1	0
+127	680	0.1	1518
+190	605	0.08700007725	1
+190	625	0.090000344755	1
+190	637	0.09300020722	1
+190	653	0.09600061972	1
+190	669	0.099000322171	1
+191	606	0.08700007725	5e-012
+191	626	0.090000344755	7e-012
+191	638	0.09300020722	1.1e-011
+191	654	0.09600061972	7e-012
+191	670	0.099000322171	8e-012
+192	607	0.08700007725	-1
+192	627	0.090000344755	5
+192	639	0.09300020722	0
+192	655	0.09600061972	7
+192	671	0.099000322171	6
+193	609	0.08700019902	1
+193	621	0.09000033399	1
+193	641	0.093000261399	1
+193	657	0.096000626371	1
+193	673	0.099000436275	1
+194	610	0.08700019902	1e-011
+194	622	0.09000033399	1.3e-011
+194	642	0.093000261399	1.4e-011
+194	658	0.096000626371	1.2e-011
+194	674	0.099000436275	1.1e-011
+195	611	0.08700019902	3
+195	623	0.09000033399	7
+195	643	0.093000261399	2
+195	659	0.096000626371	8
+195	675	0.099000436275	7
+196	601	0.086999832039	1
+196	613	0.089999687033	1
+196	633	0.093000054515	1
+196	649	0.095999942015	1
+196	665	0.098999947013	1
+197	602	0.086999832039	-6e-012
+197	614	0.089999687033	-3e-012
+197	634	0.093000054515	-3e-012
+197	650	0.095999942015	-2e-012
+197	666	0.098999947013	-4e-012
+198	603	0.086999832039	-1
+198	615	0.089999687033	-6
+198	635	0.093000054515	0
+198	651	0.095999942015	-1
+198	667	0.098999947013	-2
+199	617	0.089999689466	1
+199	629	0.092999601901	1
+199	645	0.095999509357	1
+199	661	0.098999539285	1
+200	618	0.089999689466	-1.3e-011
+200	630	0.092999601901	-1.1e-011
+200	646	0.095999509357	-1.2e-011
+200	662	0.098999539285	-1.1e-011
+201	619	0.089999689466	-5
+201	631	0.092999601901	-4
+201	647	0.095999509357	-6
+201	663	0.098999539285	-7
+2	687	0.05025221	0
+2	687	0.10013013	1
+130	681	0.10012208	1518
+134	682	0.10012213	1518
+135	682	0.10012213	1518
+140	683	0.10012213	0.00012213
+141	683	0.10012213	4554
+146	687	0.10013013	1518
+149	688	0.10025221	1518
+154	689	0.10025226	1518
+155	689	0.10025226	1518
+2	979	0.10025221	0
+2	979	0.15013013	1
+3	1252	0.00049738	0
+3	1252	0.2	1
+4	960	0.10012208	0
+4	960	0.15	1
+4	1253	0.15012208	0
+4	1253	0.2	1
+102	1244	0.2	1500
+103	1244	0.2	0.2
+104	956	0.15	1500
+104	1245	0.2	1500
+105	956	0.15	0.05
+105	1245	0.2	0.05
+108	1246	0.2	1518
+109	1246	0.2	0
+110	1246	0.2	1
+110	1246	0.2	0
+111	1246	0.2	1518
+111	1246	0.2	0
+112	1246	0.2	1518
+113	1246	0.2	0
+114	957	0.15	1518
+114	1247	0.2	1518
+115	957	0.15	0
+115	1247	0.2	0
+116	957	0.15	1
+116	957	0.15	0
+116	1247	0.2	1
+116	1247	0.2	0
+117	957	0.15	1518
+117	957	0.15	0
+117	1247	0.2	1518
+117	1247	0.2	0
+118	957	0.15	1518
+118	1247	0.2	1518
+119	957	0.15	0
+119	1247	0.2	0
+126	1252	0.2	1518
+127	960	0.15	1518
+127	1253	0.2	1518
+129	1254	0.20012208	1518
+130	973	0.15012208	1518
+130	1255	0.20012208	1518
+132	1256	0.20012213	1518
+133	1256	0.20012213	1518
+134	974	0.15012213	1518
+134	1257	0.20012213	1518
+135	974	0.15012213	1518
+135	1257	0.20012213	1518
+138	1258	0.20012213	0.00012213
+139	1258	0.20012213	6072
+140	975	0.15012213	0.00012213
+140	1259	0.20012213	0.00012213
+141	975	0.15012213	6072
+141	1259	0.20012213	7590
+146	979	0.15013013	1518
+149	980	0.15025221	1518
+154	981	0.15025226	1518
+155	981	0.15025226	1518
+160	690	0.10025226	0.00025226
+160	982	0.15025226	0.00025226
+161	690	0.10025226	7590
+161	982	0.15025226	9108
+168	692	0.10025226	1518
+168	984	0.15025226	1518
+169	692	0.10025226	0.00025226
+169	984	0.15025226	0.00025226
+170	692	0.10025226	1
+170	692	0.10025226	0
+170	984	0.15025226	1
+170	984	0.15025226	0
+171	692	0.10025226	1518
+171	692	0.10025226	0
+171	984	0.15025226	1518
+171	984	0.15025226	0
+172	692	0.10025226	1518
+172	984	0.15025226	1518
+173	692	0.10025226	0.00025226
+173	984	0.15025226	0.00025226
+178	693	0.10025226	1518
+178	985	0.15025226	1518
+179	693	0.10025226	4554
+179	985	0.15025226	6072
+180	693	0.10025226	0.00025226
+180	985	0.15025226	0.00025226
+181	693	0.10025226	0.00025226
+181	985	0.15025226	0.00025226
+190	705	0.102000142123	1
+190	721	0.105000479623	1
+190	737	0.108000534583	1
+190	753	0.111000152002	1
+190	769	0.114000537014	1
+190	781	0.116999929487	1
+190	801	0.120000319499	1
+190	821	0.123000431999	1
+190	829	0.126000336975	1
+190	853	0.129000514457	1
+190	865	0.132000301932	1
+190	885	0.135000324411	1
+190	893	0.137999956893	1
+190	917	0.141000426909	1
+190	925	0.144000054374	1
+190	941	0.147000166874	1
+190	970	0.15000026936	1
+190	997	0.153000254342	1
+190	1013	0.156000121822	1
+190	1033	0.159000266816	1
+190	1045	0.162000176804	1
+190	1057	0.165000176804	1
+190	1073	0.167999899307	1
+190	1093	0.171000214313	1
+190	1109	0.174000204305	1
+190	1125	0.177000199303	1
+190	1141	0.180000199303	1
+190	1153	0.183000124303	1
+190	1169	0.185999776813	1
+190	1185	0.188999791795	1
+190	1201	0.191999966765	1
+190	1221	0.195000136749	1
+190	1233	0.198000216749	1
+191	706	0.102000142123	9e-012
+191	722	0.105000479623	1e-011
+191	738	0.108000534583	9e-012
+191	754	0.111000152002	6e-012
+191	770	0.114000537014	3e-012
+191	782	0.116999929487	4e-012
+191	802	0.120000319499	3e-012
+191	822	0.123000431999	6e-012
+191	830	0.126000336975	9e-012
+191	854	0.129000514457	5e-012
+191	866	0.132000301932	7e-012
+191	886	0.135000324411	3e-012
+191	894	0.137999956893	4e-012
+191	918	0.141000426909	5e-012
+191	926	0.144000054374	3e-012
+191	942	0.147000166874	7e-012
+191	971	0.15000026936	6e-012
+191	998	0.153000254342	5e-012
+191	1014	0.156000121822	6e-012
+191	1034	0.159000266816	4e-012
+191	1046	0.162000176804	0
+191	1058	0.165000176804	-1e-012
+191	1074	0.167999899307	2e-012
+191	1094	0.171000214313	4e-012
+191	1110	0.174000204305	2e-012
+191	1126	0.177000199303	0
+191	1142	0.180000199303	-2e-012
+191	1154	0.183000124303	-5e-012
+191	1170	0.185999776813	-6e-012
+191	1186	0.188999791795	-6e-012
+191	1202	0.191999966765	-4e-012
+191	1222	0.195000136749	0
+191	1234	0.198000216749	-3e-012
+192	707	0.102000142123	0
+192	723	0.105000479623	4
+192	739	0.108000534583	9
+192	755	0.111000152002	-2
+192	771	0.114000537014	9
+192	783	0.116999929487	-3
+192	803	0.120000319499	0
+192	823	0.123000431999	4
+192	831	0.126000336975	2
+192	855	0.129000514457	5
+192	867	0.132000301932	3
+192	887	0.135000324411	6
+192	895	0.137999956893	-4
+192	919	0.141000426909	7
+192	927	0.144000054374	0
+192	943	0.147000166874	2
+192	972	0.15000026936	3
+192	999	0.153000254342	4
+192	1015	0.156000121822	1
+192	1035	0.159000266816	3
+192	1047	0.162000176804	0
+192	1059	0.165000176804	3
+192	1075	0.167999899307	-3
+192	1095	0.171000214313	2
+192	1111	0.174000204305	1
+192	1127	0.177000199303	0
+192	1143	0.180000199303	0
+192	1155	0.183000124303	2
+192	1171	0.185999776813	-3
+192	1187	0.188999791795	-5
+192	1203	0.191999966765	-4
+192	1223	0.195000136749	-1
+192	1235	0.198000216749	-1
+193	709	0.102000288698	1
+193	725	0.105000498662	1
+193	741	0.108000591118	1
+193	757	0.111000636034	1
+193	773	0.114000755938	1
+193	789	0.117000875842	1
+193	805	0.12000051565	1
+193	813	0.123000283033	1
+193	837	0.126000530494	1
+193	849	0.129000260386	1
+193	869	0.13200047035	1
+193	881	0.13500028528	1
+193	901	0.138000415232	1
+193	913	0.141000150152	1
+193	933	0.144000285122	1
+193	949	0.147000505114	1
+193	962	0.150000085042	1
+193	1001	0.153000470054	1
+193	1017	0.156000182539	1
+193	1029	0.15900005503	1
+193	1049	0.16200031753	1
+193	1065	0.165000254985	1
+193	1081	0.168000464949	1
+193	1097	0.171000429851	1
+193	1113	0.174000319767	1
+193	1129	0.177000214707	1
+193	1145	0.18000031218	1
+193	1161	0.18300028713	1
+193	1177	0.186000469623	1
+193	1193	0.189000379611	1
+193	1209	0.192000599603	1
+193	1217	0.195000067058	1
+193	1241	0.198000532076	1
+194	710	0.102000288698	1.2e-011
+194	726	0.105000498662	1.1e-011
+194	742	0.108000591118	1.4e-011
+194	758	0.111000636034	1.6e-011
+194	774	0.114000755938	1.6e-011
+194	790	0.117000875842	1.6e-011
+194	806	0.12000051565	1.3e-011
+194	814	0.123000283033	1.3e-011
+194	838	0.126000530494	1.2e-011
+194	850	0.129000260386	1.2e-011
+194	870	0.13200047035	1e-011
+194	882	0.13500028528	1.2e-011
+194	902	0.138000415232	1e-011
+194	914	0.141000150152	1e-011
+194	934	0.144000285122	8e-012
+194	950	0.147000505114	8e-012
+194	963	0.150000085042	6e-012
+194	1002	0.153000470054	3e-012
+194	1018	0.156000182539	3e-012
+194	1030	0.15900005503	7e-012
+194	1050	0.16200031753	9e-012
+194	1066	0.165000254985	1.2e-011
+194	1082	0.168000464949	1.4e-011
+194	1098	0.171000429851	1.2e-011
+194	1114	0.174000319767	1e-011
+194	1130	0.177000214707	9e-012
+194	1146	0.18000031218	1e-011
+194	1162	0.18300028713	7e-012
+194	1178	0.186000469623	4e-012
+194	1194	0.189000379611	8e-012
+194	1210	0.192000599603	5e-012
+194	1218	0.195000067058	6e-012
+194	1242	0.198000532076	9e-012
+195	711	0.102000288698	3
+195	727	0.105000498662	4
+195	743	0.108000591118	6
+195	759	0.111000636034	6
+195	775	0.114000755938	6
+195	791	0.117000875842	12
+195	807	0.12000051565	9
+195	815	0.123000283033	3
+195	839	0.126000530494	9
+195	851	0.129000260386	3
+195	871	0.13200047035	7
+195	883	0.13500028528	4
+195	903	0.138000415232	8
+195	915	0.141000150152	3
+195	935	0.144000285122	1
+195	951	0.147000505114	9
+195	964	0.150000085042	-2
+195	1003	0.153000470054	5
+195	1019	0.156000182539	3
+195	1031	0.15900005503	0
+195	1051	0.16200031753	5
+195	1067	0.165000254985	3
+195	1083	0.168000464949	7
+195	1099	0.171000429851	7
+195	1115	0.174000319767	6
+195	1131	0.177000214707	3
+195	1147	0.18000031218	5
+195	1163	0.18300028713	1
+195	1179	0.186000469623	3
+195	1195	0.189000379611	1
+195	1211	0.192000599603	9
+195	1219	0.195000067058	-3
+195	1243	0.198000532076	3
+196	701	0.101999957005	1
+196	717	0.105000051981	1
+196	729	0.107999624496	1
+196	749	0.111000109482	1
+196	765	0.114000029482	1
+196	785	0.117000019474	1
+196	797	0.119999896972	1
+196	817	0.12300029198	1
+196	833	0.12600044198	1
+196	841	0.12899988198	1
+196	861	0.13199995698	1
+196	877	0.135000121974	1
+196	897	0.137999999472	1
+196	909	0.141000074472	1
+196	929	0.144000106969	1
+196	945	0.147000261971	1
+196	966	0.150000171959	1
+196	993	0.153000251959	1
+196	1009	0.155999846947	1
+196	1025	0.158999809447	1
+196	1041	0.162000044451	1
+196	1061	0.165000204451	1
+196	1077	0.16800016195	1
+196	1089	0.170999964452	1
+196	1105	0.174000156955	1
+196	1121	0.17700010444	1
+196	1137	0.179999981938	1
+196	1157	0.183000259441	1
+196	1173	0.186000136939	1
+196	1189	0.188999971933	1
+196	1205	0.192000009433	1
+196	1225	0.195000319441	1
+196	1237	0.198000234437	1
+197	702	0.101999957005	-6e-012
+197	718	0.105000051981	-5e-012
+197	730	0.107999624496	-2e-012
+197	750	0.111000109482	0
+197	766	0.114000029482	4e-012
+197	786	0.117000019474	1e-012
+197	798	0.119999896972	2e-012
+197	818	0.12300029198	4e-012
+197	834	0.12600044198	0
+197	842	0.12899988198	2e-012
+197	862	0.13199995698	-2e-012
+197	878	0.135000121974	1e-012
+197	898	0.137999999472	2e-012
+197	910	0.141000074472	3e-012
+197	930	0.144000106969	2e-012
+197	946	0.147000261971	4e-012
+197	967	0.150000171959	0
+197	994	0.153000251959	2e-012
+197	1010	0.155999846947	-1e-012
+197	1026	0.158999809447	2e-012
+197	1042	0.162000044451	0
+197	1062	0.165000204451	1e-012
+197	1078	0.16800016195	-1e-012
+197	1090	0.170999964452	3e-012
+197	1106	0.174000156955	5e-012
+197	1122	0.17700010444	1e-012
+197	1138	0.179999981938	1e-012
+197	1158	0.183000259441	1e-012
+197	1174	0.186000136939	2e-012
+197	1190	0.188999971933	1e-012
+197	1206	0.192000009433	4e-012
+197	1226	0.195000319441	2e-012
+197	1238	0.198000234437	-2e-012
+198	703	0.101999957005	-4
+198	719	0.105000051981	3
+198	731	0.107999624496	-7
+198	751	0.111000109482	1
+198	767	0.114000029482	2
+198	787	0.117000019474	2
+198	799	0.119999896972	-4
+198	819	0.12300029198	0
+198	835	0.12600044198	7
+198	843	0.12899988198	0
+198	863	0.13199995698	-3
+198	879	0.135000121974	2
+198	899	0.137999999472	0
+198	911	0.141000074472	1
+198	931	0.144000106969	-1
+198	947	0.147000261971	3
+198	968	0.150000171959	-1
+198	995	0.153000251959	6
+198	1011	0.155999846947	0
+198	1027	0.158999809447	-2
+198	1043	0.162000044451	-2
+198	1063	0.165000204451	1
+198	1079	0.16800016195	2
+198	1091	0.170999964452	-1
+198	1107	0.174000156955	3
+198	1123	0.17700010444	2
+198	1139	0.179999981938	-3
+198	1159	0.183000259441	2
+198	1175	0.186000136939	3
+198	1191	0.188999971933	0
+198	1207	0.192000009433	-2
+198	1227	0.195000319441	2
+198	1239	0.198000234437	2
+199	697	0.101999686708	1
+199	713	0.104999641624	1
+199	733	0.10799979402	1
+199	745	0.110999748936	1
+199	761	0.113999618888	1
+199	777	0.116999643838	1
+199	793	0.119999556273	1
+199	809	0.122999703696	1
+199	825	0.125999766151	1
+199	845	0.129000058621	1
+199	857	0.131999838613	1
+199	873	0.134999863563	1
+199	889	0.137999371074	1
+199	905	0.140999485962	1
+199	921	0.143999713374	1
+199	937	0.146999455865	1
+199	953	0.149999725757	1
+199	989	0.152999440715	1
+199	1005	0.155999240635	1
+199	1021	0.158999280507	1
+199	1037	0.161999320379	1
+199	1053	0.164999237789	1
+199	1069	0.167999197677	1
+199	1085	0.170999754967	1
+199	1101	0.173999394919	1
+199	1117	0.176999744799	1
+199	1133	0.179999614751	1
+199	1149	0.182999447199	1
+199	1165	0.185999472149	1
+199	1181	0.188999652101	1
+199	1197	0.191999799524	1
+199	1213	0.194999542015	1
+199	1229	0.19799960447	1
+200	698	0.101999686708	-1.4e-011
+200	714	0.104999641624	-1.3e-011
+200	734	0.10799979402	-1.4e-011
+200	746	0.110999748936	-1.2e-011
+200	762	0.113999618888	-1e-011
+200	778	0.116999643838	-1.3e-011
+200	794	0.119999556273	-1.1e-011
+200	810	0.122999703696	-9e-012
+200	826	0.125999766151	-5e-012
+200	846	0.129000058621	-8e-012
+200	858	0.131999838613	-1e-011
+200	874	0.134999863563	-1.1e-011
+200	890	0.137999371074	-1.4e-011
+200	906	0.140999485962	-1.1e-011
+200	922	0.143999713374	-9e-012
+200	938	0.146999455865	-1.2e-011
+200	954	0.149999725757	-1.4e-011
+200	990	0.152999440715	-1.6e-011
+200	1006	0.155999240635	-1.6e-011
+200	1022	0.158999280507	-1.6e-011
+200	1038	0.161999320379	-1.5e-011
+200	1054	0.164999237789	-1.6e-011
+200	1070	0.167999197677	-1.5e-011
+200	1086	0.170999754967	-1.6e-011
+200	1102	0.173999394919	-1.2e-011
+200	1118	0.176999744799	-1.2e-011
+200	1134	0.179999614751	-1.3e-011
+200	1150	0.182999447199	-1e-011
+200	1166	0.185999472149	-8e-012
+200	1182	0.188999652101	-1.1e-011
+200	1198	0.191999799524	-9e-012
+200	1214	0.194999542015	-9e-012
+200	1230	0.19799960447	-1.1e-011
+201	699	0.101999686708	-6
+201	715	0.104999641624	-8
+201	735	0.10799979402	-6
+201	747	0.110999748936	-4
+201	763	0.113999618888	-5
+201	779	0.116999643838	-5
+201	795	0.119999556273	-7
+201	811	0.122999703696	-5
+201	827	0.125999766151	-6
+201	847	0.129000058621	-1
+201	859	0.131999838613	-5
+201	875	0.134999863563	1
+201	891	0.137999371074	-8
+201	907	0.140999485962	-8
+201	923	0.143999713374	-1
+201	939	0.146999455865	-9
+201	955	0.149999725757	-3
+201	991	0.152999440715	-5
+201	1007	0.155999240635	-8
+201	1023	0.158999280507	-8
+201	1039	0.161999320379	-6
+201	1055	0.164999237789	-7
+201	1071	0.167999197677	-14
+201	1087	0.170999754967	-3
+201	1103	0.173999394919	-10
+201	1119	0.176999744799	-4
+201	1135	0.179999614751	-4
+201	1151	0.182999447199	-5
+201	1167	0.185999472149	-6
+201	1183	0.188999652101	-7
+201	1199	0.191999799524	-1
+201	1215	0.194999542015	-5
+201	1231	0.19799960447	-4
+1	1266	0.00062751	0
+1	1266	0.20013013	1
+2	1267	0.15025221	0
+2	1267	0.20013013	1
+145	1266	0.20013013	1518
+146	1267	0.20013013	1518
+148	1268	0.20025221	1518
+149	1269	0.20025221	1518
+1	2449	0.20025221	0
+1	2449	0.40013013	1
+2	1566	0.20025221	0
+2	1566	0.25013013	1
+2	1858	0.25025221	0
+2	1858	0.30013013	1
+2	2134	0.30025221	0
+2	2134	0.35013013	1
+2	2448	0.35025221	0
+2	2448	0.40013013	1
+2	2465	0.40025221	0
+2	2465	0.40025317	1
+3	2428	0.20012208	0
+3	2428	0.4	1
+4	1559	0.20012208	0
+4	1559	0.25	1
+4	1843	0.25012208	0
+4	1843	0.3	1
+4	2127	0.30012208	0
+4	2127	0.35	1
+4	2429	0.35012208	0
+4	2429	0.4	1
+5	2427	0.00037434	0
+5	2427	0.4	1
+38	2447	0.40013013	1
+38	2463	0.40025317	0
+39	2447	0.40013013	1518
+39	2463	0.40025317	0
+102	2416	0.4	1500
+103	2416	0.4	0.2
+104	1555	0.25	1500
+104	1839	0.3	1500
+104	2123	0.35	1500
+104	2417	0.4	1500
+105	1555	0.25	0.05
+105	1839	0.3	0.05
+105	2123	0.35	0.05
+105	2417	0.4	0.05
+106	2415	0.4	1500
+107	2415	0.4	0.4
+108	2419	0.4	1518
+109	2419	0.4	0
+110	2419	0.4	1
+110	2419	0.4	0
+111	2419	0.4	1518
+111	2419	0.4	0
+112	2419	0.4	1518
+113	2419	0.4	0
+114	1556	0.25	1518
+114	1840	0.3	1518
+114	2124	0.35	1518
+114	2420	0.4	1518
+115	1556	0.25	0
+115	1840	0.3	0
+115	2124	0.35	0
+115	2420	0.4	0
+116	1556	0.25	1
+116	1556	0.25	0
+116	1840	0.3	1
+116	1840	0.3	0
+116	2124	0.35	1
+116	2124	0.35	0
+116	2420	0.4	1
+116	2420	0.4	0
+117	1556	0.25	1518
+117	1556	0.25	0
+117	1840	0.3	1518
+117	1840	0.3	0
+117	2124	0.35	1518
+117	2124	0.35	0
+117	2420	0.4	1518
+117	2420	0.4	0
+118	1556	0.25	1518
+118	1840	0.3	1518
+118	2124	0.35	1518
+118	2420	0.4	1518
+119	1556	0.25	0
+119	1840	0.3	0
+119	2124	0.35	0
+119	2420	0.4	0
+120	2418	0.4	1518
+121	2418	0.4	0
+122	2418	0.4	1
+122	2418	0.4	0
+123	2418	0.4	1518
+123	2418	0.4	0
+124	2418	0.4	1518
+125	2418	0.4	0
+126	2428	0.4	1518
+127	1559	0.25	1518
+127	1843	0.3	1518
+127	2127	0.35	1518
+127	2429	0.4	1518
+128	2427	0.4	1518
+129	2431	0.40012208	1518
+130	1560	0.25012208	1518
+130	1852	0.30012208	1518
+130	2128	0.35012208	1518
+130	2432	0.40012208	1518
+131	2430	0.40012208	1518
+132	2434	0.40012213	1518
+133	2434	0.40012213	1518
+134	1561	0.25012213	1518
+134	1853	0.30012213	1518
+134	2129	0.35012213	1518
+134	2435	0.40012213	1518
+135	1561	0.25012213	1518
+135	1853	0.30012213	1518
+135	2129	0.35012213	1518
+135	2435	0.40012213	1518
+136	2433	0.40012213	1518
+137	2433	0.40012213	1518
+138	2437	0.40012213	0.00012213
+139	2437	0.40012213	7590
+140	1562	0.25012213	0.00012213
+140	1854	0.30012213	0.00012213
+140	2130	0.35012213	0.00012213
+140	2438	0.40012213	0.00012213
+141	1562	0.25012213	9108
+141	1854	0.30012213	10626
+141	2130	0.35012213	12144
+141	2438	0.40012213	13662
+142	2436	0.40012213	0.00012213
+143	2436	0.40012213	4554
+145	2449	0.40013013	1518
+146	1566	0.25013013	1518
+146	1858	0.30013013	1518
+146	2134	0.35013013	1518
+146	2448	0.40013013	1518
+146	2465	0.40025317	1518
+148	2451	0.40025221	1518
+149	1567	0.25025221	1518
+149	1859	0.30025221	1518
+149	2135	0.35025221	1518
+149	2450	0.40025221	1518
+152	1270	0.20025226	1518
+152	2453	0.40025226	1518
+153	1270	0.20025226	1518
+153	2453	0.40025226	1518
+154	1271	0.20025226	1518
+154	1568	0.25025226	1518
+154	1860	0.30025226	1518
+154	2136	0.35025226	1518
+154	2452	0.40025226	1518
+155	1271	0.20025226	1518
+155	1568	0.25025226	1518
+155	1860	0.30025226	1518
+155	2136	0.35025226	1518
+155	2452	0.40025226	1518
+158	1272	0.20025226	0.00025226
+158	2455	0.40025226	0.00025226
+159	1272	0.20025226	4554
+159	2455	0.40025226	6072
+160	1273	0.20025226	0.00025226
+160	1569	0.25025226	0.00025226
+160	1861	0.30025226	0.00025226
+160	2137	0.35025226	0.00025226
+160	2454	0.40025226	0.00025226
+161	1273	0.20025226	10626
+161	1569	0.25025226	12144
+161	1861	0.30025226	13662
+161	2137	0.35025226	15180
+161	2454	0.40025226	16698
+162	1276	0.20025226	1518
+162	2459	0.40025226	1518
+163	1276	0.20025226	0.00025226
+163	2459	0.40025226	0.00025226
+164	1276	0.20025226	1
+164	1276	0.20025226	0
+164	2459	0.40025226	1
+164	2459	0.40025226	0
+165	1276	0.20025226	1518
+165	1276	0.20025226	0
+165	2459	0.40025226	1518
+165	2459	0.40025226	0
+166	1276	0.20025226	1518
+166	2459	0.40025226	1518
+167	1276	0.20025226	0.00025226
+167	2459	0.40025226	0.00025226
+168	1277	0.20025226	1518
+168	1571	0.25025226	1518
+168	1863	0.30025226	1518
+168	2139	0.35025226	1518
+168	2458	0.40025226	1518
+169	1277	0.20025226	0.00025226
+169	1571	0.25025226	0.00025226
+169	1863	0.30025226	0.00025226
+169	2139	0.35025226	0.00025226
+169	2458	0.40025226	0.00025226
+170	1277	0.20025226	1
+170	1277	0.20025226	0
+170	1571	0.25025226	1
+170	1571	0.25025226	0
+170	1863	0.30025226	1
+170	1863	0.30025226	0
+170	2139	0.35025226	1
+170	2139	0.35025226	0
+170	2458	0.40025226	1
+170	2458	0.40025226	0
+171	1277	0.20025226	1518
+171	1277	0.20025226	0
+171	1571	0.25025226	1518
+171	1571	0.25025226	0
+171	1863	0.30025226	1518
+171	1863	0.30025226	0
+171	2139	0.35025226	1518
+171	2139	0.35025226	0
+171	2458	0.40025226	1518
+171	2458	0.40025226	0
+172	1277	0.20025226	1518
+172	1571	0.25025226	1518
+172	1863	0.30025226	1518
+172	2139	0.35025226	1518
+172	2458	0.40025226	1518
+173	1277	0.20025226	0.00025226
+173	1571	0.25025226	0.00025226
+173	1863	0.30025226	0.00025226
+173	2139	0.35025226	0.00025226
+173	2458	0.40025226	0.00025226
+174	1278	0.20025226	1518
+174	2462	0.40025226	1518
+175	1278	0.20025226	4554
+175	2462	0.40025226	6072
+176	1278	0.20025226	0.00025226
+176	2462	0.40025226	0.00025226
+177	1278	0.20025226	0.00025226
+177	2462	0.40025226	0.00025226
+178	1279	0.20025226	1518
+178	1572	0.25025226	1518
+178	1864	0.30025226	1518
+178	2140	0.35025226	1518
+179	1279	0.20025226	7590
+179	1572	0.25025226	9108
+179	1864	0.30025226	10626
+179	2140	0.35025226	12144
+180	1279	0.20025226	0.00025226
+180	1572	0.25025226	0.00025226
+180	1864	0.30025226	0.00025226
+180	2140	0.35025226	0.00025226
+181	1279	0.20025226	0.00025226
+181	1572	0.25025226	0.00025226
+181	1864	0.30025226	0.00025226
+181	2140	0.35025226	0.00025226
+182	2461	0.40025226	1518
+183	2461	0.40025226	4554
+184	2461	0.40025226	0.00025226
+185	2461	0.40025226	0.00025226
+190	1292	0.201000184246	1
+190	1304	0.203999756761	1
+190	1320	0.206999809246	1
+190	1340	0.210000011743	1
+190	1352	0.212999931743	1
+190	1376	0.216000284252	1
+190	1388	0.218999996737	1
+190	1400	0.222000231741	1
+190	1416	0.225000151741	1
+190	1436	0.228000184238	1
+190	1448	0.231000179236	1
+190	1464	0.233999779236	1
+190	1476	0.236999869224	1
+190	1496	0.239999926696	1
+190	1512	0.242999584203	1
+190	1524	0.245999609153	1
+190	1544	0.248999559093	1
+190	1576	0.251999391541	1
+190	1592	0.254999351429	1
+190	1608	0.257999631253	1
+190	1628	0.260999591141	1
+190	1640	0.263999471045	1
+190	1656	0.266999548425	1
+190	1672	0.269999428329	1
+190	1688	0.272999468201	1
+190	1704	0.275999588057	1
+190	1724	0.27899982044	1
+190	1736	0.281999647907	1
+190	1760	0.284999950335	1
+190	1768	0.287999692826	1
+190	1784	0.290999787802	1
+190	1804	0.294000075287	1
+190	1820	0.296999685299	1
+190	1836	0.299999807797	1
+190	1872	0.303000052789	1
+190	1892	0.306000010288	1
+190	1908	0.309000250288	1
+190	1924	0.3119998603	1
+190	1932	0.314999715294	1
+190	1956	0.317999777749	1
+190	1964	0.320999722709	1
+190	1980	0.323999545191	1
+190	1996	0.326999602663	1
+190	2016	0.329999585127	1
+190	2028	0.332999492583	1
+190	2044	0.335999362535	1
+190	2060	0.338999477423	1
+190	2076	0.341999582363	1
+190	2096	0.344999772267	1
+190	2108	0.347999172267	1
+190	2144	0.350999612059	1
+190	2160	0.353999252011	1
+190	2180	0.356999644368	1
+190	2196	0.359999669318	1
+190	2212	0.363000004276	1
+190	2228	0.365999624284	1
+190	2244	0.368999921735	1
+190	2256	0.371999499249	1
+190	2276	0.375000069213	1
+190	2296	0.378000121698	1
+190	2312	0.381000094188	1
+190	2324	0.384000099186	1
+190	2340	0.386999784192	1
+190	2356	0.389999986689	1
+190	2372	0.392999911689	1
+190	2388	0.395999761689	1
+190	2404	0.399000054159	1
+191	1293	0.201000184246	-5e-012
+191	1305	0.203999756761	-5e-012
+191	1321	0.206999809246	-1e-012
+191	1341	0.210000011743	0
+191	1353	0.212999931743	3e-012
+191	1377	0.216000284252	3e-012
+191	1389	0.218999996737	2e-012
+191	1401	0.222000231741	0
+191	1417	0.225000151741	3e-012
+191	1437	0.228000184238	2e-012
+191	1449	0.231000179236	0
+191	1465	0.233999779236	-4e-012
+191	1477	0.236999869224	-7e-012
+191	1497	0.239999926696	-7e-012
+191	1513	0.242999584203	-1e-011
+191	1525	0.245999609153	-1.2e-011
+191	1545	0.248999559093	-1.3e-011
+191	1577	0.251999391541	-1.6e-011
+191	1593	0.254999351429	-1.6e-011
+191	1609	0.257999631253	-1.6e-011
+191	1629	0.260999591141	-1.6e-011
+191	1641	0.263999471045	-1.5e-011
+191	1657	0.266999548425	-1.6e-011
+191	1673	0.269999428329	-1.6e-011
+191	1689	0.272999468201	-1.6e-011
+191	1705	0.275999588057	-1.3e-011
+191	1725	0.27899982044	-1.1e-011
+191	1737	0.281999647907	-9e-012
+191	1761	0.284999950335	-9e-012
+191	1769	0.287999692826	-6e-012
+191	1785	0.290999787802	-3e-012
+191	1805	0.294000075287	-4e-012
+191	1821	0.296999685299	-1e-012
+191	1837	0.299999807797	-2e-012
+191	1873	0.303000052789	1e-012
+191	1893	0.306000010288	0
+191	1909	0.309000250288	-4e-012
+191	1925	0.3119998603	-6e-012
+191	1933	0.314999715294	-9e-012
+191	1957	0.317999777749	-1e-011
+191	1965	0.320999722709	-9e-012
+191	1981	0.323999545191	-7e-012
+191	1997	0.326999602663	-9e-012
+191	2017	0.329999585127	-1.1e-011
+191	2029	0.332999492583	-1.2e-011
+191	2045	0.335999362535	-1.4e-011
+191	2061	0.338999477423	-1e-011
+191	2077	0.341999582363	-1.2e-011
+191	2097	0.344999772267	-1.6e-011
+191	2109	0.347999172267	-1.6e-011
+191	2145	0.350999612059	-1.6e-011
+191	2161	0.353999252011	-1.3e-011
+191	2181	0.356999644368	-1e-011
+191	2197	0.359999669318	-6e-012
+191	2213	0.363000004276	-8e-012
+191	2229	0.365999624284	-7e-012
+191	2245	0.368999921735	-7e-012
+191	2257	0.371999499249	-4e-012
+191	2277	0.375000069213	-5e-012
+191	2297	0.378000121698	-5e-012
+191	2313	0.381000094188	-2e-012
+191	2325	0.384000099186	-2e-012
+191	2341	0.386999784192	-1e-012
+191	2357	0.389999986689	-2e-012
+191	2373	0.392999911689	-4e-012
+191	2389	0.395999761689	-5e-012
+191	2405	0.399000054159	-6e-012
+192	1294	0.201000184246	3
+192	1306	0.203999756761	-3
+192	1322	0.206999809246	-3
+192	1342	0.210000011743	1
+192	1354	0.212999931743	-3
+192	1378	0.216000284252	5
+192	1390	0.218999996737	-2
+192	1402	0.222000231741	1
+192	1418	0.225000151741	1
+192	1438	0.228000184238	1
+192	1450	0.231000179236	5
+192	1466	0.233999779236	-3
+192	1478	0.236999869224	-4
+192	1498	0.239999926696	1
+192	1514	0.242999584203	-5
+192	1526	0.245999609153	-5
+192	1546	0.248999559093	-4
+192	1578	0.251999391541	-7
+192	1594	0.254999351429	-11
+192	1610	0.257999631253	-7
+192	1630	0.260999591141	-6
+192	1642	0.263999471045	-8
+192	1658	0.266999548425	-6
+192	1674	0.269999428329	-8
+192	1690	0.272999468201	-9
+192	1706	0.275999588057	-9
+192	1726	0.27899982044	-3
+192	1738	0.281999647907	-8
+192	1762	0.284999950335	-1
+192	1770	0.287999692826	-4
+192	1786	0.290999787802	-5
+192	1806	0.294000075287	3
+192	1822	0.296999685299	-2
+192	1838	0.299999807797	-4
+192	1874	0.303000052789	1
+192	1894	0.306000010288	-3
+192	1910	0.309000250288	3
+192	1926	0.3119998603	-1
+192	1934	0.314999715294	-5
+192	1958	0.317999777749	-4
+192	1966	0.320999722709	-2
+192	1982	0.323999545191	-4
+192	1998	0.326999602663	-4
+192	2018	0.329999585127	-4
+192	2030	0.332999492583	-4
+192	2046	0.335999362535	-8
+192	2062	0.338999477423	-6
+192	2078	0.341999582363	-8
+192	2098	0.344999772267	0
+192	2110	0.347999172267	-13
+192	2146	0.350999612059	-3
+192	2162	0.353999252011	-11
+192	2182	0.356999644368	-5
+192	2198	0.359999669318	-7
+192	2214	0.363000004276	1
+192	2230	0.365999624284	-7
+192	2246	0.368999921735	2
+192	2258	0.371999499249	-9
+192	2278	0.375000069213	-3
+192	2298	0.378000121698	-2
+192	2314	0.381000094188	-1
+192	2326	0.384000099186	3
+192	2342	0.386999784192	-3
+192	2358	0.389999986689	0
+192	2374	0.392999911689	0
+192	2390	0.395999761689	-6
+192	2406	0.399000054159	-2
+193	1296	0.201000629549	1
+193	1312	0.204000604499	1
+193	1328	0.207000451895	1
+193	1344	0.210000651815	1
+193	1360	0.213000611687	1
+193	1372	0.216000261567	1
+193	1392	0.219000381471	1
+193	1408	0.222000548919	1
+193	1420	0.22500024132	1
+193	1440	0.22800064379	1
+193	1456	0.231000533706	1
+193	1468	0.234000113634	1
+193	1488	0.237000488634	1
+193	1504	0.240000308586	1
+193	1520	0.243000683586	1
+193	1536	0.246000343522	1
+193	1552	0.249000238462	1
+193	1588	0.252000768474	1
+193	1604	0.255000493334	1
+193	1616	0.258000303238	1
+193	1636	0.261000273166	1
+193	1652	0.264000408136	1
+193	1664	0.267000073094	1
+193	1684	0.270000458106	1
+193	1700	0.273000593076	1
+193	1712	0.276000167976	1
+193	1732	0.279000297928	1
+193	1748	0.282000390384	1
+193	1764	0.285000610376	1
+193	1776	0.288000147786	1
+193	1796	0.29100047526	1
+193	1812	0.29400069024	1
+193	1828	0.297000387668	1
+193	1849	0.300000715142	1
+193	1880	0.303000290042	1
+193	1896	0.306000815042	1
+193	1912	0.309000624946	1
+193	1928	0.312000397358	1
+193	1944	0.315000254804	1
+193	1960	0.318000549794	1
+193	1976	0.321000172238	1
+193	1992	0.324000242234	1
+193	2008	0.327000269724	1
+193	2024	0.330000179712	1
+193	2040	0.333000132206	1
+193	2052	0.335999934708	1
+193	2068	0.339000249714	1
+193	2084	0.342000169714	1
+193	2100	0.344999999698	1
+193	2120	0.348000464716	1
+193	2152	0.351000284668	1
+193	2172	0.354000424652	1
+193	2188	0.357000634616	1
+193	2204	0.36000083956	1
+193	2216	0.363000484406	1
+193	2232	0.36600041684	1
+193	2248	0.36900015176	1
+193	2264	0.372000531768	1
+193	2280	0.375000111696	1
+193	2292	0.378000096678	1
+193	2308	0.381000044163	1
+193	2328	0.384000104139	1
+193	2344	0.387000211634	1
+193	2360	0.390000036604	1
+193	2376	0.393000299104	1
+193	2392	0.396000091592	1
+193	2408	0.399000124089	1
+194	1297	0.201000629549	1e-011
+194	1313	0.204000604499	1.3e-011
+194	1329	0.207000451895	1.6e-011
+194	1345	0.210000651815	1.6e-011
+194	1361	0.213000611687	1.2e-011
+194	1373	0.216000261567	1.6e-011
+194	1393	0.219000381471	1.3e-011
+194	1409	0.222000548919	1.1e-011
+194	1421	0.22500024132	1.5e-011
+194	1441	0.22800064379	1.2e-011
+194	1457	0.231000533706	8e-012
+194	1469	0.234000113634	1e-011
+194	1489	0.237000488634	8e-012
+194	1505	0.240000308586	1e-011
+194	1521	0.243000683586	8e-012
+194	1537	0.246000343522	1e-011
+194	1553	0.249000238462	1.2e-011
+194	1589	0.252000768474	1.4e-011
+194	1605	0.255000493334	1.2e-011
+194	1617	0.258000303238	1.2e-011
+194	1637	0.261000273166	1e-011
+194	1653	0.264000408136	6e-012
+194	1665	0.267000073094	6e-012
+194	1685	0.270000458106	1e-011
+194	1701	0.273000593076	1e-011
+194	1713	0.276000167976	1.2e-011
+194	1733	0.279000297928	1.1e-011
+194	1749	0.282000390384	8e-012
+194	1765	0.285000610376	9e-012
+194	1777	0.288000147786	1.3e-011
+194	1797	0.29100047526	1e-011
+194	1813	0.29400069024	9e-012
+194	1829	0.297000387668	1.3e-011
+194	1850	0.300000715142	1e-011
+194	1881	0.303000290042	1.4e-011
+194	1897	0.306000815042	1.2e-011
+194	1913	0.309000624946	1.1e-011
+194	1929	0.312000397358	9e-012
+194	1945	0.315000254804	1e-011
+194	1961	0.318000549794	7e-012
+194	1977	0.321000172238	4e-012
+194	1993	0.324000242234	5e-012
+194	2009	0.327000269724	4e-012
+194	2025	0.330000179712	3e-012
+194	2041	0.333000132206	-1e-012
+194	2053	0.335999934708	2e-012
+194	2069	0.339000249714	0
+194	2085	0.342000169714	4e-012
+194	2101	0.344999999698	6e-012
+194	2121	0.348000464716	8e-012
+194	2153	0.351000284668	8e-012
+194	2173	0.354000424652	1.2e-011
+194	2189	0.357000634616	1.4e-011
+194	2205	0.36000083956	1.4e-011
+194	2217	0.363000484406	1.1e-011
+194	2233	0.36600041684	1e-011
+194	2249	0.36900015176	8e-012
+194	2265	0.372000531768	8e-012
+194	2281	0.375000111696	6e-012
+194	2293	0.378000096678	5e-012
+194	2309	0.381000044163	8e-012
+194	2329	0.384000104139	5e-012
+194	2345	0.387000211634	6e-012
+194	2361	0.390000036604	7e-012
+194	2377	0.393000299104	3e-012
+194	2393	0.396000091592	3e-012
+194	2409	0.399000124089	-1e-012
+195	1298	0.201000629549	5
+195	1314	0.204000604499	8
+195	1330	0.207000451895	5
+195	1346	0.210000651815	8
+195	1362	0.213000611687	10
+195	1374	0.216000261567	6
+195	1394	0.219000381471	4
+195	1410	0.222000548919	9
+195	1422	0.22500024132	2
+195	1442	0.22800064379	7
+195	1458	0.231000533706	9
+195	1470	0.234000113634	0
+195	1490	0.237000488634	6
+195	1506	0.240000308586	0
+195	1522	0.243000683586	8
+195	1538	0.246000343522	6
+195	1554	0.249000238462	-1
+195	1590	0.252000768474	10
+195	1606	0.255000493334	8
+195	1618	0.258000303238	6
+195	1638	0.261000273166	3
+195	1654	0.264000408136	7
+195	1666	0.267000073094	-2
+195	1686	0.270000458106	3
+195	1702	0.273000593076	10
+195	1714	0.276000167976	4
+195	1734	0.279000297928	4
+195	1750	0.282000390384	1
+195	1766	0.285000610376	10
+195	1778	0.288000147786	2
+195	1798	0.29100047526	2
+195	1814	0.29400069024	8
+195	1830	0.297000387668	2
+195	1851	0.300000715142	10
+195	1882	0.303000290042	0
+195	1898	0.306000815042	8
+195	1914	0.309000624946	8
+195	1930	0.312000397358	6
+195	1946	0.315000254804	1
+195	1962	0.318000549794	8
+195	1978	0.321000172238	1
+195	1994	0.324000242234	2
+195	2010	0.327000269724	3
+195	2026	0.330000179712	2
+195	2042	0.333000132206	2
+195	2054	0.335999934708	-3
+195	2070	0.339000249714	1
+195	2086	0.342000169714	4
+195	2102	0.344999999698	-3
+195	2122	0.348000464716	6
+195	2154	0.351000284668	2
+195	2174	0.354000424652	3
+195	2190	0.357000634616	4
+195	2206	0.36000083956	11
+195	2218	0.363000484406	6
+195	2234	0.36600041684	8
+195	2250	0.36900015176	-1
+195	2266	0.372000531768	9
+195	2282	0.375000111696	3
+195	2294	0.378000096678	3
+195	2310	0.381000044163	3
+195	2330	0.384000104139	1
+195	2346	0.387000211634	5
+195	2362	0.390000036604	0
+195	2378	0.393000299104	4
+195	2394	0.396000091592	1
+195	2410	0.399000124089	1
+196	1288	0.200999999441	1
+196	1308	0.203999839441	1
+196	1324	0.207000069445	1
+196	1336	0.209999984441	1
+196	1356	0.213000214445	1
+196	1368	0.216000081925	1
+196	1384	0.218999916919	1
+196	1404	0.222000269428	1
+196	1424	0.225000301925	1
+196	1432	0.22800016439	1
+196	1452	0.231000421881	1
+196	1472	0.234000326857	1
+196	1484	0.236999959339	1
+196	1500	0.240000029335	1
+196	1516	0.243000371842	1
+196	1532	0.24600016433	1
+196	1548	0.249000154322	1
+196	1584	0.252000111821	1
+196	1600	0.254999984312	1
+196	1620	0.258000454328	1
+196	1632	0.260999974328	1
+196	1648	0.263999894328	1
+196	1668	0.26700009183	1
+196	1680	0.270000006826	1
+196	1696	0.273000204328	1
+196	1716	0.276000321829	1
+196	1728	0.279000241829	1
+196	1744	0.281999996821	1
+196	1756	0.284999916821	1
+196	1780	0.288000386837	1
+196	1788	0.291000094307	1
+196	1800	0.294000074275	1
+196	1824	0.297000331766	1
+196	1845	0.300000279251	1
+196	1876	0.303000076748	1
+196	1888	0.30599992175	1
+196	1904	0.309000166742	1
+196	1920	0.311999781754	1
+196	1940	0.314999961706	1
+196	1948	0.317999389228	1
+196	1968	0.320999846665	1
+196	1984	0.323999664158	1
+196	2004	0.326999966586	1
+196	2012	0.329999549095	1
+196	2032	0.332999691541	1
+196	2048	0.335999866511	1
+196	2064	0.338999524018	1
+196	2080	0.341999694002	1
+196	2092	0.344999751474	1
+196	2112	0.347999963949	1
+196	2148	0.350999898937	1
+196	2164	0.353999721419	1
+196	2176	0.356999548886	1
+196	2192	0.359999653826	1
+196	2208	0.36299991377	1
+196	2224	0.365999581259	1
+196	2240	0.368999616161	1
+196	2260	0.371999881081	1
+196	2272	0.374999628559	1
+196	2288	0.377999376037	1
+196	2304	0.38099960842	1
+196	2320	0.383999563336	1
+196	2336	0.386999523224	1
+196	2352	0.389999558126	1
+196	2368	0.392999358046	1
+196	2384	0.39599963787	1
+196	2400	0.39899943779	1
+197	1289	0.200999999441	0
+197	1309	0.203999839441	4e-012
+197	1325	0.207000069445	2e-012
+197	1337	0.209999984441	4e-012
+197	1357	0.213000214445	5e-012
+197	1369	0.216000081925	2e-012
+197	1385	0.218999916919	3e-012
+197	1405	0.222000269428	3e-012
+197	1425	0.225000301925	7e-012
+197	1433	0.22800016439	9e-012
+197	1453	0.231000421881	6e-012
+197	1473	0.234000326857	3e-012
+197	1485	0.236999959339	4e-012
+197	1501	0.240000029335	7e-012
+197	1517	0.243000371842	3e-012
+197	1533	0.24600016433	4e-012
+197	1549	0.249000154322	1e-012
+197	1585	0.252000111821	3e-012
+197	1601	0.254999984312	4e-012
+197	1621	0.258000454328	0
+197	1633	0.260999974328	0
+197	1649	0.263999894328	1e-012
+197	1669	0.26700009183	2e-012
+197	1681	0.270000006826	1e-012
+197	1697	0.273000204328	1e-012
+197	1717	0.276000321829	0
+197	1729	0.279000241829	2e-012
+197	1745	0.281999996821	0
+197	1757	0.284999916821	4e-012
+197	1781	0.288000386837	5e-012
+197	1789	0.291000094307	8e-012
+197	1801	0.294000074275	9e-012
+197	1825	0.297000331766	5e-012
+197	1846	0.300000279251	1e-012
+197	1877	0.303000076748	-2e-012
+197	1889	0.30599992175	-2e-012
+197	1905	0.309000166742	-6e-012
+197	1921	0.311999781754	-8e-012
+197	1941	0.314999961706	-1.1e-011
+197	1949	0.317999389228	-7e-012
+197	1969	0.320999846665	-7e-012
+197	1985	0.323999664158	-9e-012
+197	2005	0.326999966586	-9e-012
+197	2013	0.329999549095	-9e-012
+197	2033	0.332999691541	-6e-012
+197	2049	0.335999866511	-7e-012
+197	2065	0.338999524018	-4e-012
+197	2081	0.341999694002	-7e-012
+197	2093	0.344999751474	-5e-012
+197	2113	0.347999963949	-6e-012
+197	2149	0.350999898937	-9e-012
+197	2165	0.353999721419	-1.1e-011
+197	2177	0.356999548886	-1e-011
+197	2193	0.359999653826	-8e-012
+197	2209	0.36299991377	-1.1e-011
+197	2225	0.365999581259	-1.4e-011
+197	2241	0.368999616161	-1e-011
+197	2261	0.371999881081	-1.1e-011
+197	2273	0.374999628559	-1.1e-011
+197	2289	0.377999376037	-1.3e-011
+197	2305	0.38099960842	-1.4e-011
+197	2321	0.383999563336	-1.6e-011
+197	2337	0.386999523224	-1.4e-011
+197	2353	0.389999558126	-1.6e-011
+197	2369	0.392999358046	-1.6e-011
+197	2385	0.39599963787	-1.6e-011
+197	2401	0.39899943779	-1.6e-011
+198	1290	0.200999999441	2
+198	1310	0.203999839441	-1
+198	1326	0.207000069445	2
+198	1338	0.209999984441	-1
+198	1358	0.213000214445	4
+198	1370	0.216000081925	3
+198	1386	0.218999916919	-3
+198	1406	0.222000269428	1
+198	1426	0.225000301925	5
+198	1434	0.22800016439	1
+198	1454	0.231000421881	4
+198	1474	0.234000326857	6
+198	1486	0.236999959339	1
+198	1502	0.240000029335	-1
+198	1518	0.243000371842	4
+198	1534	0.24600016433	2
+198	1550	0.249000154322	1
+198	1586	0.252000111821	3
+198	1602	0.254999984312	-4
+198	1622	0.258000454328	6
+198	1634	0.260999974328	1
+198	1650	0.263999894328	-2
+198	1670	0.26700009183	2
+198	1682	0.270000006826	-2
+198	1698	0.273000204328	-1
+198	1718	0.276000321829	1
+198	1730	0.279000241829	4
+198	1746	0.281999996821	1
+198	1758	0.284999916821	-4
+198	1782	0.288000386837	6
+198	1790	0.291000094307	4
+198	1802	0.294000074275	1
+198	1826	0.297000331766	3
+198	1847	0.300000279251	3
+198	1878	0.303000076748	1
+198	1890	0.30599992175	-4
+198	1906	0.309000166742	2
+198	1922	0.311999781754	-6
+198	1942	0.314999961706	2
+198	1950	0.317999389228	-9
+198	1970	0.320999846665	-1
+198	1986	0.323999664158	-8
+198	2006	0.326999966586	1
+198	2014	0.329999549095	-6
+198	2034	0.332999691541	-5
+198	2050	0.335999866511	1
+198	2066	0.338999524018	-4
+198	2082	0.341999694002	-4
+198	2094	0.344999751474	-5
+198	2114	0.347999963949	-2
+198	2150	0.350999898937	-2
+198	2166	0.353999721419	-3
+198	2178	0.356999548886	-6
+198	2194	0.359999653826	-7
+198	2210	0.36299991377	-1
+198	2226	0.365999581259	-7
+198	2242	0.368999616161	-8
+198	2262	0.371999881081	-2
+198	2274	0.374999628559	-2
+198	2290	0.377999376037	-9
+198	2306	0.38099960842	-6
+198	2322	0.383999563336	-7
+198	2338	0.386999523224	-7
+198	2354	0.389999558126	-5
+198	2370	0.392999358046	-11
+198	2386	0.39599963787	-5
+198	2402	0.39899943779	-8
+199	1284	0.200999511926	1
+199	1300	0.203999536876	1
+199	1316	0.206999529298	1
+199	1332	0.209999644186	1
+199	1348	0.212999589146	1
+199	1364	0.215999459098	1
+199	1380	0.218999371533	1
+199	1396	0.22199976389	1
+199	1412	0.22499970885	1
+199	1428	0.227999621285	1
+199	1444	0.230999726225	1
+199	1460	0.233999473703	1
+199	1480	0.236999936113	1
+199	1492	0.239999486113	1
+199	1508	0.242999398548	1
+199	1528	0.245999635898	1
+199	1540	0.248999473323	1
+199	1580	0.251999433211	1
+199	1596	0.254999708071	1
+199	1612	0.257999705466	1
+199	1624	0.260999265434	1
+199	1644	0.263999540294	1
+199	1660	0.266999805214	1
+199	1676	0.269999830164	1
+199	1692	0.272999662612	1
+199	1708	0.275999687562	1
+199	1720	0.278999472542	1
+199	1740	0.281999769993	1
+199	1752	0.284999704981	1
+199	1772	0.287999954961	1
+199	1792	0.291000124945	1
+199	1808	0.294000247443	1
+199	1816	0.296999617467	1
+199	1832	0.299999712443	1
+199	1868	0.302999769915	1
+199	1884	0.305999709891	1
+199	1900	0.309000082356	1
+199	1916	0.311999692368	1
+199	1936	0.31499974984	1
+199	1952	0.317999657296	1
+199	1972	0.32100003474	1
+199	1988	0.324000002237	1
+199	2000	0.326999734742	1
+199	2020	0.329999664738	1
+199	2036	0.33299990973	1
+199	2056	0.336000187233	1
+199	2072	0.339000294728	1
+199	2088	0.342000552219	1
+199	2104	0.345000414684	1
+199	2116	0.348000309624	1
+199	2156	0.351000487106	1
+199	2168	0.35400010955	1
+199	2184	0.357000292043	1
+199	2200	0.360000544521	1
+199	2220	0.363000546916	1
+199	2236	0.366000511818	1
+199	2252	0.36900087177	1
+199	2268	0.372000831642	1
+199	2284	0.375000636516	1
+199	2300	0.378000521404	1
+199	2316	0.381000561292	1
+199	2332	0.384000211172	1
+199	2348	0.38700046365	1
+199	2364	0.390000391059	1
+199	2380	0.393000751011	1
+199	2396	0.396000710883	1
+199	2412	0.399000750771	1
+200	1285	0.200999511926	-1e-011
+200	1301	0.203999536876	-1.3e-011
+200	1317	0.206999529298	-1.4e-011
+200	1333	0.209999644186	-1e-011
+200	1349	0.212999589146	-1.2e-011
+200	1365	0.215999459098	-1.3e-011
+200	1381	0.218999371533	-1.3e-011
+200	1397	0.22199976389	-1e-011
+200	1413	0.22499970885	-1.3e-011
+200	1429	0.227999621285	-1e-011
+200	1445	0.230999726225	-1.1e-011
+200	1461	0.233999473703	-9e-012
+200	1481	0.236999936113	-1.2e-011
+200	1493	0.239999486113	-1.3e-011
+200	1509	0.242999398548	-1.5e-011
+200	1529	0.245999635898	-1.5e-011
+200	1541	0.248999473323	-1.6e-011
+200	1581	0.251999433211	-1.4e-011
+200	1597	0.254999708071	-1.5e-011
+200	1613	0.257999705466	-1.6e-011
+200	1625	0.260999265434	-1.4e-011
+200	1645	0.263999540294	-1e-011
+200	1661	0.266999805214	-1e-011
+200	1677	0.269999830164	-1.3e-011
+200	1693	0.272999662612	-1e-011
+200	1709	0.275999687562	-1e-011
+200	1721	0.278999472542	-7e-012
+200	1741	0.281999769993	-6e-012
+200	1753	0.284999704981	-4e-012
+200	1773	0.287999954961	-4e-012
+200	1793	0.291000124945	-1e-012
+200	1809	0.294000247443	-4e-012
+200	1817	0.296999617467	-6e-012
+200	1833	0.299999712443	-7e-012
+200	1869	0.302999769915	-8e-012
+200	1885	0.305999709891	-5e-012
+200	1901	0.309000082356	-4e-012
+200	1917	0.311999692368	-7e-012
+200	1937	0.31499974984	-1.1e-011
+200	1953	0.317999657296	-7e-012
+200	1973	0.32100003474	-3e-012
+200	1989	0.324000002237	-5e-012
+200	2001	0.326999734742	-4e-012
+200	2021	0.329999664738	-2e-012
+200	2037	0.33299990973	1e-012
+200	2057	0.336000187233	5e-012
+200	2073	0.339000294728	9e-012
+200	2089	0.342000552219	7e-012
+200	2105	0.345000414684	1e-011
+200	2117	0.348000309624	9e-012
+200	2157	0.351000487106	7e-012
+200	2169	0.35400010955	7e-012
+200	2185	0.357000292043	1.1e-011
+200	2201	0.360000544521	1.5e-011
+200	2221	0.363000546916	1.4e-011
+200	2237	0.366000511818	1.6e-011
+200	2253	0.36900087177	1.6e-011
+200	2269	0.372000831642	1.4e-011
+200	2285	0.375000636516	1.4e-011
+200	2301	0.378000521404	1.6e-011
+200	2317	0.381000561292	1.2e-011
+200	2333	0.384000211172	1.1e-011
+200	2349	0.38700046365	1.3e-011
+200	2365	0.390000391059	1.6e-011
+200	2381	0.393000751011	1.6e-011
+200	2397	0.396000710883	1.6e-011
+200	2413	0.399000750771	1.5e-011
+201	1286	0.200999511926	-5
+201	1302	0.203999536876	-6
+201	1318	0.206999529298	-8
+201	1334	0.209999644186	-4
+201	1350	0.212999589146	-4
+201	1366	0.215999459098	-5
+201	1382	0.218999371533	-11
+201	1398	0.22199976389	-4
+201	1414	0.22499970885	-5
+201	1430	0.227999621285	-6
+201	1446	0.230999726225	-2
+201	1462	0.233999473703	-10
+201	1482	0.236999936113	0
+201	1494	0.239999486113	-5
+201	1510	0.242999398548	-10
+201	1530	0.245999635898	-5
+201	1542	0.248999473323	-7
+201	1582	0.251999433211	-10
+201	1598	0.254999708071	-7
+201	1614	0.257999705466	-2
+201	1626	0.260999265434	-10
+201	1646	0.263999540294	-8
+201	1662	0.266999805214	-5
+201	1678	0.269999830164	-4
+201	1694	0.272999662612	-5
+201	1710	0.275999687562	-2
+201	1722	0.278999472542	-7
+201	1742	0.281999769993	-2
+201	1754	0.284999704981	-5
+201	1774	0.287999954961	-4
+201	1794	0.291000124945	-2
+201	1810	0.294000247443	6
+201	1818	0.296999617467	-4
+201	1834	0.299999712443	-4
+201	1870	0.302999769915	-3
+201	1886	0.305999709891	-7
+201	1902	0.309000082356	3
+201	1918	0.311999692368	-4
+201	1938	0.31499974984	-4
+201	1954	0.317999657296	-8
+201	1974	0.32100003474	-1
+201	1990	0.324000002237	1
+201	2002	0.326999734742	-1
+201	2022	0.329999664738	-4
+201	2038	0.33299990973	-3
+201	2058	0.336000187233	1
+201	2074	0.339000294728	1
+201	2090	0.342000552219	5
+201	2106	0.345000414684	6
+201	2118	0.348000309624	2
+201	2158	0.351000487106	8
+201	2170	0.35400010955	1
+201	2186	0.357000292043	2
+201	2202	0.360000544521	7
+201	2222	0.363000546916	7
+201	2238	0.366000511818	3
+201	2254	0.36900087177	8
+201	2270	0.372000831642	9
+201	2286	0.375000636516	8
+201	2302	0.378000521404	7
+201	2318	0.381000561292	10
+201	2334	0.384000211172	2
+201	2350	0.38700046365	7
+201	2366	0.390000391059	3
+201	2382	0.393000751011	8
+201	2398	0.396000710883	7
+201	2414	0.399000750771	12
+0	2465	0.00050447	0
+1	2465	0.40025221	0
+2	2465	0.40037525	0
+3	2465	0.40012208	0
+4	2465	0.40012208	0
+5	2465	0.40012208	0
+
