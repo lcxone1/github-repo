@@ -1,14 +1,14 @@
 version 2
-run WithQ-0-20221219-21:17:21-8548
+run WithQ-0-20221220-15:02:38-25940
 attr configname WithQ
-attr datetime 20221219-21:17:21
+attr datetime 20221220-15:02:38
 attr experiment WithQ
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network test2
-attr processid 8548
+attr processid 25940
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -131,16 +131,16 @@ param **.aktor[2].sourceApp[0].idDataFrames "\"30\""
 scalar test2.gateway1.ethg$o[0].channel packetsDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.gateway1.ethg$o[0].channel utilization:last 0.0011822327309576
+scalar test2.gateway1.ethg$o[0].channel utilization:last nan
 attr source timeavg(channelBusy)
-scalar test2.gateway1.ethg$o[0].channel packets:count 3
+scalar test2.gateway1.ethg$o[0].channel packets:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
-scalar test2.gateway1.ethg$o[0].channel packetBytes:sum 224
+scalar test2.gateway1.ethg$o[0].channel packetBytes:sum 0
 attr interpolationmode none
 attr source packetBytes(messageSent)
 attr unit B
-scalar test2.gateway1.ethg$o[0].channel throughput:last 118268.21541711
+scalar test2.gateway1.ethg$o[0].channel throughput:last nan
 attr source sumPerDuration(packetBits(messageSent))
 attr unit bps
 scalar test2.gateway2.ethg$o[0].channel packetsDiscarded:count 0
@@ -191,16 +191,16 @@ attr unit bps
 scalar test2.switch1.ethg$o[1].channel packetsDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.switch1.ethg$o[1].channel utilization:last 0.0011811565975044
+scalar test2.switch1.ethg$o[1].channel utilization:last nan
 attr source timeavg(channelBusy)
-scalar test2.switch1.ethg$o[1].channel packets:count 3
+scalar test2.switch1.ethg$o[1].channel packets:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
-scalar test2.switch1.ethg$o[1].channel packetBytes:sum 224
+scalar test2.switch1.ethg$o[1].channel packetBytes:sum 0
 attr interpolationmode none
 attr source packetBytes(messageSent)
 attr unit B
-scalar test2.switch1.ethg$o[1].channel throughput:last 118160.52027554
+scalar test2.switch1.ethg$o[1].channel throughput:last nan
 attr source sumPerDuration(packetBits(messageSent))
 attr unit bps
 scalar test2.switch2.ethg$o[0].channel packetsDiscarded:count 0
@@ -221,16 +221,16 @@ attr unit bps
 scalar test2.switch2.ethg$o[1].channel packetsDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.switch2.ethg$o[1].channel utilization:last 0.0011790101972539
+scalar test2.switch2.ethg$o[1].channel utilization:last nan
 attr source timeavg(channelBusy)
-scalar test2.switch2.ethg$o[1].channel packets:count 3
+scalar test2.switch2.ethg$o[1].channel packets:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
-scalar test2.switch2.ethg$o[1].channel packetBytes:sum 224
+scalar test2.switch2.ethg$o[1].channel packetBytes:sum 0
 attr interpolationmode none
 attr source packetBytes(messageSent)
 attr unit B
-scalar test2.switch2.ethg$o[1].channel throughput:last 117945.7173265
+scalar test2.switch2.ethg$o[1].channel throughput:last nan
 attr source sumPerDuration(packetBits(messageSent))
 attr unit bps
 scalar test2.switch3.ethg$o[0].channel packetsDiscarded:count 0
@@ -251,16 +251,16 @@ attr unit bps
 scalar test2.switch3.ethg$o[1].channel packetsDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.switch3.ethg$o[1].channel utilization:last 0.0011800824213816
+scalar test2.switch3.ethg$o[1].channel utilization:last nan
 attr source timeavg(channelBusy)
-scalar test2.switch3.ethg$o[1].channel packets:count 3
+scalar test2.switch3.ethg$o[1].channel packets:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
-scalar test2.switch3.ethg$o[1].channel packetBytes:sum 224
+scalar test2.switch3.ethg$o[1].channel packetBytes:sum 0
 attr interpolationmode none
 attr source packetBytes(messageSent)
 attr unit B
-scalar test2.switch3.ethg$o[1].channel throughput:last 118053.02109012
+scalar test2.switch3.ethg$o[1].channel throughput:last nan
 attr source sumPerDuration(packetBits(messageSent))
 attr unit bps
 scalar test2.switch3.ethg$o[2].channel packetsDiscarded:count 0
@@ -279,18 +279,18 @@ scalar test2.switch3.ethg$o[2].channel throughput:last nan
 attr source sumPerDuration(packetBits(messageSent))
 attr unit bps
 statistic test2.canbus1.canBusLogic arbitrationLength:stats
-field count 13
-field mean 0.53846153846154
-field stddev 0.51887452166277
+field count 3
+field mean 0.66666666666667
+field stddev 0.57735026918963
 field min 0
 field max 1
-field sum 7
-field sqrsum 7
+field sum 2
+field sqrsum 2
 attr interpolationmode sample-hold
 attr source arbitrationLength
 attr title "Arbitration Length, stats"
 attr unit packets
-scalar test2.canbus1.canBusLogic utilization:last 3.3648317584121
+scalar test2.canbus1.canBusLogic utilization:last 56.218905472637
 attr source lowHighRatio(state)*100
 attr title "Utilization, last"
 attr unit %
@@ -330,33 +330,31 @@ attr title "received CAN IDs via RF, histogram"
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.canbus1.canBusLogic rxDF:count 7
+scalar test2.canbus1.canBusLogic rxDF:count 2
 attr interpolationmode none
 attr source rxDF
 attr title "data frames received, count"
 statistic test2.canbus1.canBusLogic rxCANIdDF:histogram
-field count 7
-field mean 2
-field stddev 1.1547005383793
+field count 2
+field mean 1.5
+field stddev 0.70710678118655
 field min 1
-field max 4
-field sum 14
-field sqrsum 36
+field max 2
+field sum 3
+field sqrsum 5
 attr interpolationmode none
 attr source ID(rxDF)
 attr title "received CAN IDs via DF, histogram"
 bin	-inf	0
 bin	0	0
-bin	1	3
-bin	2	2
-bin	3	1
-bin	4	1
-bin	5	0
-scalar test2.canbus1.canBusLogic framesPerSec:last 349.98250087496
+bin	1	1
+bin	2	1
+bin	3	0
+scalar test2.canbus1.canBusLogic framesPerSec:last 9950.2487562189
 attr source sumPerDuration(constant1(rxPk))
 attr title "Frames/sec, last"
 attr unit fps
-scalar test2.canbus1.canBusLogic bitsPerSec:last 38848.05759712
+scalar test2.canbus1.canBusLogic bitsPerSec:last 1104477.6119403
 attr source sumPerDuration(packetBits(rxPk))
 attr title "Bits/sec, last"
 attr unit bps
@@ -480,7 +478,7 @@ attr title "sent errors, count"
 scalar test2.sensor[0].canNodePort.canPortOutput txRF:count 0
 attr source txRF
 attr title "sent remote frames, count"
-scalar test2.sensor[0].canNodePort.canPortOutput txDF:count 3
+scalar test2.sensor[0].canNodePort.canPortOutput txDF:count 1
 attr source txDF
 attr title "sent data frames, count"
 scalar test2.sensor[0].canNodePort.canPortOutput rxEF:count 0
@@ -526,50 +524,50 @@ scalar test2.sensor[0].bufferIn[0] txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
-scalar test2.sensor[0].bufferOut rxPk:count 6
+scalar test2.sensor[0].bufferOut rxPk:count 2
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, count"
-scalar test2.sensor[0].bufferOut rxPk:sum(packetBytes) 84
+scalar test2.sensor[0].bufferOut rxPk:sum(packetBytes) 28
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, sum(packetBytes)"
 statistic test2.sensor[0].bufferOut size:stats
-field count 5
-field mean 8.4
-field stddev 7.6681158050723
+field count 2
+field mean 7
+field stddev 9.8994949366117
 field min 0
 field max 14
-field sum 42
-field sqrsum 588
+field sum 14
+field sqrsum 196
 attr interpolationmode sample-hold
 attr source size
 attr title "Queue Size, stats"
 attr unit B
 statistic test2.sensor[0].bufferOut length:stats
-field count 5
-field mean 0.6
-field stddev 0.54772255750517
+field count 2
+field mean 0.5
+field stddev 0.70710678118655
 field min 0
 field max 1
-field sum 3
-field sqrsum 3
+field sum 1
+field sqrsum 1
 attr interpolationmode sample-hold
 attr source length
 attr title "Queue Length, stats"
 attr unit packets
-scalar test2.sensor[0].bufferOut txPk:count 3
+scalar test2.sensor[0].bufferOut txPk:count 1
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, count"
-scalar test2.sensor[0].bufferOut txPk:sum(packetBytes) 42
+scalar test2.sensor[0].bufferOut txPk:sum(packetBytes) 14
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
 scalar test2.sensor[0].sourceApp[0] txRF:count 0
 attr source txRF
 attr title "source app remote frame, count"
-scalar test2.sensor[0].sourceApp[0] txDF:count 3
+scalar test2.sensor[0].sourceApp[0] txDF:count 1
 attr source txDF
 attr title "source app data frame, count"
 statistic test2.sensor[0].sinkApp[0] rxRFPayloadLatency:stats
@@ -687,7 +685,7 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic test2.sensor[0].canClock clockDrift:stats
-field count 4
+field count 2
 field mean 0
 field stddev 0
 field min 0
@@ -699,7 +697,7 @@ attr source clockDrift
 attr title "clockDrift, stats"
 attr unit s
 statistic test2.sensor[0].canClock clockDrift:histogram
-field count 4
+field count 2
 field mean 0
 field stddev 0
 field min 0
@@ -736,7 +734,7 @@ bin	-0.08	0
 bin	-0.06	0
 bin	-0.04	0
 bin	-0.02	0
-bin	0	4
+bin	0	2
 bin	0.02	0
 bin	0.04	0
 bin	0.06	0
@@ -882,7 +880,7 @@ attr title "sent errors, count"
 scalar test2.sensor[1].canNodePort.canPortOutput txRF:count 0
 attr source txRF
 attr title "sent remote frames, count"
-scalar test2.sensor[1].canNodePort.canPortOutput txDF:count 2
+scalar test2.sensor[1].canNodePort.canPortOutput txDF:count 1
 attr source txDF
 attr title "sent data frames, count"
 scalar test2.sensor[1].canNodePort.canPortOutput rxEF:count 0
@@ -928,50 +926,50 @@ scalar test2.sensor[1].bufferIn[0] txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
-scalar test2.sensor[1].bufferOut rxPk:count 4
+scalar test2.sensor[1].bufferOut rxPk:count 2
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, count"
-scalar test2.sensor[1].bufferOut rxPk:sum(packetBytes) 56
+scalar test2.sensor[1].bufferOut rxPk:sum(packetBytes) 28
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, sum(packetBytes)"
 statistic test2.sensor[1].bufferOut size:stats
-field count 4
-field mean 7
-field stddev 8.0829037686548
-field min 0
+field count 1
+field mean 14
+field stddev nan
+field min 14
 field max 14
-field sum 28
-field sqrsum 392
+field sum 14
+field sqrsum 196
 attr interpolationmode sample-hold
 attr source size
 attr title "Queue Size, stats"
 attr unit B
 statistic test2.sensor[1].bufferOut length:stats
-field count 4
-field mean 0.5
-field stddev 0.57735026918963
-field min 0
+field count 1
+field mean 1
+field stddev nan
+field min 1
 field max 1
-field sum 2
-field sqrsum 2
+field sum 1
+field sqrsum 1
 attr interpolationmode sample-hold
 attr source length
 attr title "Queue Length, stats"
 attr unit packets
-scalar test2.sensor[1].bufferOut txPk:count 2
+scalar test2.sensor[1].bufferOut txPk:count 1
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, count"
-scalar test2.sensor[1].bufferOut txPk:sum(packetBytes) 28
+scalar test2.sensor[1].bufferOut txPk:sum(packetBytes) 14
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
 scalar test2.sensor[1].sourceApp[0] txRF:count 0
 attr source txRF
 attr title "source app remote frame, count"
-scalar test2.sensor[1].sourceApp[0] txDF:count 2
+scalar test2.sensor[1].sourceApp[0] txDF:count 1
 attr source txDF
 attr title "source app data frame, count"
 statistic test2.sensor[1].sinkApp[0] rxRFPayloadLatency:stats
@@ -1089,7 +1087,7 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic test2.sensor[1].canClock clockDrift:stats
-field count 3
+field count 2
 field mean 0
 field stddev 0
 field min 0
@@ -1101,7 +1099,7 @@ attr source clockDrift
 attr title "clockDrift, stats"
 attr unit s
 statistic test2.sensor[1].canClock clockDrift:histogram
-field count 3
+field count 2
 field mean 0
 field stddev 0
 field min 0
@@ -1138,7 +1136,7 @@ bin	-0.08	0
 bin	-0.06	0
 bin	-0.04	0
 bin	-0.02	0
-bin	0	3
+bin	0	2
 bin	0.02	0
 bin	0.04	0
 bin	0.06	0
@@ -1284,7 +1282,7 @@ attr title "sent errors, count"
 scalar test2.sensor[2].canNodePort.canPortOutput txRF:count 0
 attr source txRF
 attr title "sent remote frames, count"
-scalar test2.sensor[2].canNodePort.canPortOutput txDF:count 1
+scalar test2.sensor[2].canNodePort.canPortOutput txDF:count 0
 attr source txDF
 attr title "sent data frames, count"
 scalar test2.sensor[2].canNodePort.canPortOutput rxEF:count 0
@@ -1330,50 +1328,50 @@ scalar test2.sensor[2].bufferIn[0] txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
-scalar test2.sensor[2].bufferOut rxPk:count 2
+scalar test2.sensor[2].bufferOut rxPk:count 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, count"
-scalar test2.sensor[2].bufferOut rxPk:sum(packetBytes) 28
+scalar test2.sensor[2].bufferOut rxPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, sum(packetBytes)"
 statistic test2.sensor[2].bufferOut size:stats
-field count 2
-field mean 7
-field stddev 9.8994949366117
-field min 0
-field max 14
-field sum 14
-field sqrsum 196
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode sample-hold
 attr source size
 attr title "Queue Size, stats"
 attr unit B
 statistic test2.sensor[2].bufferOut length:stats
-field count 2
-field mean 0.5
-field stddev 0.70710678118655
-field min 0
-field max 1
-field sum 1
-field sqrsum 1
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode sample-hold
 attr source length
 attr title "Queue Length, stats"
 attr unit packets
-scalar test2.sensor[2].bufferOut txPk:count 1
+scalar test2.sensor[2].bufferOut txPk:count 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, count"
-scalar test2.sensor[2].bufferOut txPk:sum(packetBytes) 14
+scalar test2.sensor[2].bufferOut txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
 scalar test2.sensor[2].sourceApp[0] txRF:count 0
 attr source txRF
 attr title "source app remote frame, count"
-scalar test2.sensor[2].sourceApp[0] txDF:count 1
+scalar test2.sensor[2].sourceApp[0] txDF:count 0
 attr source txDF
 attr title "source app data frame, count"
 statistic test2.sensor[2].sinkApp[0] rxRFPayloadLatency:stats
@@ -1491,9 +1489,9 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic test2.sensor[2].canClock clockDrift:stats
-field count 2
+field count 1
 field mean 0
-field stddev 0
+field stddev nan
 field min 0
 field max 0
 field sum 0
@@ -1503,9 +1501,9 @@ attr source clockDrift
 attr title "clockDrift, stats"
 attr unit s
 statistic test2.sensor[2].canClock clockDrift:histogram
-field count 2
+field count 1
 field mean 0
-field stddev 0
+field stddev nan
 field min 0
 field max 0
 field sum 0
@@ -1540,7 +1538,7 @@ bin	-0.08	0
 bin	-0.06	0
 bin	-0.04	0
 bin	-0.02	0
-bin	0	2
+bin	0	1
 bin	0.02	0
 bin	0.04	0
 bin	0.06	0
@@ -1686,7 +1684,7 @@ attr title "sent errors, count"
 scalar test2.sensor[3].canNodePort.canPortOutput txRF:count 0
 attr source txRF
 attr title "sent remote frames, count"
-scalar test2.sensor[3].canNodePort.canPortOutput txDF:count 1
+scalar test2.sensor[3].canNodePort.canPortOutput txDF:count 0
 attr source txDF
 attr title "sent data frames, count"
 scalar test2.sensor[3].canNodePort.canPortOutput rxEF:count 0
@@ -1732,50 +1730,50 @@ scalar test2.sensor[3].bufferIn[0] txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
-scalar test2.sensor[3].bufferOut rxPk:count 2
+scalar test2.sensor[3].bufferOut rxPk:count 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, count"
-scalar test2.sensor[3].bufferOut rxPk:sum(packetBytes) 28
+scalar test2.sensor[3].bufferOut rxPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, sum(packetBytes)"
 statistic test2.sensor[3].bufferOut size:stats
-field count 2
-field mean 7
-field stddev 9.8994949366117
-field min 0
-field max 14
-field sum 14
-field sqrsum 196
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode sample-hold
 attr source size
 attr title "Queue Size, stats"
 attr unit B
 statistic test2.sensor[3].bufferOut length:stats
-field count 2
-field mean 0.5
-field stddev 0.70710678118655
-field min 0
-field max 1
-field sum 1
-field sqrsum 1
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode sample-hold
 attr source length
 attr title "Queue Length, stats"
 attr unit packets
-scalar test2.sensor[3].bufferOut txPk:count 1
+scalar test2.sensor[3].bufferOut txPk:count 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, count"
-scalar test2.sensor[3].bufferOut txPk:sum(packetBytes) 14
+scalar test2.sensor[3].bufferOut txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
 scalar test2.sensor[3].sourceApp[0] txRF:count 0
 attr source txRF
 attr title "source app remote frame, count"
-scalar test2.sensor[3].sourceApp[0] txDF:count 1
+scalar test2.sensor[3].sourceApp[0] txDF:count 0
 attr source txDF
 attr title "source app data frame, count"
 statistic test2.sensor[3].sinkApp[0] rxRFPayloadLatency:stats
@@ -1893,9 +1891,9 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic test2.sensor[3].canClock clockDrift:stats
-field count 2
+field count 1
 field mean 0
-field stddev 0
+field stddev nan
 field min 0
 field max 0
 field sum 0
@@ -1905,9 +1903,9 @@ attr source clockDrift
 attr title "clockDrift, stats"
 attr unit s
 statistic test2.sensor[3].canClock clockDrift:histogram
-field count 2
+field count 1
 field mean 0
-field stddev 0
+field stddev nan
 field min 0
 field max 0
 field sum 0
@@ -1942,7 +1940,7 @@ bin	-0.08	0
 bin	-0.06	0
 bin	-0.04	0
 bin	-0.02	0
-bin	0	2
+bin	0	1
 bin	0.02	0
 bin	0.04	0
 bin	0.06	0
@@ -1969,18 +1967,18 @@ bin	0.46	0
 bin	0.48	0
 bin	0.5	0
 statistic test2.canbus2.canBusLogic arbitrationLength:stats
-field count 8
-field mean 0.75
-field stddev 0.70710678118655
-field min 0
-field max 2
-field sum 6
-field sqrsum 8
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode sample-hold
 attr source arbitrationLength
 attr title "Arbitration Length, stats"
 attr unit packets
-scalar test2.canbus2.canBusLogic utilization:last 3.0383360522023
+scalar test2.canbus2.canBusLogic utilization:last nan
 attr source lowHighRatio(state)*100
 attr title "Utilization, last"
 attr unit %
@@ -2020,32 +2018,29 @@ attr title "received CAN IDs via RF, histogram"
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.canbus2.canBusLogic rxDF:count 4
+scalar test2.canbus2.canBusLogic rxDF:count 0
 attr interpolationmode none
 attr source rxDF
 attr title "data frames received, count"
 statistic test2.canbus2.canBusLogic rxCANIdDF:histogram
-field count 4
-field mean 1.75
-field stddev 0.95742710775634
-field min 1
-field max 3
-field sum 7
-field sqrsum 15
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source ID(rxDF)
 attr title "received CAN IDs via DF, histogram"
 bin	-inf	0
 bin	0	0
-bin	1	2
-bin	2	1
-bin	3	1
-bin	4	0
-scalar test2.canbus2.canBusLogic framesPerSec:last 262.46305832454
+bin	1	0
+scalar test2.canbus2.canBusLogic framesPerSec:last nan
 attr source sumPerDuration(constant1(rxPk))
 attr title "Frames/sec, last"
 attr unit fps
-scalar test2.canbus2.canBusLogic bitsPerSec:last 29133.399474024
+scalar test2.canbus2.canBusLogic bitsPerSec:last nan
 attr source sumPerDuration(packetBits(rxPk))
 attr title "Bits/sec, last"
 attr unit bps
@@ -2077,99 +2072,32 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic test2.aktor[0].canNodePort.canPortInput rxDFPayloadLatency:stats
-field count 3
-field mean 0.00532328
-field stddev 5.0661338316392e-005
-field min 0.0052648
-field max 0.0053538
-field sum 0.01596984
-field sqrsum 8.50170630176e-005
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, stats"
 attr unit s
 statistic test2.aktor[0].canNodePort.canPortInput rxDFPayloadLatency:histogram
-field count 3
-field mean 0.00532328
-field stddev 5.0661338316392e-005
-field min 0.0052648
-field max 0.0053538
-field sum 0.01596984
-field sqrsum 8.50170630176e-005
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, histogram"
 attr unit s
 bin	-inf	0
-bin	0.005242	0
-bin	0.005244	0
-bin	0.005246	0
-bin	0.005248	0
-bin	0.00525	0
-bin	0.005252	0
-bin	0.005254	0
-bin	0.005256	0
-bin	0.005258	0
-bin	0.00526	0
-bin	0.005262	0
-bin	0.005264	1
-bin	0.005266	0
-bin	0.005268	0
-bin	0.00527	0
-bin	0.005272	0
-bin	0.005274	0
-bin	0.005276	0
-bin	0.005278	0
-bin	0.00528	0
-bin	0.005282	0
-bin	0.005284	0
-bin	0.005286	0
-bin	0.005288	0
-bin	0.00529	0
-bin	0.005292	0
-bin	0.005294	0
-bin	0.005296	0
-bin	0.005298	0
-bin	0.0053	0
-bin	0.005302	0
-bin	0.005304	0
-bin	0.005306	0
-bin	0.005308	0
-bin	0.00531	0
-bin	0.005312	0
-bin	0.005314	0
-bin	0.005316	0
-bin	0.005318	0
-bin	0.00532	0
-bin	0.005322	0
-bin	0.005324	0
-bin	0.005326	0
-bin	0.005328	0
-bin	0.00533	0
-bin	0.005332	0
-bin	0.005334	0
-bin	0.005336	0
-bin	0.005338	0
-bin	0.00534	0
-bin	0.005342	0
-bin	0.005344	0
-bin	0.005346	0
-bin	0.005348	0
-bin	0.00535	1
-bin	0.005352	1
-bin	0.005354	0
-bin	0.005356	0
-bin	0.005358	0
-bin	0.00536	0
-bin	0.005362	0
-bin	0.005364	0
-bin	0.005366	0
-bin	0.005368	0
-bin	0.00537	0
-bin	0.005372	0
-bin	0.005374	0
-bin	0.005376	0
-bin	0.005378	0
+bin	0	0
+bin	1	0
 scalar test2.aktor[0].canNodePort.canPortInput rxRF:count 0
 attr source rxRF
 attr title "complete remote frames received, count"
@@ -2200,119 +2128,36 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.aktor[0].canNodePort.canPortInput rxDF:count 3
+scalar test2.aktor[0].canNodePort.canPortInput rxDF:count 0
 attr source rxDF
 attr title "complete data frames received, count"
 statistic test2.aktor[0].canNodePort.canPortInput rxDFLatency:stats
-field count 3
-field mean 0.000149
-field stddev 6.4085879880048e-005
-field min 0.000112
-field max 0.000223
-field sum 0.000447
-field sqrsum 7.4817e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, stats"
 attr unit s
 statistic test2.aktor[0].canNodePort.canPortInput rxDFLatency:histogram
-field count 3
-field mean 0.000149
-field stddev 6.4085879880048e-005
-field min 0.000112
-field max 0.000223
-field sum 0.000447
-field sqrsum 7.4817e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, histogram"
 attr unit s
 bin	-inf	0
-bin	8.4e-005	0
-bin	8.6e-005	0
-bin	8.8e-005	0
-bin	9e-005	0
-bin	9.2e-005	0
-bin	9.4e-005	0
-bin	9.6e-005	0
-bin	9.8e-005	0
-bin	0.0001	0
-bin	0.000102	0
-bin	0.000104	0
-bin	0.000106	0
-bin	0.000108	0
-bin	0.00011	2
-bin	0.000112	0
-bin	0.000114	0
-bin	0.000116	0
-bin	0.000118	0
-bin	0.00012	0
-bin	0.000122	0
-bin	0.000124	0
-bin	0.000126	0
-bin	0.000128	0
-bin	0.00013	0
-bin	0.000132	0
-bin	0.000134	0
-bin	0.000136	0
-bin	0.000138	0
-bin	0.00014	0
-bin	0.000142	0
-bin	0.000144	0
-bin	0.000146	0
-bin	0.000148	0
-bin	0.00015	0
-bin	0.000152	0
-bin	0.000154	0
-bin	0.000156	0
-bin	0.000158	0
-bin	0.00016	0
-bin	0.000162	0
-bin	0.000164	0
-bin	0.000166	0
-bin	0.000168	0
-bin	0.00017	0
-bin	0.000172	0
-bin	0.000174	0
-bin	0.000176	0
-bin	0.000178	0
-bin	0.00018	0
-bin	0.000182	0
-bin	0.000184	0
-bin	0.000186	0
-bin	0.000188	0
-bin	0.00019	0
-bin	0.000192	0
-bin	0.000194	0
-bin	0.000196	0
-bin	0.000198	0
-bin	0.0002	0
-bin	0.000202	0
-bin	0.000204	0
-bin	0.000206	0
-bin	0.000208	0
-bin	0.00021	0
-bin	0.000212	0
-bin	0.000214	0
-bin	0.000216	0
-bin	0.000218	0
-bin	0.00022	0
-bin	0.000222	1
-bin	0.000224	0
-bin	0.000226	0
-bin	0.000228	0
-bin	0.00023	0
-bin	0.000232	0
-bin	0.000234	0
-bin	0.000236	0
-bin	0.000238	0
-bin	0.00024	0
-bin	0.000242	0
-bin	0.000244	0
-bin	0.000246	0
-bin	0.000248	0
-bin	0.00025	0
-bin	0.000252	0
+bin	0	0
+bin	1	0
 scalar test2.aktor[0].canNodePort.canPortOutput txEF:count 0
 attr source txEF
 attr title "sent errors, count"
@@ -2325,11 +2170,11 @@ attr title "sent data frames, count"
 scalar test2.aktor[0].canNodePort.canPortOutput rxEF:count 0
 attr source rxEF
 attr title "receive errors, count"
-scalar test2.aktor[0].bufferIn[0] rxPk:count 3
+scalar test2.aktor[0].bufferIn[0] rxPk:count 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, count"
-scalar test2.aktor[0].bufferIn[0] rxPk:sum(packetBytes) 42
+scalar test2.aktor[0].bufferIn[0] rxPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, sum(packetBytes)"
@@ -2357,11 +2202,11 @@ attr interpolationmode sample-hold
 attr source length
 attr title "Queue Length, stats"
 attr unit packets
-scalar test2.aktor[0].bufferIn[0] txPk:count 3
+scalar test2.aktor[0].bufferIn[0] txPk:count 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, count"
-scalar test2.aktor[0].bufferIn[0] txPk:sum(packetBytes) 42
+scalar test2.aktor[0].bufferIn[0] txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
@@ -2439,99 +2284,32 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic test2.aktor[0].sinkApp[0] rxDFPayloadLatency:stats
-field count 3
-field mean 0.00532328
-field stddev 5.0661338316392e-005
-field min 0.0052648
-field max 0.0053538
-field sum 0.01596984
-field sqrsum 8.50170630176e-005
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, stats"
 attr unit s
 statistic test2.aktor[0].sinkApp[0] rxDFPayloadLatency:histogram
-field count 3
-field mean 0.00532328
-field stddev 5.0661338316392e-005
-field min 0.0052648
-field max 0.0053538
-field sum 0.01596984
-field sqrsum 8.50170630176e-005
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, histogram"
 attr unit s
 bin	-inf	0
-bin	0.005242	0
-bin	0.005244	0
-bin	0.005246	0
-bin	0.005248	0
-bin	0.00525	0
-bin	0.005252	0
-bin	0.005254	0
-bin	0.005256	0
-bin	0.005258	0
-bin	0.00526	0
-bin	0.005262	0
-bin	0.005264	1
-bin	0.005266	0
-bin	0.005268	0
-bin	0.00527	0
-bin	0.005272	0
-bin	0.005274	0
-bin	0.005276	0
-bin	0.005278	0
-bin	0.00528	0
-bin	0.005282	0
-bin	0.005284	0
-bin	0.005286	0
-bin	0.005288	0
-bin	0.00529	0
-bin	0.005292	0
-bin	0.005294	0
-bin	0.005296	0
-bin	0.005298	0
-bin	0.0053	0
-bin	0.005302	0
-bin	0.005304	0
-bin	0.005306	0
-bin	0.005308	0
-bin	0.00531	0
-bin	0.005312	0
-bin	0.005314	0
-bin	0.005316	0
-bin	0.005318	0
-bin	0.00532	0
-bin	0.005322	0
-bin	0.005324	0
-bin	0.005326	0
-bin	0.005328	0
-bin	0.00533	0
-bin	0.005332	0
-bin	0.005334	0
-bin	0.005336	0
-bin	0.005338	0
-bin	0.00534	0
-bin	0.005342	0
-bin	0.005344	0
-bin	0.005346	0
-bin	0.005348	0
-bin	0.00535	1
-bin	0.005352	1
-bin	0.005354	0
-bin	0.005356	0
-bin	0.005358	0
-bin	0.00536	0
-bin	0.005362	0
-bin	0.005364	0
-bin	0.005366	0
-bin	0.005368	0
-bin	0.00537	0
-bin	0.005372	0
-bin	0.005374	0
-bin	0.005376	0
-bin	0.005378	0
+bin	0	0
+bin	1	0
 scalar test2.aktor[0].sinkApp[0] rxRF:count 0
 attr source rxRF
 attr title "sink app remote frame, count"
@@ -2562,119 +2340,36 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.aktor[0].sinkApp[0] rxDF:count 3
+scalar test2.aktor[0].sinkApp[0] rxDF:count 0
 attr source rxDF
 attr title "sink app data frame, count"
 statistic test2.aktor[0].sinkApp[0] rxDFLatency:stats
-field count 3
-field mean 0.000149
-field stddev 6.4085879880048e-005
-field min 0.000112
-field max 0.000223
-field sum 0.000447
-field sqrsum 7.4817e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, stats"
 attr unit s
 statistic test2.aktor[0].sinkApp[0] rxDFLatency:histogram
-field count 3
-field mean 0.000149
-field stddev 6.4085879880048e-005
-field min 0.000112
-field max 0.000223
-field sum 0.000447
-field sqrsum 7.4817e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, histogram"
 attr unit s
 bin	-inf	0
-bin	8.4e-005	0
-bin	8.6e-005	0
-bin	8.8e-005	0
-bin	9e-005	0
-bin	9.2e-005	0
-bin	9.4e-005	0
-bin	9.6e-005	0
-bin	9.8e-005	0
-bin	0.0001	0
-bin	0.000102	0
-bin	0.000104	0
-bin	0.000106	0
-bin	0.000108	0
-bin	0.00011	2
-bin	0.000112	0
-bin	0.000114	0
-bin	0.000116	0
-bin	0.000118	0
-bin	0.00012	0
-bin	0.000122	0
-bin	0.000124	0
-bin	0.000126	0
-bin	0.000128	0
-bin	0.00013	0
-bin	0.000132	0
-bin	0.000134	0
-bin	0.000136	0
-bin	0.000138	0
-bin	0.00014	0
-bin	0.000142	0
-bin	0.000144	0
-bin	0.000146	0
-bin	0.000148	0
-bin	0.00015	0
-bin	0.000152	0
-bin	0.000154	0
-bin	0.000156	0
-bin	0.000158	0
-bin	0.00016	0
-bin	0.000162	0
-bin	0.000164	0
-bin	0.000166	0
-bin	0.000168	0
-bin	0.00017	0
-bin	0.000172	0
-bin	0.000174	0
-bin	0.000176	0
-bin	0.000178	0
-bin	0.00018	0
-bin	0.000182	0
-bin	0.000184	0
-bin	0.000186	0
-bin	0.000188	0
-bin	0.00019	0
-bin	0.000192	0
-bin	0.000194	0
-bin	0.000196	0
-bin	0.000198	0
-bin	0.0002	0
-bin	0.000202	0
-bin	0.000204	0
-bin	0.000206	0
-bin	0.000208	0
-bin	0.00021	0
-bin	0.000212	0
-bin	0.000214	0
-bin	0.000216	0
-bin	0.000218	0
-bin	0.00022	0
-bin	0.000222	1
-bin	0.000224	0
-bin	0.000226	0
-bin	0.000228	0
-bin	0.00023	0
-bin	0.000232	0
-bin	0.000234	0
-bin	0.000236	0
-bin	0.000238	0
-bin	0.00024	0
-bin	0.000242	0
-bin	0.000244	0
-bin	0.000246	0
-bin	0.000248	0
-bin	0.00025	0
-bin	0.000252	0
+bin	0	0
+bin	1	0
 statistic test2.aktor[0].canClock clockDrift:stats
 field count 1
 field mean 0
@@ -2779,82 +2474,32 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic test2.aktor[1].canNodePort.canPortInput rxDFPayloadLatency:stats
-field count 1
-field mean 0.0052648
+field count 0
+field mean nan
 field stddev nan
-field min 0.0052648
-field max 0.0052648
-field sum 0.0052648
-field sqrsum 2.771811904e-005
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, stats"
 attr unit s
 statistic test2.aktor[1].canNodePort.canPortInput rxDFPayloadLatency:histogram
-field count 1
-field mean 0.0052648
+field count 0
+field mean nan
 field stddev nan
-field min 0.0052648
-field max 0.0052648
-field sum 0.0052648
-field sqrsum 2.771811904e-005
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, histogram"
 attr unit s
 bin	-inf	0
-bin	0	1
-bin	0.01	0
-bin	0.02	0
-bin	0.03	0
-bin	0.04	0
-bin	0.05	0
-bin	0.06	0
-bin	0.07	0
-bin	0.08	0
-bin	0.09	0
-bin	0.1	0
-bin	0.11	0
-bin	0.12	0
-bin	0.13	0
-bin	0.14	0
-bin	0.15	0
-bin	0.16	0
-bin	0.17	0
-bin	0.18	0
-bin	0.19	0
-bin	0.2	0
-bin	0.21	0
-bin	0.22	0
-bin	0.23	0
-bin	0.24	0
-bin	0.25	0
-bin	0.26	0
-bin	0.27	0
-bin	0.28	0
-bin	0.29	0
-bin	0.3	0
-bin	0.31	0
-bin	0.32	0
-bin	0.33	0
-bin	0.34	0
-bin	0.35	0
-bin	0.36	0
-bin	0.37	0
-bin	0.38	0
-bin	0.39	0
-bin	0.4	0
-bin	0.41	0
-bin	0.42	0
-bin	0.43	0
-bin	0.44	0
-bin	0.45	0
-bin	0.46	0
-bin	0.47	0
-bin	0.48	0
-bin	0.49	0
-bin	0.5	0
-bin	0.51	0
+bin	0	0
+bin	1	0
 scalar test2.aktor[1].canNodePort.canPortInput rxRF:count 0
 attr source rxRF
 attr title "complete remote frames received, count"
@@ -2885,86 +2530,36 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.aktor[1].canNodePort.canPortInput rxDF:count 1
+scalar test2.aktor[1].canNodePort.canPortInput rxDF:count 0
 attr source rxDF
 attr title "complete data frames received, count"
 statistic test2.aktor[1].canNodePort.canPortInput rxDFLatency:stats
-field count 1
-field mean 0.000223
+field count 0
+field mean nan
 field stddev nan
-field min 0.000223
-field max 0.000223
-field sum 0.000223
-field sqrsum 4.9729e-008
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, stats"
 attr unit s
 statistic test2.aktor[1].canNodePort.canPortInput rxDFLatency:histogram
-field count 1
-field mean 0.000223
+field count 0
+field mean nan
 field stddev nan
-field min 0.000223
-field max 0.000223
-field sum 0.000223
-field sqrsum 4.9729e-008
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, histogram"
 attr unit s
 bin	-inf	0
-bin	0	1
-bin	0.01	0
-bin	0.02	0
-bin	0.03	0
-bin	0.04	0
-bin	0.05	0
-bin	0.06	0
-bin	0.07	0
-bin	0.08	0
-bin	0.09	0
-bin	0.1	0
-bin	0.11	0
-bin	0.12	0
-bin	0.13	0
-bin	0.14	0
-bin	0.15	0
-bin	0.16	0
-bin	0.17	0
-bin	0.18	0
-bin	0.19	0
-bin	0.2	0
-bin	0.21	0
-bin	0.22	0
-bin	0.23	0
-bin	0.24	0
-bin	0.25	0
-bin	0.26	0
-bin	0.27	0
-bin	0.28	0
-bin	0.29	0
-bin	0.3	0
-bin	0.31	0
-bin	0.32	0
-bin	0.33	0
-bin	0.34	0
-bin	0.35	0
-bin	0.36	0
-bin	0.37	0
-bin	0.38	0
-bin	0.39	0
-bin	0.4	0
-bin	0.41	0
-bin	0.42	0
-bin	0.43	0
-bin	0.44	0
-bin	0.45	0
-bin	0.46	0
-bin	0.47	0
-bin	0.48	0
-bin	0.49	0
-bin	0.5	0
-bin	0.51	0
+bin	0	0
+bin	1	0
 scalar test2.aktor[1].canNodePort.canPortOutput txEF:count 0
 attr source txEF
 attr title "sent errors, count"
@@ -2977,11 +2572,11 @@ attr title "sent data frames, count"
 scalar test2.aktor[1].canNodePort.canPortOutput rxEF:count 0
 attr source rxEF
 attr title "receive errors, count"
-scalar test2.aktor[1].bufferIn[0] rxPk:count 1
+scalar test2.aktor[1].bufferIn[0] rxPk:count 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, count"
-scalar test2.aktor[1].bufferIn[0] rxPk:sum(packetBytes) 14
+scalar test2.aktor[1].bufferIn[0] rxPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, sum(packetBytes)"
@@ -3009,11 +2604,11 @@ attr interpolationmode sample-hold
 attr source length
 attr title "Queue Length, stats"
 attr unit packets
-scalar test2.aktor[1].bufferIn[0] txPk:count 1
+scalar test2.aktor[1].bufferIn[0] txPk:count 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, count"
-scalar test2.aktor[1].bufferIn[0] txPk:sum(packetBytes) 14
+scalar test2.aktor[1].bufferIn[0] txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
@@ -3091,82 +2686,32 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic test2.aktor[1].sinkApp[0] rxDFPayloadLatency:stats
-field count 1
-field mean 0.0052648
+field count 0
+field mean nan
 field stddev nan
-field min 0.0052648
-field max 0.0052648
-field sum 0.0052648
-field sqrsum 2.771811904e-005
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, stats"
 attr unit s
 statistic test2.aktor[1].sinkApp[0] rxDFPayloadLatency:histogram
-field count 1
-field mean 0.0052648
+field count 0
+field mean nan
 field stddev nan
-field min 0.0052648
-field max 0.0052648
-field sum 0.0052648
-field sqrsum 2.771811904e-005
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, histogram"
 attr unit s
 bin	-inf	0
-bin	0	1
-bin	0.01	0
-bin	0.02	0
-bin	0.03	0
-bin	0.04	0
-bin	0.05	0
-bin	0.06	0
-bin	0.07	0
-bin	0.08	0
-bin	0.09	0
-bin	0.1	0
-bin	0.11	0
-bin	0.12	0
-bin	0.13	0
-bin	0.14	0
-bin	0.15	0
-bin	0.16	0
-bin	0.17	0
-bin	0.18	0
-bin	0.19	0
-bin	0.2	0
-bin	0.21	0
-bin	0.22	0
-bin	0.23	0
-bin	0.24	0
-bin	0.25	0
-bin	0.26	0
-bin	0.27	0
-bin	0.28	0
-bin	0.29	0
-bin	0.3	0
-bin	0.31	0
-bin	0.32	0
-bin	0.33	0
-bin	0.34	0
-bin	0.35	0
-bin	0.36	0
-bin	0.37	0
-bin	0.38	0
-bin	0.39	0
-bin	0.4	0
-bin	0.41	0
-bin	0.42	0
-bin	0.43	0
-bin	0.44	0
-bin	0.45	0
-bin	0.46	0
-bin	0.47	0
-bin	0.48	0
-bin	0.49	0
-bin	0.5	0
-bin	0.51	0
+bin	0	0
+bin	1	0
 scalar test2.aktor[1].sinkApp[0] rxRF:count 0
 attr source rxRF
 attr title "sink app remote frame, count"
@@ -3197,86 +2742,36 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.aktor[1].sinkApp[0] rxDF:count 1
+scalar test2.aktor[1].sinkApp[0] rxDF:count 0
 attr source rxDF
 attr title "sink app data frame, count"
 statistic test2.aktor[1].sinkApp[0] rxDFLatency:stats
-field count 1
-field mean 0.000223
+field count 0
+field mean nan
 field stddev nan
-field min 0.000223
-field max 0.000223
-field sum 0.000223
-field sqrsum 4.9729e-008
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, stats"
 attr unit s
 statistic test2.aktor[1].sinkApp[0] rxDFLatency:histogram
-field count 1
-field mean 0.000223
+field count 0
+field mean nan
 field stddev nan
-field min 0.000223
-field max 0.000223
-field sum 0.000223
-field sqrsum 4.9729e-008
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, histogram"
 attr unit s
 bin	-inf	0
-bin	0	1
-bin	0.01	0
-bin	0.02	0
-bin	0.03	0
-bin	0.04	0
-bin	0.05	0
-bin	0.06	0
-bin	0.07	0
-bin	0.08	0
-bin	0.09	0
-bin	0.1	0
-bin	0.11	0
-bin	0.12	0
-bin	0.13	0
-bin	0.14	0
-bin	0.15	0
-bin	0.16	0
-bin	0.17	0
-bin	0.18	0
-bin	0.19	0
-bin	0.2	0
-bin	0.21	0
-bin	0.22	0
-bin	0.23	0
-bin	0.24	0
-bin	0.25	0
-bin	0.26	0
-bin	0.27	0
-bin	0.28	0
-bin	0.29	0
-bin	0.3	0
-bin	0.31	0
-bin	0.32	0
-bin	0.33	0
-bin	0.34	0
-bin	0.35	0
-bin	0.36	0
-bin	0.37	0
-bin	0.38	0
-bin	0.39	0
-bin	0.4	0
-bin	0.41	0
-bin	0.42	0
-bin	0.43	0
-bin	0.44	0
-bin	0.45	0
-bin	0.46	0
-bin	0.47	0
-bin	0.48	0
-bin	0.49	0
-bin	0.5	0
-bin	0.51	0
+bin	0	0
+bin	1	0
 statistic test2.aktor[1].canClock clockDrift:stats
 field count 1
 field mean 0
@@ -3381,96 +2876,32 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic test2.aktor[2].canNodePort.canPortInput rxDFPayloadLatency:stats
-field count 2
-field mean 0.00280802
-field stddev 0.003474411595767
-field min 0.00035124
-field max 0.0052648
-field sum 0.00561604
-field sqrsum 2.78414885776e-005
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, stats"
 attr unit s
 statistic test2.aktor[2].canNodePort.canPortInput rxDFPayloadLatency:histogram
-field count 2
-field mean 0.00280802
-field stddev 0.003474411595767
-field min 0.00035124
-field max 0.0052648
-field sum 0.00561604
-field sqrsum 2.78414885776e-005
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, histogram"
 attr unit s
 bin	-inf	0
 bin	0	0
-bin	0.0001	0
-bin	0.0002	0
-bin	0.0003	1
-bin	0.0004	0
-bin	0.0005	0
-bin	0.0006	0
-bin	0.0007	0
-bin	0.0008	0
-bin	0.0009	0
-bin	0.001	0
-bin	0.0011	0
-bin	0.0012	0
-bin	0.0013	0
-bin	0.0014	0
-bin	0.0015	0
-bin	0.0016	0
-bin	0.0017	0
-bin	0.0018	0
-bin	0.0019	0
-bin	0.002	0
-bin	0.0021	0
-bin	0.0022	0
-bin	0.0023	0
-bin	0.0024	0
-bin	0.0025	0
-bin	0.0026	0
-bin	0.0027	0
-bin	0.0028	0
-bin	0.0029	0
-bin	0.003	0
-bin	0.0031	0
-bin	0.0032	0
-bin	0.0033	0
-bin	0.0034	0
-bin	0.0035	0
-bin	0.0036	0
-bin	0.0037	0
-bin	0.0038	0
-bin	0.0039	0
-bin	0.004	0
-bin	0.0041	0
-bin	0.0042	0
-bin	0.0043	0
-bin	0.0044	0
-bin	0.0045	0
-bin	0.0046	0
-bin	0.0047	0
-bin	0.0048	0
-bin	0.0049	0
-bin	0.005	0
-bin	0.0051	0
-bin	0.0052	1
-bin	0.0053	0
-bin	0.0054	0
-bin	0.0055	0
-bin	0.0056	0
-bin	0.0057	0
-bin	0.0058	0
-bin	0.0059	0
-bin	0.006	0
-bin	0.0061	0
-bin	0.0062	0
-bin	0.0063	0
-bin	0.0064	0
-bin	0.0065	0
+bin	1	0
 scalar test2.aktor[2].canNodePort.canPortInput rxRF:count 0
 attr source rxRF
 attr title "complete remote frames received, count"
@@ -3501,119 +2932,36 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.aktor[2].canNodePort.canPortInput rxDF:count 2
+scalar test2.aktor[2].canNodePort.canPortInput rxDF:count 0
 attr source rxDF
 attr title "complete data frames received, count"
 statistic test2.aktor[2].canNodePort.canPortInput rxDFLatency:stats
-field count 2
-field mean 0.0001675
-field stddev 7.8488852711707e-005
-field min 0.000112
-field max 0.000223
-field sum 0.000335
-field sqrsum 6.2273e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, stats"
 attr unit s
 statistic test2.aktor[2].canNodePort.canPortInput rxDFLatency:histogram
-field count 2
-field mean 0.0001675
-field stddev 7.8488852711707e-005
-field min 0.000112
-field max 0.000223
-field sum 0.000335
-field sqrsum 6.2273e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, histogram"
 attr unit s
 bin	-inf	0
-bin	8.4e-005	0
-bin	8.6e-005	0
-bin	8.8e-005	0
-bin	9e-005	0
-bin	9.2e-005	0
-bin	9.4e-005	0
-bin	9.6e-005	0
-bin	9.8e-005	0
-bin	0.0001	0
-bin	0.000102	0
-bin	0.000104	0
-bin	0.000106	0
-bin	0.000108	0
-bin	0.00011	1
-bin	0.000112	0
-bin	0.000114	0
-bin	0.000116	0
-bin	0.000118	0
-bin	0.00012	0
-bin	0.000122	0
-bin	0.000124	0
-bin	0.000126	0
-bin	0.000128	0
-bin	0.00013	0
-bin	0.000132	0
-bin	0.000134	0
-bin	0.000136	0
-bin	0.000138	0
-bin	0.00014	0
-bin	0.000142	0
-bin	0.000144	0
-bin	0.000146	0
-bin	0.000148	0
-bin	0.00015	0
-bin	0.000152	0
-bin	0.000154	0
-bin	0.000156	0
-bin	0.000158	0
-bin	0.00016	0
-bin	0.000162	0
-bin	0.000164	0
-bin	0.000166	0
-bin	0.000168	0
-bin	0.00017	0
-bin	0.000172	0
-bin	0.000174	0
-bin	0.000176	0
-bin	0.000178	0
-bin	0.00018	0
-bin	0.000182	0
-bin	0.000184	0
-bin	0.000186	0
-bin	0.000188	0
-bin	0.00019	0
-bin	0.000192	0
-bin	0.000194	0
-bin	0.000196	0
-bin	0.000198	0
-bin	0.0002	0
-bin	0.000202	0
-bin	0.000204	0
-bin	0.000206	0
-bin	0.000208	0
-bin	0.00021	0
-bin	0.000212	0
-bin	0.000214	0
-bin	0.000216	0
-bin	0.000218	0
-bin	0.00022	0
-bin	0.000222	1
-bin	0.000224	0
-bin	0.000226	0
-bin	0.000228	0
-bin	0.00023	0
-bin	0.000232	0
-bin	0.000234	0
-bin	0.000236	0
-bin	0.000238	0
-bin	0.00024	0
-bin	0.000242	0
-bin	0.000244	0
-bin	0.000246	0
-bin	0.000248	0
-bin	0.00025	0
-bin	0.000252	0
+bin	0	0
+bin	1	0
 scalar test2.aktor[2].canNodePort.canPortOutput txEF:count 0
 attr source txEF
 attr title "sent errors, count"
@@ -3626,11 +2974,11 @@ attr title "sent data frames, count"
 scalar test2.aktor[2].canNodePort.canPortOutput rxEF:count 0
 attr source rxEF
 attr title "receive errors, count"
-scalar test2.aktor[2].bufferIn[0] rxPk:count 2
+scalar test2.aktor[2].bufferIn[0] rxPk:count 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, count"
-scalar test2.aktor[2].bufferIn[0] rxPk:sum(packetBytes) 28
+scalar test2.aktor[2].bufferIn[0] rxPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, sum(packetBytes)"
@@ -3658,11 +3006,11 @@ attr interpolationmode sample-hold
 attr source length
 attr title "Queue Length, stats"
 attr unit packets
-scalar test2.aktor[2].bufferIn[0] txPk:count 2
+scalar test2.aktor[2].bufferIn[0] txPk:count 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, count"
-scalar test2.aktor[2].bufferIn[0] txPk:sum(packetBytes) 28
+scalar test2.aktor[2].bufferIn[0] txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
@@ -3740,96 +3088,32 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic test2.aktor[2].sinkApp[0] rxDFPayloadLatency:stats
-field count 2
-field mean 0.00280802
-field stddev 0.003474411595767
-field min 0.00035124
-field max 0.0052648
-field sum 0.00561604
-field sqrsum 2.78414885776e-005
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, stats"
 attr unit s
 statistic test2.aktor[2].sinkApp[0] rxDFPayloadLatency:histogram
-field count 2
-field mean 0.00280802
-field stddev 0.003474411595767
-field min 0.00035124
-field max 0.0052648
-field sum 0.00561604
-field sqrsum 2.78414885776e-005
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, histogram"
 attr unit s
 bin	-inf	0
 bin	0	0
-bin	0.0001	0
-bin	0.0002	0
-bin	0.0003	1
-bin	0.0004	0
-bin	0.0005	0
-bin	0.0006	0
-bin	0.0007	0
-bin	0.0008	0
-bin	0.0009	0
-bin	0.001	0
-bin	0.0011	0
-bin	0.0012	0
-bin	0.0013	0
-bin	0.0014	0
-bin	0.0015	0
-bin	0.0016	0
-bin	0.0017	0
-bin	0.0018	0
-bin	0.0019	0
-bin	0.002	0
-bin	0.0021	0
-bin	0.0022	0
-bin	0.0023	0
-bin	0.0024	0
-bin	0.0025	0
-bin	0.0026	0
-bin	0.0027	0
-bin	0.0028	0
-bin	0.0029	0
-bin	0.003	0
-bin	0.0031	0
-bin	0.0032	0
-bin	0.0033	0
-bin	0.0034	0
-bin	0.0035	0
-bin	0.0036	0
-bin	0.0037	0
-bin	0.0038	0
-bin	0.0039	0
-bin	0.004	0
-bin	0.0041	0
-bin	0.0042	0
-bin	0.0043	0
-bin	0.0044	0
-bin	0.0045	0
-bin	0.0046	0
-bin	0.0047	0
-bin	0.0048	0
-bin	0.0049	0
-bin	0.005	0
-bin	0.0051	0
-bin	0.0052	1
-bin	0.0053	0
-bin	0.0054	0
-bin	0.0055	0
-bin	0.0056	0
-bin	0.0057	0
-bin	0.0058	0
-bin	0.0059	0
-bin	0.006	0
-bin	0.0061	0
-bin	0.0062	0
-bin	0.0063	0
-bin	0.0064	0
-bin	0.0065	0
+bin	1	0
 scalar test2.aktor[2].sinkApp[0] rxRF:count 0
 attr source rxRF
 attr title "sink app remote frame, count"
@@ -3860,119 +3144,36 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.aktor[2].sinkApp[0] rxDF:count 2
+scalar test2.aktor[2].sinkApp[0] rxDF:count 0
 attr source rxDF
 attr title "sink app data frame, count"
 statistic test2.aktor[2].sinkApp[0] rxDFLatency:stats
-field count 2
-field mean 0.0001675
-field stddev 7.8488852711707e-005
-field min 0.000112
-field max 0.000223
-field sum 0.000335
-field sqrsum 6.2273e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, stats"
 attr unit s
 statistic test2.aktor[2].sinkApp[0] rxDFLatency:histogram
-field count 2
-field mean 0.0001675
-field stddev 7.8488852711707e-005
-field min 0.000112
-field max 0.000223
-field sum 0.000335
-field sqrsum 6.2273e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, histogram"
 attr unit s
 bin	-inf	0
-bin	8.4e-005	0
-bin	8.6e-005	0
-bin	8.8e-005	0
-bin	9e-005	0
-bin	9.2e-005	0
-bin	9.4e-005	0
-bin	9.6e-005	0
-bin	9.8e-005	0
-bin	0.0001	0
-bin	0.000102	0
-bin	0.000104	0
-bin	0.000106	0
-bin	0.000108	0
-bin	0.00011	1
-bin	0.000112	0
-bin	0.000114	0
-bin	0.000116	0
-bin	0.000118	0
-bin	0.00012	0
-bin	0.000122	0
-bin	0.000124	0
-bin	0.000126	0
-bin	0.000128	0
-bin	0.00013	0
-bin	0.000132	0
-bin	0.000134	0
-bin	0.000136	0
-bin	0.000138	0
-bin	0.00014	0
-bin	0.000142	0
-bin	0.000144	0
-bin	0.000146	0
-bin	0.000148	0
-bin	0.00015	0
-bin	0.000152	0
-bin	0.000154	0
-bin	0.000156	0
-bin	0.000158	0
-bin	0.00016	0
-bin	0.000162	0
-bin	0.000164	0
-bin	0.000166	0
-bin	0.000168	0
-bin	0.00017	0
-bin	0.000172	0
-bin	0.000174	0
-bin	0.000176	0
-bin	0.000178	0
-bin	0.00018	0
-bin	0.000182	0
-bin	0.000184	0
-bin	0.000186	0
-bin	0.000188	0
-bin	0.00019	0
-bin	0.000192	0
-bin	0.000194	0
-bin	0.000196	0
-bin	0.000198	0
-bin	0.0002	0
-bin	0.000202	0
-bin	0.000204	0
-bin	0.000206	0
-bin	0.000208	0
-bin	0.00021	0
-bin	0.000212	0
-bin	0.000214	0
-bin	0.000216	0
-bin	0.000218	0
-bin	0.00022	0
-bin	0.000222	1
-bin	0.000224	0
-bin	0.000226	0
-bin	0.000228	0
-bin	0.00023	0
-bin	0.000232	0
-bin	0.000234	0
-bin	0.000236	0
-bin	0.000238	0
-bin	0.00024	0
-bin	0.000242	0
-bin	0.000244	0
-bin	0.000246	0
-bin	0.000248	0
-bin	0.00025	0
-bin	0.000252	0
+bin	0	0
+bin	1	0
 statistic test2.aktor[2].canClock clockDrift:stats
 field count 1
 field mean 0
@@ -4077,31 +3278,31 @@ bin	-inf	0
 bin	0	0
 bin	1	0
 statistic test2.gateway1.can[0].canNodePort.canPortInput rxDFPayloadLatency:stats
-field count 6
+field count 1
 field mean 0.000112
-field stddev 0
+field stddev nan
 field min 0.000112
 field max 0.000112
-field sum 0.000672
-field sqrsum 7.5264e-008
+field sum 0.000112
+field sqrsum 1.2544e-008
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, stats"
 attr unit s
 statistic test2.gateway1.can[0].canNodePort.canPortInput rxDFPayloadLatency:histogram
-field count 6
+field count 1
 field mean 0.000112
-field stddev 0
+field stddev nan
 field min 0.000112
 field max 0.000112
-field sum 0.000672
-field sqrsum 7.5264e-008
+field sum 0.000112
+field sqrsum 1.2544e-008
 attr interpolationmode linear
 attr source timestampAge(rxDFPayload)
 attr title "End-to-end latency of data frame payload, histogram"
 attr unit s
 bin	-inf	0
-bin	0	6
+bin	0	1
 bin	0.01	0
 bin	0.02	0
 bin	0.03	0
@@ -4183,35 +3384,35 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.gateway1.can[0].canNodePort.canPortInput rxDF:count 6
+scalar test2.gateway1.can[0].canNodePort.canPortInput rxDF:count 1
 attr source rxDF
 attr title "complete data frames received, count"
 statistic test2.gateway1.can[0].canNodePort.canPortInput rxDFLatency:stats
-field count 6
+field count 1
 field mean 0.000112
-field stddev 0
+field stddev nan
 field min 0.000112
 field max 0.000112
-field sum 0.000672
-field sqrsum 7.5264e-008
+field sum 0.000112
+field sqrsum 1.2544e-008
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, stats"
 attr unit s
 statistic test2.gateway1.can[0].canNodePort.canPortInput rxDFLatency:histogram
-field count 6
+field count 1
 field mean 0.000112
-field stddev 0
+field stddev nan
 field min 0.000112
 field max 0.000112
-field sum 0.000672
-field sqrsum 7.5264e-008
+field sum 0.000112
+field sqrsum 1.2544e-008
 attr interpolationmode linear
 attr source timestampAge(rxDF)
 attr title "End-to-end latency of data frames, histogram"
 attr unit s
 bin	-inf	0
-bin	0	6
+bin	0	1
 bin	0.01	0
 bin	0.02	0
 bin	0.03	0
@@ -4275,11 +3476,11 @@ attr title "sent data frames, count"
 scalar test2.gateway1.can[0].canNodePort.canPortOutput rxEF:count 0
 attr source rxEF
 attr title "receive errors, count"
-scalar test2.gateway1.can[0].bufferIn[0] rxPk:count 6
+scalar test2.gateway1.can[0].bufferIn[0] rxPk:count 1
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, count"
-scalar test2.gateway1.can[0].bufferIn[0] rxPk:sum(packetBytes) 84
+scalar test2.gateway1.can[0].bufferIn[0] rxPk:sum(packetBytes) 14
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, sum(packetBytes)"
@@ -4307,11 +3508,11 @@ attr interpolationmode sample-hold
 attr source length
 attr title "Queue Length, stats"
 attr unit packets
-scalar test2.gateway1.can[0].bufferIn[0] txPk:count 6
+scalar test2.gateway1.can[0].bufferIn[0] txPk:count 1
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, count"
-scalar test2.gateway1.can[0].bufferIn[0] txPk:sum(packetBytes) 84
+scalar test2.gateway1.can[0].bufferIn[0] txPk:sum(packetBytes) 14
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
@@ -5070,19 +4271,19 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.gateway1.tte[0].phy[0].mac "simulated time" 0.020001
+scalar test2.gateway1.tte[0].phy[0].mac "simulated time" 0.000201
 scalar test2.gateway1.tte[0].phy[0].mac full-duplex 1
-scalar test2.gateway1.tte[0].phy[0].mac "frames/sec sent" 149.99250037498
+scalar test2.gateway1.tte[0].phy[0].mac "frames/sec sent" 0
 scalar test2.gateway1.tte[0].phy[0].mac "frames/sec rcvd" 0
-scalar test2.gateway1.tte[0].phy[0].mac "bits/sec sent" 79996.00019999
+scalar test2.gateway1.tte[0].phy[0].mac "bits/sec sent" 0
 scalar test2.gateway1.tte[0].phy[0].mac "bits/sec rcvd" 0
 scalar test2.gateway1.tte[0].phy[0].mac "rx channel idle (%)" 100
 scalar test2.gateway1.tte[0].phy[0].mac "rx channel utilization (%)" 0
-scalar test2.gateway1.tte[0].phy[0].mac rxPkFromHL:count 3
+scalar test2.gateway1.tte[0].phy[0].mac rxPkFromHL:count 0
 attr interpolationmode none
 attr source rxPkFromHL
 attr title "packet bytes from higher layer, count"
-scalar test2.gateway1.tte[0].phy[0].mac rxPkFromHL:sum(packetBytes) 200
+scalar test2.gateway1.tte[0].phy[0].mac rxPkFromHL:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPkFromHL
 attr title "packet bytes from higher layer, sum(packetBytes)"
@@ -5098,11 +4299,11 @@ attr title "pause units sent, count"
 scalar test2.gateway1.tte[0].phy[0].mac txPausePkUnits:sum 0
 attr interpolationmode none
 attr title "pause units sent, sum"
-scalar test2.gateway1.tte[0].phy[0].mac txPk:count 3
+scalar test2.gateway1.tte[0].phy[0].mac txPk:count 0
 attr interpolationmode none
 attr source txPk
 attr title "packets transmitted, count"
-scalar test2.gateway1.tte[0].phy[0].mac txPk:sum(packetBytes) 200
+scalar test2.gateway1.tte[0].phy[0].mac txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "packets transmitted, sum(packetBytes)"
@@ -5464,11 +4665,11 @@ scalar test2.gateway1.tte[0].encap encapPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, sum(packetBytes)"
-scalar test2.gateway1.tte[0].scheduler.period[0] numberOfCycles:count 1
+scalar test2.gateway1.tte[0].scheduler.period[0] numberOfCycles:count 0
 attr interpolationmode none
 attr source newCycle
 attr title "Number of cycle, count"
-scalar test2.gateway1.tte[0].scheduler.period[1] numberOfCycles:count 1
+scalar test2.gateway1.tte[0].scheduler.period[1] numberOfCycles:count 0
 attr interpolationmode none
 attr source newCycle
 attr title "Number of cycle, count"
@@ -5582,230 +4783,108 @@ scalar test2.gateway1.tte[0].bgOut dropped:count 0
 attr source dropped
 attr title "Dropped frames, count"
 attr unit packets
-scalar test2.gateway1.tte[0].bgOut rxPk:count 3
+scalar test2.gateway1.tte[0].bgOut rxPk:count 0
 attr source rxPk
 attr title "Received Packets, count"
 attr unit packets
-scalar test2.gateway1.tte[0].bgOut rxBytes:sum(packetBytes) 200
+scalar test2.gateway1.tte[0].bgOut rxBytes:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPk
 attr title "Received Bytes, sum(packetBytes)"
 attr unit B
 statistic test2.gateway1.tte[0].bgOut rxBytes:histogram(packetBytes)
-field count 3
-field mean 66.666666666667
-field stddev 4.618802153517
-field min 64
-field max 72
-field sum 200
-field sqrsum 13376
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source rxPk
 attr title "Received Bytes, histogram(packetBytes)"
 attr unit B
 bin	-inf	0
-bin	62	0
-bin	63	0
-bin	64	2
-bin	65	0
-bin	66	0
-bin	67	0
-bin	68	0
-bin	69	0
-bin	70	0
-bin	71	0
-bin	72	1
-bin	73	0
-bin	74	0
+bin	0	0
+bin	1	0
 statistic test2.gateway1.tte[0].bgOut rxLatency:stats
-field count 3
-field mean 4e-005
-field stddev 0
-field min 4e-005
-field max 4e-005
-field sum 0.00012
-field sqrsum 4.8e-009
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), stats"
 attr unit s
 statistic test2.gateway1.tte[0].bgOut rxLatency:histogram
-field count 3
-field mean 4e-005
-field stddev 0
-field min 4e-005
-field max 4e-005
-field sum 0.00012
-field sqrsum 4.8e-009
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), histogram"
 attr unit s
 bin	-inf	0
-bin	0	3
-bin	0.01	0
-bin	0.02	0
-bin	0.03	0
-bin	0.04	0
-bin	0.05	0
-bin	0.06	0
-bin	0.07	0
-bin	0.08	0
-bin	0.09	0
-bin	0.1	0
-bin	0.11	0
-bin	0.12	0
-bin	0.13	0
-bin	0.14	0
-bin	0.15	0
-bin	0.16	0
-bin	0.17	0
-bin	0.18	0
-bin	0.19	0
-bin	0.2	0
-bin	0.21	0
-bin	0.22	0
-bin	0.23	0
-bin	0.24	0
-bin	0.25	0
-bin	0.26	0
-bin	0.27	0
-bin	0.28	0
-bin	0.29	0
-bin	0.3	0
-bin	0.31	0
-bin	0.32	0
-bin	0.33	0
-bin	0.34	0
-bin	0.35	0
-bin	0.36	0
-bin	0.37	0
-bin	0.38	0
-bin	0.39	0
-bin	0.4	0
-bin	0.41	0
-bin	0.42	0
-bin	0.43	0
-bin	0.44	0
-bin	0.45	0
-bin	0.46	0
-bin	0.47	0
-bin	0.48	0
-bin	0.49	0
-bin	0.5	0
-bin	0.51	0
-scalar test2.gateway1.tte[0].bgOut txPk:count 3
+bin	0	0
+bin	1	0
+scalar test2.gateway1.tte[0].bgOut txPk:count 0
 attr source txPk
 attr title "Transmitted Packets, count"
 attr unit packets
-scalar test2.gateway1.tte[0].bgOut txBytes:sum(packetBytes) 200
+scalar test2.gateway1.tte[0].bgOut txBytes:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "Transmitted Bytes, sum(packetBytes)"
 attr unit B
 statistic test2.gateway1.tte[0].bgOut txBytes:histogram(packetBytes)
-field count 3
-field mean 66.666666666667
-field stddev 4.618802153517
-field min 64
-field max 72
-field sum 200
-field sqrsum 13376
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source txPk
 attr title "Transmitted Bytes, histogram(packetBytes)"
 attr unit B
 bin	-inf	0
-bin	62	0
-bin	63	0
-bin	64	2
-bin	65	0
-bin	66	0
-bin	67	0
-bin	68	0
-bin	69	0
-bin	70	0
-bin	71	0
-bin	72	1
-bin	73	0
-bin	74	0
+bin	0	0
+bin	1	0
 statistic test2.gateway1.tte[0].bgOut txLatency:stats
-field count 3
-field mean 4e-005
-field stddev 0
-field min 4e-005
-field max 4e-005
-field sum 0.00012
-field sqrsum 4.8e-009
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(txPk)
 attr title "End-to-end latency (transmitted), stats"
 attr unit s
 statistic test2.gateway1.tte[0].bgOut txLatency:histogram
-field count 3
-field mean 4e-005
-field stddev 0
-field min 4e-005
-field max 4e-005
-field sum 0.00012
-field sqrsum 4.8e-009
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(txPk)
 attr title "End-to-end latency (transmitted), histogram"
 attr unit s
 bin	-inf	0
-bin	0	3
-bin	0.01	0
-bin	0.02	0
-bin	0.03	0
-bin	0.04	0
-bin	0.05	0
-bin	0.06	0
-bin	0.07	0
-bin	0.08	0
-bin	0.09	0
-bin	0.1	0
-bin	0.11	0
-bin	0.12	0
-bin	0.13	0
-bin	0.14	0
-bin	0.15	0
-bin	0.16	0
-bin	0.17	0
-bin	0.18	0
-bin	0.19	0
-bin	0.2	0
-bin	0.21	0
-bin	0.22	0
-bin	0.23	0
-bin	0.24	0
-bin	0.25	0
-bin	0.26	0
-bin	0.27	0
-bin	0.28	0
-bin	0.29	0
-bin	0.3	0
-bin	0.31	0
-bin	0.32	0
-bin	0.33	0
-bin	0.34	0
-bin	0.35	0
-bin	0.36	0
-bin	0.37	0
-bin	0.38	0
-bin	0.39	0
-bin	0.4	0
-bin	0.41	0
-bin	0.42	0
-bin	0.43	0
-bin	0.44	0
-bin	0.45	0
-bin	0.46	0
-bin	0.47	0
-bin	0.48	0
-bin	0.49	0
-bin	0.5	0
-bin	0.51	0
+bin	0	0
+bin	1	0
 scalar test2.gateway1.tte[0].TTvlinks[0] dropped:count 0
 attr source dropped
 attr title "Dropped frames, count"
@@ -5983,7 +5062,7 @@ attr source constant1(messageSent)
 scalar test2.gateway1.gateway.router.out[1].channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.gateway1.gateway.router.out[1].channel messages:count 5
+scalar test2.gateway1.gateway.router.out[1].channel messages:count 1
 attr interpolationmode none
 attr source constant1(messageSent)
 scalar test2.gateway1.gateway.transform[0].out.channel messagesDiscarded:count 0
@@ -5995,7 +5074,7 @@ attr source constant1(messageSent)
 scalar test2.gateway1.gateway.transform[1].out.channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.gateway1.gateway.transform[1].out.channel messages:count 3
+scalar test2.gateway1.gateway.transform[1].out.channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
 scalar test2.gateway1.gateway.buffering[0].out.channel messagesDiscarded:count 0
@@ -6007,10 +5086,10 @@ attr source constant1(messageSent)
 scalar test2.gateway1.gateway.buffering[1].out.channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.gateway1.gateway.buffering[1].out.channel messages:count 3
+scalar test2.gateway1.gateway.buffering[1].out.channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
-scalar test2.gateway1.gateway.router dropped:count 1
+scalar test2.gateway1.gateway.router dropped:count 0
 attr interpolationmode none
 attr source droppedFramesSignal
 attr title "dropped frames, count"
@@ -6038,28 +5117,28 @@ attr title "Pool-Hold-Up-Time (pool0HoldUpTime)"
 scalar test2.gateway1.gateway.buffering[0] pool0HoldUpTime:min nan
 attr interpolationmode sample-hold
 attr title "Pool-Hold-Up-Time (pool0HoldUpTime)"
-scalar test2.gateway1.gateway.buffering[1] pool0MessageSize:count 2
+scalar test2.gateway1.gateway.buffering[1] pool0MessageSize:count 0
 attr interpolationmode linear
 attr title "pool size (pool0MessageSize)"
-scalar test2.gateway1.gateway.buffering[1] pool0MessageSize:sum 3
+scalar test2.gateway1.gateway.buffering[1] pool0MessageSize:sum 0
 attr interpolationmode linear
 attr title "pool size (pool0MessageSize)"
-scalar test2.gateway1.gateway.buffering[1] pool0MessageSize:mean 1.5
+scalar test2.gateway1.gateway.buffering[1] pool0MessageSize:mean nan
 attr interpolationmode linear
 attr title "pool size (pool0MessageSize)"
-scalar test2.gateway1.gateway.buffering[1] pool0MessageSize:min 1
+scalar test2.gateway1.gateway.buffering[1] pool0MessageSize:min nan
 attr interpolationmode linear
 attr title "pool size (pool0MessageSize)"
-scalar test2.gateway1.gateway.buffering[1] pool0MessageSize:max 2
+scalar test2.gateway1.gateway.buffering[1] pool0MessageSize:max nan
 attr interpolationmode linear
 attr title "pool size (pool0MessageSize)"
-scalar test2.gateway1.gateway.buffering[1] pool0HoldUpTime:mean 0.0049333333333333
+scalar test2.gateway1.gateway.buffering[1] pool0HoldUpTime:mean nan
 attr interpolationmode sample-hold
 attr title "Pool-Hold-Up-Time (pool0HoldUpTime)"
-scalar test2.gateway1.gateway.buffering[1] pool0HoldUpTime:max 0.005
+scalar test2.gateway1.gateway.buffering[1] pool0HoldUpTime:max nan
 attr interpolationmode sample-hold
 attr title "Pool-Hold-Up-Time (pool0HoldUpTime)"
-scalar test2.gateway1.gateway.buffering[1] pool0HoldUpTime:min 0.0048
+scalar test2.gateway1.gateway.buffering[1] pool0HoldUpTime:min nan
 attr interpolationmode sample-hold
 attr title "Pool-Hold-Up-Time (pool0HoldUpTime)"
 statistic test2.gateway2.can[0].canNodePort.canPortInput rxRFPayloadLatency:stats
@@ -6182,7 +5261,7 @@ attr title "sent errors, count"
 scalar test2.gateway2.can[0].canNodePort.canPortOutput txRF:count 0
 attr source txRF
 attr title "sent remote frames, count"
-scalar test2.gateway2.can[0].canNodePort.canPortOutput txDF:count 4
+scalar test2.gateway2.can[0].canNodePort.canPortOutput txDF:count 0
 attr source txDF
 attr title "sent data frames, count"
 scalar test2.gateway2.can[0].canNodePort.canPortOutput rxEF:count 0
@@ -6228,43 +5307,43 @@ scalar test2.gateway2.can[0].bufferIn[0] txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
-scalar test2.gateway2.can[0].bufferOut rxPk:count 8
+scalar test2.gateway2.can[0].bufferOut rxPk:count 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, count"
-scalar test2.gateway2.can[0].bufferOut rxPk:sum(packetBytes) 112
+scalar test2.gateway2.can[0].bufferOut rxPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPk
 attr title "RX Packets, sum(packetBytes)"
 statistic test2.gateway2.can[0].bufferOut size:stats
-field count 8
-field mean 10.5
-field stddev 9.8994949366117
-field min 0
-field max 28
-field sum 84
-field sqrsum 1568
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode sample-hold
 attr source size
 attr title "Queue Size, stats"
 attr unit B
 statistic test2.gateway2.can[0].bufferOut length:stats
-field count 8
-field mean 0.75
-field stddev 0.70710678118655
-field min 0
-field max 2
-field sum 6
-field sqrsum 8
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode sample-hold
 attr source length
 attr title "Queue Length, stats"
 attr unit packets
-scalar test2.gateway2.can[0].bufferOut txPk:count 4
+scalar test2.gateway2.can[0].bufferOut txPk:count 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, count"
-scalar test2.gateway2.can[0].bufferOut txPk:sum(packetBytes) 56
+scalar test2.gateway2.can[0].bufferOut txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "TX Packets, sum(packetBytes)"
@@ -6957,117 +6036,40 @@ attr source droppedPk
 attr title "Unconfigured CT dropped, count"
 attr unit packets
 statistic test2.gateway2.tte[0].phy[0].inControl rxLatency:stats
-field count 3
-field mean 8.8093333333333e-005
-field stddev 1.4780166891261e-006
-field min 8.724e-005
-field max 8.98e-005
-field sum 0.00026428
-field sqrsum 2.32856752e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), stats"
 attr unit s
 statistic test2.gateway2.tte[0].phy[0].inControl rxLatency:histogram
-field count 3
-field mean 8.8093333333333e-005
-field stddev 1.4780166891261e-006
-field min 8.724e-005
-field max 8.98e-005
-field sum 0.00026428
-field sqrsum 2.32856752e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), histogram"
 attr unit s
 bin	-inf	0
-bin	8.655e-005	0
-bin	8.66e-005	0
-bin	8.665e-005	0
-bin	8.67e-005	0
-bin	8.675e-005	0
-bin	8.68e-005	0
-bin	8.685e-005	0
-bin	8.69e-005	0
-bin	8.695e-005	0
-bin	8.7e-005	0
-bin	8.705e-005	0
-bin	8.71e-005	0
-bin	8.715e-005	0
-bin	8.72e-005	2
-bin	8.725e-005	0
-bin	8.73e-005	0
-bin	8.735e-005	0
-bin	8.74e-005	0
-bin	8.745e-005	0
-bin	8.75e-005	0
-bin	8.755e-005	0
-bin	8.76e-005	0
-bin	8.765e-005	0
-bin	8.77e-005	0
-bin	8.775e-005	0
-bin	8.78e-005	0
-bin	8.785e-005	0
-bin	8.79e-005	0
-bin	8.795e-005	0
-bin	8.8e-005	0
-bin	8.805e-005	0
-bin	8.81e-005	0
-bin	8.815e-005	0
-bin	8.82e-005	0
-bin	8.825e-005	0
-bin	8.83e-005	0
-bin	8.835e-005	0
-bin	8.84e-005	0
-bin	8.845e-005	0
-bin	8.85e-005	0
-bin	8.855e-005	0
-bin	8.86e-005	0
-bin	8.865e-005	0
-bin	8.87e-005	0
-bin	8.875e-005	0
-bin	8.88e-005	0
-bin	8.885e-005	0
-bin	8.89e-005	0
-bin	8.895e-005	0
-bin	8.9e-005	0
-bin	8.905e-005	0
-bin	8.91e-005	0
-bin	8.915e-005	0
-bin	8.92e-005	0
-bin	8.925e-005	0
-bin	8.93e-005	0
-bin	8.935e-005	0
-bin	8.94e-005	0
-bin	8.945e-005	0
-bin	8.95e-005	0
-bin	8.955e-005	0
-bin	8.96e-005	0
-bin	8.965e-005	0
-bin	8.97e-005	0
-bin	8.975e-005	1
-bin	8.98e-005	0
-bin	8.985e-005	0
-bin	8.99e-005	0
-bin	8.995e-005	0
-bin	9e-005	0
-bin	9.005e-005	0
-bin	9.01e-005	0
-bin	9.015e-005	0
-bin	9.02e-005	0
-bin	9.025e-005	0
-bin	9.03e-005	0
-bin	9.035e-005	0
-bin	9.04e-005	0
-bin	9.045e-005	0
-scalar test2.gateway2.tte[0].phy[0].mac "simulated time" 0.020001
+bin	0	0
+bin	1	0
+scalar test2.gateway2.tte[0].phy[0].mac "simulated time" 0.000201
 scalar test2.gateway2.tte[0].phy[0].mac full-duplex 1
 scalar test2.gateway2.tte[0].phy[0].mac "frames/sec sent" 0
-scalar test2.gateway2.tte[0].phy[0].mac "frames/sec rcvd" 149.99250037498
+scalar test2.gateway2.tte[0].phy[0].mac "frames/sec rcvd" 0
 scalar test2.gateway2.tte[0].phy[0].mac "bits/sec sent" 0
-scalar test2.gateway2.tte[0].phy[0].mac "bits/sec rcvd" 79996.00019999
-scalar test2.gateway2.tte[0].phy[0].mac "rx channel idle (%)" 99.910404479776
-scalar test2.gateway2.tte[0].phy[0].mac "rx channel utilization (%)" 0.089595520223989
+scalar test2.gateway2.tte[0].phy[0].mac "bits/sec rcvd" 0
+scalar test2.gateway2.tte[0].phy[0].mac "rx channel idle (%)" 100
+scalar test2.gateway2.tte[0].phy[0].mac "rx channel utilization (%)" 0
 scalar test2.gateway2.tte[0].phy[0].mac rxPkFromHL:count 0
 attr interpolationmode none
 attr source rxPkFromHL
@@ -7120,19 +6122,19 @@ scalar test2.gateway2.tte[0].phy[0].mac droppedPkIfaceDown:sum(packetBytes) 0
 attr interpolationmode none
 attr source dropPkIfaceDown
 attr title "packets dropped/interface down, sum(packetBytes)"
-scalar test2.gateway2.tte[0].phy[0].mac rxPkOk:count 3
+scalar test2.gateway2.tte[0].phy[0].mac rxPkOk:count 0
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, count"
-scalar test2.gateway2.tte[0].phy[0].mac rxPkOk:sum(packetBytes) 200
+scalar test2.gateway2.tte[0].phy[0].mac rxPkOk:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, sum(packetBytes)"
-scalar test2.gateway2.tte[0].phy[0].mac passedUpPk:count 3
+scalar test2.gateway2.tte[0].phy[0].mac passedUpPk:count 0
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, count"
-scalar test2.gateway2.tte[0].phy[0].mac passedUpPk:sum(packetBytes) 200
+scalar test2.gateway2.tte[0].phy[0].mac passedUpPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, sum(packetBytes)"
@@ -7454,11 +6456,11 @@ scalar test2.gateway2.tte[0].encap encapPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source encapPk
 attr title "packets encapsulated, sum(packetBytes)"
-scalar test2.gateway2.tte[0].scheduler.period[0] numberOfCycles:count 1
+scalar test2.gateway2.tte[0].scheduler.period[0] numberOfCycles:count 0
 attr interpolationmode none
 attr source newCycle
 attr title "Number of cycle, count"
-scalar test2.gateway2.tte[0].scheduler.period[1] numberOfCycles:count 1
+scalar test2.gateway2.tte[0].scheduler.period[1] numberOfCycles:count 0
 attr interpolationmode none
 attr source newCycle
 attr title "Number of cycle, count"
@@ -7466,284 +6468,108 @@ scalar test2.gateway2.tte[0].bgIn dropped:count 0
 attr source dropped
 attr title "Dropped frames, count"
 attr unit packets
-scalar test2.gateway2.tte[0].bgIn rxPk:count 3
+scalar test2.gateway2.tte[0].bgIn rxPk:count 0
 attr source rxPk
 attr title "Received Packets, count"
 attr unit packets
-scalar test2.gateway2.tte[0].bgIn rxBytes:sum(packetBytes) 200
+scalar test2.gateway2.tte[0].bgIn rxBytes:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPk
 attr title "Received Bytes, sum(packetBytes)"
 attr unit B
 statistic test2.gateway2.tte[0].bgIn rxBytes:histogram(packetBytes)
-field count 3
-field mean 66.666666666667
-field stddev 4.618802153517
-field min 64
-field max 72
-field sum 200
-field sqrsum 13376
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source rxPk
 attr title "Received Bytes, histogram(packetBytes)"
 attr unit B
 bin	-inf	0
-bin	62	0
-bin	63	0
-bin	64	2
-bin	65	0
-bin	66	0
-bin	67	0
-bin	68	0
-bin	69	0
-bin	70	0
-bin	71	0
-bin	72	1
-bin	73	0
-bin	74	0
+bin	0	0
+bin	1	0
 statistic test2.gateway2.tte[0].bgIn rxLatency:stats
-field count 3
-field mean 8.8093333333333e-005
-field stddev 1.4780166891261e-006
-field min 8.724e-005
-field max 8.98e-005
-field sum 0.00026428
-field sqrsum 2.32856752e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), stats"
 attr unit s
 statistic test2.gateway2.tte[0].bgIn rxLatency:histogram
-field count 3
-field mean 8.8093333333333e-005
-field stddev 1.4780166891261e-006
-field min 8.724e-005
-field max 8.98e-005
-field sum 0.00026428
-field sqrsum 2.32856752e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), histogram"
 attr unit s
 bin	-inf	0
-bin	8.655e-005	0
-bin	8.66e-005	0
-bin	8.665e-005	0
-bin	8.67e-005	0
-bin	8.675e-005	0
-bin	8.68e-005	0
-bin	8.685e-005	0
-bin	8.69e-005	0
-bin	8.695e-005	0
-bin	8.7e-005	0
-bin	8.705e-005	0
-bin	8.71e-005	0
-bin	8.715e-005	0
-bin	8.72e-005	2
-bin	8.725e-005	0
-bin	8.73e-005	0
-bin	8.735e-005	0
-bin	8.74e-005	0
-bin	8.745e-005	0
-bin	8.75e-005	0
-bin	8.755e-005	0
-bin	8.76e-005	0
-bin	8.765e-005	0
-bin	8.77e-005	0
-bin	8.775e-005	0
-bin	8.78e-005	0
-bin	8.785e-005	0
-bin	8.79e-005	0
-bin	8.795e-005	0
-bin	8.8e-005	0
-bin	8.805e-005	0
-bin	8.81e-005	0
-bin	8.815e-005	0
-bin	8.82e-005	0
-bin	8.825e-005	0
-bin	8.83e-005	0
-bin	8.835e-005	0
-bin	8.84e-005	0
-bin	8.845e-005	0
-bin	8.85e-005	0
-bin	8.855e-005	0
-bin	8.86e-005	0
-bin	8.865e-005	0
-bin	8.87e-005	0
-bin	8.875e-005	0
-bin	8.88e-005	0
-bin	8.885e-005	0
-bin	8.89e-005	0
-bin	8.895e-005	0
-bin	8.9e-005	0
-bin	8.905e-005	0
-bin	8.91e-005	0
-bin	8.915e-005	0
-bin	8.92e-005	0
-bin	8.925e-005	0
-bin	8.93e-005	0
-bin	8.935e-005	0
-bin	8.94e-005	0
-bin	8.945e-005	0
-bin	8.95e-005	0
-bin	8.955e-005	0
-bin	8.96e-005	0
-bin	8.965e-005	0
-bin	8.97e-005	0
-bin	8.975e-005	1
-bin	8.98e-005	0
-bin	8.985e-005	0
-bin	8.99e-005	0
-bin	8.995e-005	0
-bin	9e-005	0
-bin	9.005e-005	0
-bin	9.01e-005	0
-bin	9.015e-005	0
-bin	9.02e-005	0
-bin	9.025e-005	0
-bin	9.03e-005	0
-bin	9.035e-005	0
-bin	9.04e-005	0
-bin	9.045e-005	0
-scalar test2.gateway2.tte[0].bgIn txPk:count 3
+bin	0	0
+bin	1	0
+scalar test2.gateway2.tte[0].bgIn txPk:count 0
 attr source txPk
 attr title "Transmitted Packets, count"
 attr unit packets
-scalar test2.gateway2.tte[0].bgIn txBytes:sum(packetBytes) 200
+scalar test2.gateway2.tte[0].bgIn txBytes:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "Transmitted Bytes, sum(packetBytes)"
 attr unit B
 statistic test2.gateway2.tte[0].bgIn txBytes:histogram(packetBytes)
-field count 3
-field mean 66.666666666667
-field stddev 4.618802153517
-field min 64
-field max 72
-field sum 200
-field sqrsum 13376
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source txPk
 attr title "Transmitted Bytes, histogram(packetBytes)"
 attr unit B
 bin	-inf	0
-bin	62	0
-bin	63	0
-bin	64	2
-bin	65	0
-bin	66	0
-bin	67	0
-bin	68	0
-bin	69	0
-bin	70	0
-bin	71	0
-bin	72	1
-bin	73	0
-bin	74	0
+bin	0	0
+bin	1	0
 statistic test2.gateway2.tte[0].bgIn txLatency:stats
-field count 3
-field mean 8.8093333333333e-005
-field stddev 1.4780166891261e-006
-field min 8.724e-005
-field max 8.98e-005
-field sum 0.00026428
-field sqrsum 2.32856752e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(txPk)
 attr title "End-to-end latency (transmitted), stats"
 attr unit s
 statistic test2.gateway2.tte[0].bgIn txLatency:histogram
-field count 3
-field mean 8.8093333333333e-005
-field stddev 1.4780166891261e-006
-field min 8.724e-005
-field max 8.98e-005
-field sum 0.00026428
-field sqrsum 2.32856752e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(txPk)
 attr title "End-to-end latency (transmitted), histogram"
 attr unit s
 bin	-inf	0
-bin	8.655e-005	0
-bin	8.66e-005	0
-bin	8.665e-005	0
-bin	8.67e-005	0
-bin	8.675e-005	0
-bin	8.68e-005	0
-bin	8.685e-005	0
-bin	8.69e-005	0
-bin	8.695e-005	0
-bin	8.7e-005	0
-bin	8.705e-005	0
-bin	8.71e-005	0
-bin	8.715e-005	0
-bin	8.72e-005	2
-bin	8.725e-005	0
-bin	8.73e-005	0
-bin	8.735e-005	0
-bin	8.74e-005	0
-bin	8.745e-005	0
-bin	8.75e-005	0
-bin	8.755e-005	0
-bin	8.76e-005	0
-bin	8.765e-005	0
-bin	8.77e-005	0
-bin	8.775e-005	0
-bin	8.78e-005	0
-bin	8.785e-005	0
-bin	8.79e-005	0
-bin	8.795e-005	0
-bin	8.8e-005	0
-bin	8.805e-005	0
-bin	8.81e-005	0
-bin	8.815e-005	0
-bin	8.82e-005	0
-bin	8.825e-005	0
-bin	8.83e-005	0
-bin	8.835e-005	0
-bin	8.84e-005	0
-bin	8.845e-005	0
-bin	8.85e-005	0
-bin	8.855e-005	0
-bin	8.86e-005	0
-bin	8.865e-005	0
-bin	8.87e-005	0
-bin	8.875e-005	0
-bin	8.88e-005	0
-bin	8.885e-005	0
-bin	8.89e-005	0
-bin	8.895e-005	0
-bin	8.9e-005	0
-bin	8.905e-005	0
-bin	8.91e-005	0
-bin	8.915e-005	0
-bin	8.92e-005	0
-bin	8.925e-005	0
-bin	8.93e-005	0
-bin	8.935e-005	0
-bin	8.94e-005	0
-bin	8.945e-005	0
-bin	8.95e-005	0
-bin	8.955e-005	0
-bin	8.96e-005	0
-bin	8.965e-005	0
-bin	8.97e-005	0
-bin	8.975e-005	1
-bin	8.98e-005	0
-bin	8.985e-005	0
-bin	8.99e-005	0
-bin	8.995e-005	0
-bin	9e-005	0
-bin	9.005e-005	0
-bin	9.01e-005	0
-bin	9.015e-005	0
-bin	9.02e-005	0
-bin	9.025e-005	0
-bin	9.03e-005	0
-bin	9.035e-005	0
-bin	9.04e-005	0
-bin	9.045e-005	0
+bin	0	0
+bin	1	0
 scalar test2.gateway2.tte[0].bgOut dropped:count 0
 attr source dropped
 attr title "Dropped frames, count"
@@ -8021,7 +6847,7 @@ bin	1	0
 scalar test2.gateway2.gateway.router.out[0].channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.gateway2.gateway.router.out[0].channel messages:count 3
+scalar test2.gateway2.gateway.router.out[0].channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
 scalar test2.gateway2.gateway.router.out[1].channel messagesDiscarded:count 0
@@ -8033,7 +6859,7 @@ attr source constant1(messageSent)
 scalar test2.gateway2.gateway.transform[0].out.channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.gateway2.gateway.transform[0].out.channel messages:count 4
+scalar test2.gateway2.gateway.transform[0].out.channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
 scalar test2.gateway2.gateway.transform[1].out.channel messagesDiscarded:count 0
@@ -8045,7 +6871,7 @@ attr source constant1(messageSent)
 scalar test2.gateway2.gateway.buffering[0].out.channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.gateway2.gateway.buffering[0].out.channel messages:count 3
+scalar test2.gateway2.gateway.buffering[0].out.channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
 scalar test2.gateway2.gateway.buffering[1].out.channel messagesDiscarded:count 0
@@ -8156,7 +6982,7 @@ scalar test2.etherHost.llc passedUpPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source passedUpPk
 attr title "packets passed up, sum(packetBytes)"
-scalar test2.etherHost.mac "simulated time" 0.020001
+scalar test2.etherHost.mac "simulated time" 0.000201
 scalar test2.etherHost.mac full-duplex 1
 scalar test2.etherHost.mac "frames/sec sent" 0
 scalar test2.etherHost.mac "frames/sec rcvd" 0
@@ -8250,13 +7076,13 @@ attr source constant1(messageSent)
 scalar test2.switch1.beswitch.ifOut[1].channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.switch1.beswitch.ifOut[1].channel messages:count 3
+scalar test2.switch1.beswitch.ifOut[1].channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
 scalar test2.switch1.phy[0].upperLayerOut.channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.switch1.phy[0].upperLayerOut.channel messages:count 3
+scalar test2.switch1.phy[0].upperLayerOut.channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
 scalar test2.switch1.phy[1].upperLayerOut.channel messagesDiscarded:count 0
@@ -8265,7 +7091,7 @@ attr source constant1(messageDiscarded)
 scalar test2.switch1.phy[1].upperLayerOut.channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
-scalar test2.switch1.beswitch "processed frames" 3
+scalar test2.switch1.beswitch "processed frames" 0
 scalar test2.switch1.beswitch "discarded frames" 0
 statistic test2.switch1.phy[0].shaper rc9QueueSize:stats
 field count 1
@@ -8548,88 +7374,40 @@ attr source droppedPk
 attr title "Unconfigured CT dropped, count"
 attr unit packets
 statistic test2.switch1.phy[0].inControl rxLatency:stats
-field count 3
-field mean 4.6023333333333e-005
-field stddev 3.6950417228224e-007
-field min 4.581e-005
-field max 4.645e-005
-field sum 0.00013807
-field sqrsum 6.3547147e-009
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), stats"
 attr unit s
 statistic test2.switch1.phy[0].inControl rxLatency:histogram
-field count 3
-field mean 4.6023333333333e-005
-field stddev 3.6950417228224e-007
-field min 4.581e-005
-field max 4.645e-005
-field sum 0.00013807
-field sqrsum 6.3547147e-009
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), histogram"
 attr unit s
 bin	-inf	0
-bin	4.564e-005	0
-bin	4.566e-005	0
-bin	4.568e-005	0
-bin	4.57e-005	0
-bin	4.572e-005	0
-bin	4.574e-005	0
-bin	4.576e-005	0
-bin	4.578e-005	0
-bin	4.58e-005	2
-bin	4.582e-005	0
-bin	4.584e-005	0
-bin	4.586e-005	0
-bin	4.588e-005	0
-bin	4.59e-005	0
-bin	4.592e-005	0
-bin	4.594e-005	0
-bin	4.596e-005	0
-bin	4.598e-005	0
-bin	4.6e-005	0
-bin	4.602e-005	0
-bin	4.604e-005	0
-bin	4.606e-005	0
-bin	4.608e-005	0
-bin	4.61e-005	0
-bin	4.612e-005	0
-bin	4.614e-005	0
-bin	4.616e-005	0
-bin	4.618e-005	0
-bin	4.62e-005	0
-bin	4.622e-005	0
-bin	4.624e-005	0
-bin	4.626e-005	0
-bin	4.628e-005	0
-bin	4.63e-005	0
-bin	4.632e-005	0
-bin	4.634e-005	0
-bin	4.636e-005	0
-bin	4.638e-005	0
-bin	4.64e-005	0
-bin	4.642e-005	0
-bin	4.644e-005	1
-bin	4.646e-005	0
-bin	4.648e-005	0
-bin	4.65e-005	0
-bin	4.652e-005	0
-bin	4.654e-005	0
-bin	4.656e-005	0
-bin	4.658e-005	0
-bin	4.66e-005	0
-bin	4.662e-005	0
-scalar test2.switch1.phy[0].mac "simulated time" 0.020001
+bin	0	0
+bin	1	0
+scalar test2.switch1.phy[0].mac "simulated time" 0.000201
 scalar test2.switch1.phy[0].mac full-duplex 1
 scalar test2.switch1.phy[0].mac "frames/sec sent" 0
-scalar test2.switch1.phy[0].mac "frames/sec rcvd" 149.99250037498
+scalar test2.switch1.phy[0].mac "frames/sec rcvd" 0
 scalar test2.switch1.phy[0].mac "bits/sec sent" 0
-scalar test2.switch1.phy[0].mac "bits/sec rcvd" 79996.00019999
-scalar test2.switch1.phy[0].mac "rx channel idle (%)" 99.910404479776
-scalar test2.switch1.phy[0].mac "rx channel utilization (%)" 0.089595520223989
+scalar test2.switch1.phy[0].mac "bits/sec rcvd" 0
+scalar test2.switch1.phy[0].mac "rx channel idle (%)" 100
+scalar test2.switch1.phy[0].mac "rx channel utilization (%)" 0
 scalar test2.switch1.phy[0].mac rxPkFromHL:count 0
 attr interpolationmode none
 attr source rxPkFromHL
@@ -8682,19 +7460,19 @@ scalar test2.switch1.phy[0].mac droppedPkIfaceDown:sum(packetBytes) 0
 attr interpolationmode none
 attr source dropPkIfaceDown
 attr title "packets dropped/interface down, sum(packetBytes)"
-scalar test2.switch1.phy[0].mac rxPkOk:count 3
+scalar test2.switch1.phy[0].mac rxPkOk:count 0
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, count"
-scalar test2.switch1.phy[0].mac rxPkOk:sum(packetBytes) 200
+scalar test2.switch1.phy[0].mac rxPkOk:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, sum(packetBytes)"
-scalar test2.switch1.phy[0].mac passedUpPk:count 3
+scalar test2.switch1.phy[0].mac passedUpPk:count 0
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, count"
-scalar test2.switch1.phy[0].mac passedUpPk:sum(packetBytes) 200
+scalar test2.switch1.phy[0].mac passedUpPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, sum(packetBytes)"
@@ -9005,19 +7783,19 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.switch1.phy[1].mac "simulated time" 0.020001
+scalar test2.switch1.phy[1].mac "simulated time" 0.000201
 scalar test2.switch1.phy[1].mac full-duplex 1
-scalar test2.switch1.phy[1].mac "frames/sec sent" 149.99250037498
+scalar test2.switch1.phy[1].mac "frames/sec sent" 0
 scalar test2.switch1.phy[1].mac "frames/sec rcvd" 0
-scalar test2.switch1.phy[1].mac "bits/sec sent" 79996.00019999
+scalar test2.switch1.phy[1].mac "bits/sec sent" 0
 scalar test2.switch1.phy[1].mac "bits/sec rcvd" 0
 scalar test2.switch1.phy[1].mac "rx channel idle (%)" 100
 scalar test2.switch1.phy[1].mac "rx channel utilization (%)" 0
-scalar test2.switch1.phy[1].mac rxPkFromHL:count 3
+scalar test2.switch1.phy[1].mac rxPkFromHL:count 0
 attr interpolationmode none
 attr source rxPkFromHL
 attr title "packet bytes from higher layer, count"
-scalar test2.switch1.phy[1].mac rxPkFromHL:sum(packetBytes) 200
+scalar test2.switch1.phy[1].mac rxPkFromHL:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPkFromHL
 attr title "packet bytes from higher layer, sum(packetBytes)"
@@ -9033,11 +7811,11 @@ attr title "pause units sent, count"
 scalar test2.switch1.phy[1].mac txPausePkUnits:sum 0
 attr interpolationmode none
 attr title "pause units sent, sum"
-scalar test2.switch1.phy[1].mac txPk:count 3
+scalar test2.switch1.phy[1].mac txPk:count 0
 attr interpolationmode none
 attr source txPk
 attr title "packets transmitted, count"
-scalar test2.switch1.phy[1].mac txPk:sum(packetBytes) 200
+scalar test2.switch1.phy[1].mac txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "packets transmitted, sum(packetBytes)"
@@ -9081,11 +7859,11 @@ scalar test2.switch1.phy[1].mac passedUpPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, sum(packetBytes)"
-scalar test2.switch1.scheduler.period[0] numberOfCycles:count 1
+scalar test2.switch1.scheduler.period[0] numberOfCycles:count 0
 attr interpolationmode none
 attr source newCycle
 attr title "Number of cycle, count"
-scalar test2.switch1.scheduler.period[1] numberOfCycles:count 1
+scalar test2.switch1.scheduler.period[1] numberOfCycles:count 0
 attr interpolationmode none
 attr source newCycle
 attr title "Number of cycle, count"
@@ -9098,13 +7876,13 @@ attr source constant1(messageSent)
 scalar test2.switch2.beswitch.ifOut[1].channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.switch2.beswitch.ifOut[1].channel messages:count 3
+scalar test2.switch2.beswitch.ifOut[1].channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
 scalar test2.switch2.phy[0].upperLayerOut.channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.switch2.phy[0].upperLayerOut.channel messages:count 3
+scalar test2.switch2.phy[0].upperLayerOut.channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
 scalar test2.switch2.phy[1].upperLayerOut.channel messagesDiscarded:count 0
@@ -9113,7 +7891,7 @@ attr source constant1(messageDiscarded)
 scalar test2.switch2.phy[1].upperLayerOut.channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
-scalar test2.switch2.beswitch "processed frames" 3
+scalar test2.switch2.beswitch "processed frames" 0
 scalar test2.switch2.beswitch "discarded frames" 0
 statistic test2.switch2.phy[0].shaper rc9QueueSize:stats
 field count 1
@@ -9396,98 +8174,40 @@ attr source droppedPk
 attr title "Unconfigured CT dropped, count"
 attr unit packets
 statistic test2.switch2.phy[0].inControl rxLatency:stats
-field count 3
-field mean 7.407e-005
-field stddev 1.1085125168454e-006
-field min 7.343e-005
-field max 7.535e-005
-field sum 0.00022221
-field sqrsum 1.64615523e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), stats"
 attr unit s
 statistic test2.switch2.phy[0].inControl rxLatency:histogram
-field count 3
-field mean 7.407e-005
-field stddev 1.1085125168454e-006
-field min 7.343e-005
-field max 7.535e-005
-field sum 0.00022221
-field sqrsum 1.64615523e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), histogram"
 attr unit s
 bin	-inf	0
-bin	7.29e-005	0
-bin	7.295e-005	0
-bin	7.3e-005	0
-bin	7.305e-005	0
-bin	7.31e-005	0
-bin	7.315e-005	0
-bin	7.32e-005	0
-bin	7.325e-005	0
-bin	7.33e-005	0
-bin	7.335e-005	0
-bin	7.34e-005	2
-bin	7.345e-005	0
-bin	7.35e-005	0
-bin	7.355e-005	0
-bin	7.36e-005	0
-bin	7.365e-005	0
-bin	7.37e-005	0
-bin	7.375e-005	0
-bin	7.38e-005	0
-bin	7.385e-005	0
-bin	7.39e-005	0
-bin	7.395e-005	0
-bin	7.4e-005	0
-bin	7.405e-005	0
-bin	7.41e-005	0
-bin	7.415e-005	0
-bin	7.42e-005	0
-bin	7.425e-005	0
-bin	7.43e-005	0
-bin	7.435e-005	0
-bin	7.44e-005	0
-bin	7.445e-005	0
-bin	7.45e-005	0
-bin	7.455e-005	0
-bin	7.46e-005	0
-bin	7.465e-005	0
-bin	7.47e-005	0
-bin	7.475e-005	0
-bin	7.48e-005	0
-bin	7.485e-005	0
-bin	7.49e-005	0
-bin	7.495e-005	0
-bin	7.5e-005	0
-bin	7.505e-005	0
-bin	7.51e-005	0
-bin	7.515e-005	0
-bin	7.52e-005	0
-bin	7.525e-005	0
-bin	7.53e-005	1
-bin	7.535e-005	0
-bin	7.54e-005	0
-bin	7.545e-005	0
-bin	7.55e-005	0
-bin	7.555e-005	0
-bin	7.56e-005	0
-bin	7.565e-005	0
-bin	7.57e-005	0
-bin	7.575e-005	0
-bin	7.58e-005	0
-bin	7.585e-005	0
-scalar test2.switch2.phy[0].mac "simulated time" 0.020001
+bin	0	0
+bin	1	0
+scalar test2.switch2.phy[0].mac "simulated time" 0.000201
 scalar test2.switch2.phy[0].mac full-duplex 1
 scalar test2.switch2.phy[0].mac "frames/sec sent" 0
-scalar test2.switch2.phy[0].mac "frames/sec rcvd" 149.99250037498
+scalar test2.switch2.phy[0].mac "frames/sec rcvd" 0
 scalar test2.switch2.phy[0].mac "bits/sec sent" 0
-scalar test2.switch2.phy[0].mac "bits/sec rcvd" 79996.00019999
-scalar test2.switch2.phy[0].mac "rx channel idle (%)" 99.910404479776
-scalar test2.switch2.phy[0].mac "rx channel utilization (%)" 0.089595520223989
+scalar test2.switch2.phy[0].mac "bits/sec rcvd" 0
+scalar test2.switch2.phy[0].mac "rx channel idle (%)" 100
+scalar test2.switch2.phy[0].mac "rx channel utilization (%)" 0
 scalar test2.switch2.phy[0].mac rxPkFromHL:count 0
 attr interpolationmode none
 attr source rxPkFromHL
@@ -9540,19 +8260,19 @@ scalar test2.switch2.phy[0].mac droppedPkIfaceDown:sum(packetBytes) 0
 attr interpolationmode none
 attr source dropPkIfaceDown
 attr title "packets dropped/interface down, sum(packetBytes)"
-scalar test2.switch2.phy[0].mac rxPkOk:count 3
+scalar test2.switch2.phy[0].mac rxPkOk:count 0
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, count"
-scalar test2.switch2.phy[0].mac rxPkOk:sum(packetBytes) 200
+scalar test2.switch2.phy[0].mac rxPkOk:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, sum(packetBytes)"
-scalar test2.switch2.phy[0].mac passedUpPk:count 3
+scalar test2.switch2.phy[0].mac passedUpPk:count 0
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, count"
-scalar test2.switch2.phy[0].mac passedUpPk:sum(packetBytes) 200
+scalar test2.switch2.phy[0].mac passedUpPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, sum(packetBytes)"
@@ -9863,19 +8583,19 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.switch2.phy[1].mac "simulated time" 0.020001
+scalar test2.switch2.phy[1].mac "simulated time" 0.000201
 scalar test2.switch2.phy[1].mac full-duplex 1
-scalar test2.switch2.phy[1].mac "frames/sec sent" 149.99250037498
+scalar test2.switch2.phy[1].mac "frames/sec sent" 0
 scalar test2.switch2.phy[1].mac "frames/sec rcvd" 0
-scalar test2.switch2.phy[1].mac "bits/sec sent" 79996.00019999
+scalar test2.switch2.phy[1].mac "bits/sec sent" 0
 scalar test2.switch2.phy[1].mac "bits/sec rcvd" 0
 scalar test2.switch2.phy[1].mac "rx channel idle (%)" 100
 scalar test2.switch2.phy[1].mac "rx channel utilization (%)" 0
-scalar test2.switch2.phy[1].mac rxPkFromHL:count 3
+scalar test2.switch2.phy[1].mac rxPkFromHL:count 0
 attr interpolationmode none
 attr source rxPkFromHL
 attr title "packet bytes from higher layer, count"
-scalar test2.switch2.phy[1].mac rxPkFromHL:sum(packetBytes) 200
+scalar test2.switch2.phy[1].mac rxPkFromHL:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPkFromHL
 attr title "packet bytes from higher layer, sum(packetBytes)"
@@ -9891,11 +8611,11 @@ attr title "pause units sent, count"
 scalar test2.switch2.phy[1].mac txPausePkUnits:sum 0
 attr interpolationmode none
 attr title "pause units sent, sum"
-scalar test2.switch2.phy[1].mac txPk:count 3
+scalar test2.switch2.phy[1].mac txPk:count 0
 attr interpolationmode none
 attr source txPk
 attr title "packets transmitted, count"
-scalar test2.switch2.phy[1].mac txPk:sum(packetBytes) 200
+scalar test2.switch2.phy[1].mac txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "packets transmitted, sum(packetBytes)"
@@ -9939,11 +8659,11 @@ scalar test2.switch2.phy[1].mac passedUpPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, sum(packetBytes)"
-scalar test2.switch2.scheduler.period[0] numberOfCycles:count 1
+scalar test2.switch2.scheduler.period[0] numberOfCycles:count 0
 attr interpolationmode none
 attr source newCycle
 attr title "Number of cycle, count"
-scalar test2.switch2.scheduler.period[1] numberOfCycles:count 1
+scalar test2.switch2.scheduler.period[1] numberOfCycles:count 0
 attr interpolationmode none
 attr source newCycle
 attr title "Number of cycle, count"
@@ -9956,7 +8676,7 @@ attr source constant1(messageSent)
 scalar test2.switch3.beswitch.ifOut[1].channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.switch3.beswitch.ifOut[1].channel messages:count 3
+scalar test2.switch3.beswitch.ifOut[1].channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
 scalar test2.switch3.beswitch.ifOut[2].channel messagesDiscarded:count 0
@@ -9968,7 +8688,7 @@ attr source constant1(messageSent)
 scalar test2.switch3.phy[0].upperLayerOut.channel messagesDiscarded:count 0
 attr interpolationmode none
 attr source constant1(messageDiscarded)
-scalar test2.switch3.phy[0].upperLayerOut.channel messages:count 3
+scalar test2.switch3.phy[0].upperLayerOut.channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
 scalar test2.switch3.phy[1].upperLayerOut.channel messagesDiscarded:count 0
@@ -9983,7 +8703,7 @@ attr source constant1(messageDiscarded)
 scalar test2.switch3.phy[2].upperLayerOut.channel messages:count 0
 attr interpolationmode none
 attr source constant1(messageSent)
-scalar test2.switch3.beswitch "processed frames" 3
+scalar test2.switch3.beswitch "processed frames" 0
 scalar test2.switch3.beswitch "discarded frames" 0
 statistic test2.switch3.phy[0].shaper rc9QueueSize:stats
 field count 1
@@ -10266,136 +8986,40 @@ attr source droppedPk
 attr title "Unconfigured CT dropped, count"
 attr unit packets
 statistic test2.switch3.phy[0].inControl rxLatency:stats
-field count 3
-field mean 6.0046666666667e-005
-field stddev 7.3900834456335e-007
-field min 5.962e-005
-field max 6.09e-005
-field sum 0.00018014
-field sqrsum 1.08178988e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), stats"
 attr unit s
 statistic test2.switch3.phy[0].inControl rxLatency:histogram
-field count 3
-field mean 6.0046666666667e-005
-field stddev 7.3900834456335e-007
-field min 5.962e-005
-field max 6.09e-005
-field sum 0.00018014
-field sqrsum 1.08178988e-008
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
 attr interpolationmode none
 attr source messageAge(rxPk)
 attr title "End-to-end latency (received), histogram"
 attr unit s
 bin	-inf	0
-bin	5.928e-005	0
-bin	5.93e-005	0
-bin	5.932e-005	0
-bin	5.934e-005	0
-bin	5.936e-005	0
-bin	5.938e-005	0
-bin	5.94e-005	0
-bin	5.942e-005	0
-bin	5.944e-005	0
-bin	5.946e-005	0
-bin	5.948e-005	0
-bin	5.95e-005	0
-bin	5.952e-005	0
-bin	5.954e-005	0
-bin	5.956e-005	0
-bin	5.958e-005	0
-bin	5.96e-005	2
-bin	5.962e-005	0
-bin	5.964e-005	0
-bin	5.966e-005	0
-bin	5.968e-005	0
-bin	5.97e-005	0
-bin	5.972e-005	0
-bin	5.974e-005	0
-bin	5.976e-005	0
-bin	5.978e-005	0
-bin	5.98e-005	0
-bin	5.982e-005	0
-bin	5.984e-005	0
-bin	5.986e-005	0
-bin	5.988e-005	0
-bin	5.99e-005	0
-bin	5.992e-005	0
-bin	5.994e-005	0
-bin	5.996e-005	0
-bin	5.998e-005	0
-bin	6e-005	0
-bin	6.002e-005	0
-bin	6.004e-005	0
-bin	6.006e-005	0
-bin	6.008e-005	0
-bin	6.01e-005	0
-bin	6.012e-005	0
-bin	6.014e-005	0
-bin	6.016e-005	0
-bin	6.018e-005	0
-bin	6.02e-005	0
-bin	6.022e-005	0
-bin	6.024e-005	0
-bin	6.026e-005	0
-bin	6.028e-005	0
-bin	6.03e-005	0
-bin	6.032e-005	0
-bin	6.034e-005	0
-bin	6.036e-005	0
-bin	6.038e-005	0
-bin	6.04e-005	0
-bin	6.042e-005	0
-bin	6.044e-005	0
-bin	6.046e-005	0
-bin	6.048e-005	0
-bin	6.05e-005	0
-bin	6.052e-005	0
-bin	6.054e-005	0
-bin	6.056e-005	0
-bin	6.058e-005	0
-bin	6.06e-005	0
-bin	6.062e-005	0
-bin	6.064e-005	0
-bin	6.066e-005	0
-bin	6.068e-005	0
-bin	6.07e-005	0
-bin	6.072e-005	0
-bin	6.074e-005	0
-bin	6.076e-005	0
-bin	6.078e-005	0
-bin	6.08e-005	0
-bin	6.082e-005	0
-bin	6.084e-005	0
-bin	6.086e-005	0
-bin	6.088e-005	1
-bin	6.09e-005	0
-bin	6.092e-005	0
-bin	6.094e-005	0
-bin	6.096e-005	0
-bin	6.098e-005	0
-bin	6.1e-005	0
-bin	6.102e-005	0
-bin	6.104e-005	0
-bin	6.106e-005	0
-bin	6.108e-005	0
-bin	6.11e-005	0
-bin	6.112e-005	0
-bin	6.114e-005	0
-bin	6.116e-005	0
-bin	6.118e-005	0
-bin	6.12e-005	0
-bin	6.122e-005	0
-scalar test2.switch3.phy[0].mac "simulated time" 0.020001
+bin	0	0
+bin	1	0
+scalar test2.switch3.phy[0].mac "simulated time" 0.000201
 scalar test2.switch3.phy[0].mac full-duplex 1
 scalar test2.switch3.phy[0].mac "frames/sec sent" 0
-scalar test2.switch3.phy[0].mac "frames/sec rcvd" 149.99250037498
+scalar test2.switch3.phy[0].mac "frames/sec rcvd" 0
 scalar test2.switch3.phy[0].mac "bits/sec sent" 0
-scalar test2.switch3.phy[0].mac "bits/sec rcvd" 79996.00019999
-scalar test2.switch3.phy[0].mac "rx channel idle (%)" 99.910404479776
-scalar test2.switch3.phy[0].mac "rx channel utilization (%)" 0.089595520223989
+scalar test2.switch3.phy[0].mac "bits/sec rcvd" 0
+scalar test2.switch3.phy[0].mac "rx channel idle (%)" 100
+scalar test2.switch3.phy[0].mac "rx channel utilization (%)" 0
 scalar test2.switch3.phy[0].mac rxPkFromHL:count 0
 attr interpolationmode none
 attr source rxPkFromHL
@@ -10448,19 +9072,19 @@ scalar test2.switch3.phy[0].mac droppedPkIfaceDown:sum(packetBytes) 0
 attr interpolationmode none
 attr source dropPkIfaceDown
 attr title "packets dropped/interface down, sum(packetBytes)"
-scalar test2.switch3.phy[0].mac rxPkOk:count 3
+scalar test2.switch3.phy[0].mac rxPkOk:count 0
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, count"
-scalar test2.switch3.phy[0].mac rxPkOk:sum(packetBytes) 200
+scalar test2.switch3.phy[0].mac rxPkOk:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPkOk
 attr title "packets received OK, sum(packetBytes)"
-scalar test2.switch3.phy[0].mac passedUpPk:count 3
+scalar test2.switch3.phy[0].mac passedUpPk:count 0
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, count"
-scalar test2.switch3.phy[0].mac passedUpPk:sum(packetBytes) 200
+scalar test2.switch3.phy[0].mac passedUpPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, sum(packetBytes)"
@@ -10771,19 +9395,19 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.switch3.phy[1].mac "simulated time" 0.020001
+scalar test2.switch3.phy[1].mac "simulated time" 0.000201
 scalar test2.switch3.phy[1].mac full-duplex 1
-scalar test2.switch3.phy[1].mac "frames/sec sent" 149.99250037498
+scalar test2.switch3.phy[1].mac "frames/sec sent" 0
 scalar test2.switch3.phy[1].mac "frames/sec rcvd" 0
-scalar test2.switch3.phy[1].mac "bits/sec sent" 79996.00019999
+scalar test2.switch3.phy[1].mac "bits/sec sent" 0
 scalar test2.switch3.phy[1].mac "bits/sec rcvd" 0
 scalar test2.switch3.phy[1].mac "rx channel idle (%)" 100
 scalar test2.switch3.phy[1].mac "rx channel utilization (%)" 0
-scalar test2.switch3.phy[1].mac rxPkFromHL:count 3
+scalar test2.switch3.phy[1].mac rxPkFromHL:count 0
 attr interpolationmode none
 attr source rxPkFromHL
 attr title "packet bytes from higher layer, count"
-scalar test2.switch3.phy[1].mac rxPkFromHL:sum(packetBytes) 200
+scalar test2.switch3.phy[1].mac rxPkFromHL:sum(packetBytes) 0
 attr interpolationmode none
 attr source rxPkFromHL
 attr title "packet bytes from higher layer, sum(packetBytes)"
@@ -10799,11 +9423,11 @@ attr title "pause units sent, count"
 scalar test2.switch3.phy[1].mac txPausePkUnits:sum 0
 attr interpolationmode none
 attr title "pause units sent, sum"
-scalar test2.switch3.phy[1].mac txPk:count 3
+scalar test2.switch3.phy[1].mac txPk:count 0
 attr interpolationmode none
 attr source txPk
 attr title "packets transmitted, count"
-scalar test2.switch3.phy[1].mac txPk:sum(packetBytes) 200
+scalar test2.switch3.phy[1].mac txPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source txPk
 attr title "packets transmitted, sum(packetBytes)"
@@ -11154,7 +9778,7 @@ attr unit s
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar test2.switch3.phy[2].mac "simulated time" 0.020001
+scalar test2.switch3.phy[2].mac "simulated time" 0.000201
 scalar test2.switch3.phy[2].mac full-duplex 1
 scalar test2.switch3.phy[2].mac "frames/sec sent" 0
 scalar test2.switch3.phy[2].mac "frames/sec rcvd" 0
@@ -11230,11 +9854,11 @@ scalar test2.switch3.phy[2].mac passedUpPk:sum(packetBytes) 0
 attr interpolationmode none
 attr source packetSentToUpper
 attr title "packets passed to higher layer, sum(packetBytes)"
-scalar test2.switch3.scheduler.period[0] numberOfCycles:count 1
+scalar test2.switch3.scheduler.period[0] numberOfCycles:count 0
 attr interpolationmode none
 attr source newCycle
 attr title "Number of cycle, count"
-scalar test2.switch3.scheduler.period[1] numberOfCycles:count 1
+scalar test2.switch3.scheduler.period[1] numberOfCycles:count 0
 attr interpolationmode none
 attr source newCycle
 attr title "Number of cycle, count"

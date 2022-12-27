@@ -1,0 +1,295 @@
+version 2
+run General-0-20221226-23:12:38-22960
+attr configname General
+attr datetime 20221226-23:12:38
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network test_udp
+attr processid 22960
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.IP_1.numUdpApps 1
+param **.IP_1.udpApp[0].typename "\"UDPBasicApp\""
+param **.IP_1.udpApp[*].destAddresses "\"10.0.10.1\""
+param **.IP_1.udpApp[0].destPort 1000
+param **.IP_1.udpApp[0].messageLength 100B
+param **.IP_1.udpApp[0].startTime 1s
+param **.IP_1.udpApp[0].sendInterval 500ms
+param **.IP_zentral.numUdpApps 2
+param **.IP_zentral.udpApp[0].typename "\"UDPSink\""
+param **.IP_zentral.udpApp[0].localPort 1000
+param **.IP_zentral.udpApp[1].typename "\"UDPBasicApp\""
+param **.IP_zentral.udpApp[1].destAddresses "\"10.0.2.1\""
+param **.IP_zentral.udpApp[1].destPort 200
+param **.IP_zentral.udpApp[1].messageLength 100B
+param **.IP_zentral.udpApp[1].startTime 1s
+param **.IP_zentral.udpApp[1].sendInterval 1000ms
+param **.IP_2.numUdpApps 1
+param **.IP_2.udpApp[0].typename "\"UDPSink\""
+param **.IP_2.udpApp[0].localPort 200
+
+vector 0 test_udp.IP_zentral.ethg$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 1 test_udp.R1.ethg$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 2 test_udp.R1.ethg$o[1].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 3 test_udp.R1.ethg$o[2].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 4 test_udp.IP_1.ethg$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 5 test_udp.IP_2.ethg$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr source channelBusy
+vector 6 test_udp.IP_zentral.udpApp[1] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 7 test_udp.IP_1.udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 8 test_udp.IP_zentral.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 9 test_udp.IP_1.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 10 test_udp.IP_zentral.networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 11 test_udp.IP_1.networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 12 test_udp.IP_zentral.eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 13 test_udp.IP_1.eth[0].encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, vector(packetBytes)"
+vector 14 test_udp.IP_zentral.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 15 test_udp.IP_1.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 16 test_udp.IP_zentral.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 17 test_udp.IP_1.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 18 test_udp.R1.eth[1].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 19 test_udp.R1.eth[1].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 20 test_udp.R1.eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 21 test_udp.R1.eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 22 test_udp.R1.eth[1].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+vector 23 test_udp.R1.eth[0].encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, vector(packetBytes)"
+0	0	0	0
+0	30	1	1
+0	59	1.0000576	0
+0	59	2	1
+0	88	2.0000576	0
+0	88	3	1
+0	117	3.0000576	0
+0	117	4	1
+0	146	4.0000576	0
+0	146	5	1
+0	175	5.0000576	0
+0	175	6	1
+0	204	6.0000576	0
+0	204	7	1
+1	0	0	0
+2	0	0	0
+3	0	0	0
+4	0	0	0
+4	31	1	1
+4	60	1.0000576	0
+4	60	2	1
+4	89	2.0000576	0
+4	89	3	1
+4	118	3.0000576	0
+4	118	4	1
+4	147	4.0000576	0
+4	147	5	1
+4	176	5.0000576	0
+4	176	6	1
+4	205	6.0000576	0
+4	205	7	1
+5	0	0	0
+6	18	1	100
+6	47	2	100
+6	76	3	100
+6	105	4	100
+6	134	5	100
+6	163	6	100
+6	192	7	100
+7	19	1	100
+7	44	1.5	100
+7	50	2	100
+7	73	2.5	100
+7	79	3	100
+7	102	3.5	100
+7	108	4	100
+7	131	4.5	100
+7	137	5	100
+7	160	5.5	100
+7	166	6	100
+7	189	6.5	100
+7	195	7	100
+8	21	1	108
+8	51	2	108
+8	80	3	108
+8	109	4	108
+8	138	5	108
+8	167	6	108
+8	196	7	108
+9	23	1	108
+9	45	1.5	108
+9	54	2	108
+9	74	2.5	108
+9	83	3	108
+9	103	3.5	108
+9	110	4	108
+9	132	4.5	108
+9	141	5	108
+9	161	5.5	108
+9	170	6	108
+9	190	6.5	108
+9	197	7	108
+10	24	1	1
+10	48	2	1
+10	77	3	1
+10	111	4	1
+10	135	5	1
+10	164	6	1
+10	198	7	1
+11	25	1	1
+11	49	2	1
+11	78	3	1
+11	112	4	1
+11	136	5	1
+11	165	6	1
+11	199	7	1
+12	28	1	28
+12	56	2	28
+12	85	3	28
+12	115	4	28
+12	143	5	28
+12	172	6	28
+12	202	7	28
+13	29	1	28
+13	57	2	28
+13	86	3	28
+13	116	4	28
+13	144	5	28
+13	173	6	28
+13	203	7	28
+14	30	1	64
+14	59	2	64
+14	88	3	64
+14	117	4	64
+14	146	5	64
+14	175	6	64
+14	204	7	64
+15	31	1	64
+15	60	2	64
+15	89	3	64
+15	118	4	64
+15	147	5	64
+15	176	6	64
+15	205	7	64
+16	32	1.0000576	64
+16	61	2.0000576	64
+16	90	3.0000576	64
+16	119	4.0000576	64
+16	148	5.0000576	64
+16	177	6.0000576	64
+16	206	7.0000576	64
+17	33	1.0000576	64
+17	62	2.0000576	64
+17	91	3.0000576	64
+17	120	4.0000576	64
+17	149	5.0000576	64
+17	178	6.0000576	64
+17	207	7.0000576	64
+18	34	1.0000577	64
+18	63	2.0000577	64
+18	92	3.0000577	64
+18	121	4.0000577	64
+18	150	5.0000577	64
+18	179	6.0000577	64
+18	208	7.0000577	64
+19	34	1.0000577	64
+19	63	2.0000577	64
+19	92	3.0000577	64
+19	121	4.0000577	64
+19	150	5.0000577	64
+19	179	6.0000577	64
+19	208	7.0000577	64
+20	35	1.0000577	64
+20	64	2.0000577	64
+20	93	3.0000577	64
+20	122	4.0000577	64
+20	151	5.0000577	64
+20	180	6.0000577	64
+20	209	7.0000577	64
+21	35	1.0000577	64
+21	64	2.0000577	64
+21	93	3.0000577	64
+21	122	4.0000577	64
+21	151	5.0000577	64
+21	180	6.0000577	64
+21	209	7.0000577	64
+22	36	1.0000577	28
+22	65	2.0000577	28
+22	94	3.0000577	28
+22	123	4.0000577	28
+22	152	5.0000577	28
+22	181	6.0000577	28
+22	210	7.0000577	28
+23	37	1.0000577	28
+23	66	2.0000577	28
+23	95	3.0000577	28
+23	124	4.0000577	28
+23	153	5.0000577	28
+23	182	6.0000577	28
+23	211	7.0000577	28
+0	212	7.0000576	0
+4	212	7.0000576	0
+

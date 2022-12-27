@@ -1,4 +1,3 @@
-package signalsandgateways.examples.test3;
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,50 +13,14 @@ package signalsandgateways.examples.test3;
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-//package signalsandgateways.examples;
+package signalsandgateways.examples.test3;
 
-import core4inet.nodes.ethernet.AS6802.TTEEtherSwitch;
-import core4inet.incoming.AS6802.TTIncoming;
-import core4inet.buffer.AS6802.TTQueueBuffer;
-import core4inet.incoming.AS6802.RCIncoming;
-import core4inet.buffer.AS6802.RCQueueBuffer;
+import core4inet.nodes.ethernet.IEEE8021Q.IEEE8021QEtherSwitch;
 
 //
-// switch1: configuration in switch1.ini
-// Forwards time-triggered messages with VL-ID 100 and rate-constrained messages with VL-ID 101
+// Switch1: configuration in switch1.ini
 //
-module Switch extends TTEEtherSwitch
+module Switch extends IEEE8021QEtherSwitch
 {
-    parameters:
-        int numberOfTT_Vlinks = default(0);
-        int numberOfRC_Vlinks = default(0);
-        int numberOfBG_Vlinks = default(0);
-        @display("bgb=457,311");
-    submodules:
-        //Vector of output buffers for timetriggered traffic(TT)
-        TTvlinks[numberOfTT_Vlinks]: TTQueueBuffer {
-            @display("p=517,37");
-        }
-        //Vector of input buffers for timetriggered traffic(TT)
-        TTvlinks_ctc[numberOfTT_Vlinks]: TTIncoming {
-            @display("p=517,154");
-        }
-        //Vector of output buffers for rate constrained traffic(RC)
-        RCvlinks[numberOfRC_Vlinks]: RCQueueBuffer {
-            parameters:
-                @display("p=768,37");
-        }
-        //Vector of input buffers for rate constrained traffic(RC)
-        RCvlinks_ctc[numberOfRC_Vlinks]: RCIncoming {
-            parameters:
-                @display("p=768,154");
-        }
-
-    connections:
-        for i=0..numberOfTT_Vlinks-1 {
-            TTvlinks_ctc[i].out --> TTvlinks[i].in;
-        }
-        for i=0..numberOfRC_Vlinks-1 {
-            RCvlinks_ctc[i].out --> RCvlinks[i].in;
-        }
+    @display("bgb=351,311");
 }

@@ -1,0 +1,5 @@
+<config>
+  <interface hosts='IP_1' address='10.0.1.1' netmask='255.255.255.0'/>
+  <interface hosts='IP_2' address='10.0.2.1' netmask='255.255.255.0'/>
+  <interface hosts='IP_zentral' address='10.0.10.1' netmask='255.255.255.0'/>
+</config>

@@ -6,8 +6,7 @@
 		<routing>
 			<route source="0" destination="1">
 				<canframe canId="1"/>
-				<canframe canId="2"/>
-				<canframe canId="3"/>
+
 			</route>
 		</routing>
 		<buffering>
@@ -21,10 +20,9 @@
 			</pool>
 		</buffering>
 		<transformation destination="1" type="toEthernet">
-			<ethernetqframe dst="0A-00-00-00-00-04" vid="1" pcp="7">
+			<ethernetqframe dst="0A-00-00-00-00-10" vid="1" pcp="7">
 				<canframe canId="1"/>
-				<canframe canId="2"/>
-				<canframe canId="3"/>
+
 			</ethernetqframe>
 		</transformation>
 	</gateway>
@@ -32,11 +30,11 @@
 	<gateway id="gateway2">
 		<routing>
 			<route source="1" destination="0">
-				<ethernetqframe dst="0A-00-00-00-00-04" vid="1"/>
+				<ethernetqframe dst="0A-00-00-00-00-10" vid="1"/>
 			</route>
 		</routing>
 		<transformation destination="0" type="toCan">
-			<ethernetqframe dst="0A-00-00-00-00-04"/>
+			<ethernetqframe dst="0A-00-00-00-00-02"/>
 		</transformation>
 	</gateway>
 	

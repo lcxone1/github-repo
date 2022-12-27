@@ -1,5 +1,12 @@
-有ETH Host
-多Sensor 多aktor
+有IP
+单Sensor 单aktor - 便于理解
 没有定义具体CAN的payload 只定义了ID
 ETH用了ETH100M
 信号还没有通过ETH Host处理 这个是一个TODO
+
+修正了2个gateway和switch的 MAC地址
+用node表示IP
+
+TODO：
+修改ip.ini,ip.ned 
+信号要通过IP处理

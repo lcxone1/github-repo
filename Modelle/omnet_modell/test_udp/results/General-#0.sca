@@ -1,0 +1,1020 @@
+version 2
+run General-0-20221226-23:12:38-22960
+attr configname General
+attr datetime 20221226-23:12:38
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network test_udp
+attr processid 22960
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.IP_1.numUdpApps 1
+param **.IP_1.udpApp[0].typename "\"UDPBasicApp\""
+param **.IP_1.udpApp[*].destAddresses "\"10.0.10.1\""
+param **.IP_1.udpApp[0].destPort 1000
+param **.IP_1.udpApp[0].messageLength 100B
+param **.IP_1.udpApp[0].startTime 1s
+param **.IP_1.udpApp[0].sendInterval 500ms
+param **.IP_zentral.numUdpApps 2
+param **.IP_zentral.udpApp[0].typename "\"UDPSink\""
+param **.IP_zentral.udpApp[0].localPort 1000
+param **.IP_zentral.udpApp[1].typename "\"UDPBasicApp\""
+param **.IP_zentral.udpApp[1].destAddresses "\"10.0.2.1\""
+param **.IP_zentral.udpApp[1].destPort 200
+param **.IP_zentral.udpApp[1].messageLength 100B
+param **.IP_zentral.udpApp[1].startTime 1s
+param **.IP_zentral.udpApp[1].sendInterval 1000ms
+param **.IP_2.numUdpApps 1
+param **.IP_2.udpApp[0].typename "\"UDPSink\""
+param **.IP_2.udpApp[0].localPort 200
+
+scalar test_udp.IP_zentral.ethg$o[0].channel packetsDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar test_udp.IP_zentral.ethg$o[0].channel utilization:last 5.7599526038186e-005
+attr source timeavg(channelBusy)
+scalar test_udp.IP_zentral.ethg$o[0].channel packets:count 7
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar test_udp.IP_zentral.ethg$o[0].channel packetBytes:sum 504
+attr interpolationmode none
+attr source packetBytes(messageSent)
+attr unit B
+scalar test_udp.IP_zentral.ethg$o[0].channel throughput:last 576
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar test_udp.R1.ethg$o[0].channel packetsDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar test_udp.R1.ethg$o[0].channel utilization:last nan
+attr source timeavg(channelBusy)
+scalar test_udp.R1.ethg$o[0].channel packets:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar test_udp.R1.ethg$o[0].channel packetBytes:sum 0
+attr interpolationmode none
+attr source packetBytes(messageSent)
+attr unit B
+scalar test_udp.R1.ethg$o[0].channel throughput:last nan
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar test_udp.R1.ethg$o[1].channel packetsDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar test_udp.R1.ethg$o[1].channel utilization:last nan
+attr source timeavg(channelBusy)
+scalar test_udp.R1.ethg$o[1].channel packets:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar test_udp.R1.ethg$o[1].channel packetBytes:sum 0
+attr interpolationmode none
+attr source packetBytes(messageSent)
+attr unit B
+scalar test_udp.R1.ethg$o[1].channel throughput:last nan
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar test_udp.R1.ethg$o[2].channel packetsDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar test_udp.R1.ethg$o[2].channel utilization:last nan
+attr source timeavg(channelBusy)
+scalar test_udp.R1.ethg$o[2].channel packets:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar test_udp.R1.ethg$o[2].channel packetBytes:sum 0
+attr interpolationmode none
+attr source packetBytes(messageSent)
+attr unit B
+scalar test_udp.R1.ethg$o[2].channel throughput:last nan
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar test_udp.IP_1.ethg$o[0].channel packetsDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar test_udp.IP_1.ethg$o[0].channel utilization:last 5.7599526038186e-005
+attr source timeavg(channelBusy)
+scalar test_udp.IP_1.ethg$o[0].channel packets:count 7
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar test_udp.IP_1.ethg$o[0].channel packetBytes:sum 504
+attr interpolationmode none
+attr source packetBytes(messageSent)
+attr unit B
+scalar test_udp.IP_1.ethg$o[0].channel throughput:last 576
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar test_udp.IP_2.ethg$o[0].channel packetsDiscarded:count 0
+attr interpolationmode none
+attr source constant1(messageDiscarded)
+scalar test_udp.IP_2.ethg$o[0].channel utilization:last nan
+attr source timeavg(channelBusy)
+scalar test_udp.IP_2.ethg$o[0].channel packets:count 0
+attr interpolationmode none
+attr source constant1(messageSent)
+scalar test_udp.IP_2.ethg$o[0].channel packetBytes:sum 0
+attr interpolationmode none
+attr source packetBytes(messageSent)
+attr unit B
+scalar test_udp.IP_2.ethg$o[0].channel throughput:last nan
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+scalar test_udp.IP_zentral.networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar test_udp.IP_zentral.networkLayer.arp sentReq:count 7
+attr title "ARP request sent, count"
+scalar test_udp.IP_zentral.networkLayer.arp failedARPResolution:count 2
+attr title "ARP failed resolutions, count"
+scalar test_udp.IP_zentral.networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar test_udp.IP_zentral.networkLayer.arp initiatedARPResolution:count 3
+attr title "ARP initiated resolutions, count"
+scalar test_udp.IP_zentral.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar test_udp.IP_zentral.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar test_udp.IP_zentral.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar test_udp.IP_zentral.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar test_udp.IP_zentral.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar test_udp.IP_zentral.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar test_udp.IP_zentral.eth[0].mac "simulated time" 7.0000577
+scalar test_udp.IP_zentral.eth[0].mac full-duplex 1
+scalar test_udp.IP_zentral.eth[0].mac "frames/sec sent" 0.9999917572108
+scalar test_udp.IP_zentral.eth[0].mac "frames/sec rcvd" 0
+scalar test_udp.IP_zentral.eth[0].mac "bits/sec sent" 511.99577969193
+scalar test_udp.IP_zentral.eth[0].mac "bits/sec rcvd" 0
+scalar test_udp.IP_zentral.eth[0].mac "rx channel idle (%)" 100
+scalar test_udp.IP_zentral.eth[0].mac "rx channel utilization (%)" 0
+scalar test_udp.IP_zentral.eth[0].mac rxPkFromHL:count 7
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar test_udp.IP_zentral.eth[0].mac rxPkFromHL:sum(packetBytes) 448
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar test_udp.IP_zentral.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar test_udp.IP_zentral.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar test_udp.IP_zentral.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar test_udp.IP_zentral.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar test_udp.IP_zentral.eth[0].mac txPk:count 7
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar test_udp.IP_zentral.eth[0].mac txPk:sum(packetBytes) 448
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar test_udp.IP_zentral.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar test_udp.IP_zentral.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar test_udp.IP_zentral.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar test_udp.IP_zentral.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar test_udp.IP_zentral.eth[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar test_udp.IP_zentral.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar test_udp.IP_zentral.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar test_udp.IP_zentral.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar test_udp.IP_zentral.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar test_udp.IP_zentral.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar test_udp.IP_zentral.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar test_udp.IP_zentral.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar test_udp.IP_zentral.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar test_udp.IP_zentral.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar test_udp.IP_zentral.eth[0].encap encapPk:count 7
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar test_udp.IP_zentral.eth[0].encap encapPk:sum(packetBytes) 196
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar test_udp.IP_zentral.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar test_udp.IP_zentral.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic test_udp.IP_zentral.udpApp[0] endToEndDelay:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "end-to-end delay, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar test_udp.IP_zentral.udpApp[1] "packets sent" 7
+scalar test_udp.IP_zentral.udpApp[1] "packets received" 0
+scalar test_udp.IP_zentral.udpApp[1] sentPk:count 7
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar test_udp.IP_zentral.udpApp[1] sentPk:sum(packetBytes) 700
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar test_udp.IP_zentral.udpApp[1] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar test_udp.IP_zentral.udpApp[1] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic test_udp.IP_zentral.udpApp[1] rcvdPkLifetime:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar test_udp.IP_zentral.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar test_udp.IP_zentral.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar test_udp.IP_zentral.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar test_udp.IP_zentral.udp sentPk:count 7
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar test_udp.IP_zentral.udp sentPk:sum(packetBytes) 756
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar test_udp.IP_zentral.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar test_udp.IP_zentral.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar test_udp.R1.networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar test_udp.R1.networkLayer.arp sentReq:count 0
+attr title "ARP request sent, count"
+scalar test_udp.R1.networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar test_udp.R1.networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar test_udp.R1.networkLayer.arp initiatedARPResolution:count 0
+attr title "ARP initiated resolutions, count"
+scalar test_udp.R1.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar test_udp.R1.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar test_udp.R1.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar test_udp.R1.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar test_udp.R1.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar test_udp.R1.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar test_udp.R1.eth[0].mac "simulated time" 7.0000577
+scalar test_udp.R1.eth[0].mac full-duplex 1
+scalar test_udp.R1.eth[0].mac "frames/sec sent" 0
+scalar test_udp.R1.eth[0].mac "frames/sec rcvd" 0.9999917572108
+scalar test_udp.R1.eth[0].mac "bits/sec sent" 0
+scalar test_udp.R1.eth[0].mac "bits/sec rcvd" 511.99577969193
+scalar test_udp.R1.eth[0].mac "rx channel idle (%)" 99.994240047478
+scalar test_udp.R1.eth[0].mac "rx channel utilization (%)" 0.0057599525215342
+scalar test_udp.R1.eth[0].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar test_udp.R1.eth[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar test_udp.R1.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar test_udp.R1.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar test_udp.R1.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar test_udp.R1.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar test_udp.R1.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar test_udp.R1.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar test_udp.R1.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar test_udp.R1.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar test_udp.R1.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar test_udp.R1.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar test_udp.R1.eth[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar test_udp.R1.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar test_udp.R1.eth[0].mac rxPkOk:count 7
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar test_udp.R1.eth[0].mac rxPkOk:sum(packetBytes) 448
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar test_udp.R1.eth[0].mac passedUpPk:count 7
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar test_udp.R1.eth[0].mac passedUpPk:sum(packetBytes) 448
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar test_udp.R1.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar test_udp.R1.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar test_udp.R1.eth[0].encap decapPk:count 7
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar test_udp.R1.eth[0].encap decapPk:sum(packetBytes) 196
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar test_udp.R1.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar test_udp.R1.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar test_udp.R1.eth[1].mac "simulated time" 7.0000577
+scalar test_udp.R1.eth[1].mac full-duplex 1
+scalar test_udp.R1.eth[1].mac "frames/sec sent" 0
+scalar test_udp.R1.eth[1].mac "frames/sec rcvd" 0.9999917572108
+scalar test_udp.R1.eth[1].mac "bits/sec sent" 0
+scalar test_udp.R1.eth[1].mac "bits/sec rcvd" 511.99577969193
+scalar test_udp.R1.eth[1].mac "rx channel idle (%)" 99.994240047478
+scalar test_udp.R1.eth[1].mac "rx channel utilization (%)" 0.0057599525215342
+scalar test_udp.R1.eth[1].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar test_udp.R1.eth[1].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar test_udp.R1.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar test_udp.R1.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar test_udp.R1.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar test_udp.R1.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar test_udp.R1.eth[1].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar test_udp.R1.eth[1].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar test_udp.R1.eth[1].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar test_udp.R1.eth[1].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar test_udp.R1.eth[1].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar test_udp.R1.eth[1].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar test_udp.R1.eth[1].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar test_udp.R1.eth[1].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar test_udp.R1.eth[1].mac rxPkOk:count 7
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar test_udp.R1.eth[1].mac rxPkOk:sum(packetBytes) 448
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar test_udp.R1.eth[1].mac passedUpPk:count 7
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar test_udp.R1.eth[1].mac passedUpPk:sum(packetBytes) 448
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar test_udp.R1.eth[1].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar test_udp.R1.eth[1].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar test_udp.R1.eth[1].encap decapPk:count 7
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar test_udp.R1.eth[1].encap decapPk:sum(packetBytes) 196
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar test_udp.R1.eth[1].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar test_udp.R1.eth[1].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar test_udp.R1.eth[2].mac "simulated time" 7.0000577
+scalar test_udp.R1.eth[2].mac full-duplex 1
+scalar test_udp.R1.eth[2].mac "frames/sec sent" 0
+scalar test_udp.R1.eth[2].mac "frames/sec rcvd" 0
+scalar test_udp.R1.eth[2].mac "bits/sec sent" 0
+scalar test_udp.R1.eth[2].mac "bits/sec rcvd" 0
+scalar test_udp.R1.eth[2].mac "rx channel idle (%)" 100
+scalar test_udp.R1.eth[2].mac "rx channel utilization (%)" 0
+scalar test_udp.R1.eth[2].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar test_udp.R1.eth[2].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar test_udp.R1.eth[2].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar test_udp.R1.eth[2].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar test_udp.R1.eth[2].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar test_udp.R1.eth[2].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar test_udp.R1.eth[2].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar test_udp.R1.eth[2].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar test_udp.R1.eth[2].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar test_udp.R1.eth[2].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar test_udp.R1.eth[2].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar test_udp.R1.eth[2].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar test_udp.R1.eth[2].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar test_udp.R1.eth[2].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar test_udp.R1.eth[2].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar test_udp.R1.eth[2].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar test_udp.R1.eth[2].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar test_udp.R1.eth[2].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar test_udp.R1.eth[2].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar test_udp.R1.eth[2].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar test_udp.R1.eth[2].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar test_udp.R1.eth[2].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar test_udp.R1.eth[2].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar test_udp.R1.eth[2].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar test_udp.IP_1.networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar test_udp.IP_1.networkLayer.arp sentReq:count 7
+attr title "ARP request sent, count"
+scalar test_udp.IP_1.networkLayer.arp failedARPResolution:count 2
+attr title "ARP failed resolutions, count"
+scalar test_udp.IP_1.networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar test_udp.IP_1.networkLayer.arp initiatedARPResolution:count 3
+attr title "ARP initiated resolutions, count"
+scalar test_udp.IP_1.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar test_udp.IP_1.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar test_udp.IP_1.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar test_udp.IP_1.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar test_udp.IP_1.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar test_udp.IP_1.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar test_udp.IP_1.eth[0].mac "simulated time" 7.0000577
+scalar test_udp.IP_1.eth[0].mac full-duplex 1
+scalar test_udp.IP_1.eth[0].mac "frames/sec sent" 0.9999917572108
+scalar test_udp.IP_1.eth[0].mac "frames/sec rcvd" 0
+scalar test_udp.IP_1.eth[0].mac "bits/sec sent" 511.99577969193
+scalar test_udp.IP_1.eth[0].mac "bits/sec rcvd" 0
+scalar test_udp.IP_1.eth[0].mac "rx channel idle (%)" 100
+scalar test_udp.IP_1.eth[0].mac "rx channel utilization (%)" 0
+scalar test_udp.IP_1.eth[0].mac rxPkFromHL:count 7
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar test_udp.IP_1.eth[0].mac rxPkFromHL:sum(packetBytes) 448
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar test_udp.IP_1.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar test_udp.IP_1.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar test_udp.IP_1.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar test_udp.IP_1.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar test_udp.IP_1.eth[0].mac txPk:count 7
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar test_udp.IP_1.eth[0].mac txPk:sum(packetBytes) 448
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar test_udp.IP_1.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar test_udp.IP_1.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar test_udp.IP_1.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar test_udp.IP_1.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar test_udp.IP_1.eth[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar test_udp.IP_1.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar test_udp.IP_1.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar test_udp.IP_1.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar test_udp.IP_1.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar test_udp.IP_1.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar test_udp.IP_1.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar test_udp.IP_1.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar test_udp.IP_1.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar test_udp.IP_1.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar test_udp.IP_1.eth[0].encap encapPk:count 7
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar test_udp.IP_1.eth[0].encap encapPk:sum(packetBytes) 196
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar test_udp.IP_1.udpApp[0] "packets sent" 13
+scalar test_udp.IP_1.udpApp[0] "packets received" 0
+scalar test_udp.IP_1.udpApp[0] sentPk:count 13
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar test_udp.IP_1.udpApp[0] sentPk:sum(packetBytes) 1300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar test_udp.IP_1.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar test_udp.IP_1.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic test_udp.IP_1.udpApp[0] rcvdPkLifetime:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar test_udp.IP_1.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar test_udp.IP_1.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar test_udp.IP_1.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar test_udp.IP_1.udp sentPk:count 13
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar test_udp.IP_1.udp sentPk:sum(packetBytes) 1404
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar test_udp.IP_1.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar test_udp.IP_1.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar test_udp.IP_2.networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar test_udp.IP_2.networkLayer.arp sentReq:count 0
+attr title "ARP request sent, count"
+scalar test_udp.IP_2.networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar test_udp.IP_2.networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar test_udp.IP_2.networkLayer.arp initiatedARPResolution:count 0
+attr title "ARP initiated resolutions, count"
+scalar test_udp.IP_2.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar test_udp.IP_2.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar test_udp.IP_2.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar test_udp.IP_2.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar test_udp.IP_2.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar test_udp.IP_2.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar test_udp.IP_2.eth[0].mac "simulated time" 7.0000577
+scalar test_udp.IP_2.eth[0].mac full-duplex 1
+scalar test_udp.IP_2.eth[0].mac "frames/sec sent" 0
+scalar test_udp.IP_2.eth[0].mac "frames/sec rcvd" 0
+scalar test_udp.IP_2.eth[0].mac "bits/sec sent" 0
+scalar test_udp.IP_2.eth[0].mac "bits/sec rcvd" 0
+scalar test_udp.IP_2.eth[0].mac "rx channel idle (%)" 100
+scalar test_udp.IP_2.eth[0].mac "rx channel utilization (%)" 0
+scalar test_udp.IP_2.eth[0].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar test_udp.IP_2.eth[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar test_udp.IP_2.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar test_udp.IP_2.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar test_udp.IP_2.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar test_udp.IP_2.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar test_udp.IP_2.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar test_udp.IP_2.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar test_udp.IP_2.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar test_udp.IP_2.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar test_udp.IP_2.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar test_udp.IP_2.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar test_udp.IP_2.eth[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar test_udp.IP_2.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar test_udp.IP_2.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar test_udp.IP_2.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar test_udp.IP_2.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar test_udp.IP_2.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar test_udp.IP_2.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar test_udp.IP_2.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar test_udp.IP_2.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar test_udp.IP_2.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar test_udp.IP_2.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar test_udp.IP_2.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar test_udp.IP_2.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar test_udp.IP_2.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic test_udp.IP_2.udpApp[0] endToEndDelay:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "end-to-end delay, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar test_udp.IP_2.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar test_udp.IP_2.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar test_udp.IP_2.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar test_udp.IP_2.udp sentPk:count 0
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar test_udp.IP_2.udp sentPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar test_udp.IP_2.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar test_udp.IP_2.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+

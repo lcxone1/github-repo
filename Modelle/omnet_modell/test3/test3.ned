@@ -50,52 +50,57 @@ network test3
         canbus1: CanBus {
             @display("p=137,62");
         }
-        sensor[4]: CanNode {
+        sensor: CanNode {
             @display("p=51,62");
         }
         canbus2: CanBus {
             @display("p=634.6,61.56");
         }
-        aktor[3]: CanNode {
+        aktor: CanNode {
             @display("p=720.48,61.56");
         }
-        gateway1: Gateway1 {
-            @display("p=214,62");
+        zonenmodul1: Gateway1 {
+            @display("p=238,61");
             gates:
                 cang[1];
                 ethg[1];
         }
 
-        gateway2: Gateway2 {
-            @display("p=548.72003,61.56");
+        zonenmodul2: Gateway2 {
+            @display("p=511,61");
             gates:
                 cang[1];
                 ethg[1];
         }
 
-        etherHost: EtherHost {
-            @display("p=379,142");
-        }
         switch1: Switch {
             @display("p=379,62");
             gates:
                 ethg[3];
         }
+
+        IP_zentral: IP {
+            @display("p=379,169");
+        }
     connections:
         //gateway1.ethg[0] <--> cable {  delay = 100ns; } <--> switch.ethg[0];
         //gateway2.ethg[0] <--> cable {  delay = 50ns; } <--> switch.ethg[1];
 
-        gateway1.cang[0] <--> canbus1.gate++;
-        gateway2.cang[0] <--> canbus2.gate++;
+        zonenmodul1.cang[0] <--> canbus1.gate++;
+        zonenmodul2.cang[0] <--> canbus2.gate++;
 
-        for i=0..(3) {
-            canbus1.gate++ <--> sensor[i].gate;
-        }
-        for i=0..(2) {
-            canbus2.gate++ <--> aktor[i].gate;
-        }
+//        for i=0..(3) {
+//            canbus1.gate++ <--> sensor[i].gate;
+//        }
+//        for i=0..(2) {
+//            canbus2.gate++ <--> aktor[i].gate;
+//        }
 
-        gateway1.ethg[0] <--> Eth100M <--> switch1.ethg[0];
-        switch1.ethg[1] <--> Eth100M <--> gateway2.ethg[0];
-        switch1.ethg[2] <--> Eth100M <--> etherHost.ethg;
+
+        canbus1.gate++ <--> sensor.gate;
+        canbus2.gate++ <--> aktor.gate;
+
+        zonenmodul1.ethg[0] <--> Eth100M <--> switch1.ethg[0];
+        switch1.ethg[1] <--> Eth100M <--> zonenmodul2.ethg[0];
+        switch1.ethg[2] <--> Eth100M <--> IP_zentral.ethg;
 }
