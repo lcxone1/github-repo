@@ -23,8 +23,7 @@
 \maketitle
 
 \begin{abstract}
-  Energy demand forecasting is a salient process for proper allocation of the available resources for industrial production, agricultural, health, population and education etc. It is also the starting point for building roadmaps for achiving a low carbnon energy systems. In the last decades, researchers have contributed thousands of papers on forecasting of future energy demand.
-  In this article I made an attemptation to briefly review the various energy demand forecasting methodes world wide since 2005. XX valuable open data sources were also been pointed out. No artificial Intelligence method are discussed in this article.
+  Energy demand forecasting is a crucial process for the proper allocation of available resources for various sectors, such as industrial production, agriculture, health, population, and education. It involves using models and analysis to predict future energy demand and evaluate the impacts of different policy scenarios on energy markets, the environment, and economic performance. Governments, utilities, and other organizations rely on energy demand forecasting as a tool to plan for the future and ensure that energy systems can meet the needs of society. In the last decades, researchers have contributed thousands of papers on forecasting of future energy demand. In this article I made an attemptation to briefly review the various energy demand forecasting methodes world wide since 2005. Among them, I have detailed the following 4 models: TIMES, LEAP, PRIME, and AIM/ENDUSE. No artificial Intelligence method are discussed in this article.
   
 \end{abstract}
 
@@ -35,17 +34,34 @@ Energy demand forecasting, Energy models, Forecasting model
 
 \section{Introduction}
 
+Energy demand forecasting is a crucial process for the proper allocation of available resources for various sectors, such as industrial production, agriculture, health, population, and education. It involves using models and analysis to predict future energy demand and evaluate the impacts of different policy scenarios on energy markets, the environment, and economic performance. Governments, utilities, and other organizations rely on energy demand forecasting as a tool to plan for the future and ensure that energy systems can meet the needs of society. This process is an integral part of energy planning and policy development, allowing decision-makers to anticipate future energy requirements and identify potential challenges and opportunities. Additionally, energy demand forecasting plays a key role in the transition to more sustainable and resilient energy systems, helping to identify the most effective and efficient pathways for meeting future energy demand in an environmentally and sustainably responsible manner.
+
 Projecting long-term energy demand at the global aggregate level is the starting point for creating a comprehensive roadmap for the transition to an achieve a climate neutral world by mid-century \cite{UNFCCC}. While energy forecasting can be interpreted as forecasting of kWh consumption, I use the wider definition, referring to forecasting of the energy industry. We pay particular attention to topics related to energy systems, including electricity demand, and wind and solar power generation. Although oil and gas forecasting is also an important subset of energy forecasting, it is outside the scope of this article.
 
-[Mehr zu Introduction]
+[wer hat ansonst was schon gemacht]
 
-The rest of this article is structured as follows: Section 2 presents an overview of the literature; Section 3 introduces xx valuable data sources and emphasizes the importance of reproducible research; Section 4 summarizes this article.
+The goal of the report, is to provide an briefly overview of the various energy demand forecasting methodes world wide. Meanwhile I provide an in-depth understanding of the models using the following four models as an example: TIMES, LEAP, PRIME, and AIM/ENDUSE.
 
+The remainder of this article is organized as follows: In Section 2, I provide an overview of modeling techniques used in energy demand forecasting. In Section 3, I provide an in-depth explanation of each of these four models, including their original authors, the methodology employed, the energy sector they focus on, and the time horizon in which they can be applied. Finally, in Section 4, I summarize the key points of this article.
 \section{Overview of Literatures}
 
   \subsection{Time Series Models}
-Time series models uses time series trend analysis for extrapolating the future energy requirement. Himanshu and Lester \cite{srilanka} have used time series analysis for predicting electricity demand in Sri Lanka. Mabel et al. used pearl or logistic function to forecast the future wind energy patterns in India\cite{TSA-india}.
-  
+
+Recording the ordered sequence of the values of a variable at fixed time intervals creates a time series. Time series models are the most simplest of models which uses time series trend analysis for extrapolating the future energy requirement. Time series models are often categorized as top-down models, and represent the relationship between the variable's values with time.  
+
+Himanshu and Lester \cite{srilanka} have used time series analysis for predicting electricity demand in Sri Lanka. Mabel et al. used pearl or logistic function to forecast the future wind energy patterns in India \cite{TSA-india}.
+
+Three time series models, namely, Grey-Markov model, Grey-Model with rolling mechanism, and singular spectrum analysis (SSA) are used to forecast the consumption of conventional energy in India. GreyMarkov model has been employed to forecast crude-petroleum consumption while Grey-Model with rolling mechanism to forecast coal, electricity (in utilities) consumption and SSA to predict natural gas consumption \cite{time-serie india}.
+
+The problem of forecasting the monthly peak demand of electricity in north India was studied by Ghosh \cite{time-serie india ghosh}. In this paper the authors used two different time series methods–that of multiplicative seasonal autoregressive integrated moving average and Holt-Winters multiplicative exponential smoothing. 
+
+Mati et al. \cite{time-serie Nigeria}used the time series to forecast the electricity demand in Nigeria. A multiple regression time series was applied, and electricity consumption and percentage connectivity to the national grid were considered the independent variables of the model
+
+Moreover, a chaotic time series method was used by Wang et al. \cite{time-serie china}to forecast the electricity demand. The authors believed that the electricity demand series had the chaotic characteristics, and that the
+proposed method could effectively predict the demand with a mean absolute relative error of 2.48\%. It is notable that the seasonal effects were considered in the method by using a trend adjustment technique; additionally, a data set from the network of New South Wales in Australia was used to simulate the needed data.
+
+Simmhan and Noor \cite{time series clustering} applied the incremental clustering of time series to forecast the energy consumption. The main contribution of the authors is about applying the method to big data and used 700,000 input data points to show the efficacy of the developed model both in terms of accuracy and prediction time. 
+
   \subsection{Probabilistic Forecasting}
   Many phenomena and systems in nature can be viewed as or modeled by stochastic processes. The frequently used point forecasts, or single-valued forecasts, are simply presenting summary statistics, mostly expected values, of a subject during different time periods. In weather forecasting, it has long been known that a forecast is essentially fivedimensional, spanning the three-dimensional space, time and probability. [mehr info] 
 
@@ -108,6 +124,20 @@ Time series models uses time series trend analysis for extrapolating the future 
   \bibitem{272}
   Lee Y-S, Tong L-I. Forecasting energy consumption using a grey model improved by incorporating genetic programming. Energy Conversion and Management 2011;52:147–52.
 
+  \bibitem{time-serie india}
+  Kumar U, Jain VK. Time series models (Grey-Markov. Grey Model with rolling mechanism and singular spectrum analysis) to forecast energy consumption in India. Energy 2010; 35(4): 1709–16
+
+  \bibitem{time-serie india ghosh}
+  Ghosh, S.: Univariate time-series forecasting of monthly peak demand of electricity in northern India. Int. J. Indian Cult. Bus. Manag. 1(4), 466–474 (2008)
+
+  \bibitem{time-serie Nigeria}
+  Mati, A.A., Gajoga, B.G., Jimoh, B., Adegobye, A., Dajab, D.D.: Electricity demand forecasting in Nigeria using time series model. Pac. J. Sci. Technol. 10(2), 479–485 (2009)
+
+  \bibitem{time-serie china}
+  Wang, J., Chi, D., Wu, J., Lu, H.Y.: Chaotic time series method combined with particle swarm optimization and trend adjustment for electricity demand forecasting. Expert Syst. Appl. 38(7), 8419–8429 (2011)
+
+  \bibitem{time series clustering}
+  Simmhan, Y., Noor, M.U.: Scalable prediction of energy consumption using incremental time series clustering. In: Big Data, IEEE International Conference, pp. 29–36. IEEE (2013)
 \end{thebibliography}
 
 \end{document}
