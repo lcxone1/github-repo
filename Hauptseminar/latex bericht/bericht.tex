@@ -40,16 +40,19 @@ Projecting long-term energy demand at the global aggregate level is the starting
 
 [wer hat ansonst was schon gemacht]
 
-The goal of the report, is to provide an briefly overview of the various energy demand forecasting methodes world wide. Meanwhile I provide an in-depth understanding of the models using the following four models as an example: TIMES, LEAP, PRIME, and AIM/ENDUSE.
+The aim of this report is to provide a brief overview of the various methods used for energy demand forecasting around the world, while also offering a detailed understanding of these methods using four specific models as examples: TIMES, LEAP, PRIME, and AIM/ENDUSE.
 
-The remainder of this article is organized as follows: In Section 2, I provide an overview of modeling techniques used in energy demand forecasting. In Section 3, I provide an in-depth explanation of each of these four models, including their original authors, the methodology employed, the energy sector they focus on, and the time horizon in which they can be applied. Finally, in Section 4, I summarize the key points of this article.
-\section{Overview of Literatures}
+The rest of this article is structured as follows: In Section 2, an overview of the modeling techniques used in energy demand forecasting is provided. In Section 3, each of these four models is analyzed in depth, including information about their original authors, the methodology employed, the energy sector they focus on, and the time horizon in which they can be applied. Finally, in Section 4, the key points of this article are summarized.
+
+
+
+\section{Overview of modeling techniques}
 
   \subsection{Time Series Models}
 
-Recording the ordered sequence of the values of a variable at fixed time intervals creates a time series. Time series models are the most simplest of models which uses time series trend analysis for extrapolating the future energy requirement. Time series models are often categorized as top-down models, and represent the relationship between the variable's values with time.  
+  A time series is a record of the ordered sequence of values of a variable at fixed time intervals. Time series models are the most basic type of model that uses time series trend analysis to extrapolate future energy requirements. These models are often classified as top-down models and depict the relationship between the values of the variable and time.
 
-Himanshu and Lester \cite{srilanka} have used time series analysis for predicting electricity demand in Sri Lanka. Mabel et al. used pearl or logistic function to forecast the future wind energy patterns in India \cite{TSA-india}.
+  Himanshu and Lester used time series analysis to forecast electricity demand in Sri Lanka \cite{srilanka}. Mabel et al. applied pearl or logistic function to predict future wind energy patterns in India \cite{TSA-india}.
 
 Three time series models, namely, Grey-Markov model, Grey-Model with rolling mechanism, and singular spectrum analysis (SSA) are used to forecast the consumption of conventional energy in India. GreyMarkov model has been employed to forecast crude-petroleum consumption while Grey-Model with rolling mechanism to forecast coal, electricity (in utilities) consumption and SSA to predict natural gas consumption \cite{time-serie india}.
 
@@ -57,44 +60,81 @@ The problem of forecasting the monthly peak demand of electricity in north India
 
 Mati et al. \cite{time-serie Nigeria}used the time series to forecast the electricity demand in Nigeria. A multiple regression time series was applied, and electricity consumption and percentage connectivity to the national grid were considered the independent variables of the model
 
-Moreover, a chaotic time series method was used by Wang et al. \cite{time-serie china}to forecast the electricity demand. The authors believed that the electricity demand series had the chaotic characteristics, and that the
-proposed method could effectively predict the demand with a mean absolute relative error of 2.48\%. It is notable that the seasonal effects were considered in the method by using a trend adjustment technique; additionally, a data set from the network of New South Wales in Australia was used to simulate the needed data.
+Moreover, a chaotic time series method was used by Wang et al. \cite{time-serie china}to forecast the electricity demand. The authors believed that the electricity demand series had the chaotic characteristics, and that the proposed method could effectively predict the demand with a mean absolute relative error of 2.48\%. It is notable that the seasonal effects were considered in the method by using a trend adjustment technique; additionally, a data set from the network of New South Wales in Australia was used to simulate the needed data.
 
 Simmhan and Noor \cite{time series clustering} applied the incremental clustering of time series to forecast the energy consumption. The main contribution of the authors is about applying the method to big data and used 700,000 input data points to show the efficacy of the developed model both in terms of accuracy and prediction time. 
 
-  \subsection{Probabilistic Forecasting}
-  Many phenomena and systems in nature can be viewed as or modeled by stochastic processes. The frequently used point forecasts, or single-valued forecasts, are simply presenting summary statistics, mostly expected values, of a subject during different time periods. In weather forecasting, it has long been known that a forecast is essentially fivedimensional, spanning the three-dimensional space, time and probability. [mehr info] 
 
-  Some specific examples can be found in the area of energy demand forecasting. Researchers have proposed various forecast combination strategies to generate and improve probabilistic load forecasts \cite{37}, \cite{76}, \cite{77}. In \cite{37}, the researchers [genauer erzaehlen was hat der Autor gemacht]. In \cite{76}, [genauer erzaehlen was hat der Autor gemacht]. In \cite{77}, [genauer erzaehlen was hat der Autor gemacht]
 
-  \subsection{Hierarchical Forecasting}
+
+  \subsection{Regression Models}
+  Regression models are used to determine a forecasting function by calculating the value of a dependent variable based on one or more independent variables. The dependent variable is referred to as the "response variable," and the independent variables are referred to as "predictor variables." Linear regression models are the simplest type of regression model, which estimate the linear relationship between variables. On the other hand, nonlinear regression models are a type of regression model in which the dependent variable is modeled using a nonlinear combination of the independent variables.
+
+  O'Neill and Desai analyzed the accuracy of projections of US energy consumption made by the Energy Information Administration (EIA) \cite{O'Neill BC}. They used GDP and energy intensity (EI) to project energy requirements and found that the GDP projections were consistently too high, while EI projections were consistently too low, which tended to underestimate future energy consumption.
   
-    \subsubsection{Bottom-Up Approach}
-  Energy forecasting often encounters time series that have aggregation constraints due to temporal or geographical groupings. In these scenarios, hierarchical forecasting, which reconciles base forecasts generated individually at different levels of a hierarchy, becomes important. There are two ways of hierarchical forecasting, bottom-up and top-down. The 'bottom-up' modelling approach are based on a detailed analysis of individual behaviour, disaggregated in continents, countries, regions, and main economic sectors—industry, transport, buildings, agriculture, etc. The criteria used to disaggregate may vary, but generally they tend to be quite detailed, reaching the smallest possible decision units and from several points of view. [hier vor- und nachteile]  In \cite{9}, [erzaehlen was hat der Autor gemacht]
-
-    \subsubsection{Top-Down Approach}
-  An alternative approach, by contrast, starts from the global perspective and disaggregates the analysis as long as there are data and well-established behavioural parameterisations available. This could be characterised as a 'top-down' approach, as opposed to the 'bottom-up' disaggregated approach discussed previously.In contrast to bottom-up approach, the number of paper using this model for long-term forecasting is much smaller. One reason could be the lack of a solid microfoundation, implying that the aggregated relationships, reasonable as they may be, are only loosely backed by theory. Unexpected breaks may derail forecasts, and that is what should be carefully scrutinised when assessing long-range forecasts and simulations.
+  
+  Linear and nonlinear effect of energy consumption on economic growth for Taiwan is examined by Lee and Chang \cite{Lee CC}. It is found that a threshold regression provides a better empirical model than the standard linear model.
 
   
-  \subsection{Grey Prediction Models}
-  nergy demand forecasting can be regarded as grey system problem, because a few factors such as GDP, income, population are known to influence the energy demand but how exactly they affect the energy demand is not clear.
+  Regression models are also used for electric load forecasting. Al-Hamadi et. al \cite{Al-Hamadi HM} have blabla
 
-  Energy consumption in China is forecast using grey prediction model which incorporates genetic algorithm\cite{272}.[genauer erzaehlen was hat der Autor gemacht]
+  
+  Tunc et al. \cite{Tunc}used the regression analysis to predict Turkey's electric energy consumption.
 
-  \subsection{Regression Models?}
+  
+  Bessec and Fouquau \cite{Bessec} have examined the non linear relationship between electricity demand and temperature in the European Union. A panel threshold regression with exponential and logistic functions is considered for the data collected from 15 European countries. 
+  
+
+  An empirical model based on multivariate regression is developed \cite{Al-Ghandoor A} to predict the electricity requirement of Jordon's industrial sector. Industrial production outputs and capacity utilization were found to be two most important variables that affect electrical power demand. 
+
+  
+  A non parametric regression model \cite{Jonsson} is used to assess the wind energy forecasts. The conditional price distribution is found to be non Gaussian. The forecasting models for electricity spot prices for which parameters are estimated by a least squares technique will not have Gaussian residuals.
 
 
 
 
 
+  \subsection{Econometric Models}
+  Econometric models are statistical models that are used to predict energy demand by examining the relationships between energy consumption and economic and demographic factors such as income, population, and industrial output. These models are based on the idea that energy demand is influenced by various economic and demographic factors and utilize statistical techniques to model these relationships and forecast future energy demand. Econometric models can be applied to forecast energy demand in various sectors, including electricity, heat, transport, and industry, and they can be customized to different time horizons, from short-term forecasts to long-term projections.
 
 
+  Utama et al. \cite{Utama}predicted the energy demand in the Southeast Asian region.The land-to-population ratio, total land area, population trends, demographic characteristics, and landscape were considered the affective factors regarding energy demand. 
+  
+  Mtembo et al. \cite{Mtembo} proposed an econometric model to predict the electricity demand in Zimbabwe. A multiple linear regression econometric model was proposed, and the GDP, Consumer Price Index (CPI), temperature, and population were considered the affective factors for peak demand. 
 
-\section{Open Data Sources}
-  \subsection{Data published with ties to papers}
-  \subsection{ISO Data}
-  \subsection{In situ Weather Data}
-  \subsection{Economics and population Data}
+
+  Dey et al.  \cite{Dey} forecasted the natural gas demand for the power sector of Bangladesh by using econometrics. Economic variables, such as gas price and per-capita GDP, were considered the affective factors. Applying various statistical tests, it was shown that price has no significant impact on gas demand.
+
+  Econometric modeling was also used by Roming and Leimbach \cite{Roming} to forecast the energy demand. The authors used both in-sample and out-of-sample selection criteria in order to create robust short-term and medium-term forecasts. The variables of GDP per capita, population density, and urbanization were considered the affective factors.
+  
+
+
+  \subsection{ARIMA Models}
+  ARIMA (AutoRegressive Integrated Moving Average) models are frequently used in energy demand forecasting. These models are based on the idea that the current value of a time series is related to its past values and utilize statistical techniques to model these relationships and forecast future energy demand. ARMA models provide a concise description of a stationary stochastic process using two polynomials, one an autoregression and the other a moving average. ARIMA models can be applied to forecast energy demand in various sectors, including electricity, heat, transport, and industry, and they can be customized to different time horizons, from short-term forecasts to long-term projections.
+
+  Due to their importance, ARIMA models are given a separate section in this review. Additionally, some non-stationary time series have underlying stochastic processes that change over time and contain trends, seasonality, or both. In these cases, it may be necessary to use a method like ARIMA models, in which d represents the number of performed differentiations to achieve a stationary process, with p autoregressive terms and q moving average terms \cite{Box}. A decision support system for forecasting fossil fuel production in Turkey was developed using regression, ARIMA, and SARIMA methods \cite{Ediger 1, Ediger 2}.
+ 
+  Erdogdu \cite{Erdogdu} has estimated short and long-run price and income elasticities of sectoral natural gas demand in Turkey. The future electric energy demand is forecast using ARIMA. 
+  
+
+  Conejo et al. \cite{Conejo} have used ARIMA to forecast electric price while Pappas et al. \cite{Pappas} have used ARIMA to study the electricity demand load.
+ 
+
+\section{Review of Models}
+  \subsection{TIMES}
+  TIMES (The Integrated Model to Evaluate Energy Systems) is a energy demand forecasting model, the successor of MARKAL, developed by the International Energy Agency (IEA). It is a long-term energy modeling tool that is used to analyze the evolution of energy systems and to evaluate the impacts of different policy scenarios on energy markets, the environment, and economic performance. TIMES is a flexible model that can be used to analyze a wide range of energy systems, including electricity, heat, transport, and industrial systems, and it is designed to be compatible with other models and tools used for energy analysis. The IEA is an intergovernmental organization that promotes cooperation on energy issues among its member countries and provides analysis and data on global energy markets.
+
+  \subsection{LEAP}
+  LEAP (Long-range Energy Alternatives Planning System) is a energy demand forecasting model developed by the Stockholm Environment Institute (SEI), which is an international research institute that conducts research and provides analysis on environmental and sustainability issues. LEAP is a long-term energy modeling tool that is used to analyze the evolution of energy systems and to evaluate the impacts of different policy scenarios on energy markets, the environment, and economic performance. It is a flexible model that can be used to analyze a wide range of energy systems, including electricity, heat, transport, and industrial systems, and it is designed to be compatible with other models and tools used for energy analysis. The Stockholm Environment Institute (SEI) is a non-profit research institute that conducts research and provides analysis on environmental and sustainability issues to support policy development and decision-making. It has offices and research centers in a number of countries around the world.
+
+  \subsection{PRIME}
+  PRIMES (Policy-supporting Energy Model System) is a energy demand forecasting model developed by the Energy Policy and Innovation Unit (EPIU) of the Ministry of Finance of Finland. PRIMES is a long-term energy modeling tool that is used to analyze the evolution of energy systems and to evaluate the impacts of different policy scenarios on energy markets, the environment, and economic performance. It is a flexible model that can be used to analyze a wide range of energy systems, including electricity, heat, transport, and industrial systems, and it is designed to be compatible with other models and tools used for energy analysis. The Energy Policy and Innovation Unit (EPIU) is a division of the Ministry of Finance of Finland that is responsible for developing and implementing energy policy in Finland. It provides analysis and expertise on energy issues to support policy development and decision-making.
+
+
+  \subsection{AIM/ENDUSE}
+  AIM/ENDUSE (Advanced Integrated Model/END-USE) is a energy demand forecasting model developed by the Argonne National Laboratory, which is a research institute operated by the U.S. Department of Energy. AIM/ENDUSE is a long-term energy modeling tool that is used to analyze the evolution of energy systems and to evaluate the impacts of different policy scenarios on energy markets, the environment, and economic performance. It is a flexible model that can be used to analyze a wide range of energy systems, including electricity, heat, transport, and industrial systems, and it is designed to be compatible with other models and tools used for energy analysis. The Argonne National Laboratory is a leading research institute that conducts scientific research and development in a variety of fields, including energy, national security, and the environment.
+
+
 
 \section{Summary}
 
@@ -121,8 +161,6 @@ Simmhan and Noor \cite{time series clustering} applied the incremental clusterin
   \bibitem{9}
   Boßmann, T.; Staffell, I. The shape of future electricity demand: Exploring load curves in 2050s Germany and Britain. Energy 2015, 90, 1317–1333
 
-  \bibitem{272}
-  Lee Y-S, Tong L-I. Forecasting energy consumption using a grey model improved by incorporating genetic programming. Energy Conversion and Management 2011;52:147–52.
 
   \bibitem{time-serie india}
   Kumar U, Jain VK. Time series models (Grey-Markov. Grey Model with rolling mechanism and singular spectrum analysis) to forecast energy consumption in India. Energy 2010; 35(4): 1709–16
@@ -138,6 +176,61 @@ Simmhan and Noor \cite{time series clustering} applied the incremental clusterin
 
   \bibitem{time series clustering}
   Simmhan, Y., Noor, M.U.: Scalable prediction of energy consumption using incremental time series clustering. In: Big Data, IEEE International Conference, pp. 29–36. IEEE (2013)
+
+  \bibitem{O'Neill BC}
+  O'Neill BC, Desai M. Accuracy of past projections of US energy consumption. Energy Policy 2005;33(8):979–93.
+
+  \bibitem{Lee CC}
+  Lee CC, Chang CP. The impact of energy consumption on economic growth: evidence from linear and nonlinear models in Taiwan. Energy 2007;32(12):2282–94
+
+  \bibitem{Al-Hamadi HM}
+  Al-Hamadi HM, Soliman SA. Long-term/mid-term electric load forecasting based on short-term correlation and annual growth. Electrical Power and Energy Systems 2005;74(3):353–61
+
+  \bibitem{Tunc}
+  Tunc M, Camdali U, Parmaksizoglu C. Comparison of Turkey's electrical energy consumption and production with some European countries and optimization of future electrical power supply investments in Turkey. Energy Policy 2006;34(1):50–9
+
+  \bibitem{Bessec}
+  Bessec M, Fouquau J. The non-linear link between electricity consumption and temperature in Europe: a threshold panel approach. Energy Economics 2008;30(5):2705–21
+
+  \bibitem{Al-Ghandoor A}
+  Al-Ghandoor A, Al-Hinti I, Jaber JO, Sawalha SA. Electricity consumption and associated GHG emissions of the Jordanian industrial sector: empirical analysis and future projection. Energy Policy 2008;36(1):258–67.
+
+  \bibitem{Jonsson}
+  Jónsson T, Pinson P, Madsen H. On the market impact of wind energy forecasts. Energy Economics 2010;32(2):313–20.
+
+  \bibitem{Utama}
+  Utama, N.A., Ishihara, K.N., Tezuka, T., Farzaneh, H., McLellan, B., Zhang, Q.: Energy Demand Forecast for South East Asia Region: an econometric approach with relation to the energy per capita "Curve". In: Zero-Carbon Energy Kyoto 2012, pp. 31–41. Springer, Japan (2013)
+
+  \bibitem{Mtembo}
+  Mtembo, V., Taylor, G.A., Ekwue, A.: A novel econometric model for peak demand forecasting. In: Power Engineering Conference (UPEC), 49th International Universities, pp. 1–6. IEEE (2014)
+
+
+  \bibitem{Dey}
+  Dey, H.S., Kabir, M.A., Wadud, Z., Khan, S.I., Azad, M.A.: Econometric modeling and forecasting of natural gas demand for power sector in Bangladesh. In: TENCON 2011–2011 IEEE Region 10 Conference, pp. 1383–1386. IEEE (2011)
+
+  \bibitem{Roming}
+  Roming, N., Leimbach, M.: Econometric forecasting of final energy demand using in-sample and out-of-sample model selection criteria (2015)
+
+  \bibitem{Box}
+  Box, G.E., Jenkins, G.M., Reinsel, G.C., Ljung, G.M.: Time series analysis: forecasting and control. Wiley, New York (2015)
+
+  \bibitem{Ediger 1}
+  Ediger VS, Akar S, Ugurlu B. Forecasting production of fossil fuel sources in Turkey using a comparative regression and ARIMA model. Energy Policy 2006;34(18):3836–46
+
+  \bibitem{Ediger 2}
+  Ediger VS, Akar S. ARIMA forecasting of primary energy demand by fuel in Turkey. Energy Policy 2007;35:1701–8.
+
+  \bibitem{Erdogdu}
+  Erdogdu E. Natural gas demand in Turkey. Applied Energy 2010;87:211–9
+
+  \bibitem{Conejo}
+  Conejo AJ, Plazas MA, Espinola R, Molina AB. Day-ahead electricity price forecasting using the wavelet transform and ARIMA models. IEEE Transactions on Power Systems 2005;20:1035–42.
+
+  \bibitem{Pappas}
+  Pappas SS, Ekonomou L, Karamousantas DC, Chatzarakis GE, Katsikas SK, Liatsis P. Electricity demand loads modeling using auto regressive moving average (ARMA) models. Energy 2008;33:1353–60.
+
+  \bibitem{Box 2}
+  Box, G. E. P., Jenkins, G. M., \& Reinsel, G. C. (2008). Time series analysis: forecasting and control (4th ed.). Wiley.
 \end{thebibliography}
 
 \end{document}
