@@ -124,6 +124,26 @@ Simmhan and Noor \cite{time series clustering} applied the incremental clusterin
   \subsection{TIMES}
   TIMES (The Integrated Model to Evaluate Energy Systems) is a energy demand forecasting model, the successor of MARKAL, developed by the International Energy Agency (IEA). It is a long-term energy modeling tool that is used to analyze the evolution of energy systems and to evaluate the impacts of different policy scenarios on energy markets, the environment, and economic performance. TIMES is a flexible model that can be used to analyze a wide range of energy systems, including electricity, heat, transport, and industrial systems, and it is designed to be compatible with other models and tools used for energy analysis. The IEA is an intergovernmental organization that promotes cooperation on energy issues among its member countries and provides analysis and data on global energy markets.
 
+  \subsubsection{Inputs}
+  The TIMES model is well-suited for analyzing potential energy futures based on different scenarios. It requires four types of inputs to define a complete scenario: energy demand curves, primary resource supply curves, policy settings, and descriptions of technologies. These inputs allow TIMES to simulate the behavior of energy systems and assess the impacts of different policy and technological choices.
+
+  Demand drivers, such as population, GDP, GDP per capita, number of households, and sectoral outputs, are obtained from external sources and used to calculate reference demand in TIMES. These drivers may vary depending on the specific system boundaries of the model. Elasticities of demand are used to relate the demand drivers to the reference demand in each region, and the reference demand is calculated using the following formula:
+  $Demand=Driver^{Elasticity}$
+
+  Policies that impact the energy system can be included in the scenario definition in TIMES. Both micro measures and broader policy targets are supported to be included in the simulation. This allows TIMES to analyze the impacts of different policy choices on energy demand, supply, and other aspects of the energy system.
+
+  TIMES uses technologies or processes to describe the transformation of commodities into other forms, such as fuels, materials, energy services, or emissions. The quality of a TIMES model depends on the richness and development of the technological database, which includes both current and future technologies. As a bottom-up model, TIMES places a strong emphasis on this technological database and uses it to select the most appropriate technologies for each scenario.
+
+  \subsubsection{Time Horizon}
+  In TIMES, producers and consumers of commodities like energy carriers, materials, energy services, and emissions make up the energy economy. By default, TIMES assumes that these commodities are traded in competitive markets, which results in a supply-demand equilibrium that maximizes the net total surplus. When running a simulation, TIMES configures the energy system of a set of regions over a specific time horizon in a way that minimizes the net total cost of the system (or maximizes the net total surplus) while satisfying various constraints. This optimization process helps to determine the most cost-effective configuration of the energy system.
+
+  The whole time horizon of the simulation can be sliced into different time-slices at will by the user r (see Figure xxx). This is especially important whenever the mode and cost of production of an energy carrier at different times of the year are significantly different.  In such cases, the matching of supply and demand requires that the activities of the technologies producing and consuming the commodity be tracked for each time slice. 
+
+  \centering
+  \includegraphics[width=3.2in]{time_horizon.png}
+
+
+
   \subsection{LEAP}
   LEAP (Long-range Energy Alternatives Planning System) is a energy demand forecasting model developed by the Stockholm Environment Institute (SEI), which is an international research institute that conducts research and provides analysis on environmental and sustainability issues. LEAP is a long-term energy modeling tool that is used to analyze the evolution of energy systems and to evaluate the impacts of different policy scenarios on energy markets, the environment, and economic performance. It is a flexible model that can be used to analyze a wide range of energy systems, including electricity, heat, transport, and industrial systems, and it is designed to be compatible with other models and tools used for energy analysis. The Stockholm Environment Institute (SEI) is a non-profit research institute that conducts research and provides analysis on environmental and sustainability issues to support policy development and decision-making. It has offices and research centers in a number of countries around the world.
 
