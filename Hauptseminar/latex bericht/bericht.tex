@@ -38,8 +38,6 @@ Energy demand forecasting is a crucial process for the proper allocation of avai
 
 Projecting long-term energy demand at the global aggregate level is the starting point for creating a comprehensive roadmap for the transition to an achieve a climate neutral world by mid-century\cite{UNFCCC}. While energy forecasting can be interpreted as forecasting of kWh consumption, I use the wider definition, referring to forecasting of the energy industry. We pay particular attention to topics related to energy systems, including electricity demand, and wind and solar power generation. Although oil and gas forecasting is also an important subset of energy forecasting, it is outside the scope of this article.
 
-[wer hat ansonst was schon gemacht]
-
 The aim of this report is to provide a brief overview of the various methods used for energy demand forecasting around the world, while also offering a detailed understanding of these methods using four specific models as examples: TIMES, LEAP, PRIMES, and AIM/ENDUSE.
 
 The rest of this article is structured as follows: In Section 2, an overview of the modeling techniques used in energy demand forecasting is provided. In Section 3, each of these four models is analyzed in depth, including information about their original authors, the methodology employed, the energy sector they focus on, and the time horizon in which they can be applied. Finally, in Section 4, the key points of this article are summarized.
@@ -121,6 +119,8 @@ Simmhan and Noor\cite{time series clustering} applied the incremental clustering
  
 
 \section{Review of Models}
+
+As mentioned before, in this section I will give an detailed explanation of the the following four models. [vllt 2-3 Sätze mehr]
   \subsection{TIMES}
   TIMES (The Integrated Model to Evaluate Energy Systems) is a energy demand forecasting model, the successor of MARKAL, developed by the International Energy Agency (IEA). It is a long-term energy modeling tool that is used to analyze the evolution of energy systems and to evaluate the impacts of different policy scenarios on energy markets, the environment, and economic performance. TIMES is a flexible model that can be used to analyze a wide range of energy systems, including electricity, heat, transport, and industrial systems, and it is designed to be compatible with other models and tools used for energy analysis. The IEA is an intergovernmental organization that promotes cooperation on energy issues among its member countries and provides analysis and data on global energy markets. 
 
@@ -139,7 +139,12 @@ Simmhan and Noor\cite{time series clustering} applied the incremental clustering
 
   The whole time horizon of the simulation can be sliced into different time-slices at will by the user r (see Figure xxx). This is especially important whenever the mode and cost of production of an energy carrier at different times of the year are significantly different.  In such cases, the matching of supply and demand requires that the activities of the technologies producing and consuming the commodity be tracked for each time slice.\cite{times-docu}
 
+  \begin{figure}[!t]
+  \centering  
   \includegraphics[width=3.2in]{time_horizon.png}
+  \caption{Example of a time-slice tree}
+  \label{fig1}
+  \end{figure}
 
   \subsection{LEAP}
 
@@ -153,8 +158,13 @@ Simmhan and Noor\cite{time series clustering} applied the incremental clustering
  
   %\subsubsection{Time Horizon}
   LEAP  is intended as a medium- to long-term modeling tool. Most of its calculations occur on an annual time-step, and the time horizon can extend for an unlimited number of years. Studies typically include both a historical period known as the Current Accounts, in which the model is run to test its ability to replicate known statistical data, as well as multiple forward looking scenarios. Typically, most studies use a forecast period of between 20 and 50 years.\cite{leap}
- 
+  
+  \begin{figure}[!t]
+  \centering
   \includegraphics[width=3.2in]{leapstructure.png}
+  \caption{The Structure of LEAP's Calculations}
+  \label{fig2}
+  \end{figure}
 
   \subsection{PRIMES}
   PRIMES (Policy-supporting Energy Model System) is a large scale applied energy demand forecasting model developed by E3Modelling, a spin-off of the E3MLab at National Technical University of Athens (NTUA). The model is suited for medium-term and long-term (up to 2070) projections in 5-year steps and covers all EU Member States, and EFTA (except Lichtenstein) and candidate countries. It is a Bottom-up Partial equilibrium (PE) model, combines micro-economic foundations of the behavioural modelling with the engineering and energy-system approach, covering all energy sectors and markets at a disaggregated level. The model provides detailed projections of energy demand, supply, prices and investment into the future, covering the entire energy system including emissions. Furthermore, the model captures the technology learning and economies of scale.
